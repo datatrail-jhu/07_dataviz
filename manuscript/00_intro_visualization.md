@@ -1,3 +1,11 @@
+{
+course-completeness: 90
+course-attempts: 2
+default-quiz-attempts: 2
+authors: Jeffrey Leek
+contributors: Shannon Ellis
+}
+
 # Intro to Data Visualization
 
 Data visualization is an incredibly important part of any data science project. When you are first handed a data set by your boss or first scrape a large dataset from the Internet, visualizing your data can help you get a handle on what's going on in the data set. Similarly, once you've done your analysis and are ready to communicate your findings to your teammates, data visualizations are an effective way to communicate your results to others. In this lesson, we'll walk through what data visualization is and define some of the basic types of data visualizations.
