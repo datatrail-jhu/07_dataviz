@@ -16,9 +16,9 @@ If your goal is to allow the viewer to compare values across groups, pie charts 
 
 Choosing colors that work for the story you're trying to convey with your visualization is importnat. Avoiding colors that are hard to see on a screen or when projected, such as pastels, is a good idea. Additionally, red-green color blindness is common and leads to difficulty in distinguishing reds from greens. Simply avoiding making comparisons between these two colors is a good first step when visualizing data. 
 
-![Choosing appropriate colors for visualiations is important](images/01_good_plots/01_dataviz_good_plots-2.png)
+![Choosing appropriate colors for visualizations is important](images/01_good_plots/01_dataviz_good_plots-2.png)
 
-Beyond red-green color blindness, there is an entire group of experts out there in color theory.To learn more about available [color palletes in R](https://github.com/EmilHvitfeldt/r-color-palettes) or to read more from a pro named Lisa Charlotte Rost [talking about color choices in data visualization](https://lisacharlotterost.github.io/2016/04/22/Colors-for-DataVis/), feel free to read more.
+Beyond red-green color blindness, there is an entire group of experts out there in color theory.To learn more about available [color palettes in R](https://github.com/EmilHvitfeldt/r-color-palettes) or to read more from a pro named Lisa Charlotte Rost [talking about color choices in data visualization](https://lisacharlotterost.github.io/2016/04/22/Colors-for-DataVis/), feel free to read more.
 
 #### Label your axes
 
@@ -86,7 +86,7 @@ To see examples of beautiful data visualizations, check out Nathan Yau's [Flowin
 A) to avoid misleading viewers
 b) it's the law
 c) it's mandatory when graphing in R
-d) to help color-blind viwers
+d) to help color-blind viewers
 
 ? Which of these is something you should do when visualizing data?
 

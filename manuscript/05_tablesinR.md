@@ -2,7 +2,7 @@
 
 Now that we have a good understanding of what to consider when making tables, we can to practice making good tables in R. To do this, we'll return to the diamonds data set. As a reminder, this dataset contains prices and other information about ~54,000 different diamonds. If we want to provide viewers with a summary of these data, we may want to provide information about diamonds broken down by the quality of the diamond's cut. To get the data we're interested in, we'll use the `diamonds` dataset and the `dplyr` R package, which we discussed in a lesson in an earlier course.
 
-### Geting the data in order
+### Getting the data in order
 
 To start figuring out how the quality of the cut of the diamond affects the price of that diamond, we first have to first get the data in order. To do that, we'll use the `dplyr` package that you learned about in an earlier course in this series. This allows us to group the data by the quality of the cut (`cut`) before summarizing the data to determine the number of diamonds in each category (`N`), the minimum price of the diamonds in this category (`min`), the average price (`avg`), and the highest price in the category (`max`).
 
@@ -58,7 +58,7 @@ kable(df)
 However, there are still a few issues we want to improve upon:
 
 * column names could be more informative
-* too many digits in the avg column
+* too many digits in the `avg` column
 * Caption/title is missing
 * Source of data not included.
 
@@ -79,7 +79,7 @@ kable(df, digits=0, "html") %>%
 
 ### Annotating your table
 
-We mentioned earlier that captions and sourcing your data are incredibly imporant. The `kable` package allows for a `caption` argument. Below, an informative caption has been included. Additionally, `kableExtra` has a `footnote()` function. This allows you to include the source of your data at the bottom of the table. With these final additions, you have a table that clearly displays the data and could be confidently shared with your boss. 
+We mentioned earlier that captions and sourcing your data are incredibly important. The `kable` package allows for a `caption` argument. Below, an informative caption has been included. Additionally, `kableExtra` has a `footnote()` function. This allows you to include the source of your data at the bottom of the table. With these final additions, you have a table that clearly displays the data and could be confidently shared with your boss. 
 
 ```r
 kable(df, digits=0, "html", caption="Table 1: Diamonds Price by Quality of Cut. Most Diamonds are of the highest quality cut and the most expensive diamonds are of the highest quality") %>%
@@ -98,7 +98,7 @@ So far, this has all been done within RStudio. However, in a lesson in an earlie
 Similar to how we approached learning about making figures in R, we've demonstrated how to make good tables with a single example. The best way to really learn how to make tables is to practice using the tips here and playing around within R. So, feel free to use this as a start and go practice making a few beautiful tables in R!
 
 ### Additional resources
-[Karl Browman's approach to tables in R](http://kbroman.org/knitr_knutshell/pages/figs_tables.html)
+[Karl Broman's approach to tables in R](http://kbroman.org/knitr_knutshell/pages/figs_tables.html)
 [knitr documentation](https://cran.r-project.org/web/packages/knitr/knitr.pdf)
 [kableExtra package documentation](https://cran.r-project.org/web/packages/kableExtra/vignettes/awesome_table_in_html.html)
 

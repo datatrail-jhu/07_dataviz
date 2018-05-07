@@ -1,6 +1,6 @@
 # Making Plots In R
 
-RStudio and the prgoramming language R allow you to plot your data in a number of different ways. In this lesson, we'll discuss what to consider any time you're plotting your data, the types of plots you can make in R, and the code needed to make a number of different plots using R programming in RStudio.
+RStudio and the programming language R allow you to plot your data in a number of different ways. In this lesson, we'll discuss what to consider any time you're plotting your data, the types of plots you can make in R, and the code needed to make a number of different plots using R programming in RStudio.
 
 ### What To Consider When Making Plots
 
@@ -18,9 +18,9 @@ When discussing data visualization, it's always good to have an example to look 
 ![iPhone Sales over time](images/02_plotsinR/02_dataviz_plotsinR-2.png)
 
 #### What's your point?
-Whenever you have data you're trying to plot, think about what you're actually trying to show. Once you've taken a look at your data, a good title for the plot can be helpful. Your title should **tell viwers what they'll see when they look at the plot**. 
+Whenever you have data you're trying to plot, think about what you're actually trying to show. Once you've taken a look at your data, a good title for the plot can be helpful. Your title should **tell viewers what they'll see when they look at the plot**. 
 
-For the iPhone example, a reasonable headline would be **"iPhone more successful than all other Apple prodcuts." This tells us what others would expect to conclude from looking at the data in the figure. 
+For the iPhone example, a reasonable headline would be **"iPhone more successful than all other Apple products." This tells us what others would expect to conclude from looking at the data in the figure. 
 
 ![iPhone Sales over time with title](images/02_plotsinR/02_dataviz_plotsinR-3.png)
 
@@ -38,21 +38,21 @@ With our example data set, our title suggests that the iPhone has been Apple's m
 
 ##### Highlighting data with color
 
-Colors help direct viewers' eyes to the most important parts of the figure. Colors tell your readers where to focus their attention. Greys help to tell viwers where to focus less of their attention, while other colors help to highlight the point your trying to make.
+Colors help direct viewers' eyes to the most important parts of the figure. Colors tell your readers where to focus their attention. Greys help to tell viewers where to focus less of their attention, while other colors help to highlight the point your trying to make.
 
 For example, in the iPhone example, we can de-emphasize the iPod and iPad data using grey lines, while really highlighting the huge amount of growth of the iPhone, by making its line red.
 
 ![iPhone Sales, in red, over time vs other Apple Products, in grey](images/02_plotsinR/02_dataviz_plotsinR-5.png)
 
 ##### Annotate your plot
-By highlighting parts of your plot with arrows or text on your plot, you can further draw viewers' attention to certain part of the plot. These are often details that are unecessary in exploratory plots, where the goal is just to better understand the data, but are very helpful in explanatory plots, when you're trying to draw conclusions from the plot. 
+By highlighting parts of your plot with arrows or text on your plot, you can further draw viewers' attention to certain part of the plot. These are often details that are unnecessary in exploratory plots, where the goal is just to better understand the data, but are very helpful in explanatory plots, when you're trying to draw conclusions from the plot. 
 
 In the iPhone example, by highlighting when Apple announced the iPhone 4 in 2010 and adding text to explain that this was the first time that more iPhones were sold than iPods, viewers get a better understanding of the data.
 
 ![iPhone sales over time annotated](images/02_plotsinR/02_dataviz_plotsinR-6.png)
 
 #### What does your final chart show?
-The first step of the process told viewers what they would see in the plot. The second step showed them. The third step makes it extra clear to viewers what they shoudl be seeing. You explain to viewers what they should be seeing in the plot. This is where you are sure to add descriptions, legends, and the source of your data. Again, these are important pieces of creating a complete explanatory plot, but are not all necessary when making exploratory plots.
+The first step of the process told viewers what they would see in the plot. The second step showed them. The third step makes it extra clear to viewers what they should be seeing. You explain to viewers what they should be seeing in the plot. This is where you are sure to add descriptions, legends, and the source of your data. Again, these are important pieces of creating a complete explanatory plot, but are not all necessary when making exploratory plots.
 
 ##### Write precise descriptions 
 
@@ -163,7 +163,7 @@ You will always begin by calling the `ggplot()` function. You'll then specify yo
 
 #### Making Exploratory Plots 
 
-To build your first plot in `ggplot2` we'll make use of the fact that there are some datasets already available in R. One frequently-used data set is known as `diamonds`. This data set contains prices and other attributes of 53,940 diamonds, with each row containing information about a different diamon. If you look at the first few rows of data, you can get an idea of what data are included in this dataset. 
+To build your first plot in `ggplot2` we'll make use of the fact that there are some datasets already available in R. One frequently-used data set is known as `diamonds`. This data set contains prices and other attributes of 53,940 diamonds, with each row containing information about a different diamond. If you look at the first few rows of data, you can get an idea of what data are included in this dataset. 
 
 ![First 12 rows of diamonds dataset](images/02_plotsinR/02_dataviz_plotsinR-14.png)
 

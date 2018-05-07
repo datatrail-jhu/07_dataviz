@@ -63,7 +63,7 @@ We won't walk through each of these now, but if you hover your mouse over any of
  
 In addition to general interactive graphics, plotly can also be used to generate animated plots - plots that show changes over time. The code for this is similar in form to what is seen above; however, it requires the `frame` argument be specified. This states what variable `ggplotly` should use for each frame in the animation. 
 
-To demonstrate how this can be done, we'll use a very common example data set, frequently used by R users. This dataaset is from Jenny Bryan's [`gapminder` R package](https://cran.r-project.org/web/packages/gapminder/index.html). It contains data about the life expectancy, population, and per capita GDP from a number of countries from 1952 to 2007. We will use these data to generate an animated graphic that shows the relationship between per capita GDP and life expectancy by country. Each point on the graph represents a different country. The points are colored by the continent that each country is from. As mentioned above, to generate an anmiated plot within plotly, frame must be specified. Below, frame is specified to be `year,` which specifies that the animiation should cycle through the years within this dataset.
+To demonstrate how this can be done, we'll use a very common example data set, frequently used by R users. This dataset is from Jenny Bryan's [`gapminder` R package](https://cran.r-project.org/web/packages/gapminder/index.html). It contains data about the life expectancy, population, and per capita GDP from a number of countries from 1952 to 2007. We will use these data to generate an animated graphic that shows the relationship between per capita GDP and life expectancy by country. Each point on the graph represents a different country. The points are colored by the continent that each country is from. As mentioned above, to generate an animated plot within plotly, frame must be specified. Below, frame is specified to be `year,` which specifies that the animation should cycle through the years within this dataset.
 
 ```r
 ## install the package 
@@ -95,7 +95,7 @@ plotly objects can be printed directly into RMarkdown reports (.Rmd files) as lo
 
 #### gganimate
 
-With many things in R, there is more than one way to generate animaged ojbects in RStudio. There is an additional package that allows for the generation of animated graphics from ggplot2 graphs: [`gganimate`](https://github.com/dgrtwo/gganimate).
+With many things in R, there is more than one way to generate animated objects in RStudio. There is an additional package that allows for the generation of animated graphics from ggplot2 graphs: [`gganimate`](https://github.com/dgrtwo/gganimate).
 
 Below we will generate the same graph as above but will use `gganimate()` to do so. The code to generate the ggplot object created (gg) will not change. The benefit of gganimate() is that if you are interesting in saving the image as a GIF, rather than embedding the plot into your .Rmd report, gganimate() has this capability. (gganimate() can save animated graphics as .gif, .mp4, .swf, and .html objects)
 

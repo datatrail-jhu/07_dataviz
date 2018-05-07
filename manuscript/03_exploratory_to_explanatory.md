@@ -56,7 +56,7 @@ theme (
 
 #### Altering line color 
 
-You may have noticed that the default colors within ggplot2 (as seen in the exploratory plot above) are red, green, and blue for these plots. However, in our final version, we highlight the iPhone line in red and have the iPad and iPod lines in grey. This is controlled using `scale_colour_manual()`. `scale_colour_manual()` knows which variable lines should be colored because `color=variable` was defined earlier. If `color=variable` had not been included in that first line, scale_colour_manual() would not know what to color. For exaample, R will let you know in your console if you try this that it doesn't "know how to automatically pick scale for object of type yearqtr" and the resulting plot will simply have three black lines.   
+You may have noticed that the default colors within ggplot2 (as seen in the exploratory plot above) are red, green, and blue for these plots. However, in our final version, we highlight the iPhone line in red and have the iPad and iPod lines in grey. This is controlled using `scale_colour_manual()`. `scale_colour_manual()` knows which variable lines should be colored because `color=variable` was defined earlier. If `color=variable` had not been included in that first line, scale_colour_manual() would not know what to color. For example, R will let you know in your console if you try this that it doesn't "know how to automatically pick scale for object of type yearqtr" and the resulting plot will simply have three black lines.   
 
 ![Trying to defince colors without telling R what variable to color](images/03_exploratory_to_explanatory/03_dataviz_exploratory_to_explanatory-7.png)
 
@@ -75,7 +75,7 @@ Now that the lines are the color we want, we often want the lines to be thicker 
 Once a plot is almost complete, to really make it as explanatory as possible, you'll often want to annotate the plot to draw viewers attention to a particular point on the plot. To do so in `ggplot2`, there is `annotate()`. For this plot, `annotate()` was used both to add the grey rectangle and to add the text to the plot explaining that in 2010 was the first year when more iPhones were sold than iPods. 
 ![adding annotation in ggplot2](images/03_exploratory_to_explanatory/03_dataviz_exploratory_to_explanatory-10.png)
 
-Within annotate, you have to specify the geom you want to add to the plot (here we add "rect" and "text") and the x- and y-coordinates on the graph where you want the annotation to appear. Additionally, you also have the ability to control a number of parameters, inclduing:
+Within annotate, you have to specify the geom you want to add to the plot (here we add "rect" and "text") and the x- and y-coordinates on the graph where you want the annotation to appear. Additionally, you also have the ability to control a number of parameters, including:
 * alpha - the transparency of shapes on the plot
 * size - the size of the text
 * hjust - the horizontal alignment of text (vjust controls vertical alignment)

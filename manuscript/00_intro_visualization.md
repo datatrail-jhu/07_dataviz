@@ -41,7 +41,7 @@ Other Exploratory Plotting Examples:
 
 ### Explanatory Plots 
 
-These are data displays that aim to communicate insights to others. These are plots that you spend a lot of time making sure they're easily interpretable by an auudence. General characteristics of explanatory plots:
+These are data displays that aim to communicate insights to others. These are plots that you spend a lot of time making sure they're easily interpretable by an audience. General characteristics of explanatory plots:
 * They take a while to make.
 * There are only a few of these for each project.
 * You've spent a lot of time making sure the colors, labels, and sizes are all perfect for your needs.
@@ -50,7 +50,7 @@ Here we see  an improvement upon the exploratory plot we looked at previously. H
 
 ![Explanatory Plots](images/00_intro_visualization/00_dataviz_intro_visualization-3.png)
 
-Explanatory plots are made after you've done an analaysis and once you really understand the data you have. The goal of these plots is to communicate your findings clearly to others. To do so, you want to make sure these plots are made carefully - the axis labels should all be clear, the labels should all be large enough to read, the colors should all be caefully chosen, etc.. As this takes times and because you do not want to overwhelm your audience, you only want to have a few of these for each project. We often refer to these as "publication ready" plots. These are the plots that would make it into an article at the New York Times or in your presentation to your bosses.
+Explanatory plots are made after you've done an analysis and once you really understand the data you have. The goal of these plots is to communicate your findings clearly to others. To do so, you want to make sure these plots are made carefully - the axis labels should all be clear, the labels should all be large enough to read, the colors should all be carefully chosen, etc.. As this takes times and because you do not want to overwhelm your audience, you only want to have a few of these for each project. We often refer to these as "publication ready" plots. These are the plots that would make it into an article at the New York Times or in your presentation to your bosses.
 
 Other Explanatory Plotting Examples:
 [How the Recession Shaped the Economy (NYT)](https://www.nytimes.com/interactive/2014/06/05/upshot/how-the-recession-reshaped-the-economy-in-255-charts.html)
@@ -88,7 +88,7 @@ The final basic plot we'll talk about here is the boxplot. Boxplots also summari
 
 ![Boxplot](images/00_intro_visualization/00_dataviz_intro_visualization-12.png)
 
-To interpret a boxplot, there are a few places where we'll want to focus our attention. For each category, the horizontal line through the middle of the box corresponds to the median value for that group. So, here, we can say that the median, or most typical height for females is about 165 cm. For males, this value is higher, just under 180 cm. Outside of the colored boxes, there are dashed lines. The ends of these lines correspond to the typical range of values. Here, we can see that females tend to have heights between 150 and 180cm. Lastly, when individuals have vaues outside the typical range, a boxplot will show these individuals as circles. These circles are referred to as outliers.
+To interpret a boxplot, there are a few places where we'll want to focus our attention. For each category, the horizontal line through the middle of the box corresponds to the median value for that group. So, here, we can say that the median, or most typical height for females is about 165 cm. For males, this value is higher, just under 180 cm. Outside of the colored boxes, there are dashed lines. The ends of these lines correspond to the typical range of values. Here, we can see that females tend to have heights between 150 and 180cm. Lastly, when individuals have values outside the typical range, a boxplot will show these individuals as circles. These circles are referred to as outliers.
 
 #### Resources to look at these and other types of plots:
 [R Graph Gallery](https://www.r-graph-gallery.com/)
@@ -102,7 +102,7 @@ Using this same data set, we can use a table to get a quick breakdown of how man
 A few things to keep in mind when making tables is that it's best to:
 * Limit the number of digits in the table
 * Include a caption
-* When possible, keep it simiple.
+* When possible, keep it simple.
 
 ![Table](images/00_intro_visualization/00_dataviz_intro_visualization-16.png)
 

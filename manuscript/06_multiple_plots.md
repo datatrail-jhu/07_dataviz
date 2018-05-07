@@ -1,4 +1,4 @@
-# Mulitple Plots in R
+# Multiple Plots in R
 
 When generating reports for a data science project, there is often more than one plot that you want to display at a time. To accomplish this in R, we will use the R package [patchwork](https://github.com/thomasp85/patchwork) from [Thomas Lin Pedersen](https://www.data-imaginist.com/), which simplifies this process. 
 
@@ -15,7 +15,7 @@ devtools::install_github("thomasp85/patchwork")
 
 ### Basic plotting using patchwork
 
-Patchwork allows any plots generated from `ggplot2` to be combined simply. For example, if you were interested in plotting data from the `mtcars` dataset in R but wanted to combine two different plots, you could use patchwork. Below, you'll see code for combining two plots. The first plot examines the relationship between how many miles per gallon (mpg) a car a gets and the weight of that car in 1000lb (wt). This is assigned to object `p1`. The second plot looks at the replatinship between how many mpgs a car gets and the number of forward gears that car has (`p2`). While you could plot each individually, you may want to see them side by side. With patchwork, you can do this my simply using a plus sign (`p1+p2`). Using this very simple code, you'll obtain side by side plots, which is exactly what you were looking to achieve! 
+Patchwork allows any plots generated from `ggplot2` to be combined simply. For example, if you were interested in plotting data from the `mtcars` dataset in R but wanted to combine two different plots, you could use patchwork. Below, you'll see code for combining two plots. The first plot examines the relationship between how many miles per gallon (mpg) a car a gets and the weight of that car in 1000lb (wt). This is assigned to object `p1`. The second plot looks at the relationship between how many mpgs a car gets and the number of forward gears that car has (`p2`). While you could plot each individually, you may want to see them side by side. With patchwork, you can do this my simply using a plus sign (`p1+p2`). Using this very simple code, you'll obtain side by side plots, which is exactly what you were looking to achieve! 
 
 ```r
 library(ggplot2)
@@ -77,7 +77,7 @@ So far we have only added plots to one another using '+'. While this operator ca
 
 #### `|` and `/`
 
-If you are simply adding plots beside one another or on top of one another, this can be accomplied using `|` and `/`. `|` tells patchwork to put the plots next to one another from left to right. `/` tells patchwork you want those plots on top of each other. For example, below we see that `p1`, `p2`, and `p3` should all be next to one another. These are grouped together because of the parentheses. Then these three plots should all be atop `p4`.
+If you are simply adding plots beside one another or on top of one another, this can be accomplished using `|` and `/`. `|` tells patchwork to put the plots next to one another from left to right. `/` tells patchwork you want those plots on top of each other. For example, below we see that `p1`, `p2`, and `p3` should all be next to one another. These are grouped together because of the parentheses. Then these three plots should all be atop `p4`.
 
 ```r
 (p1 | p2 | p3) /
