@@ -1,0 +1,8 @@
+00_intro_visualization.md
+01_good_plots.md
+02_plotsinR.md
+03_exploratory_to_explanatory.md
+04_datatables.md
+05_tablesinR.md
+06_multiple_plots.md
+07_advanced_data_visualization.md

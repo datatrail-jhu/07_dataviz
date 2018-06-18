@@ -13,11 +13,13 @@ There are a number of questions you should ask yourself before making a plot. Th
 3. What does your final chart show exactly?
 
 #### The Data We Want to Plot
+
 When discussing data visualization, it's always good to have an example to look at. For the example here, we'll use the same example [Lisa Charlotte Rost](https://twitter.com/lisacrost) used in her blog post. If you were interested in analyzing data that looked to assess the success of the iPhone, you would want to look at data to see how sales of iPhones have changed over time. You might, for example, start with a super basic plot like this:
 
 ![iPhone Sales over time](images/02_plotsinR/02_dataviz_plotsinR-2.png)
 
 #### What's your point?
+
 Whenever you have data you're trying to plot, think about what you're actually trying to show. Once you've taken a look at your data, a good title for the plot can be helpful. Your title should **tell viewers what they'll see when they look at the plot**. 
 
 For the iPhone example, a reasonable headline would be **"iPhone more successful than all other Apple products." This tells us what others would expect to conclude from looking at the data in the figure. 
@@ -32,6 +34,7 @@ We talked about it in the last lesson, but an incredibly important decision is t
 * annotating your plot
 
 ##### Adding data
+
 With our example data set, our title suggests that the iPhone has been Apple's most successful product. To make that claim, it would be really helpful for the plot to compare iPhone sales with other Apple products, say, the iPad or the iPod. By adding data about other Apple products over time, we can visualize just how successful the iPhone has been.
 
 ![iPhone Sales over time vs other Apple Products](images/02_plotsinR/02_dataviz_plotsinR-4.png)
@@ -45,6 +48,7 @@ For example, in the iPhone example, we can de-emphasize the iPod and iPad data u
 ![iPhone Sales, in red, over time vs other Apple Products, in grey](images/02_plotsinR/02_dataviz_plotsinR-5.png)
 
 ##### Annotate your plot
+
 By highlighting parts of your plot with arrows or text on your plot, you can further draw viewers' attention to certain part of the plot. These are often details that are unnecessary in exploratory plots, where the goal is just to better understand the data, but are very helpful in explanatory plots, when you're trying to draw conclusions from the plot. 
 
 In the iPhone example, by highlighting when Apple announced the iPhone 4 in 2010 and adding text to explain that this was the first time that more iPhones were sold than iPods, viewers get a better understanding of the data.
@@ -52,6 +56,7 @@ In the iPhone example, by highlighting when Apple announced the iPhone 4 in 2010
 ![iPhone sales over time annotated](images/02_plotsinR/02_dataviz_plotsinR-6.png)
 
 #### What does your final chart show?
+
 The first step of the process told viewers what they would see in the plot. The second step showed them. The third step makes it extra clear to viewers what they should be seeing. You explain to viewers what they should be seeing in the plot. This is where you are sure to add descriptions, legends, and the source of your data. Again, these are important pieces of creating a complete explanatory plot, but are not all necessary when making exploratory plots.
 
 ##### Write precise descriptions 
