@@ -117,7 +117,7 @@ A few things to keep in mind when making tables is that it's best to:
 
 ### Intro to Data Visualization quiz
 
-{choose: answers: 4}
+{choose-answers: 4}
 ? Which plot is best when comparing numerical values from two pieces of information?
 
 C) Scatterplot
@@ -127,7 +127,7 @@ o) Clustering
 o) Pie Chart
 o) Heatmap
 
-{choose: answers: 4}
+{choose-answers: 4}
 ? What type of plot would you use to compare the number of apples and oranges in a data set containing information about different pieces of fruit?
 
 C) Barplot
@@ -136,7 +136,7 @@ o) Histogram
 o) Donut Chart
 o) Network Diagram
 
-{choose: answers: 4}
+{choose-answers: 4}
 ? If half of your data set were comprised of men and half of females, what number should you put in the table to represent the percentage of females?
 
 C) 50 %
@@ -146,7 +146,7 @@ o) 50.0000 %
 o) 100.00 % 
 o) NA
 
-{choose: answers: 4}
+{choose-answers: 4}
 ? To quickly see the range of values for a numerical piece of information and how many individuals take that value, what plot would you use?
 
 C) Histogram

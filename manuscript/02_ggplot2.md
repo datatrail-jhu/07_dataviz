@@ -42,12 +42,26 @@ In this plot, we see that, in general, the larger the diamond is (or the more ca
 
 ### Aesthetics
 
-What if we wanted to alter the size, color or shape of the points? Probably unsurprisingly, these can all be changed within the aesthetics argument. After all, something's aesthetic refers to how something looks. Thus, if you want to change the look of your graph, you'll want to play around with the aesthetic. For now, we'll focus on arguments within `aes()` that change how the points on the plot look. Later, we'll return to `aes()` for other aesthetic changes we may want to make!
+What if we wanted to alter the size, color or shape of the points? Probably unsurprisingly, these can all be changed within the aesthetics argument. After all, something's aesthetic refers to how something looks. Thus, if you want to change the look of your graph, you'll want to play around with the plot's aesthetics. For now, we'll focus on arguments within `aes()` that change how the points on the plot look. Later, we'll return to `aes()` for other aesthetic changes we may want to make!
+
+#### Point color
+
+In the scatterplot we just generated, we saw that there was a relationship between carat and price, such that the more carats a diamond has, generally, the higher the price. But, it's not a perfectly linear trend. What we mean by that is that not all diamonds that were 2 carats were exactly the same price. And, not all 3 carat diamonds were exactly the same price. What if we were interested in finding out a little bit more about why this is the case?
+
+Well, we could look at the clarity of the diamonds to see whether or not that affects the price of the diamonds? To add clarity to our plot, we could change the color of our points to differ based on clarity:
+
+```r
+ggplot(data = diamonds, aes(x = carat, y = price, color = clarity) + 
+  geom_point()
+```
+
+![changing point colors helps us better understand the data](images/02_ggplot2/02_dataviz_ggplot2-4.png)
+
+Here we see that not only are the points now colored by clarity, ggplot2 has also automatically added a legend for us with the various classes and their corresponding point color. 
 
 #### Point size
 
 
-#### Point color
 
 
 #### Point Shape
