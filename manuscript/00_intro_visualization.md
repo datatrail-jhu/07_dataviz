@@ -104,6 +104,7 @@ A few things to keep in mind when making tables is that it's best to:
 * Include a caption
 * When possible, keep it simple.
 
+
 ![Table](images/00_intro_visualization/00_dataviz_intro_visualization-17.png)
 
 ### Slides and Video

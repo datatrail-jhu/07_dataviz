@@ -211,9 +211,9 @@ While the plots are not identical, they are very similar and tell the same story
 
 To learn more about bad plotting techniques to avoid, you can check out Flowing Data's [Ugly Charts](http://flowingdata.com/category/visualization/ugly-visualization/) or [WTF Visualizations](http://viz.wtf/). 
 
-To see examples of beautiful data visualizations, check out Nathan Yau's [Flowing Data](http://flowingdata.com/) blog, the  [Uncharted](https://blog.datawrapper.de/) blog, or many analytical pieces published by [FiveThirtyEight](http://fivethirtyeight.com/).
+To see examples of beautiful data visualizations, check out Nathan Yau's [Flowing Data](http://flowingdata.com/) blog, the  [Chartable](https://blog.datawrapper.de/) blog, or many analytical pieces published by [FiveThirtyEight](http://fivethirtyeight.com/).
 
-To read more about red-green color blindness, read more information [here](http://www.colourblindawareness.org/colour-blindness/)
+To read more about red-green color blindness, read more information [here](http://www.colourblindawareness.org/colour-blindness/).
 
 ### Slides and Video
 

@@ -169,7 +169,7 @@ ggplot(data = diamonds) +
   geom_histogram(mapping =  aes(carat))
 ```
 
-![histogram of carat shows range and shape](images/02_ggplot2/02_dataviz_ggplot2-11.png)
+![histogram of carat shows range and shape](images/02_ggplot2/02_dataviz_ggplot2-12.png)
 
 The code follows what we've seen so far in this lesson; however, we've now called `geom_histogram` to specify that we want to plot a histogram rather than a scatterplot. 
 
@@ -188,7 +188,7 @@ ggplot(data = diamonds) +
 
 Again, the changes to the code are minimal. We are now interested in plotting the categorical variable `cut` and state that we want a bar plot, by including `geom_bar()`. 
 
-![diamonds barplot](images/02_ggplot2/02_dataviz_ggplot2-5.png)
+![diamonds barplot](images/02_ggplot2/02_dataviz_ggplot2-13.png)
 
 Here, we again use rectangular shapes to represent the data, but we're not showing the distribution of a single variable (as we were with `geom_histogram`). Rather, we're using rectangles to show the count (number) of diamonds within each category within cut. Thus, we need a different geom: `geom_bar`!
 
@@ -203,7 +203,7 @@ ggplot(data = diamonds) +
 
 In the code, we see that again, we only have to change what variables we want to be included in the plot the type of plot (or geom) we want (here, `geom_boxplot()`) to get a basic boxplot.
 
-![diamonds box](images/02_ggplot2/02_dataviz_ggplot2-6.png)
+![diamonds boxplot](images/02_ggplot2/02_dataviz_ggplot2-14.png)
 
 In the figure itself we see that the median price (the black horizontal bar in the middle of each box represents the median for each category) increases as the diamond color increases from the worst category (J) to the best (D).
 
@@ -211,11 +211,11 @@ In the figure itself we see that the median price (the black horizontal bar in t
 
 While we've reviewed basic code to make a few common types of plots, there are a number of other plot types that can be made in `ggplot2.` These are listed in the [online reference material for ggplot2](http://ggplot2.tidyverse.org/reference/) or can be accessed through RStudio directly. To do so, you would type `?geom_` into the Console in RStudio. A list of geoms will appear. You can hover your cursor over any one of these to get a short description. 
 
-![?geom in Console](images/02_ggplot2/02_dataviz_ggplot2-7.png)
+![?geom in Console](images/02_ggplot2/02_dataviz_ggplot2-15.png)
 
 Or, you can select a geom from this list and click enter. After selecting a geom, such as geom_abline and hitting 'Enter,' the help page for that geom will pop up in the 'Help' tab at bottom right. Here, you can find more detailed information about the selected geom.
 
-[geom_abline help page](images/02_ggplot2/02_dataviz_ggplot2-8.png)
+[geom_abline help page](images/02_ggplot2/02_dataviz_ggplot2-16.png)
 
 ### Summary
 
