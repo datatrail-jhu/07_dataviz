@@ -29,7 +29,7 @@ df
 
 By getting the data summarized into a single object in R (`df`), we're on our way to making an informative table. However, this is clearly just an exploratory table. The output in R from this code follows some of the good table rules above, but not all of them.  At a glance, it will help you to understand the data, but it's not the finished table you would want to send to your boss. 
 
-![Exploratory diamonds table](images/05_tablesinR/05_dataviz_tablesinR-3.png)
+![Exploratory diamonds table](images/07_tablesinR/07_dataviz_tablesinR-3.png)
 
 From this output, you, the creator of the table, would be able to see that there are a number of **good qualities**: 
 
@@ -53,7 +53,7 @@ The first step to a prettier table just involves using the `kable()` function fr
 kable(df)
 ```
 
-![kable basic output](images/05_tablesinR/05_dataviz_tablesinR-4.png) 
+![kable basic output](images/07_tablesinR/07_dataviz_tablesinR-4.png) 
 
 However, there are still a few issues we want to improve upon:
 
@@ -75,7 +75,7 @@ kable(df, digits=0, "html") %>%
   add_header_above(c(" " = 2,  "price (USD)" = 3)) 
 ```  
 
-![Viewer tab with formatted table](images/05_tablesinR/05_dataviz_tablesinR-6.png)
+![Viewer tab with formatted table](images/07_tablesinR/07_dataviz_tablesinR-6.png)
 
 ### Annotating your table
 
@@ -87,13 +87,13 @@ kable(df, digits=0, "html", caption="Table 1: Diamonds Price by Quality of Cut. 
   add_header_above(c(" " = 2,  "price (USD)" = 3)) %>% 
   footnote(general="Diamonds dataset from ggplot2", general_title="Source:",footnote_as_chunk = T)
 ```  
-![Viewer tab with annotated and formatted table](images/05_tablesinR/05_dataviz_tablesinR-8.png)
+![Viewer tab with annotated and formatted table](images/07_tablesinR/07_dataviz_tablesinR-8.png)
 
 ### Tables in RMarkdown
 
 So far, this has all been done within RStudio. However, in a lesson in an earlier course in this series, we discussed the importance of making reports in RMarkdown. The previous lesson focused on how to format RMarkdown documents generally. Here we want to point out that tables made using `kable()` are properly formatted for RMarkdown reports. 
 
-![Code and table rendered from RMarkdown document](images/05_tablesinR/05_dataviz_tablesinR-9.png)
+![Code and table rendered from RMarkdown document](images/07_tablesinR/07_dataviz_tablesinR-9.png)
 
 Similar to how we approached learning about making figures in R, we've demonstrated how to make good tables with a single example. The best way to really learn how to make tables is to practice using the tips here and playing around within R. So, feel free to use this as a start and go practice making a few beautiful tables in R!
 
@@ -110,7 +110,7 @@ Similar to how we approached learning about making figures in R, we've demonstra
 * [Slides](https://docs.google.com/presentation/d/1vjyG1vibsmtXrPA1hs2HS3MfjsPMjRDEmBEsVlgkIxg/edit?usp=sharing)
 
 
-{quiz, id: quiz_05_tablesinR}
+{quiz, id: quiz_07_tablesinR}
 
 ### Tables In R quiz
 

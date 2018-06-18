@@ -11,7 +11,7 @@
   
 ![Saving Plots](UPDATE LINK)
   
-  * [Slides]()
+  * [Slides](https://docs.google.com/presentation/d/1O_10dR6Nb273S0bF-Xv3VCCHweagVzRJVv7HI1NPMBs/edit?usp=sharing)
   
   
 {quiz, id: quiz_03_saving_plots}
