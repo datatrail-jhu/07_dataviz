@@ -271,7 +271,7 @@ o) geom_density
 o) geom_curve
 
 {choose-answers: 4, points: 2}
-?If you were to run the following code, what color would the points be?: `ggplot(data = diamonds, aes(x = carat, y = price, color = "blue" )) + geom_point()`
+? If you were to run the following code, what color would the points be?: `ggplot(data = diamonds, aes(x = carat, y = price, color = "blue" )) + geom_point()`
 
 C) coral
 m) blue
