@@ -68,7 +68,7 @@ The goal of data visualization is to improve understanding of data. Sometimes co
 
 Having discussed some general guidelines, there are a number of questions you should ask yourself before making a plot. These have been nicely laid out in a [blog post](https://blog.datawrapper.de/better-charts/) from the wonderful team at [Chartable](https://blog.datawrapper.de/), [Datawrapper's](https://www.datawrapper.de/) blog. We will summarize them here and include a number of the images from their post. The post argues that there are three main questions you should ask any time you create a visual display of your data. We will discuss these three questions below and then step through the process of creating data displays in R.
 
-![Three Questions for Creating a Chart](images/02_plotsinR/02_dataviz_plotsinR-1.png)
+![Three Questions for Creating a Chart](images/01_good_plots/01_dataviz_good_plots-11.png)
 
 1. What's your point?
 2. How can you emphasize your point in your chart?
@@ -78,7 +78,7 @@ Having discussed some general guidelines, there are a number of questions you sh
 
 When discussing data visualization, it's always good to have an example to look at. For the example here, we'll use the same example [Lisa Charlotte Rost](https://twitter.com/lisacrost) used in her blog post. If you were interested in analyzing data that looked to assess the success of the iPhone, you would want to look at data to see how sales of iPhones have changed over time. You might, for example, start with a super basic plot like this:
 
-![iPhone Sales over time](images/02_plotsinR/02_dataviz_plotsinR-2.png)
+![iPhone Sales over time](images/01_good_plots/01_dataviz_good_plots-12.png)
 
 #### What's your point?
 
@@ -86,7 +86,7 @@ Whenever you have data you're trying to plot, think about what you're actually t
 
 For the iPhone example, a reasonable headline would be **"iPhone more successful than all other Apple products." This tells us what others would expect to conclude from looking at the data in the figure. 
 
-![iPhone Sales over time with title](images/02_plotsinR/02_dataviz_plotsinR-3.png)
+![iPhone Sales over time with title](images/01_good_plots/01_dataviz_good_plots-13.png)
 
 #### How can you emphasize your point?
 
@@ -99,7 +99,7 @@ We talked about it in the last lesson, but an incredibly important decision is t
 
 With our example data set, our title suggests that the iPhone has been Apple's most successful product. To make that claim, it would be really helpful for the plot to compare iPhone sales with other Apple products, say, the iPad or the iPod. By adding data about other Apple products over time, we can visualize just how successful the iPhone has been.
 
-![iPhone Sales over time vs other Apple Products](images/02_plotsinR/02_dataviz_plotsinR-4.png)
+![iPhone Sales over time vs other Apple Products](images/01_good_plots/01_dataviz_good_plots-14.png)
 
 ##### Highlighting data with color
 
@@ -107,7 +107,7 @@ Colors help direct viewers' eyes to the most important parts of the figure. Colo
 
 For example, in the iPhone example, we can de-emphasize the iPod and iPad data using grey lines, while really highlighting the huge amount of growth of the iPhone, by making its line red.
 
-![iPhone Sales, in red, over time vs other Apple Products, in grey](images/02_plotsinR/02_dataviz_plotsinR-5.png)
+![iPhone Sales, in red, over time vs other Apple Products, in grey](images/01_good_plots/01_dataviz_good_plots-15.png)
 
 ##### Annotate your plot
 
@@ -115,7 +115,7 @@ By highlighting parts of your plot with arrows or text on your plot, you can fur
 
 In the iPhone example, by highlighting when Apple announced the iPhone 4 in 2010 and adding text to explain that this was the first time that more iPhones were sold than iPods, viewers get a better understanding of the data.
 
-![iPhone sales over time annotated](images/02_plotsinR/02_dataviz_plotsinR-6.png)
+![iPhone sales over time annotated](images/01_good_plots/01_dataviz_good_plots-16.png)
 
 #### What does your final chart show?
 
@@ -125,23 +125,23 @@ The first step of the process told viewers what they would see in the plot. The 
 
 Whether it's a figure legend at the bottom of your plot, a subtitle explaining what data are plotted, or clear axes labels, text describing clearly what's going on in your plot is important. Here, the author of these plots decided to include a subtitle, "Worldwide sales of selected Apple products in million, by fiscal quarter, 2000 to 2014." She could have similarly included this information on the y-axis "Worldwide sales of Apple products (in millions)." While there are different approaches, including this information is critical.
 
-![iPhone sales over time annotated with description](images/02_plotsinR/02_dataviz_plotsinR-7.png)
+![iPhone sales over time annotated with description](images/01_good_plots/01_dataviz_good_plots-17.png)
 
 ##### Add legends 
 
 When making a plot, be sure that viewers are able to easily determine what each line or point on a plot represents. Here, by adding text to label which line is iPhone, which is iPad, and which is iPod, viewers are quickly able to understand the plot
 
-![iPhone sales over time annotated with description and text labels](images/02_plotsinR/02_dataviz_plotsinR-8.png)
+![iPhone sales over time annotated with description and text labels](images/01_good_plots/01_dataviz_good_plots-18.png)
 
 ##### Add a source
 
 When finalizing an explanatory plot, be sure to source your data. It's always best for readers to know where you obtained your data and what data are being used to create your plot. Transparency is important.
 
-![iPhone sales over time with source information](images/02_plotsinR/02_dataviz_plotsinR-9.png)
+![iPhone sales over time with source information](images/01_good_plots/01_dataviz_good_plots-19.png)
 
 The finalized plot is clear, the conclusion the viewer is to make is obvious, the data are well-labeled, and the plot is annotated.
 
-![Final blog post plot](images/02_plotsinR/02_dataviz_plotsinR-10.png)
+![Final blog post plot](images/01_good_plots/01_dataviz_good_plots-20.png)
 
 ### Making The iPhone Plot in R
 
@@ -203,7 +203,7 @@ p <- ggplot(data = df2, aes(x=yrq,y=value, group=variable, color=variable)) +
 ## save plot as PNG  
 ggsave("iPhone_sales.png",p, width=12 , units=c("in"))
 ```
-![Reproduced blog post plot](images/02_plotsinR/02_dataviz_plotsinR-12.png)
+![Reproduced blog post plot](images/01_good_plots/01_dataviz_good_plots-22.png)
 
 While the plots are not identical, they are very similar and tell the same story. Making good plots in R is an important skill and can be learned using the `ggplot2` package in R. We'll discuss how to generate `ggplot2` plots in the next lesson!
 

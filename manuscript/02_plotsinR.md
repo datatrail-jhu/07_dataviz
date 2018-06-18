@@ -24,7 +24,7 @@ You will always begin by calling the `ggplot()` function. You'll then specify yo
 
 To build your first plot in `ggplot2` we'll make use of the fact that there are some datasets already available in R. One frequently-used data set is known as `diamonds`. This data set contains prices and other attributes of 53,940 diamonds, with each row containing information about a different diamond. If you look at the first few rows of data, you can get an idea of what data are included in this dataset. 
 
-![First 12 rows of diamonds dataset](images/02_plotsinR/02_dataviz_plotsinR-14.png)
+![First 12 rows of diamonds dataset](images/02_plotsinR/02_dataviz_plotsinR-2.png)
 
 Here you see a lot of numbers and can get an idea of what data are available in this data set. For example, in looking at the column names across the top, you can see that we have information about how many carats each diamond is (`carat`), some information on the quality of the diamond cut (`cut`), the color of the diamond from J (worst) to D (best) (`color`), along with a number of other pieces of information about each diamond.
 
@@ -41,7 +41,7 @@ ggplot(data = diamonds, aes(carat)) +
 
 Note, we specified in the code above that we would be using the `diamonds` dataset, that we were interested in plotting information about the diamonds' `carat` in the plot, and that the geom we were interested in plotting was a histogram (`geom_histogram`).
 
-![diamonds histogram](images/02_plotsinR/02_dataviz_plotsinR-15.png)
+![diamonds histogram](images/02_plotsinR/02_dataviz_plotsinR-3.png)
 
 
 ##### Scatterplots
@@ -55,7 +55,7 @@ ggplot(data = diamonds, aes(x=carat, y=price)) +
 
 Note that the overall format of the code is the same as it was for the histogram; however, we've defined `x=carat` and `y=price` and changed `geom_histogram` to `geom_point`.
 
-![diamonds scatterplot](images/02_plotsinR/02_dataviz_plotsinR-16.png)
+![diamonds scatterplot](images/02_plotsinR/02_dataviz_plotsinR-4.png)
 
 In this plot, we see that, in general, the larger the diamond is (or the more carats it has), the more expensive the diamond is (price), which is probably what we would have expected. However, now, we have a plot that supports this conclusion. 
 
@@ -70,7 +70,7 @@ ggplot(data = diamonds, aes(cut)) +
 
 Again, the changes to the code are minimal. We are now interested in plotting the categorical variable `cut` and state that we want a bar plot, by including `geom_bar()`. 
 
-![diamonds barplot](images/02_plotsinR/02_dataviz_plotsinR-17.png)
+![diamonds barplot](images/02_plotsinR/02_dataviz_plotsinR-5.png)
 
 ##### Boxplots
 
@@ -83,7 +83,7 @@ ggplot(data = diamonds, aes(x=color, y=price)) +
 
 In the code, we see that again, we only have to change what variables we want to be included in the plot the type of plot (or geom) we want (here, `geom_boxplot()`) to get a basic boxplot.
 
-![diamonds box](images/02_plotsinR/02_dataviz_plotsinR-18.png)
+![diamonds box](images/02_plotsinR/02_dataviz_plotsinR-6.png)
 
 In the figure itself we see that the median price (the black horizontal bar in the middle of each box represents the median for each category) increases as the diamond color increases from the worst category (J) to the best (D).
 
@@ -92,16 +92,17 @@ In the figure itself we see that the median price (the black horizontal bar in t
 
 While we've reviewed basic code to make a few common types of plots, there are a number of other plot types that can be made in `ggplot2.` These are listed in the [online reference material for ggplot2](http://ggplot2.tidyverse.org/reference/) or can be accessed through RStudio directly. To do so, you would type `?geom_` into the Console in RStudio. A list of geoms will appear. You can hover your cursor over any one of these to get a short description. 
 
-![?geom in Console](images/02_plotsinR/02_dataviz_plotsinR-19.png)
+![?geom in Console](images/02_plotsinR/02_dataviz_plotsinR-7.png)
 
 Or, you can select a geom from this list and click enter. After selecting a geom, such as geom_abline and hitting 'Enter,' the help page for that geom will pop up in the 'Help' tab at bottom right. Here, you can find more detailed information about the selected geom.
 
-[geom_abline help page](images/02_plotsinR/02_dataviz_plotsinR-20.png)
+[geom_abline help page](images/02_plotsinR/02_dataviz_plotsinR-8.png)
 
 
 ### Additional reources:
-[R For Data Science by Hadley Wickham](http://r4ds.had.co.nz/data-visualisation.html#introduction-1)
-[ggplot2 reference](http://ggplot2.tidyverse.org/reference/)
+* [R For Data Science by Hadley Wickham](http://r4ds.had.co.nz/data-visualisation.html#introduction-1)
+* [ggplot2](http://ggplot2.tidyverse.org/)
+* [ggplot2 reference](http://ggplot2.tidyverse.org/reference/)
 
 ### Slides and Video
   
