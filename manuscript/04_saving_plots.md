@@ -16,6 +16,6 @@
   
 {quiz, id: quiz_03_saving_plots}
   
-### Saving Plots
+### Saving Plots quiz
 
 {/quiz}

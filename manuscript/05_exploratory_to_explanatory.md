@@ -109,7 +109,7 @@ As you practice making plots in R, know that it's typical to struggle to figure 
   
 {quiz, id: quiz_05_exploratory_to_explanatory}
   
-### From Exploratory to Explanatory
+### From Exploratory to Explanatory quiz
   
 {choose-answers: 4}
 ? What is the goal of the title on your plot?

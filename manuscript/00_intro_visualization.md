@@ -117,6 +117,12 @@ A few things to keep in mind when making tables is that it's best to:
 
 ### Intro to Data Visualization quiz
 
+  
+? When you've spent a lot of time perfecting the details of your plot, what type of plot have you created?
+  
+a) exploratory
+B) explanatory
+
 {choose-answers: 4}
 ? Which plot is best when comparing numerical values from two pieces of information?
 
@@ -139,11 +145,11 @@ o) Network Diagram
 {choose-answers: 4}
 ? If half of your data set were comprised of men and half of females, what number should you put in the table to represent the percentage of females?
 
-C) 50 %
+C) 50%
 o) 0
-o) 49.879 %
-o) 50.0000 % 
-o) 100.00 % 
+o) 49.879%
+o) 50.0000% 
+o) 100.00% 
 o) NA
 
 {choose-answers: 4}
