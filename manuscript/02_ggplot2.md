@@ -247,7 +247,7 @@ o) ggplot() function call
 o) the geom you want to plot
 o) the variable(s) you want to plot
 
-{choose-answers: 4)
+{choose-answers: 4}
 ? Which geom would you specify to generate a scatterplot? 
 
 C) geom_point
@@ -259,7 +259,7 @@ o) geom_bar
 o) geom_blank
 o) geom_scatter
 
-{choose-answers: 4)
+{choose-answers: 4}
 ? Which geom would you specify if you wanted to know how many individuals in a data set fell into each level of a categorical variable?
 
 C) geom_bar
@@ -281,7 +281,7 @@ o) circles
 o) green
 o) triangles 
 
-{choose-answers: 4, points: 2)
+{choose-answers: 4, points: 2}
 ? What does the alpha argument change in the plot generated from this code?
 
 ```r
