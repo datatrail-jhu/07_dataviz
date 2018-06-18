@@ -58,17 +58,162 @@ Often, in an attempt to make differences between groups look larger than they ar
 
 #### Keep it simple
 
-Lastly, the goal of data visualization is to improve understanding of data. Sometimes complicated visualizations cannot be avoided; however, when possible, keep it simple. 
+The goal of data visualization is to improve understanding of data. Sometimes complicated visualizations cannot be avoided; however, when possible, keep it simple. 
 
 ![Here, the graphic does not immediately convey a main point. It's hard to interpret what each circle means or what the story of this graphic is supposed to me. Make sure in your graphics that your main point comes through](images/01_good_plots/01_dataviz_good_plots-9.png)
 
 ![Similarly, the intention of your graphic should never be to mislead and confuse. Unlike what was done here, be sure that your data visualizations improve viewers' understanding. Do not aim to confuse](images/01_good_plots/01_dataviz_good_plots-10.png)
+
+### What To Consider When Making Plots
+
+Having discussed some general guidelines, there are a number of questions you should ask yourself before making a plot. These have been nicely laid out in a [blog post](https://blog.datawrapper.de/better-charts/) from the wonderful team at [Chartable](https://blog.datawrapper.de/), [Datawrapper's](https://www.datawrapper.de/) blog. We will summarize them here and include a number of the images from their post. The post argues that there are three main questions you should ask any time you create a visual display of your data. We will discuss these three questions below and then step through the process of creating data displays in R.
+
+![Three Questions for Creating a Chart](images/02_plotsinR/02_dataviz_plotsinR-1.png)
+
+1. What's your point?
+2. How can you emphasize your point in your chart?
+3. What does your final chart show exactly?
+
+#### The Data We Want to Plot
+
+When discussing data visualization, it's always good to have an example to look at. For the example here, we'll use the same example [Lisa Charlotte Rost](https://twitter.com/lisacrost) used in her blog post. If you were interested in analyzing data that looked to assess the success of the iPhone, you would want to look at data to see how sales of iPhones have changed over time. You might, for example, start with a super basic plot like this:
+
+![iPhone Sales over time](images/02_plotsinR/02_dataviz_plotsinR-2.png)
+
+#### What's your point?
+
+Whenever you have data you're trying to plot, think about what you're actually trying to show. Once you've taken a look at your data, a good title for the plot can be helpful. Your title should **tell viewers what they'll see when they look at the plot**. 
+
+For the iPhone example, a reasonable headline would be **"iPhone more successful than all other Apple products." This tells us what others would expect to conclude from looking at the data in the figure. 
+
+![iPhone Sales over time with title](images/02_plotsinR/02_dataviz_plotsinR-3.png)
+
+#### How can you emphasize your point?
+
+We talked about it in the last lesson, but an incredibly important decision is that, choosing an appropriate chart for the type of data you have is very important. In the next section of this lesson, we'll discuss what type of data are appropriate for each type of plot in R; however, for now, we'll just focus on the iPhone data example. With this example, we'll discuss that you can emphasize your point by:
+* adding data
+* highlighting data with color
+* annotating your plot
+
+##### Adding data
+
+With our example data set, our title suggests that the iPhone has been Apple's most successful product. To make that claim, it would be really helpful for the plot to compare iPhone sales with other Apple products, say, the iPad or the iPod. By adding data about other Apple products over time, we can visualize just how successful the iPhone has been.
+
+![iPhone Sales over time vs other Apple Products](images/02_plotsinR/02_dataviz_plotsinR-4.png)
+
+##### Highlighting data with color
+
+Colors help direct viewers' eyes to the most important parts of the figure. Colors tell your readers where to focus their attention. Greys help to tell viewers where to focus less of their attention, while other colors help to highlight the point your trying to make.
+
+For example, in the iPhone example, we can de-emphasize the iPod and iPad data using grey lines, while really highlighting the huge amount of growth of the iPhone, by making its line red.
+
+![iPhone Sales, in red, over time vs other Apple Products, in grey](images/02_plotsinR/02_dataviz_plotsinR-5.png)
+
+##### Annotate your plot
+
+By highlighting parts of your plot with arrows or text on your plot, you can further draw viewers' attention to certain part of the plot. These are often details that are unnecessary in exploratory plots, where the goal is just to better understand the data, but are very helpful in explanatory plots, when you're trying to draw conclusions from the plot. 
+
+In the iPhone example, by highlighting when Apple announced the iPhone 4 in 2010 and adding text to explain that this was the first time that more iPhones were sold than iPods, viewers get a better understanding of the data.
+
+![iPhone sales over time annotated](images/02_plotsinR/02_dataviz_plotsinR-6.png)
+
+#### What does your final chart show?
+
+The first step of the process told viewers what they would see in the plot. The second step showed them. The third step makes it extra clear to viewers what they should be seeing. You explain to viewers what they should be seeing in the plot. This is where you are sure to add descriptions, legends, and the source of your data. Again, these are important pieces of creating a complete explanatory plot, but are not all necessary when making exploratory plots.
+
+##### Write precise descriptions 
+
+Whether it's a figure legend at the bottom of your plot, a subtitle explaining what data are plotted, or clear axes labels, text describing clearly what's going on in your plot is important. Here, the author of these plots decided to include a subtitle, "Worldwide sales of selected Apple products in million, by fiscal quarter, 2000 to 2014." She could have similarly included this information on the y-axis "Worldwide sales of Apple products (in millions)." While there are different approaches, including this information is critical.
+
+![iPhone sales over time annotated with description](images/02_plotsinR/02_dataviz_plotsinR-7.png)
+
+##### Add legends 
+
+When making a plot, be sure that viewers are able to easily determine what each line or point on a plot represents. Here, by adding text to label which line is iPhone, which is iPad, and which is iPod, viewers are quickly able to understand the plot
+
+![iPhone sales over time annotated with description and text labels](images/02_plotsinR/02_dataviz_plotsinR-8.png)
+
+##### Add a source
+
+When finalizing an explanatory plot, be sure to source your data. It's always best for readers to know where you obtained your data and what data are being used to create your plot. Transparency is important.
+
+![iPhone sales over time with source information](images/02_plotsinR/02_dataviz_plotsinR-9.png)
+
+The finalized plot is clear, the conclusion the viewer is to make is obvious, the data are well-labeled, and the plot is annotated.
+
+![Final blog post plot](images/02_plotsinR/02_dataviz_plotsinR-10.png)
+
+### Making The iPhone Plot in R
+
+Here, we'll introduce the code required to generate the plot used as an example in this lesson in R, but we won't walk through this code step-by-step until a later lesson. We include this now to make two points:
+
+1. Once you have access to the data, you **can** manipulate plots to look the way you want.
+2. It often takes a lot of somewhat complicated code to reproduce someone else's beautiful plot.
+
+As to the second point above, while the code here is rather complicated, you'll see that the code required to make basic plots in R is quite simple. Once you master the basics, you'll be able to start generating more and more complex plots, building on the basic building blocs that we'll go over in the next lesson!
+
+```r
+library(ggplot2)
+library(reshape2)
+library(zoo)
+library(directlabels)
+
+## after downloading data from https://blog.datawrapper.de/better-charts/
+## read data into R
+df <- read.csv("data-orzoM.csv",stringsAsFactors=FALSE)
+
+## get quarter year variable into a form R knows how to work with
+df$Year <- grep("Q",unlist(strsplit(as.character(df$Quarter),"\\s")), value=TRUE, invert=TRUE)
+df$Q <- grep("Q",unlist(strsplit(as.character(df$Quarter),"\\s")), value=TRUE, invert=FALSE)
+df$yrq <- paste(df$Year,df$Q, sep=" ")
+df$yrq <- as.yearqtr(df$yrq)
+
+## reshape data into long, tidy format
+df2 <- melt(df, id=c("Quarter","yrq","Year", "Q"))
+df2$value <- as.numeric(df2$value)
+
+## plot data as in blog post
+p <- ggplot(data = df2, aes(x=yrq,y=value, group=variable, color=variable)) +
+  geom_line(size = 1.5) +
+  scale_x_yearqtr(limits = c(2004, 2015),
+                  format = "%Y", breaks=c(2004:2015), expand = c(0.1, 0.01)) + 
+  scale_colour_manual(values = c("red3","grey","grey")) + 
+  scale_y_continuous(breaks = c(0,10,20,30,40,50,60,70,80)) + 
+  theme_bw() +
+  theme(  panel.grid.major.x = element_blank() ,
+          panel.grid.minor.x = element_blank() ,
+          axis.title.x = element_blank(),
+          axis.title.y = element_blank(),
+          axis.text = element_text(size=15),
+          plot.margin = unit(c(1,1,1,1), "lines"),
+          legend.position ="none",
+          plot.title = element_text(size = 22),
+          plot.subtitle = element_text(size = 15),
+          panel.border = element_blank()
+  ) +
+  geom_dl(aes(label = variable), 
+          method = list(c("last.points"),
+          aes(colour = "black"), 
+          cex = 1.3)
+  ) +
+  ggtitle("iPhone more successful than all other Apple products", subtitle="Worldwide sales of selected Apple products in million, by fiscal quarter, 2000 to 2014") +
+  annotate("rect", xmin = 2010, xmax = 2011, ymin = 0, ymax = Inf, fill = "grey", alpha = 0.2) +
+  annotate("text", x = 2010.5, y = 40, label = "After Apple announced \n the iPhone 4 in 2010, \n more iPhones were sold \n than iPods for the first time.", hjust = 1, size=6)
+
+## save plot as PNG  
+ggsave("iPhone_sales.png",p, width=12 , units=c("in"))
+```
+![Reproduced blog post plot](images/02_plotsinR/02_dataviz_plotsinR-12.png)
+
+While the plots are not identical, they are very similar and tell the same story. Making good plots in R is an important skill and can be learned using the `ggplot2` package in R. We'll discuss how to generate `ggplot2` plots in the next lesson!
 
 ### Additional Resources 
 
 To learn more about bad plotting techniques to avoid, you can check out Flowing Data's [Ugly Charts](http://flowingdata.com/category/visualization/ugly-visualization/) or [WTF Visualizations](http://viz.wtf/). 
 
 To see examples of beautiful data visualizations, check out Nathan Yau's [Flowing Data](http://flowingdata.com/) blog, the  [Uncharted](https://blog.datawrapper.de/) blog, or many analytical pieces published by [FiveThirtyEight](http://fivethirtyeight.com/).
+
+To read more about red-green color blindness, read more information [here](http://www.colourblindawareness.org/colour-blindness/)
 
 ### Slides and Video
 
@@ -81,32 +226,58 @@ To see examples of beautiful data visualizations, check out Nathan Yau's [Flowin
 
 ### Good Plots quiz
 
+{choose-answers: 4}
 ? Why is it important to start the y-axis at 0?
 
-A) to avoid misleading viewers
-b) it's the law
-c) it's mandatory when graphing in R
-d) to help color-blind viewers
-
+C) to avoid misleading viewers
+o) it's the law
+o) it's mandatory when graphing in R
+o) to help color-blind viewers
+o) it minimizes whitespace
+ 
+{choose-answers: 4}
 ? Which of these is something you should do when visualizing data?
 
-a) minimize label text size
-B) using contrasting colors for comparison
-c) assume whatever chart is made first is right
-d) exclude axes labels to save space
+C) using contrasting colors for comparison
+C) include axis labels
+C) minimize unnecessary whitespace
+o) minimize label text size
+o) assume whatever chart is made first is right
+o) exclude axes labels to save space
+o) only use red and green in your charts
+o) make sure text is small to highlight the data
 
+{choose-answers: 4}
 ? If a pie chart is made up of exactly two slices that appear similar in size, what is a reasonable value for one of those slices? 
 
-a) 2%
-B) 51%
-c) 10%
-d) 100%
+C) 51%
+C) 49%
+o) 2%
+o) 10%
+o) 100%
+o) 90%
+o) 4%
+o) 95%
 
+{choose-answers: 4}
 ? If a plot is getting too busy, what is a reasonable approach to take?
 
-A) Simplify the plot's design to highlight your main point.
-b) Use a lot of different colors to explain all the different points you're trying to make.
-c) Explain the complicated plot with a lot of text underneath the figure.
-d) Leave it as is. People will figure it out.
+C) Simplify the plot's design to highlight your main point.
+o) Use a lot of different colors to explain all the different points you're trying to make.
+o) Explain the complicated plot with a lot of text underneath the figure.
+o) Leave it as is. People will figure it out.
+o) Overlay as much text as possible to help explain the busy figure.
+o) Add an additional busy figure to help explain the first figure
+
+{choose-answers: 4}
+? In the iPhone plot example used in the lesson, what is one way the figure generator "emphasize the point"" in their chart?
+
+C) used red to highlight most important data on the plot 
+o) used red and green for comparison
+o) started the y-axis at 50 to make the point
+o) removed values from axes to just highlight the lines
+o) removed all text from the plot to just show the data
+o) chose to use a pie chart
+o) chose to only use grey, black, and white to keep it simple
 
 {/quiz}
