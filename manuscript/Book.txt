@@ -1,7 +1,7 @@
 00_intro_visualization.md
 01_good_plots.md
 02_ggplot2.md
-# 03_customization.md
+03_customization.md
 04_savingplots.md
 05_exploratory_to_explanatory.md
 06_datatables.md

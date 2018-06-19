@@ -45,7 +45,7 @@ Other Exploratory Plotting Examples:
 
 ### Explanatory Plots 
 
-These are data displays that aim to communicate insights to others. These are plots that you spend a lot of time making sure they're easily interpretable by an audience. General characteristics of explanatory plots:
+These are data displays that aim to **communicate insights to others**. These are plots that you spend a lot of time making sure they're easily interpretable by an audience. General characteristics of explanatory plots:
 
 * They take a while to make.
 * There are only a few of these for each project.
@@ -72,7 +72,7 @@ To do this, we'll use the "Davis" dataset which includes, height and weight info
 
 #### Histogram
 
-Histograms are helpful when you want to better understand what values you have in your data set for a single set of numbers. For example, if you had a dataset with information about many people, you may want to know how tall the people in your data set are. To quickly visualize this, you could use a histogram. Histograms let you know what range of values you have in your data set. For example, below you can see that in this data set, the height values range from around 50 to around 200 cm. The shape of the histogram also gives you information about the individuals in your dataset. The number of people at each height are also counted. So, the tallest bars show that there are about 40 people in the data set whose height is between 165 and 170 cm. Finally, you can quickly tell, at a glance that most people in this data set are at least 150 cm tall, but that there is at least one individually whose reported height is much lower. 
+Histograms are helpful when you want to **better understand what values you have in your data set for a single set of numbers**. For example, if you had a dataset with information about many people, you may want to know how tall the people in your data set are. To quickly visualize this, you could use a histogram. Histograms let you know what range of values you have in your data set. For example, below you can see that in this data set, the height values range from around 50 to around 200 cm. The shape of the histogram also gives you information about the individuals in your dataset. The number of people at each height are also counted. So, the tallest bars show that there are about 40 people in the data set whose height is between 165 and 170 cm. Finally, you can quickly tell, at a glance that most people in this data set are at least 150 cm tall, but that there is at least one individually whose reported height is much lower. 
 
 ![Histogram](images/00_intro_visualization/00_dataviz_intro_visualization-6.png) 
 
@@ -103,7 +103,8 @@ To interpret a boxplot, there are a few places where we'll want to focus our att
 
 ### Tables
 
-While we have focused on figures here so far, tables can be incredibly informative at a glance too. If you are looking to display summary numbers, a table can also visually display information. 
+While we have focused on figures here so far, tables can be incredibly informative at a glance too. If you are looking to display summary numbers, **a table can also visually display information**. 
+
 Using this same data set, we can use a table to get a quick breakdown of how many males and females there are in the data set and what percentage of each gender there is.
 
 A few things to keep in mind when making tables is that it's best to:

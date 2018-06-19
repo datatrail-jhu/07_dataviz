@@ -91,9 +91,11 @@ For the iPhone example, a reasonable headline would be **"iPhone more successful
 #### How can you emphasize your point?
 
 We talked about it in the last lesson, but an incredibly important decision is that, choosing an appropriate chart for the type of data you have is very important. In the next section of this lesson, we'll discuss what type of data are appropriate for each type of plot in R; however, for now, we'll just focus on the iPhone data example. With this example, we'll discuss that you can emphasize your point by:
+
 * adding data
 * highlighting data with color
 * annotating your plot
+
 
 ##### Adding data
 
@@ -149,6 +151,7 @@ Here, we'll introduce the code required to generate the plot used as an example 
 
 1. Once you have access to the data, you **can** manipulate plots to look the way you want.
 2. It often takes a lot of somewhat complicated code to reproduce someone else's beautiful plot.
+
 
 As to the second point above, while the code here is rather complicated, you'll see that the code required to make basic plots in R is quite simple. Once you master the basics, you'll be able to start generating more and more complex plots, building on the basic building blocs that we'll go over in the next lesson!
 
