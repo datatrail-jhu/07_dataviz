@@ -21,9 +21,11 @@ Good plots have a number of features. While not exhaustive, good plots have:
 3. Axes that are not misleading.
 4. Data that are displayed appropriately considering the type of data you have.
 
+
 More specifically, however, there are two general approaches to data visualization: exploratory plots and explanatory plots.
 
 #### Exploratory Plots
+
 These are **data displays to help you better understand and discover hidden patterns in the data** you're working with. These won't be the prettiest plots, but they will be incredibly helpful. Exploratory visualizations have a number of general characteristics:
 
 * They are made quickly.
@@ -95,8 +97,9 @@ The final basic plot we'll talk about here is the boxplot. Boxplots also summari
 To interpret a boxplot, there are a few places where we'll want to focus our attention. For each category, the horizontal line through the middle of the box corresponds to the median value for that group. So, here, we can say that the median, or most typical height for females is about 165 cm. For males, this value is higher, just under 180 cm. Outside of the colored boxes, there are dashed lines. The ends of these lines correspond to the typical range of values. Here, we can see that females tend to have heights between 150 and 180cm. Lastly, when individuals have values outside the typical range, a boxplot will show these individuals as circles. These circles are referred to as outliers.
 
 #### Resources to look at these and other types of plots:
-[R Graph Gallery](https://www.r-graph-gallery.com/)
-[Ferdio Data Visualization Catalog](http://datavizproject.com/)
+* [R Graph Gallery](https://www.r-graph-gallery.com/)
+* [Ferdio Data Visualization Catalog](http://datavizproject.com/)
+
 
 ### Tables
 
