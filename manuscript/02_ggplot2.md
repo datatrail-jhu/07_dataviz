@@ -298,3 +298,21 @@ o) only plots points of the most frequent level within clarity
 o) changes all the points to be rainbow colored
 
 {/quiz}
+
+
+{exercise, id: exercise_02_ggplot2}
+
+### DataCamp:  Data Visualization with gpplot2 (Part 1)
+
+{case-sensitive: false}
+? To get more practice with `ggplot2` plot generation go to the course [ Data Visualization with gpplot2 (Part 1)](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1) on DataCamp. Login and complete the entire course.
+
+Once you've completed the course, type "completed" in the box below.
+
+*Note*: This requires a DataCamp login, which costs money. As an exercise, this is not required to pass the course but it *will* help you get a better grasp on the concepts covered in these lessons.
+
+*Reminder*: Videos in DataCamp are essential to understanding the material. It's best not to skip over these videos!
+
+! completed
+
+{/exercise}

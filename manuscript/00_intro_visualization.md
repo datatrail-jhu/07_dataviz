@@ -22,6 +22,7 @@ Good plots have a number of features. While not exhaustive, good plots have:
 4. Data that are displayed appropriately considering the type of data you have.  
 
 
+
 More specifically, however, there are two general approaches to data visualization: exploratory plots and explanatory plots.
 
 #### Exploratory Plots

@@ -16,7 +16,7 @@ Both interactive and animated graphics can be generated in R. We'll cover the ba
 
 #### plotly
 
-plotly can be used to "easily translate `ggplot2` graphs to an interactive web-based version and/or create custom web-based visualizations directly from R." 
+plotly can be used to "easily translate `ggplot2` graphs to an interactive web-based version and/or create custom web-based visualizations directly from R." plotly is its own framework that has been implemented to be usable in R through the `plotly` package
 
 ##### plotly interactive graphics
 
