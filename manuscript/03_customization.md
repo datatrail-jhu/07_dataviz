@@ -21,7 +21,7 @@ ggplot(data = diamonds) +
 ```
 ![diamonds broken down by clarity](images/03_customization/03_dataviz_customization-2.png)
 
-Well that's a start since we see the breakdown, but all the bars are the same color. What if we adjusted color within aes?
+Well that's a start since we see the breakdown, but all the bars are the same color. What if we adjusted color within `aes()`?
 
 ```r
 ggplot(data = diamonds) + 
@@ -66,7 +66,7 @@ Now that we have some sense of which clarity is most common in our diamonds data
 
 What we've just generated is a **stacked bar chart**. It's a pretty good name for this type of chart as the bars fur cut are all stacked on top of one another. If you don't want a stacked bar chart you could use one of the other `position` options: `identity`, `fill`, or `dodge`.
 
-Returning to our question about proportion of each cut within each clarity group, we'll want to use `position = "fill"`. Building off of what we've already done, 
+Returning to our question about proportion of each cut within each clarity group, we'll want to use `position = "fill"`. Building off of what we've already done:
 
 ```r
 ggplot(data = diamonds) + 
@@ -328,6 +328,7 @@ In this lesson we've covered how to manually change the colors of your plot in R
 * [`ggthemes` package](https://cran.r-project.org/web/packages/ggthemes/vignettes/ggthemes.html) - [GitHub repo](https://github.com/jrnold/ggthemes)
 * [R4DS: Chapter 3](http://r4ds.had.co.nz/data-visualisation.html)
 * [R4DS: Chapter 18](http://r4ds.had.co.nz/graphics-for-communication.html)
+
 
 ### Slides and Video
   

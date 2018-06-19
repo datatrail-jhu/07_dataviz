@@ -74,6 +74,7 @@ Having discussed some general guidelines, there are a number of questions you sh
 2. How can you emphasize your point in your chart?
 3. What does your final chart show exactly?
 
+
 #### The Data We Want to Plot
 
 When discussing data visualization, it's always good to have an example to look at. For the example here, we'll use the same example [Lisa Charlotte Rost](https://twitter.com/lisacrost) used in her blog post. If you were interested in analyzing data that looked to assess the success of the iPhone, you would want to look at data to see how sales of iPhones have changed over time. You might, for example, start with a super basic plot like this:
@@ -217,6 +218,8 @@ To learn more about bad plotting techniques to avoid, you can check out Flowing 
 To see examples of beautiful data visualizations, check out Nathan Yau's [Flowing Data](http://flowingdata.com/) blog, the  [Chartable](https://blog.datawrapper.de/) blog, or many analytical pieces published by [FiveThirtyEight](http://fivethirtyeight.com/).
 
 To read more about red-green color blindness, read more information [here](http://www.colourblindawareness.org/colour-blindness/).
+
+To read more about Data Visualization and the goals of Data Visualization read Elijah Meek's [Data Visulatization Fast and Slow](https://medium.com/@Elijah_Meeks/data-visualization-fast-and-slow-d2653d4850b0) - links to the rest of the posts in this series are included there.
 
 ### Slides and Video
 

@@ -20,9 +20,10 @@ When you have an entire dataset, it's often nice to have a table that summarizes
 
 ![Sample summary tables](images/06_datatables/06_dataviz_datatables-2.png)
 
-#### Summarize dataset information 
+#### Summarize top results
 
 Tables are also helpful when you want to display information about the top results from an analysis (i.e. the top 10 best-selling books, the business that had the highest sales last year, etc.).
+
 For example, if you had information about 162,049 different flights that departed the Pacific Northwest in 2014 and wanted to know which destinations had the longest average delay for flights out of the Pacific Northwest, you could use a data table to display these results. At a glance from this table we can clearly see which airports had the longest delay in arrival time without .
 
 ![Top results table](images/06_datatables/06_dataviz_datatables-3.png)

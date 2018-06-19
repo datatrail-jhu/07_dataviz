@@ -15,9 +15,11 @@ Before we do that, let's take a glance at the data used to make this plot.
 ![data for iPhone plot](images/05_exploratory_to_explanatory/05_dataviz_exploratory_to_explanatory-2.png)
 
 The variables used to reproduce the blog post graph are:
-  * **yrq** - a variable for the year and quarter from which the sales of the Apple product was recorded
-* **variable** - which Apple Product we're talking about (iPhone, iPad, or iPod)
-* **value** - the sales for that Apple product in that year and quarter in millions of US dollars. NA means no data were available for that product in that year-quarter.
+
+* __yrq__ - a variable for the year and quarter from which the sales of the Apple product was recorded
+* __variable__ - which Apple Product we're talking about (iPhone, iPad, or iPod)
+* __value__ - the sales for that Apple product in that year and quarter in millions of US dollars. NA means no data were available for that product in that year-quarter.
+
 
 ### Exploratory Plot 
 
@@ -343,7 +345,7 @@ We point these out now not so you master each of these alterations, but rather s
 
 As we walked through this example, you saw that it can take a lot of code to generate a polished graph. As you practice making plots in R, know that it's typical to struggle to figure out how to make the plot look exactly the way you want. Google will help here and so will people on [stack overflow](https://stackoverflow.com/). Googling your specific question and looking for solutions in R that other people have already come up with is a great place to start whenever you're stuck trying to figure out something on a plot. Also, really great explanatory plots take time. It's ok to spend a lot of time making a single important plot that effectively communicates your point.  
 
-![It can take a lot of code](images/05_exploratory_to_explanatory/05_dataviz_exploratory_to_explanatory-19.png)
+![It can take a lot of code](images/05_exploratory_to_explanatory/05_dataviz_exploratory_to_explanatory-20.png)
 
 
 ### Slides and Video
