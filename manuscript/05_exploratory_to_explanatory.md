@@ -416,7 +416,7 @@ o) labels(caption = ""
 {/quiz}
 
 
-{exercise, id: exercise_03_customization}
+{exercise, id: exercise_05_exploratory_to_explanatory}
 
 ### DataCamp:  Introduction to the Tidyverse
 
