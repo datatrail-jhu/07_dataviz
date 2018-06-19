@@ -8,4 +8,4 @@
 07_tablesinR.md
 08_multiple_plots.md
 09_advanced_data_visualization.md
-# 10_dataviz_project.md
+10_dataviz_project.md
