@@ -82,4 +82,34 @@ Similar to above, the `height`, `width` can again be specified, as above. For jp
   
 ### Saving Plots quiz
 
+{choose-answers: 4}
+? Which function should you use to output images?
+
+C) ggsave()
+o) ggplot()
+o) save_images()
+o) save.pdf()
+o) save.png()
+o) make_image()
+
+{choose-answers: 4}
+? Which file format allows for multiple images to be saved to a single file?
+
+C) PDF
+o) PNG
+o) JPEG
+o) TIFF
+o) All of the above
+o) None of the above
+
+{choose-answers: 4}
+? Which file format is best if you want to edit the image in the future?
+
+C) TIFF
+o) PNG
+o) JPEG
+o) PDF
+o) All of the above
+o) None of the above
+
 {/quiz}
