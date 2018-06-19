@@ -116,8 +116,10 @@ gganimate(gg, "output.gif")
 
 
 ### Additional resources
+
 * [plotly](https://plotly-book.cpsievert.me/) documentation
 * [gganimate](https://github.com/dgrtwo/gganimate) documentation
+
 
 ### Slides and Video
   

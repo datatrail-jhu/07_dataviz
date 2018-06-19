@@ -43,7 +43,7 @@ For example, to increase the size of and overwrite the PNG image created above, 
 ggsave(plot = myplot, filename = "myplot.png", path = "figures/exploratory_figures", height = 9, width = 9, unit = c("in"))
 ```
 
-### Saving other plots
+### Alternative Approach
 
 As `ggsave()` is an incredibly simple function,, we recommend that you use that to generate images. However, there may be times where you run into trouble saving an image or see someone else has saved an image in a different way. In addition to `ggsave()`, there are a number of graphics devices that you *can* use to save plots as images. We recommend you use `ggsave()`; however we want you to additionally be aware of an alternative way to generate image files.  
 
