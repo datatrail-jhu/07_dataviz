@@ -19,15 +19,17 @@ Good plots have a number of features. While not exhaustive, good plots have:
 1. Clearly-labeled axes.
 2. Text that are large enough to see.
 3. Axes that are not misleading.
-5. Data that are displayed appropriately considering the type of data you have.
+4. Data that are displayed appropriately considering the type of data you have.
 
 More specifically, however, there are two general approaches to data visualization: exploratory plots and explanatory plots.
 
 #### Exploratory Plots
 These are **data displays to help you better understand and discover hidden patterns in the data** you're working with. These won't be the prettiest plots, but they will be incredibly helpful. Exploratory visualizations have a number of general characteristics:
+
 * They are made quickly.
 * You'll make a large number of them.
 * The axes and legends are cleaned up.
+
 
 Below we have a graph where the axes are labeled and general pattern can be determined. This is a great example of an exploratory plot. It lets you the analyst know what's going on in your data, but it isn't yet ready for a big presentation.
 
@@ -42,9 +44,11 @@ Other Exploratory Plotting Examples:
 ### Explanatory Plots 
 
 These are data displays that aim to communicate insights to others. These are plots that you spend a lot of time making sure they're easily interpretable by an audience. General characteristics of explanatory plots:
+
 * They take a while to make.
 * There are only a few of these for each project.
 * You've spent a lot of time making sure the colors, labels, and sizes are all perfect for your needs.
+
 
 Here we see  an improvement upon the exploratory plot we looked at previously. Here, the axis labels are more descriptive. All of the text is larger. The legend has been moved onto the plot. The points on the plot are larger. And, there is a title. All of these changes help to improve the plot, making it an explanatory plot that would be presentation-ready.
 
@@ -100,6 +104,7 @@ While we have focused on figures here so far, tables can be incredibly informati
 Using this same data set, we can use a table to get a quick breakdown of how many males and females there are in the data set and what percentage of each gender there is.
 
 A few things to keep in mind when making tables is that it's best to:
+
 * Limit the number of digits in the table
 * Include a caption
 * When possible, keep it simple.
