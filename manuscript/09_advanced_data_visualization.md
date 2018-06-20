@@ -130,7 +130,7 @@ gganimate(gg, "output.gif")
   
 {quiz, id: quiz_09_advanced_data_visualization}
   
-### Advanced Data Visualization
+### Advanced Data Visualization quiz
   
 ? What type of visualization allows the user to make changes to the plot by clicking on it?
   

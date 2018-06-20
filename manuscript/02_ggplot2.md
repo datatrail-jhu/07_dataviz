@@ -235,7 +235,7 @@ In this lesson, we've walked through the basics of generating plots in `ggplot2`
   
 {quiz, id: quiz_02_ggplot2}
   
-### Introduction to ggplot2
+### Introduction to ggplot2 quiz
 
 {choose-answers: 4}
 ? Which of these is NOT required when plotting in `ggplot2`?
