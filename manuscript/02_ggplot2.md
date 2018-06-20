@@ -228,7 +228,7 @@ In this lesson, we've walked through the basics of generating plots in `ggplot2`
 
 ### Slides and Video
   
-![Introduction to ggplot2](UPDATE LINK)
+![Introduction to ggplot2](https://www.youtube.com/watch?v=izl42eXE1ss)
   
 * [Slides](https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/edit?usp=sharing)
   

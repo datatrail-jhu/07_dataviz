@@ -99,7 +99,7 @@ With an idea of how to make a great explanatory table, you're ready to start pra
 
 ### Slides and Video
 
-![Data Tables](UPDATE LINK)
+![Data Tables](https://www.youtube.com/watch?v=JbZYSHI3Iek)
 
 * [Slides](https://docs.google.com/presentation/d/147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk/edit?usp=sharing)
 

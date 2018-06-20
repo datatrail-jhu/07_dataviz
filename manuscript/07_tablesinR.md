@@ -105,7 +105,7 @@ Similar to how we approached learning about making figures in R, we've demonstra
 
 ### Slides and Video
 
-![Tables in R](UPDATE LINK)
+![Tables in R](https://www.youtube.com/watch?v=tKEmKNNn2AI)
 
 * [Slides](https://docs.google.com/presentation/d/1vjyG1vibsmtXrPA1hs2HS3MfjsPMjRDEmBEsVlgkIxg/edit?usp=sharing)
 

@@ -350,7 +350,7 @@ As we walked through this example, you saw that it can take a lot of code to gen
 
 ### Slides and Video
   
-![Making Plots In R](UPDATE LINK)
+![Making Plots In R](https://www.youtube.com/watch?v=kLXtG0lSEE0)
   
  * [Slides](https://docs.google.com/presentation/d/1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI/edit?usp=sharing)
   

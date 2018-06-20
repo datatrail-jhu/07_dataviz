@@ -119,7 +119,7 @@ A few things to keep in mind when making tables is that it's best to:
 
 ### Slides and Video
 
-![Intro to Data Visualization](UPDATE LINK)
+![Intro to Data Visualization](https://www.youtube.com/watch?v=Z3hMTo6U-pg)
 
 * [Slides](https://docs.google.com/presentation/d/1MiYOmyqu6Et6mBVTS91gip8h-tids8Wo0JDlMfXULqE/edit?usp=sharing)
 

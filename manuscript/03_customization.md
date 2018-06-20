@@ -332,7 +332,7 @@ In this lesson we've covered how to manually change the colors of your plot in R
 
 ### Slides and Video
   
-![Customization in ggplot2](UPDATE LINK)
+![Customization in ggplot2](https://www.youtube.com/watch?v=gWpeeDvow1c)
   
  * [Slides](https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/edit?usp=sharing)
   

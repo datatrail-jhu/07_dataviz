@@ -112,7 +112,7 @@ gganimate(gg, "output.gif")
 
 ```
 
-![gganimiate gif](images/09_advanced_data_visualization/output.gif)
+![gganimiate gif](https://www.youtube.com/watch?v=BMVslCR35uQ)
 
 
 ### Additional resources
@@ -123,7 +123,7 @@ gganimate(gg, "output.gif")
 
 ### Slides and Video
   
-![Advanced Data Visualization](UPDATE LINK)
+![Advanced Data Visualization](https://www.youtube.com/watch?v=BMVslCR35uQ)
   
   * [Slides](https://docs.google.com/presentation/d/1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0/edit?usp=sharing)
   
