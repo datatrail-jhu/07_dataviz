@@ -34,7 +34,7 @@ Once the repository has been created, Click on `Clone or download` and copy the 
 
 **Note**: If you're stuck on this, these steps were covered in detail in an earlier course: [Version Control](https://leanpub.com/universities/courses/jhu/version-control). Refer to the materials in this course if you're stuck on this part of the project.
 
-## RStudio Cloud Setup
+### RStudio Cloud Setup
 
 - Go to the [Data Visualization Project Workspace on RStudio Cloud](ADD LINK) 
 - Click on the "Projects" tab at the top of the workspace
@@ -48,7 +48,7 @@ To start using version control, you'll want to clone the GitHub repository you j
 
 A new directory with the name of your GitHub repository should now be viewable in the Files tab of RStudio Cloud. You are now set up to track your project with git.
 
-## Data Science Project Setup
+### Data Science Project Setup
 
 As discussed previously, you'll want all your data science projects you be organized from the very beginning. Let's do that now!
 
@@ -74,24 +74,24 @@ Once the .Rmd document is in the correct folder, you'll want to **change the aut
 
 **Note**: If you're stuck on this, these steps were covered in detail in an earlier course: [Organizing Data Science Projects](https://leanpub.com/universities/courses/jhu/organizingdatascienceprojects). Refer to the materials in this course if you're stuck on this part of the project.
 
-## Pushing to GitHub
+### Pushing to GitHub
 
 You'll want to save changes to your project regularly by pushing them to GitHub. Now that you've got your file structure set up and have added a code file (.Rmd) and two raw data files (.csv), it's a good time to stage, commit, and push these changes to GitHub. Do so now, and then take a long on GitHub to see the changes on their website!
 
 **Note**: If you're stuck on this, these steps were covered in detail in an earlier course: [Version Control](https://leanpub.com/universities/courses/jhu/version-control). Refer to the materials in this course if you're stuck on this part of the project.
 
-## Part 1: Exploratory Data Visualization
+### Part 1: Exploratory Data Visualization
 
-The first part of the project will guide you through a few data wrangling steps to get the data in a usable format before generating a number of exploratory plots.
+The first part of the project will guide you through a few steps to read the data in and explore the data. After you have a sense of what data are included in the dataset, you'll generate a number of exploratory plots.
 
-### The Data
+#### The Data
 
 The data we'll be using for this part of the project were downloaded from [kaggle](https://www.kaggle.com/aaronschlegel/seattle-pet-licenses/data), and include information about "pet licenses issued by the Seattle Animal Shelter between 2005 and early 2017." We'll be exploring these data and generating a few exploratory plots in the first part of the project.
 
 To load the data in, run the code in the `pet-data` code chunk to create an object called `pets`. 
 
 
-### Explore the Data
+#### Explore the Data
 
 Once the data have been read in, explore the data, adding your code to `dataviz_project.Rmd`, and then answer the following questions:
 
@@ -120,11 +120,11 @@ o) Livestock
 Now that you have a handle on the data, let's start to generate some exploratory plots!
 
 
-### Visualize the Data
+#### Visualize the Data
 
 To visualize the data, we'll first guide you through a few code chunks that have partial code. After walking through these code chunks, you'll be prompted 
 
-#### Bar Chart: `pet-barchart`
+##### Bar Chart: `pet-barchart`
 
 Move on to the code chunk `visualize-pets`.
 
@@ -155,7 +155,7 @@ o) 40,000
 o) 100,000
 o) 100
 
-#### Cat Table: `pet-cat-table`
+##### Cat Table: `pet-cat-table`
 
 After generating this first bar chart, move onto the code chunk `pet-cat-table`. Here you'll see the following partial code:
 
@@ -176,7 +176,7 @@ Here, you will need to replace `DATASET`, `"SPECIES"`, and `VARIABLE` (in two pl
 
 ! Lucy
 
-#### Dog Table: `pet-dog-table`
+##### Dog Table: `pet-dog-table`
 
 Having successfully generated this table, move onto the `pet-dog-table` code chunk. There is no code in here. You'll need to put all the necessary code in this code chunk! Here, the goal is to create a similar table to what we just created; however, this should contain the 10 most frequent dog names, rather than cat names.
 
@@ -185,7 +185,7 @@ Having successfully generated this table, move onto the `pet-dog-table` code chu
 
 ! Lucy
 
-#### Line Chart: `pet-linechart`
+##### Line Chart: `pet-linechart`
 
 The last guided exploratory visualization you'll see is in the code chunk `pet-linechart`. Here, the code to create two new columns has been provided in full. You'll use the column `ym`, which creates a "year-month" variable, to generate your plot:
 
@@ -218,24 +218,26 @@ pets %>%
 
 ! geom_line
 
-? In what year do se see a huge jump in the number of pet licenses?
+? In what year do you see a huge jump in the number of pet licenses?
 
 ! 2015
 
-#### Create Your Own Exploratory Plot: `pet-plot`
+##### Create Your Own Exploratory Plot: `pet-plot`
 
 After successfully generating two figures and two tables, it's time for you to generate your own exploratory plot. Explore the data and generate an additional exploratory plot that helps you better understand the data in this dataset. Included the code for this in the `pet-plot` code chunk.
 
-## Pushing to GitHub
+### Pushing to GitHub
 
 You'll want to save changes to your project regularly by pushing them to GitHub. Now that you've finished Part 1 of this project (yay!), it's a good time to stage, commit, and push these changes to GitHub. Do so now, and then take a long on GitHub to see the changes on their website!
 
 **Note**: If you're stuck on this, these steps were covered in detail in an earlier course: [Version Control](https://leanpub.com/universities/courses/jhu/version-control). Refer to the materials in this course if you're stuck on this part of the project.
 
 
-## Part 2: Explanatory Data Visualization
+### Part 2: Explanatory Data Visualization
 
-### The Data
+In the second part of the project, you'll work to generate an explanatory plot. Building on what you've done above, here, we'll again use `ggplot2`; however, we'll focus on the details in the appearance of the plot we generate to ensure that we're generating plots that effectively communicate the point we're trying to make to others.
+
+#### The Data
 
 The data used in this part of the project were dowloaded from [FiveThirtyEight](https://data.fivethirtyeight.com/) - `steak-survey`.  They were originally used in the article: [How Americans Like Their Steak](https://fivethirtyeight.com/features/how-americans-like-their-steak/). The goal of this part of the project will be to recreate the data visualization used in this article, which is re-printed here:
 
@@ -243,7 +245,7 @@ The data used in this part of the project were dowloaded from [FiveThirtyEight](
 
 To get started, Run the code in the `meat-data` code chunk to read the survey data into RStudio Cloud.
 
-### Explore the Data
+#### Explore the Data
 
 Once the data have been read in, explore the data. Add the code you use to explore the data to the `meat-explore` code chunk in dataviz_project.Rmd, and answer the following questions :
 
@@ -273,7 +275,7 @@ b) 3
 C) 5
 d) 7
 
-### Wrangle the Data
+#### Wrangle the Data
 
 Run the code in the `meat-wrangle` code chunk and answer the following questions:
 
@@ -317,7 +319,7 @@ o) The number of people who prefer each each level of steak cut
 o) The proportion of people who prefer each each level of steak cut
 
 
-### Visualize the Data
+#### Visualize the Data
 
 To generate an explanatory figure, some of the code you'll need has been entered into the `meat-visualize` code chunk. Work through this code line by line, replacing each `function_name` with the appropriate function to accomplish what the comment above the line states. 
 
@@ -343,7 +345,7 @@ p <- ggplot(pref) +
                 width = 0.7)
 ```
 
-I would then run that code. Note that we're assigning the plot to the object `p`. This means that to view the plot in the "Plots" tab you'll have to type `p` into the Console after you run the code above.
+I would then run that code. Note that we're assigning the plot to the object `p`. This means that to view the plot in the "Plots" tab you'll have to type `p` into the Console and hit enter after you run the code above to generate the plot.
 
 Work through this code layer by layer determining what `function_name` should be in each line of code. `function_name` should be the only thing you have to change in this code.
 
@@ -375,7 +377,7 @@ o) A legend containing proportion of respondents would be present to the right o
 o) A legend containing proportion of respondents would be present to the left of the plot 
 o) A legend containing proportion of respondents would be present along the top of the plot
 
-### Save the Plot
+#### Save the Plot
 
 Once you've worked through this code chunk and have a plot that looks very similar to the plot in the original publication (and that you see above), you'll want to use `ggsave()` to save this plot to figures/explanatory_figures. Save this figure as "steak_R.png". Do this using the partial code in the code chunk `save-plot`. 
 
@@ -383,7 +385,7 @@ Once you've worked through this code chunk and have a plot that looks very simil
 
 Now, you'll want to generate an explanatory figure on your own. Use these data to generate a second explanatory plot. It should tell us something new about the data. You can use any column in the data frame. But, make sure that the figure is something that could be presented or shown to a boss. Add this code to `meat-plot`
 
-### Save Your Explanatory plot
+#### Save Your Explanatory plot
 
 After you're happy with your very own explanatory plot, use `ggsave()` again to save this plot to figures/explanatory_figures. Be sure to use a filename other than "steak_R.png". You don't want to overwrite the plot you've already saved. Add this code to the code chunk `save-meat-plot.`
 
