@@ -36,7 +36,7 @@ Once the repository has been created, Click on `Clone or download` and copy the 
 
 ### RStudio Cloud Setup
 
-- Go to the [Data Visualization Project Workspace on RStudio Cloud](ADD LINK) 
+- Go to the [Data Visualization Project Workspace on RStudio Cloud](https://rstudio.cloud/spaces/2319/join?access_code=XZ%2FPFEFh1PM4J%2BWqTgM8ko0tMPQbfEuAOJyihLah) 
 - Click on the "Projects" tab at the top of the workspace
 - Make a copy of the project: `dataviz_project`
 
@@ -68,7 +68,7 @@ Once in the correct directory, use `mkdir` in the terminal to create folders wit
 - products/
   - writing/
 
-Now that your directories are set up you'll want to use the Terminal (or 'More' drop-down menu in the Files tab) to move (`mv`) the `dataviz_project.Rmd ` file into code/raw_code and the two .csv files in data/raw_data into the data/raw_data directory in *your* version controlled repository. This ensures that your code file and raw data are in the correct directory.
+Now that your directories are set up you'll want to use the Terminal (or 'More' drop-down menu in the Files tab) to **move (`mv`) the `dataviz_project.Rmd ` file into code/raw_code** and the **two .csv files in data/raw_data into the data/raw_data directory in *your* version controlled repository**. This ensures that your code file and raw data are in the correct directory.
 
 Once the .Rmd document is in the correct folder, you'll want to **change the author of this document** to your name at the top of the .Rmd document (in the YAML). Save this change before moving to the next step.
 
@@ -84,16 +84,17 @@ You'll want to save changes to your project regularly by pushing them to GitHub.
 
 The first part of the project will guide you through a few steps to read the data in and explore the data. After you have a sense of what data are included in the dataset, you'll generate a number of exploratory plots.
 
+To get started, first run the code in the `setup` code chunk. This will install and load all packages you'll need to complete this project.
+
 #### The Data
 
 The data we'll be using for this part of the project were downloaded from [kaggle](https://www.kaggle.com/aaronschlegel/seattle-pet-licenses/data), and include information about "pet licenses issued by the Seattle Animal Shelter between 2005 and early 2017." We'll be exploring these data and generating a few exploratory plots in the first part of the project.
 
-To load the data in, run the code in the `pet-data` code chunk to create an object called `pets`. 
-
+To load the data in, **run the code in the `pet-data` code chunk** to create an object called `pets`. 
 
 #### Explore the Data
 
-Once the data have been read in, explore the data, adding your code to `dataviz_project.Rmd`, and then answer the following questions:
+Once the data have been read in, **explore the data**, **adding your code to `dataviz_project.Rmd`**, and then **answer the following questions**:
 
 ? How many pet licenses are included in the dataset?
 
@@ -119,14 +120,13 @@ o) Livestock
 
 Now that you have a handle on the data, let's start to generate some exploratory plots!
 
-
 #### Visualize the Data
 
-To visualize the data, we'll first guide you through a few code chunks that have partial code. After walking through these code chunks, you'll be prompted 
+To visualize the data, we'll first guide you through a few code chunks that have partial code. After walking through these code chunks, you'll be prompted to write code to generate your own exploratory plot!
 
 ##### Bar Chart: `pet-barchart`
 
-Move on to the code chunk `visualize-pets`.
+Start in the code chunk `visualize-pets`.
 
 Here you will see comments with partial code underneath of them. For example, the first plot you'll want to generate will be using the comment  from the partial code: 
 
@@ -136,9 +136,11 @@ Here you will see comments with partial code underneath of them. For example, th
 ggplot(DATASET) +
   geom_bar(aes(x=VARIABLE))
 ```
-Here, you'll have to change `DATASET` and `VARIABLE` in the code to the appropriate dataset and variable name in order to generate an exploratory plot. 
+Here, you'll have to **change `DATASET` and `VARIABLE` in the code** to the appropriate dataset and variable name in order to generate an exploratory plot. We'll want species name along the x and a count of how many are in each species along the y.
 
-Feel free to customize your plots further using what you've learned about `ggplot2`. 
+Feel free to customize your plots further using what you've learned about `ggplot2`!
+
+After generating this figure, you'll be able to **answer the following questions**:
 
 ? Are there more dogs or cat licenses in this datset?
 
@@ -169,7 +171,7 @@ DATASET %>%
   top_n(n=10) %>%
   kable(., caption = "Top 10 Cat Names in Seattle")
 ```
-Here, you will need to replace `DATASET`, `"SPECIES"`, and `VARIABLE` (in two places) in order to get this code to run. Your table at the end should have information about the top 10 most frequent cat names
+Here, you will need to **replace `DATASET`, `"SPECIES"`, and `VARIABLE` (in two places)** in order to get this code to run. Your table at the end should have information about the top 10 most frequent cat names
 
 {case-sensitive: false}
 ? What is the most common cat name?
@@ -178,7 +180,7 @@ Here, you will need to replace `DATASET`, `"SPECIES"`, and `VARIABLE` (in two pl
 
 ##### Dog Table: `pet-dog-table`
 
-Having successfully generated this table, move onto the `pet-dog-table` code chunk. There is no code in here. You'll need to put all the necessary code in this code chunk! Here, the goal is to create a similar table to what we just created; however, this should contain the 10 most frequent dog names, rather than cat names.
+Having successfully generated this table, move onto the `pet-dog-table` code chunk. *There is no code in here*. You'll need to **put all the necessary code in this code chunk**! Here, the goal is to create a similar table to what we just created; however, this should contain the 10 most frequent *dog* names, rather than cat names.
 
 {case-sensitive: false}
 ? What is the most common dog name?
@@ -187,9 +189,9 @@ Having successfully generated this table, move onto the `pet-dog-table` code chu
 
 ##### Line Chart: `pet-linechart`
 
-The last guided exploratory visualization you'll see is in the code chunk `pet-linechart`. Here, the code to create two new columns has been provided in full. You'll use the column `ym`, which creates a "year-month" variable, to generate your plot:
+The last guided exploratory visualization you'll see is in the code chunk `pet-linechart`. Here, the code to create two new columns has been provided in full. You'll use the column `ym`, which creates a "year-month" variable, to generate your plot in just a second.
 
-You will, however, have to edit the partial code after `## how the number of licenses recorded has changed over time`. Here, you'll need to add the appropriate function_names to accomplish what is stated in the comment above, and you'll need to fill in the appropriate variable wherever you see `VARIABLE`. Finally, where you see `geom_GEOM`, change "GEOM" to the appropriate geom specified in the comment above.
+You will, however, have to **edit the partial code after `## how the number of licenses recorded has changed over time`**. Here, you'll need to **add the appropriate function_names to accomplish what is stated in the comment above the missing function name**. Additionally, you'll need to **fill in the appropriate variable wherever you see `VARIABLE`**. Finally, where you see `geom_GEOM`, **change "GEOM" to the appropriate geom specified in the comment above**.
  
 ```r
 ## add date and ym columns
@@ -210,6 +212,9 @@ pets %>%
   xlab("") + 
   ylab("Number of licenses")
 ```
+
+After figuring out the missing pieces in the code and generating the plot, you'll be able to **answer the following questions**:
+
 ? What does the function `ymd_hms()` accomplish?
 
 ! Converts `license_issue_date` to a date-time object
@@ -224,11 +229,11 @@ pets %>%
 
 ##### Create Your Own Exploratory Plot: `pet-plot`
 
-After successfully generating two figures and two tables, it's time for you to generate your own exploratory plot. Explore the data and generate an additional exploratory plot that helps you better understand the data in this dataset. Included the code for this in the `pet-plot` code chunk.
+After successfully generating two figures and two tables, it's time for you to **generate your own exploratory plot**! Explore the data and generate an additional exploratory plot that helps you better understand the data in this dataset. Include the code for this in the `pet-plot` code chunk.
 
 ### Pushing to GitHub
 
-You'll want to save changes to your project regularly by pushing them to GitHub. Now that you've finished Part 1 of this project (yay!), it's a good time to stage, commit, and push these changes to GitHub. Do so now, and then take a long on GitHub to see the changes on their website!
+You'll want to save changes to your project regularly by **pushing them to GitHub**. Now that you've finished Part 1 of this project (yay!), it's a good time to stage, commit, and push these changes to GitHub. Do so now, and then take a long on GitHub to see the changes on their website!
 
 **Note**: If you're stuck on this, these steps were covered in detail in an earlier course: [Version Control](https://leanpub.com/universities/courses/jhu/version-control). Refer to the materials in this course if you're stuck on this part of the project.
 
@@ -243,11 +248,11 @@ The data used in this part of the project were dowloaded from [FiveThirtyEight](
 
 ![steak survey data visualization from fivethirtyeight.com](images/10_dataviz_project/steak.png)
 
-To get started, Run the code in the `meat-data` code chunk to read the survey data into RStudio Cloud.
+To get started, **run the code in the `meat-data` code chunk** to read the survey data into RStudio Cloud.
 
 #### Explore the Data
 
-Once the data have been read in, explore the data. Add the code you use to explore the data to the `meat-explore` code chunk in dataviz_project.Rmd, and answer the following questions :
+Once the data have been read in, **explore the data**. **Add the code you use** to explore the data to the `meat-explore` code chunk in dataviz_project.Rmd, and **answer the following questions**:
 
 ? How many people participated in the survey?
 
@@ -277,7 +282,7 @@ d) 7
 
 #### Wrangle the Data
 
-Run the code in the `meat-wrangle` code chunk and answer the following questions:
+**Run the code in the `meat-wrangle` code chunk** to get the data in the right format for you to generate the plot. Once you've run the code, **answer the following questions**:
 
 {choose-answers: 4}
 ? What does the code within the `mutate()` function accomplish in this code chunk?
@@ -321,7 +326,7 @@ o) The proportion of people who prefer each each level of steak cut
 
 #### Visualize the Data
 
-To generate an explanatory figure, some of the code you'll need has been entered into the `meat-visualize` code chunk. Work through this code line by line, replacing each `function_name` with the appropriate function to accomplish what the comment above the line states. 
+To generate an explanatory figure, *some* of the code you'll need has been entered into the `meat-visualize` code chunk. Work through this code line by line, **replacing each `function_name` with the appropriate function to accomplish what the comment above the line states**. 
 
 For example, the first part of this code chunk contains the following partial code:
 
@@ -334,7 +339,7 @@ p <- ggplot(pref) +
                 width = 0.7)
 ```
 
-Here, the comment says we want to `specify you want to generate a bar chart`. This says to me that I'll want to change `function_name` to `geom_bar`, so that the code looks like this:
+Here, the comment says we want to `## specify you want to generate a bar chart`. This says to me that I'll want to change `function_name` to `geom_bar`, so that the code looks like this:
 
 ```r
 ## generate the plot 
@@ -345,9 +350,11 @@ p <- ggplot(pref) +
                 width = 0.7)
 ```
 
-I would then run that code. Note that we're assigning the plot to the object `p`. This means that to view the plot in the "Plots" tab you'll have to type `p` into the Console and hit enter after you run the code above to generate the plot.
+After determining what function I need, I would then **run that portion of the code** (what you see above). 
 
-Work through this code layer by layer determining what `function_name` should be in each line of code. `function_name` should be the only thing you have to change in this code.
+Note that we're assigning the plot to the object `p`. This means that to view the plot in the "Plots" tab you'll have to type `p` into the Console and hit enter after you run the code above. This will display the plot in the "Plots" tab of RStudio Cloud.
+
+**Work through this code layer by layer** determining what `function_name` should be in each line of code. Note: **`function_name` should be the only thing you have to change in this code**.
 
 ? What function did you use to specify the colors of the bars in your bar chart?
 
@@ -379,15 +386,17 @@ o) A legend containing proportion of respondents would be present along the top 
 
 #### Save the Plot
 
-Once you've worked through this code chunk and have a plot that looks very similar to the plot in the original publication (and that you see above), you'll want to use `ggsave()` to save this plot to figures/explanatory_figures. Save this figure as "steak_R.png". Do this using the partial code in the code chunk `save-plot`. 
+Once you've worked through this code chunk and have a plot that looks very similar to the plot in the original publication (and that you see above), you'll want to use `ggsave()` to **save this plot to figures/explanatory_figures**. Save this figure as "steak_R.png". Do this using the partial code in the code chunk `save-plot`. 
 
 #### Create Your Own Exploratory Plot: `meat-plot`
 
-Now, you'll want to generate an explanatory figure on your own. Use these data to generate a second explanatory plot. It should tell us something new about the data. You can use any column in the data frame. But, make sure that the figure is something that could be presented or shown to a boss. Add this code to `meat-plot`
+Now, you'll want to **generate an explanatory figure on your own**. Use these data to generate a second explanatory plot. It should tell us something new about the data. You can use any column in the data frame. But, make sure that the figure is something that could be presented or shown to a boss. **Add this code to `meat-plot`**.
+
+A quick reminder, generating plots can take a while. Be patient as you make mistakes. [Google](google.com) and [StackOverlow](stackoverflow.com) are your friends - use them when you're stuck!
 
 #### Save Your Explanatory plot
 
-After you're happy with your very own explanatory plot, use `ggsave()` again to save this plot to figures/explanatory_figures. Be sure to use a filename other than "steak_R.png". You don't want to overwrite the plot you've already saved. Add this code to the code chunk `save-meat-plot.`
+After you're happy with your very own explanatory plot, use `ggsave()` again to **save this plot to figures/explanatory_figures**. Be sure to use a filename other than "steak_R.png". You don't want to overwrite the plot you've already saved. **Add this code to the code chunk `save-meat-plot`.**
 
 ### Add Markdown Text to .Rmd
 
@@ -397,25 +406,25 @@ Before finalizing your project you'll want be sure there are **comments in your 
 
 ### Knit your R Markdown Document
 
-Last but not least, you'll want to Knit your .Rmd document into an HTML document. If you get an error, take a look at what the error says and edit your .Rmd document. Then, try to Knit again! Troubleshooting these error messages will teach you a lot about coding in R.
+Last but not least, you'll want to **Knit your .Rmd document into an HTML document**. If you get an error, take a look at what the error says and edit your .Rmd document. Then, try to Knit again! Troubleshooting these error messages will teach you a lot about coding in R.
 
 ### A Few Final Checks
 
 A complete project should have:
 
 - **Exploratory Analysis**
-  - 3 plots (two guided ; one on your own)
-  - 2 tables (one guided ; one on your own
+    - 3 plots (two guided ; one on your own)
+    - 2 tables (one guided ; one on your own)
 - **Explanatory Analysis**
-  - 2 plots (one guided ; one on your own)
-  - saved to figures/explanatory_figures
+    - 2 plots (one guided ; one on your own)
+    - saved to figures/explanatory_figures
 - Markdown text explaining your project
 - Comments in your code chunk
 - Answered all questions throughout this exercise
 
 ### Final `push` to GitHub
 
-Now that you've finalized your project, you'll do one final push to GitHub. add, commit, and push your work to GitHub. Navigate to your GitHub repository, and answer the final question below! 
+Now that you've finalized your project, you'll do one final **push to GitHub**. add, commit, and push your work to GitHub. Navigate to your GitHub repository, and answer the final question below! 
 
 **Note**: If you're stuck on this, these steps were covered in detail in an earlier course: [Version Control](https://leanpub.com/universities/courses/jhu/version-control). Refer to the materials in this course if you're stuck on this part of the project.
 
