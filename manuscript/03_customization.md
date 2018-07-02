@@ -406,30 +406,10 @@ o) axis.text = element_text(text = "bold")
 ### DataCamp:  Data Visualization with gpplot2 (Part 2)
 
 {case-sensitive: false}
-? To get more practice with `ggplot2` plot generation go to the course [ Data Visualization with gpplot2 (Part 2)](https://www.datacamp.com/courses/data-visualization-with-ggplot2-2) on DataCamp. Login and complete the second and third chapters of the course.
+? To get more practice with `ggplot2` plot generation and customication go to the course [ Data Visualization with gpplot2 (Part 2)](https://www.datacamp.com/courses/data-visualization-with-ggplot2-2) on DataCamp. Login and complete the second and third chapters of the course.
 
 - Coordinates and Facets
 - Themes
-
-Once you've completed the these two chapters, type "completed" in the box below.
-
-*Note*: This requires a DataCamp login, which costs money. As an exercise, this is not required to pass the course but it *will* help you get a better grasp on the concepts covered in these lessons.
-
-*Reminder*: Videos in DataCamp are essential to understanding the material. It's best not to skip over these videos!
-
-! completed
-
-{/exercise}
-
-{exercise, id: exercise_03_case_study}
-
-### DataCamp:  Exploratory Data Analysis in R: Case Study
-
-{case-sensitive: false}
-? To get more practice with data wrangling and `ggplot2` plot generation go to the Data Camp course [Exploratory Data Analysis in R: Case Study](https://www.datacamp.com/courses/exploratory-data-analysis-in-r-case-study). Login and complete the first and second chapters of the course.
-
-- Data cleaning and summarizing with dplyr
-- Data visualization with ggplot2
 
 Once you've completed the these two chapters, type "completed" in the box below.
 

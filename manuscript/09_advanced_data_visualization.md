@@ -163,5 +163,20 @@ d) incorrectly formatted
 
 {/quiz}
 
+{exercise, id: exercise_09_tidyverse}
 
+### DataCamp:  Introduction to the Tidyverse
+
+{case-sensitive: false}
+? To get more practice with tidying and visualizing data, go to the course [Introduction to the Tidyverse](https://www.datacamp.com/courses/introduction-to-the-tidyverse) on DataCamp. Login and complete the entire course.
+
+Once you've completed this course, type "completed" in the box below.
+
+*Note*: This requires a DataCamp login, which costs money. As an exercise, this is not required to pass the course but it *will* help you get a better grasp on the concepts covered in these lessons.
+
+*Reminder*: Videos in DataCamp are essential to understanding the material. It's best not to skip over these videos!
+
+! completed
+
+{/exercise}
 

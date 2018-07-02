@@ -305,7 +305,7 @@ o) changes all the points to be rainbow colored
 ### DataCamp:  Data Visualization with gpplot2 (Part 1)
 
 {case-sensitive: false}
-? To get more practice with `ggplot2` plot generation go to the course [ Data Visualization with gpplot2 (Part 1)](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1) on DataCamp. Login and complete the entire course.
+? To get more practice with `ggplot2` plot generation go to the course [Data Visualization with gpplot2 (Part 1)](https://www.datacamp.com/courses/data-visualization-with-ggplot2-1) on DataCamp. Login and complete the entire course.
 
 Once you've completed the course, type "completed" in the box below.
 
