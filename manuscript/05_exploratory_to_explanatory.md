@@ -421,13 +421,9 @@ o) labels(caption = ""
 ### DataCamp:  Introduction to the Tidyverse
 
 {case-sensitive: false}
-? To get more practice with data wrangling and plotting using `ggplot2`, go to the course [Introduction to the Tidyverse](https://www.datacamp.com/courses/introduction-to-the-tidyverse) on DataCamp. Login and complete the second through fourth chapters in this course. (Note: If you haven't yet completed Chapter 1 in a previous exercise, you may want to complete the first chapter as well):
+? To get more practice with data wrangling and plotting using `ggplot2`, go to the course [Introduction to the Tidyverse](https://www.datacamp.com/courses/introduction-to-the-tidyverse) on DataCamp. Login and complete the entire course.
 
-- Data visualization
-- Grouping and summarizing
-- Types of visualizations
-
-Once you've completed the final three chapters in this course, type "completed" in the box below.
+Once you've completed this course course, type "completed" in the box below.
 
 *Note*: This requires a DataCamp login, which costs money. As an exercise, this is not required to pass the course but it *will* help you get a better grasp on the concepts covered in these lessons.
 
