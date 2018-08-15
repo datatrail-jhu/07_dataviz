@@ -431,7 +431,7 @@ Now that you've finalized your project, you'll do one final **push to GitHub**. 
 
 ? Submit the URL to your `dataviz_project` GitHub repository below.
 
-! dataviz_project
+! /(https:\/\/github.com.+\/dataviz_project)/i
 
 **Congrats on finishing your Data Visualization Project!!**
 
