@@ -36,7 +36,7 @@ Once the repository has been created, Click on `Clone or download` and copy the 
 
 ### RStudio Cloud Setup
 
-- Go to the [Data Visualization Project Workspace on RStudio Cloud](https://rstudio.cloud/spaces/2319/join?access_code=XZ%2FPFEFh1PM4J%2BWqTgM8ko0tMPQbfEuAOJyihLah) 
+- - Go to the [Chromebook Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/3919/join?access_code=RUUQ%2BeEgKea0oMF7EJy4UePldyBBMu7d0amv2KFC)
 - Click on the "Projects" tab at the top of the workspace
 - Make a copy of the project: `dataviz_project`
 
