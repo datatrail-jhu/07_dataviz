@@ -111,7 +111,7 @@ ggplot(data = diamonds) +
 
  ![`labs()` adds helpful tittles, subtitles, and captions](images/03_customization/03_dataviz_customization-9.png)
  
- #### Axis labels
+#### Axis labels
  
 You may have noticed that our y-axis label says "count", but it's not actually a count anymore. In reality, it's a proportion. Having appropriately labeled axes is *so important*. Otherwise, viewers won't know what's being plotted. So, we should really fix that now using the `ylab()` function. Note: we won't be changing the x-axis label, but if you were interested in doing so, you would use `xlab("label") `.
 
