@@ -423,6 +423,11 @@ o) axis.text = element_text(text = "bold")
 
 ! /.*[kQaq||G21y||osGJ||unnD||5Hzf||z44s||pa3m||DuUx||xmMN||uPbf].*/i
 
+{points:3}
+? Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L03 Customization in ggplot2 Q06 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
+
+! /.*[Jy9u||GA0k||KTVW||ic2H||fF3v||ZdoQ||n1Jz||06vY||w2iB||TXW8].*/i
+
 {/quiz}
 
 
