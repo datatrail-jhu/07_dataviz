@@ -233,16 +233,17 @@ To read more about Data Visualization and the goals of Data Visualization read E
 ### Good Plots quiz
 
 {choose-answers: 4}
-? Why is it important to start the y-axis at 0?
+?1 Why is it important to start the y-axis at 0?
 
 C) to avoid misleading viewers
+C) it's the least misleading way to display the data
 o) it's the law
 o) it's mandatory when graphing in R
 o) to help color-blind viewers
 o) it minimizes whitespace
  
 {choose-answers: 4}
-? Which of these is something you should do when visualizing data?
+?2 Which of these is something you should do when visualizing data?
 
 C) using contrasting colors for comparison
 C) include axis labels
@@ -254,10 +255,12 @@ o) only use red and green in your charts
 o) make sure text is small to highlight the data
 
 {choose-answers: 4}
-? If a pie chart is made up of exactly two slices that appear similar in size, what is a reasonable value for one of those slices? 
+?3 If a pie chart is made up of exactly two slices that appear similar in size, what is a reasonable value for one of those slices? 
 
 C) 51%
 C) 49%
+C) 50%
+m) 33%
 o) 2%
 o) 10%
 o) 100%
@@ -266,9 +269,24 @@ o) 4%
 o) 95%
 
 {choose-answers: 4}
-? If a plot is getting too busy, what is a reasonable approach to take?
+?3 If a pie chart is made up of exactly three slices that all appear similar in size, what is a reasonable value for one of those slices? 
+
+C) 33%
+o) 51%
+o) 49%
+o) 50%
+o) 2%
+o) 10%
+o) 100%
+o) 90%
+o) 4%
+o) 95%
+
+{choose-answers: 4}
+?4 If a plot is getting too busy, what is a reasonable approach to take?
 
 C) Simplify the plot's design to highlight your main point.
+C) Rethink the plot's design to simply the plot.
 o) Use a lot of different colors to explain all the different points you're trying to make.
 o) Explain the complicated plot with a lot of text underneath the figure.
 o) Leave it as is. People will figure it out.
@@ -276,9 +294,12 @@ o) Overlay as much text as possible to help explain the busy figure.
 o) Add an additional busy figure to help explain the first figure
 
 {choose-answers: 4}
-? In the iPhone plot example used in the lesson, what is one way the figure generator "emphasize the point"" in their chart?
+?5 In the iPhone plot example used in the lesson, what is one way the figure generator "emphasize the point" in their chart?
 
-C) used red to highlight most important data on the plot 
+C) used red to highlight most important data on the plot
+C) used a grey box to help highlight an important portion of the plot 
+C) used text annotation to help highlight an important portion of the plot 
+o) used grey text on a grey background to highlight data on the plot
 o) used red and green for comparison
 o) started the y-axis at 50 to make the point
 o) removed values from axes to just highlight the lines

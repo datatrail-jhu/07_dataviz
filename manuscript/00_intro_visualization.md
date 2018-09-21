@@ -130,13 +130,13 @@ A few things to keep in mind when making tables is that it's best to:
 ### Intro to Data Visualization quiz
 
   
-? When you've spent a lot of time perfecting the details of your plot, what type of plot have you created?
+?1 When you've spent a lot of time perfecting the details of your plot, what type of plot have you created?
   
 a) exploratory
 B) explanatory
 
 {choose-answers: 4}
-? Which plot is best when comparing numerical values from two pieces of information?
+?2 Which plot is best when comparing numerical values from two pieces of information?
 
 C) Scatterplot
 o) Histogram
@@ -146,7 +146,7 @@ o) Pie Chart
 o) Heatmap
 
 {choose-answers: 4}
-? What type of plot would you use to compare the number of apples and oranges in a data set containing information about different pieces of fruit?
+?2 What type of plot would you use to compare the number of apples and oranges in a data set containing information about different pieces of fruit?
 
 C) Barplot
 o) Heatmap
@@ -155,9 +155,10 @@ o) Donut Chart
 o) Network Diagram
 
 {choose-answers: 4}
-? If half of your data set were comprised of men and half of females, what number should you put in the table to represent the percentage of females?
+?3 If half of your data set were comprised half of men and half of females, what number should you put in the table to represent the percentage of females?
 
 C) 50%
+m) 25%
 o) 0
 o) 49.879%
 o) 50.0000% 
@@ -165,7 +166,39 @@ o) 100.00%
 o) NA
 
 {choose-answers: 4}
-? To quickly see the range of values for a numerical piece of information and how many individuals take that value, what plot would you use?
+?3 If half of your data set were comprised of of a quarter men and three-quarters females, what number should you put in the table to represent the percentage of females?
+
+C) 75%
+m) 25%
+o) 0
+o) 75.879%
+o) 75.0000% 
+o) 100.00% 
+o) NA
+
+{choose-answers: 4}
+?3 If half of your data set were comprised of of a quarter men and three-quarters females, what number should you put in the table to represent the percentage of males?
+
+C) 25%
+m) 75%
+o) 0
+o) 25.879%
+o) 25.0000% 
+o) 100.00% 
+o) NA
+
+{choose-answers: 4}
+?4 To quickly see the range of values for a numerical piece of information and how many individuals take that value, what plot would you use?
+
+C) Histogram
+o) Barplot
+o) Boxplot
+o) Scatterplot
+o) Pie Chart
+o) Heatmap
+
+{choose-answers: 4}
+?4 To quickly see the range of values for a single numerical variable, what plot would you use?
 
 C) Histogram
 o) Barplot

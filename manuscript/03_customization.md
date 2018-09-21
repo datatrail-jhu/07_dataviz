@@ -342,17 +342,26 @@ In this lesson we've covered how to manually change the colors of your plot in R
 ### Customization in ggplot2 quiz
  
 {choose-answers: 4}
-? To plot side by side bar plots, what **position adjustment** would you specify?
+?1 To plot side by side bar plots, what **position adjustment** would you specify?
 
 C) `position = "dodge"`
+m) `position = "stacked"`
 o) `position = "identity"`
-o) `position = "stacked"`
+o) `position = "fill"`
+o) `position = "repel"`
+o)  `position = "side-by-side"`
+
+?1 To plot stacked bar plots, what **position adjustment** would you specify?
+
+C) `position = "stacked"`
+m) `position = "dodge"`
+o) `position = "identity"`
 o) `position = "fill"`
 o) `position = "repel"`
 o)  `position = "side-by-side"`
 
 {choose-answers: 4}
-? To switch your x-axis and put it on the y-axis and flip to put your y-axis on the x, what function would you use?
+?2 To switch your x-axis and put it on the y-axis and flip to put your y-axis on the x, what function would you use?
 
 C) `coord_flip()`
 o) `flip_coord()`
@@ -364,7 +373,20 @@ o) `coordinates_swap()`
 o) `swap_coordinates()`
 
 {choose-answers: 4}
-? Which built in `ggplot2` theme is the default theme in ggplot2?
+?2 To swap your axes, what function would you use?
+
+C) `coord_flip()`
+o) `flip_coord()`
+o) `coordinates_flip()`
+o) `flip_coordinates()`
+o) `coord_swap()`
+o) `swap_coord()`
+o) `coordinates_swap()`
+o) `swap_coordinates()`
+
+
+{choose-answers: 4}
+?3 Which built in `ggplot2` theme is the default theme in ggplot2?
 
 C) `theme_gray()`
 m) `theme_classic()`
@@ -376,9 +398,10 @@ o)  `theme_linderaw()`
 o)  `theme_minimal()`
 
 {choose-answers: 4, points: 2}
-? Explore the `ggthemes` package by clicking on [this link](https://cran.r-project.org/web/packages/ggthemes/vignettes/ggthemes.html)), which theme is based on the scales and colors used at [www.fivethirtyeight.com](www.fivethirtyeight.com)
+?4 Explore the `ggthemes` package by clicking on [this link](https://mran.microsoft.com/snapshot/2016-12-03/web/packages/ggthemes/vignettes/ggthemes.html){target="_blank"}), which theme is based on the scales and colors used at [www.fivethirtyeight.com](www.fivethirtyeight.com){target="_blank"}.
 
 C) theme_fivethirtyeight
+m) theme_gdocs
 o) theme_538
 o) theme_igray
 o) theme_stata
@@ -388,43 +411,68 @@ o) theme_base
 o) theme_538.com
 
 {choose-answers: 4, points: 2}
-? To specify that you want the x-axis (but *not* the y-axis) text to be bold, what would you include within `theme()`?
+?4 Explore the `ggthemes` package by clicking on [this link](https://mran.microsoft.com/snapshot/2016-12-03/web/packages/ggthemes/vignettes/ggthemes.html){target="_blank"}), which theme is based on the scales and colors used at Google Docs.
+
+C) theme_gdocs
+m) theme_fivethirtyeight
+o) theme_googledocs
+o) theme_igray
+o) theme_stata
+o) theme_solarized
+o) theme_tufte
+o) theme_base
+o) theme_docs.com
+
+{choose-answers: 4, points: 2}
+?5 To specify that you want the x-axis (but *not* the y-axis) text to be bold, what would you include within `theme()`?
 
 C) axis.text.x = element_text(face = "bold")
+m) axis.text.y = element_text(face = "bold")
 o) axis.text.x = element_text(font = "bold")
 o) axis.text.x = element_text(text = "bold")
 o) axis.text = element_text(face = "bold")
 o) axis.text = element_text(font = "bold")
 o) axis.text = element_text(text = "bold")
 
+{choose-answers: 4, points: 2}
+?5 To specify that you want the y-axis (but *not* the x-axis) text to be bold, what would you include within `theme()`?
+
+C) axis.text.y = element_text(face = "bold")
+m) axis.text.x = element_text(face = "bold")
+o) axis.text.y = element_text(font = "bold")
+o) axis.text.y = element_text(text = "bold")
+o) axis.text = element_text(face = "bold")
+o) axis.text = element_text(font = "bold")
+o) axis.text = element_text(text = "bold")
+
 {points:3}
-? Go to the [Chromebook Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/3919/join?access_code=RUUQ%2BeEgKea0oMF7EJy4UePldyBBMu7d0amv2KFC) and click on your copy of the 'swirl' project (If you haven't made a copy yet, do so now.) Then, type `swirl()` to get started. Tell Swirl your first name when it asks what to call you. Then, type the number that corresponds to the course `CBDS Data Visualization`. Type the number that corresponds to the lesson `L03 Customization in ggplot2 Q01 Swirl`. Do this swirl module! Once complete, paste the code at the end of the lesson here.
+?6 Go to the [Chromebook Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/3919/join?access_code=RUUQ%2BeEgKea0oMF7EJy4UePldyBBMu7d0amv2KFC) and click on your copy of the 'swirl' project (If you haven't made a copy yet, do so now.) Then, type `swirl()` to get started. Tell Swirl your first name when it asks what to call you. Then, type the number that corresponds to the course `CBDS Data Visualization`. Type the number that corresponds to the lesson `L03 Customization in ggplot2 Q01 Swirl`. Do this swirl module! Once complete, paste the code at the end of the lesson here.
 
 ! /.*[ytPZ||oxqw||kEXQ||zuGw||xS8N||vylx||sfRN||hrAW||Av8M||oLlA].*/i
 
 
 {points:3}
-? Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L03 Customization in ggplot2 Q02 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
+?7 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L03 Customization in ggplot2 Q02 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
 ! /.*[eb8n||NdLf||68cW||837Z||RoaY||WGz5||tD1Z||UYCd||7fgV||q9jQ].*/i
 
 {points:3}
-? Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L03 Customization in ggplot2 Q03 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
+?8 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L03 Customization in ggplot2 Q03 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
 ! /.*[UX1M||S4mY||9xRm||Vy42||q6EQ||3ySX||opD8||oZKK||uQuY||a03H].*/i
 
 {points:3}
-? Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L03 Customization in ggplot2 Q04 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
+?9 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L03 Customization in ggplot2 Q04 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
 ! /.*[cjSD||Fnox||l1N2||Da9p||AyxS||cAzt||XeA1||4Ljo||3ND3||3gGy].*/i
 
 {points:3}
-? Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L03 Customization in ggplot2 Q05 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
+?10 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L03 Customization in ggplot2 Q05 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
 ! /.*[kQaq||G21y||osGJ||unnD||5Hzf||z44s||pa3m||DuUx||xmMN||uPbf].*/i
 
 {points:3}
-? Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L03 Customization in ggplot2 Q06 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
+?11 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L03 Customization in ggplot2 Q06 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
 ! /.*[Jy9u||GA0k||KTVW||ic2H||fF3v||ZdoQ||n1Jz||06vY||w2iB||TXW8].*/i
 

@@ -360,27 +360,38 @@ As we walked through this example, you saw that it can take a lot of code to gen
 ### From Exploratory to Explanatory quiz
   
 {choose-answers: 4}
-? What is the goal of the title on your plot?
+?1 What is the goal of the title on your plot?
   
 C) tell viewers what they will see on the plot
-o) Define what variables are on your axes
+C) inform viewers what to take away from the plot
+o) define what variables are on your axes
 o) choose the appropriate colors 
 o) ggplot2 won't make a plot without one
 o) explain all the data on the plot in detail
 o) tell ggplot2 what shapes to put on the plot
 
 {choose-answers: 4}
-? To finalize your plot you may want to add text onto your plot. What should you use?
+?2 To finalize your plot you may want to add text onto your plot. What could you use?
 
 C) annotate("text")
-o) annotate("rect")
+m) annotate("rect")
 o) axis.text
 o) element_text()
 o) add_text("text")
 o) add.text("text")
 
 {choose-answers: 4}
-? To increase or decrease the thickness of a line on a plot, where do you specify its size?
+?2 To finalize your plot you may want to add a rectangular box onto your plot to hightlight a portion of the plot. What could you use?
+
+C) annotate("rect")
+m) annotate("text")
+o) axis.text
+o) element_text()
+o) add_text("text")
+o) add.text("text")
+
+{choose-answers: 4}
+?3 To increase or decrease the thickness of a line on a line plot, where do you specify its size?
 
 C) geom_line()
 o) theme()
@@ -392,7 +403,7 @@ o) line(size=3)
 o) lwd()
 
 {choose-answers: 4}
-? In the final plot generated, what piece of information discussed as necessary is missing from this plot?
+?4 In the final plot generated, what piece of information discussed as necessary is missing from this plot?
 
 C) information about the data source
 C) axis labels
@@ -404,7 +415,7 @@ o) annotation
 o) data labels
 
 {choose-answers: 4}
-? To add a caption to a plot, what would you use? (Note: this isn't discussed in this lecture. It may require Googling for the answer.)
+?5 To add a caption to a plot, what would you use? (Note: this isn't discussed in this lecture. It may require Googling for the answer.)
 
 C) labs(caption = "")
 o) ggcaption("")
@@ -414,24 +425,24 @@ o) ggplot2(caption = "")
 o) labels(caption = "")
 
 {points:3}
-? Go to the [Chromebook Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/3919/join?access_code=RUUQ%2BeEgKea0oMF7EJy4UePldyBBMu7d0amv2KFC) and click on your copy of the 'swirl' project (If you haven't made a copy yet, do so now.) Then, type `swirl()` to get started. Tell Swirl your first name when it asks what to call you. Then, type the number that corresponds to the course `CBDS Data Visualization`. Type the number that corresponds to the lesson `L05 Exploratory to Explanatory Q01 Swirl`. Do this swirl module! Once complete, paste the code at the end of the lesson here.
+?6 Go to the [Chromebook Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/3919/join?access_code=RUUQ%2BeEgKea0oMF7EJy4UePldyBBMu7d0amv2KFC) and click on your copy of the 'swirl' project (If you haven't made a copy yet, do so now.) Then, type `swirl()` to get started. Tell Swirl your first name when it asks what to call you. Then, type the number that corresponds to the course `CBDS Data Visualization`. Type the number that corresponds to the lesson `L05 Exploratory to Explanatory Q01 Swirl`. Do this swirl module! Once complete, paste the code at the end of the lesson here.
 
 ! /.*[EvXQ||Qnja||e1J3||cKex||lCBk||R2IT||bZZQ||Svki||ICYL||PpLl].*/i
 
 
 {points:3}
-? Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L05 Exploratory to Explanatory Q02 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
+?7 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L05 Exploratory to Explanatory Q02 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
 ! /.*[Xyxr||W1YF||rFjC||Cgyh||gmV2||JCDu||OpCd||ipcn||NgMn||xb5O].*/i
 
 {points:3}
-? Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L05 Exploratory to Explanatory Q03 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
+?8 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L05 Exploratory to Explanatory Q03 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
 ! /.*[f1fg||TKXk||VS2F||OJWE||MkxZ||NQSv||gm5Q||JbxY||hd3q||DL3R].*/i
 
 
 {points:3}
-? Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L05 Exploratory to Explanatory Q04 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
+?9 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L05 Exploratory to Explanatory Q04 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
 ! /.*[DMom||FUX0||EXFF||IzwC||mE4Y||oYuF||8yi2||Qwz0||5MvV||tNnc].*/i
 

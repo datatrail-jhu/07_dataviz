@@ -215,13 +215,14 @@ pets %>%
 
 After figuring out the missing pieces in the code and generating the plot, you'll be able to **answer the following questions**:
 
+{words: 20}
 ? What does the function `ymd_hms()` accomplish?
 
 ! Converts `license_issue_date` to a date-time object
 
 ? What geom did you specify to generate a line chart?
 
-! geom_line
+! geom_line; geom_line()
 
 ? In what year do you see a huge jump in the number of pet licenses?
 

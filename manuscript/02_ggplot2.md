@@ -238,7 +238,7 @@ In this lesson, we've walked through the basics of generating plots in `ggplot2`
 ### Introduction to ggplot2 quiz
 
 {choose-answers: 4}
-? Which of these is NOT required when plotting in `ggplot2`?
+?1 Which of these is NOT required when plotting in `ggplot2`?
 
 C) the color you want to use
 C) the shape you want to use
@@ -246,23 +246,49 @@ C) the size of the point or line you want to use
 o) ggplot() function call
 o) the geom you want to plot
 o) the variable(s) you want to plot
+o) an aesthetic (`aes`) specified
 
 {choose-answers: 4}
-? Which geom would you specify to generate a scatterplot? 
+?2 Which geom would you specify to generate a scatterplot? 
 
 C) geom_point
 m) geom_scatterplot
+m) geom_bar
 o) geom_histogram
 o) geom_scatter
 o) geom_abline
-o) geom_bar
 o) geom_blank
 o) geom_scatter
 
 {choose-answers: 4}
-? Which geom would you specify if you wanted to know how many individuals in a data set fell into each level of a categorical variable?
+?2 Which geom would you specify to generate a barpot? 
 
 C) geom_bar
+m) geom_point
+o) geom_scatterplot
+o) geom_histogram
+o) geom_scatter
+o) geom_abline
+o) geom_blank
+o) geom_scatter
+
+{choose-answers: 4}
+?3 Which geom would you specify if you wanted to know how many individuals in a data set fell into each level of a categorical variable?
+
+C) geom_bar
+m) geom_histogram
+o) geom_boxplot
+o) geom_scatterplot
+o) geom_abline
+o) geom_smooth
+o) geom_density
+o) geom_curve
+
+{choose-answers: 4}
+?3 Which geom would you specify if you wanted to know how the distribution of values in a single numeric variable?
+
+C) geom_histogram
+m) geom_bar
 o) geom_boxplot
 o) geom_scatterplot
 o) geom_abline
@@ -271,18 +297,40 @@ o) geom_density
 o) geom_curve
 
 {choose-answers: 4, points: 2}
-? If you were to run the following code, what color would the points be?: `ggplot(data = diamonds, aes(x = carat, y = price, color = "blue" )) + geom_point()`
+?4 If you were to run the following code, what color would the points be?: `ggplot(data = diamonds, aes(x = carat, y = price, color = "blue")) + geom_point()`
 
 C) coral
 m) blue
+m) black
 o) gray
-o) black
 o) circles
 o) green
 o) triangles 
 
 {choose-answers: 4, points: 2}
-? What does the alpha argument change in the plot generated from this code?
+?4 If you were to run the following code, what color would the points be?: `ggplot(data = diamonds, aes(x = carat, y = price), color = "blue") + geom_point()`
+
+C) black
+m) coral
+m) blue
+o) gray
+o) circles
+o) green
+o) triangles 
+
+{choose-answers: 4, points: 2}
+?4 If you were to run the following code, what color would the points be?: `ggplot(data = diamonds, aes(x = carat, y = price)) + geom_point(color = "blue")`
+
+C) blue
+m) black
+m) coral
+o) gray
+o) circles
+o) green
+o) triangles 
+
+{choose-answers: 4, points: 2}
+?5 What does the alpha argument change in the plot generated from this code?
 
 ```r
 ggplot(data = diamonds) + 
@@ -298,45 +346,45 @@ o) only plots points of the most frequent level within clarity
 o) changes all the points to be rainbow colored
 
 {points:3}
-? Go to the [Chromebook Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/3919/join?access_code=RUUQ%2BeEgKea0oMF7EJy4UePldyBBMu7d0amv2KFC) and click on your copy of the 'swirl' project (If you haven't made a copy yet, do so now.) Then, type `swirl()` to get started. Tell Swirl your first name when it asks what to call you. Then, type the number that corresponds to the course `CBDS Data Visualization`. Type the number that corresponds to the lesson `L02 Introduction to ggplot2 Q01 Swirl`. Do this swirl module! Once complete, paste the code at the end of the lesson here.
+?6 Go to the [Chromebook Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/3919/join?access_code=RUUQ%2BeEgKea0oMF7EJy4UePldyBBMu7d0amv2KFC) and click on your copy of the 'swirl' project (If you haven't made a copy yet, do so now.) Then, type `swirl()` to get started. Tell Swirl your first name when it asks what to call you. Then, type the number that corresponds to the course `CBDS Data Visualization`. Type the number that corresponds to the lesson `L02 Introduction to ggplot2 Q01 Swirl`. Do this swirl module! Once complete, paste the code at the end of the lesson here.
 
 ! /.*[FGFu||0qCo||RZ1E||HeeP||Uh4p||8xN1||XD51||NgN1||Vyr4||agga].*/i
 
 
 {points:3}
-? Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L02 Introduction to ggplot2 Q02 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
+?7 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L02 Introduction to ggplot2 Q02 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
 ! /.*[46Qc||y52H||plnM||UMg3||9nMl||Nf5j||o03W||JwlM||HUbA||eyyi].*/i
 
 {points:3}
-? Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L02 Introduction to ggplot2 Q03 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
+?8 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L02 Introduction to ggplot2 Q03 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
 ! /.*[d1g2||OzQ4||CSgD||UwZt||eiL6||GfRv||q2B9||gcA7||VvCB||0H3v].*/i
 
 
 {points:3}
-? Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L02 Introduction to ggplot2 Q04 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
+?9 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L02 Introduction to ggplot2 Q04 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
 ! /.*[3X2C||uAuQ||HZsz||x1Rf||Rg8N||i2dl||YhtU||KMdZ||DYCD||w6Yi].*/i
 
 
 {points:3}
-? Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L02 Introduction to ggplot2 Q05 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
+?10 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L02 Introduction to ggplot2 Q05 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
 ! /.*[QKUL||RJaN||bS21||2Gt4||a7HO||JjQH||p98s||Zsd3||0NQa||Uhao].*/i
 
 {points:3}
-? Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L02 Introduction to ggplot2 Q06 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
+?11 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L02 Introduction to ggplot2 Q06 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
 ! /.*[WHFR||r9IF||0qDM||HdUh||4z1H||B8RV||ykC3||SJ2G||SvDl||mWPI].*/i
 
 {points:3}
-? Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L02 Introduction to ggplot2 Q07 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
+?12 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L02 Introduction to ggplot2 Q07 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
 ! /.*[3bfp||Yb3S||u8WA||7FtQ||F3zB||upEm||6eUQ||ualQ||pbn1||HFcj].*/i
 
 {points:3}
-? Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L02 Introduction to ggplot2 Q08 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
+?13 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L02 Introduction to ggplot2 Q08 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
 ! /.*[VOfD||EvAR||LAkC||vIdo||yxJP||JSa0||O4Ho||T3iB||z7ZV||fW7N].*/i
 

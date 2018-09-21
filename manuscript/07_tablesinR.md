@@ -114,27 +114,72 @@ Similar to how we approached learning about making figures in R, we've demonstra
 
 ### Tables In R quiz
 
-? What argument in `kable()` controls the number of significant digits displayed?
+{choose-answers:4}
+?1 What argument in `kable()` controls the number of significant digits displayed?
 
-a) digit
-b) sig.dig
 C) digits
-d) num.sig
+o) digit
+o) sig.dig
+o) num.sig
+o) dig
 
-? When taking a table from exploratory to explanatory, what package is helpful?
+{choose-answers:4}
+?1 Which of the following would control the number of significant digits displayed for the table `df`?
 
-a) kable
-b) htmltools
-c) stat
-D) knitr
+C) knitr(df, digits=2)
+o) knitr(df, digit=2)
+o) knitr(df, sig.dig=2)
+o) knitr(df, num.sig=2)
+o) knitr(df, dig=2)
 
-? When taking a table from exploratory to explanatory, what should you consider? 
+{choose-answers:4}
+?2 When taking a table from exploratory to explanatory, what *package* is particularly helpful?
 
-a) caption/title
-b) labels
-c) number of rows 
-d) inclusion of source of data
-E) all of the above
-f) none of the above
+C) knitr
+m) kable
+o) lme
+o) stat
+o) glm
+o) math
+
+{choose-answers:4}
+?2 When taking a table from exploratory to explanatory, what *function* is particularly helpful?
+
+o) kable
+m) knitr
+o) table
+o) prop.table
+o) tab
+
+{choose-answers:4}
+?3 When taking a table from exploratory to explanatory, what should you consider? 
+
+C) everything here
+o) caption/title
+o) labels
+o) number of rows 
+o) inclusion of source of data
+o) none of the above
+
+{points:3}
+?4 Go to the [Chromebook Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/3919/join?access_code=RUUQ%2BeEgKea0oMF7EJy4UePldyBBMu7d0amv2KFC) and click on your copy of the 'swirl' project (If you haven't made a copy yet, do so now.) Then, type `swirl()` to get started. Tell Swirl your first name when it asks what to call you. Then, type the number that corresponds to the course `CBDS Data Visualization`. Type the number that corresponds to the lesson `L07 Tables in R Q01 Swirl`. Do this swirl module! Once complete, paste the code at the end of the lesson here.
+
+! /.*[0ltF||0QRQ||DiL2||gTme||ifkB||DssE||OsFA||vlaO||HCQ5||q7Ra].*/i
+
+
+{points:3}
+?5 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L07 Tables in R Q02 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
+
+! /.*[VUX0||yqmH||xuAg||CfDp||Nevw||Ynqz||DrcO||WDOj||vFwa||gTOc].*/i
+
+{points:3}
+?6 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L07 Tables in R Q02 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
+
+! /.*[C6xK||itkJ||tuvm||nCkV||MKl7||a1dR||vFQ6||beDx||Tb9R||L6hr].*/i
+
+{points:3}
+?7 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L07 Tables in R Q02 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
+
+! /.*[Wt1G||DRlx||cmjg||Q6E1||bdca||m79w||fTui||n0Bk||9SfC||mzKw].*/i
 
 {/quiz}

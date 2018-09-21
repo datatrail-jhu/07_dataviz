@@ -132,34 +132,44 @@ gganimate(gg, "output.gif")
   
 ### Advanced Data Visualization quiz
   
-? What type of visualization allows the user to make changes to the plot by clicking on it?
+{choose-answers:4}
+?1 What type of visualization allows the user to make changes to the plot by clicking on it?
   
-A) interactive
-b) explanatory
-c) animated
-d) static
-e) exploratory
+C) interactive
+o) explanatory
+o) animated
+o) static
+o) exploratory
+o) colorful
+o) black-and-white
 
-? Which of these can be used to generate interactive plots in RStudio?
+{choose-answers:4}
+?2 Which of the following can be used to generate interactive plots in RStudio?
 
-a) iris
-b) ggplot2
 C) plotly
-d) ggplot
+o) iris
+o) ggplot2
+o) ggplot
+o) plot
 
-? To output a .gif animated plot, which package would you use? 
+{choose-answers:4}
+?2 To output a .gif animated plot, which package would you use? 
 
-a) ggplot
-B) gganimate
-c) plotly
-d) ggplot2
+C) plotly
+o) ggplot
+o) gganimate
+o) ggplot2
+o) plot
 
-? If you knit a .Rmd file into an HTML report, how will a plot from plotly() display?
+{choose-answers:4}
+?3 If you knit a .Rmd file into an HTML report, how will a plot from plotly() display?
 
-a) as a static png
-B) as an interactive plot
-c) it won't display
-d) incorrectly formatted
+C) as an interactive plot
+o) as a static png
+o) it won't display
+o) incorrectly formatted
+o) link to click to see plot
+o) interactive plot will download
 
 {/quiz}
 

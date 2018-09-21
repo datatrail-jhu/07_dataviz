@@ -128,25 +128,49 @@ p1 + p2 - p3 + plot_layout(ncol = 1)
 
 ### Multiple Plots quiz
 
-? If you had three plots (p1, p2, and p3) and used the code `p1 + p2 + p3`, how many columns would the resulting plot have?
+{choose-answers:4}
+?1 If you had three plots (p1, p2, and p3) and used the code `p1 + p2 + p3`, how many columns would the resulting plot have?
 
-a) 1
-b) 2
 C) 3
-d) 4
+m) 2
+o) 1
+o) 4
+o) 0
 
-? Which of these would NOT get you four plots of equal size with two on top and two on bottom?
+{choose-answers:4}
+?1 If you had two plots (p1 and p2) and used the code `p1 + p2`, how many columns would the resulting plot have?
 
-a) (p1 + p2) + p3 + p4 + plot_layout(ncol = 2)
-b) p1 + p2 + plot_layout(ncol = 2) + p3 + p4 
-c) p1 + p2 + p3 + p4 + plot_layout(ncol = 2)
-D) p1 + p2 + (p3 + p4) + plot_layout(ncol = 2)
+C) 2
+m) 3
+o) 1
+o) 4
+o) 0
 
-? How many plots would have ggplot2 theme theme_bw() w/ this code: `((p1 + p2 + p3) + plot_layout(ncol = 1)) * theme_bw() + p4`? 
+{choose-answers:4, points:2}
+?2 Which of these would NOT get you four plots of equal size with two on top and two on bottom?
 
-a) 1
-b) 2 
+C) `p1 + p2 + (p3 + p4) + plot_layout(ncol = 2)`
+o) `(p1 + p2) + p3 + p4 + plot_layout(ncol = 2)`
+o) `p1 + p2 + plot_layout(ncol = 2) + p3 + p4`
+o) `p1 + p2 + p3 + p4 + plot_layout(ncol = 2)`
+
+
+{choose-answers:4}
+?3 How many plots would have `ggplot2` theme `theme_bw()` w/ this code: `((p1 + p2 + p3) + plot_layout(ncol = 1)) * theme_bw() + p4`? 
+
 C) 3
-d) 4
+m) 1
+o) 2 
+o) 4
+o) 0
+
+{choose-answers:4}
+?3 How many plots would have the default `ggplot2` theme `theme_gray()` w/ this code: `((p1 + p2 + p3) + plot_layout(ncol = 1)) * theme_bw() + p4`? 
+
+C) 1
+m) 3
+o) 2 
+o) 4
+o) 0
 
 {/quiz}

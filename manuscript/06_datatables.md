@@ -108,32 +108,56 @@ With an idea of how to make a great explanatory table, you're ready to start pra
 
 ### Data Tables quiz
 
-? If displaying information about individuals' income, how should the rows be ordered?
+{choose-answers:4}
+?1 If displaying information about individuals' income, how should the rows be ordered when displayed in a data table?
 
-a) by address
-b) in order of house number
 C) by last name
-d) by telephone number
+o) by address
+o) in order of house number
+o) by telephone number
+o) by middle name
+o) by grandfather's first name
+o) by grandmother's first name
 
-? When choosing labels for a table including information about individuals and their income, which column labels would be best?
+{choose-answers:4}
+?2 When choosing labels for a table including information about individuals and their income, which column labels would be best?
 
-a) LN, FN, A, C, P, I
-b) LAST OR GIVEN NAME, FIRST NAME OR PREFERRED NAME, STREET ADDRESS WHERE CURRENTLY LIVING, CITY OF RESIDENCE, PHONE NUMBER INCLUDING AREA CODE, INCOME
 C) last, first, address, city, phone, income
-d) ln, fn, a, c, p, i
+c) last_name, first_name, address, city, phone_number, income
+o) LN, FN, A, C, P, I
+o) LAST OR GIVEN NAME, FIRST NAME OR PREFERRED NAME, STREET ADDRESS WHERE CURRENTLY LIVING, CITY OF RESIDENCE, PHONE NUMBER INCLUDING AREA CODE, INCOME
+o) ln, fn, a, c, p, i
+o) l, f, a, c, p, i
+o) L, F, A, C, P, I
 
-? When should you use a plot instead of a figure? 
+{choose-answers:4}
+?3 When should you use a plot instead of a table? 
 
-a) when summarizing the samples in a data set
-b) when displaying a few of the top results from an analysis
-c) when trying to display information across a few different variables for a few people
-D) when there is a lot of data that cannot be summarized in a table
+C) when there is a lot of data that cannot be summarized in a table
+C) when the information can be understood more quickly in a plot
+C) when the information can be understood more easily in a plot
+o) when summarizing the samples in a data set
+o) when displaying a few of the top results from an analysis
+o) when trying to display information across a few different variables for a few people
+o) when summarizin a few metrics about the samples in a study
 
-? If the exact number is 3.4050234492349, which value is likely the best value to display in a table?
 
-A) 3.4
-b) 3.4050234
-c) 3
-d) 3.4050234492349
+{choose-answers:4}
+?4 If the exact number is 3.4050234492349, which value is likely the best value to display in a table?
+
+C) 3.4
+m) 7.4
+o) 3.4050234
+o) 3
+o) 3.4050234492349
+
+{choose-answers:4}
+?4 If the exact number is 7.4050234492349, which value is likely the best value to display in a table?
+
+C) 7.4
+m) 3.4
+o) 7.4050234
+o) 7
+o) 7.4050234492349
 
 {/quiz}
