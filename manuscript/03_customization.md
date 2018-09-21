@@ -351,6 +351,7 @@ o) `position = "fill"`
 o) `position = "repel"`
 o)  `position = "side-by-side"`
 
+{choose-answers: 4}
 ?1 To plot stacked bar plots, what **position adjustment** would you specify?
 
 C) `position = "stacked"`
