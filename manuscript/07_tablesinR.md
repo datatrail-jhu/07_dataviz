@@ -145,7 +145,7 @@ o) math
 {choose-answers:4}
 ?2 When taking a table from exploratory to explanatory, what *function* is particularly helpful?
 
-o) kable
+C) kable
 m) knitr
 o) table
 o) prop.table

@@ -123,7 +123,7 @@ o) by grandmother's first name
 ?2 When choosing labels for a table including information about individuals and their income, which column labels would be best?
 
 C) last, first, address, city, phone, income
-c) last_name, first_name, address, city, phone_number, income
+C) last_name, first_name, address, city, phone_number, income
 o) LN, FN, A, C, P, I
 o) LAST OR GIVEN NAME, FIRST NAME OR PREFERRED NAME, STREET ADDRESS WHERE CURRENTLY LIVING, CITY OF RESIDENCE, PHONE NUMBER INCLUDING AREA CODE, INCOME
 o) ln, fn, a, c, p, i
