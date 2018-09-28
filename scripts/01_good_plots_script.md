@@ -42,4 +42,4 @@ The finalized plot is clear, the conclusion the viewer is to make is obvious, th
 
 When it comes to trying to make this same plot in R, you will notice two things. One, once you have access to the data, you can manipulate plots to lok the way you want. And, two, it often takes a lot of somewhat complicated code to reproduce someone else's beautiful plot. As to point 2, while we include the complicated code here, in the next section, we'll break some of these steps down and you'll see that the code required to make basic plots in R is quite simple. 
 
-With a fair amount of R code, we can produce a very similar plot in R to what was included in the blog post. While the plots are not identical, they are very similar and tell the same story. Making good plots in R is an important skill and can be learned using the ggplot2 package in R.
+With a fair amount of R code, we can produce a very similar plot in R to what was included in the blog post. While the plots are not identical, they are very similar and tell the same story. Making good plots in R is an important skill and can be learned using the g g plot 2 package in R.

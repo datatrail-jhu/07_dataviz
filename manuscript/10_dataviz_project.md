@@ -17,7 +17,7 @@ You can access the project by going to the exercise accompanying this lesson.
 
 ## Data Visualization Project
 
-Data Visualization is an incredibly important skill for a data scientitst. Being able to generate exploratory visualizations that help you understand the data and explanatory visualizations so that your findings 
+Data Visualization is an incredibly important skill for a data scientist. Being able to generate exploratory visualizations that help you understand the data and explanatory visualizations so that your findings 
 
 As such, this exercise has been generated to practice your, GitHub, terminal navigation, RStudio, and data wrangling skills.
 
@@ -142,7 +142,7 @@ Feel free to customize your plots further using what you've learned about `ggplo
 
 After generating this figure, you'll be able to **answer the following questions**:
 
-? Are there more dogs or cat licenses in this datset?
+? Are there more dogs or cat licenses in this dataset?
 
 A) Dog
 b) Cat
@@ -374,7 +374,7 @@ o) controls the width of the space above the plot
 o) controls the width of the space below the plot
 
 {choose-answers: 4}
-? Without the line `legend.position="none"` what would change on the plot? (Try removing that line of code and regenerating the plot to see what chagnes!)
+? Without the line `legend.position="none"` what would change on the plot? (Try removing that line of code and regenerating the plot to see what changes!)
 
 C) A legend containing steak preference options would be present along the bottom of the plot
 o) A legend containing steak preference options would be present to the right of the plot 

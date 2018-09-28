@@ -1,2 +1,3 @@
 manuscript/resources/videos/*
 .Rproj.user
+.httr-oauth

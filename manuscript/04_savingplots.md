@@ -73,7 +73,7 @@ Similar to above, the `height`, `width` can again be specified, as above. For jp
 
 ### Slides and Video
   
-![Saving Plots](https://www.youtube.com/watch?v=_UPQU-dnAyo)
+![Saving Plots](https://www.youtube.com/watch?v=sqTl2qIhEtw)
   
   * [Slides](https://docs.google.com/presentation/d/1O_10dR6Nb273S0bF-Xv3VCCHweagVzRJVv7HI1NPMBs/edit?usp=sharing)
   

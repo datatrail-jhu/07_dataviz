@@ -14,7 +14,7 @@ If your goal is to allow the viewer to compare values across groups, pie charts 
 
 #### Be mindful when choosing colors
 
-Choosing colors that work for the story you're trying to convey with your visualization is importnat. Avoiding colors that are hard to see on a screen or when projected, such as pastels, is a good idea. Additionally, red-green color blindness is common and leads to difficulty in distinguishing reds from greens. Simply avoiding making comparisons between these two colors is a good first step when visualizing data. 
+Choosing colors that work for the story you're trying to convey with your visualization is important. Avoiding colors that are hard to see on a screen or when projected, such as pastels, is a good idea. Additionally, red-green color blindness is common and leads to difficulty in distinguishing reds from greens. Simply avoiding making comparisons between these two colors is a good first step when visualizing data. 
 
 ![Choosing appropriate colors for visualizations is important](images/01_good_plots/01_dataviz_good_plots-2.png)
 
@@ -106,11 +106,11 @@ With our example data set, our title suggests that the iPhone has been Apple's m
 
 ##### Highlighting data with color
 
-Colors help direct viewers' eyes to the most important parts of the figure. Colors tell your readers where to focus their attention. Greys help to tell viewers where to focus less of their attention, while other colors help to highlight the point your trying to make.
+Colors help direct viewers' eyes to the most important parts of the figure. Colors tell your readers where to focus their attention. Grays help to tell viewers where to focus less of their attention, while other colors help to highlight the point your trying to make.
 
-For example, in the iPhone example, we can de-emphasize the iPod and iPad data using grey lines, while really highlighting the huge amount of growth of the iPhone, by making its line red.
+For example, in the iPhone example, we can de-emphasize the iPod and iPad data using gray lines, while really highlighting the huge amount of growth of the iPhone, by making its line red.
 
-![iPhone Sales, in red, over time vs other Apple Products, in grey](images/01_good_plots/01_dataviz_good_plots-15.png)
+![iPhone Sales, in red, over time vs other Apple Products, in gray](images/01_good_plots/01_dataviz_good_plots-15.png)
 
 ##### Annotate your plot
 
@@ -219,11 +219,11 @@ To see examples of beautiful data visualizations, check out Nathan Yau's [Flowin
 
 To read more about red-green color blindness, read more information [here](http://www.colourblindawareness.org/colour-blindness/).
 
-To read more about Data Visualization and the goals of Data Visualization read Elijah Meek's [Data Visulatization Fast and Slow](https://medium.com/@Elijah_Meeks/data-visualization-fast-and-slow-d2653d4850b0) - links to the rest of the posts in this series are included there.
+To read more about Data Visualization and the goals of Data Visualization read Elijah Meek's [Data Visualization Fast and Slow](https://medium.com/@Elijah_Meeks/data-visualization-fast-and-slow-d2653d4850b0) - links to the rest of the posts in this series are included there.
 
 ### Slides and Video
 
-![Good Plots](https://www.youtube.com/watch?v=uvprcd5WSbI)
+![Good Plots](https://www.youtube.com/watch?v=M-ZFsfMu-A8)
 
 * [Slides](https://docs.google.com/presentation/d/1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w/edit?usp=sharing)
 

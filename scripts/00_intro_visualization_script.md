@@ -20,16 +20,16 @@ Scatterplots are helpful when you have numerical values for two different pieces
 
 Overall, in this data set, we can see that, in general, the more someone weighs, the taller they are. Scatterplots, therefore help us at a glance better understand the relationship between two sets of numbers.
 
-When you only have one numerical piece of information and a second piece of information that can be broken down into a few categories, a barplot will help you make numerical comparisons across categories. 
+When you only have one numerical piece of information and a second piece of information that can be broken down into a few categories, a bar plot will help you make numerical comparisons across categories. 
 
-For example if you wanted to look at how many females and how many males you have in your data set, you could use a barplot. The comparison in heights between bars clearly demonstrates that there are more females in this dataset than males. 
+For example if you wanted to look at how many females and how many males you have in your data set, you could use a bar plot. The comparison in heights between bars clearly demonstrates that there are more females in this dataset than males. 
 
-The final basic plot we'll talk about here is the boxplot. Boxplots also summarize numerical values across a category; however, instead of just comparing the heights of the bar, they give us an idea of the range of values that each category can take. For example, if we wanted to compare the heights of men to the heights of women, we could do that with a boxplot.
+The final basic plot we'll talk about here is the box plot. Box plots also summarize numerical values across a category; however, instead of just comparing the heights of the bar, they give us an idea of the range of values that each category can take. For example, if we wanted to compare the heights of men to the heights of women, we could do that with a box plot.
 
-To interpret a boxplot, there are a few places where we'll want to focus our attention. For each category, the horizontal line through the middle of the box corresponds to the median value for that group. So, here, we can say that the median, or most typical height for females is about 165 cm. For males, this value is higher, just under 180 cm. 
+To interpret a box plot, there are a few places where we'll want to focus our attention. For each category, the horizontal line through the middle of the box corresponds to the median value for that group. So, here, we can say that the median, or most typical height for females is about 165 cm. For males, this value is higher, just under 180 cm. 
 
 Outside of the colored boxes, there are dashed lines. The ends of these lines correspond to the typical range of values. Here, we can see that females tend to have heights between 150 and 180cm. 
 
-Lastly, when individuals have values outside the typical range, a boxplot will show these individuals as circles. These circles are referred to as outliers.
+Lastly, when individuals have values outside the typical range, a box plot will show these individuals as circles. These circles are referred to as outliers.
 
 While we have focused on figures here so far, tables can be incredibly informative at a glance too. If you are looking to display summary numbers, a table can also visually display information. Using this same data set, we can use a table to get a quick breakdown of how many males and females there are in the data set and what percentage of each gender there is. A few things to keep in mind when making tables is that it's best to: Limit the number of digits in the table, Include a caption, and when possible, keep it simple.
