@@ -427,24 +427,24 @@ o) labels(caption = "")
 {points:3}
 ?6 Go to the [Chromebook Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/3919/join?access_code=RUUQ%2BeEgKea0oMF7EJy4UePldyBBMu7d0amv2KFC){target="_blank"} and click on your copy of the 'swirl' project (If you haven't made a copy yet, do so now.) Then, type `swirl()` to get started. Tell Swirl your first name when it asks what to call you. Then, type the number that corresponds to the course `CBDS Data Visualization`. Type the number that corresponds to the lesson `L05 Exploratory to Explanatory Q01 Swirl`. Do this swirl module! Once complete, paste the code at the end of the lesson here.
 
-! /.*[EvXQ||Qnja||e1J3||cKex||lCBk||R2IT||bZZQ||Svki||ICYL||PpLl].*/i
+! /.+(EvXQ|Qnja|e1J3|cKex|lCBk|R2IT|bZZQ|Svki|ICYL|PpLl).+/i
 
 
 {points:3}
 ?7 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L05 Exploratory to Explanatory Q02 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
-! /.*[Xyxr||W1YF||rFjC||Cgyh||gmV2||JCDu||OpCd||ipcn||NgMn||xb5O].*/i
+! /.+(Xyxr|W1YF|rFjC|Cgyh|gmV2|JCDu|OpCd|ipcn|NgMn|xb5O).+/i
 
 {points:3}
 ?8 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L05 Exploratory to Explanatory Q03 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
-! /.*[f1fg||TKXk||VS2F||OJWE||MkxZ||NQSv||gm5Q||JbxY||hd3q||DL3R].*/i
+! /.+(f1fg|TKXk|VS2F|OJWE|MkxZ|NQSv|gm5Q|JbxY|hd3q|DL3R).+/i
 
 
 {points:3}
 ?9 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L05 Exploratory to Explanatory Q04 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
-! /.*[DMom||FUX0||EXFF||IzwC||mE4Y||oYuF||8yi2||Qwz0||5MvV||tNnc].*/i
+! /.+(DMom|FUX0|EXFF|IzwC|mE4Y|oYuF|8yi2|Qwz0|5MvV|tNnc).+/i
 
 
 

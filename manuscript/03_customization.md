@@ -449,33 +449,33 @@ o) axis.text = element_text(text = "bold")
 {points:3}
 ?6 Go to the [Chromebook Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/3919/join?access_code=RUUQ%2BeEgKea0oMF7EJy4UePldyBBMu7d0amv2KFC){target="_blank"} and click on your copy of the 'swirl' project (If you haven't made a copy yet, do so now.) Then, type `swirl()` to get started. Tell Swirl your first name when it asks what to call you. Then, type the number that corresponds to the course `CBDS Data Visualization`. Type the number that corresponds to the lesson `L03 Customization in ggplot2 Q01 Swirl`. Do this swirl module! Once complete, paste the code at the end of the lesson here.
 
-! /.*[ytPZ||oxqw||kEXQ||zuGw||xS8N||vylx||sfRN||hrAW||Av8M||oLlA].*/i
+! /.+(ytPZ|oxqw|kEXQ|zuGw|xS8N|vylx|sfRN|hrAW|Av8M|oLlA).+/i
 
 
 {points:3}
 ?7 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L03 Customization in ggplot2 Q02 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
-! /.*[eb8n||NdLf||68cW||837Z||RoaY||WGz5||tD1Z||UYCd||7fgV||q9jQ].*/i
+! /.+(eb8n|NdLf|68cW|837Z|RoaY|WGz5|tD1Z|UYCd|7fgV|q9jQ).+/i
 
 {points:3}
 ?8 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L03 Customization in ggplot2 Q03 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
-! /.*[UX1M||S4mY||9xRm||Vy42||q6EQ||3ySX||opD8||oZKK||uQuY||a03H].*/i
+! /.+(UX1M|S4mY|9xRm|Vy42|q6EQ|3ySX|opD8|oZKK|uQuY|a03H).+/i
 
 {points:3}
 ?9 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L03 Customization in ggplot2 Q04 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
-! /.*[cjSD||Fnox||l1N2||Da9p||AyxS||cAzt||XeA1||4Ljo||3ND3||3gGy].*/i
+! /.+(cjSD|Fnox|l1N2|Da9p|AyxS|cAzt|XeA1|4Ljo|3ND3|3gGy).+/i
 
 {points:3}
 ?10 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L03 Customization in ggplot2 Q05 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
-! /.*[kQaq||G21y||osGJ||unnD||5Hzf||z44s||pa3m||DuUx||xmMN||uPbf].*/i
+! /.+(kQaq|G21y|osGJ|unnD|5Hzf|z44s|pa3m|DuUx|xmMN|uPbf).+/i
 
 {points:3}
 ?11 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L03 Customization in ggplot2 Q06 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
-! /.*[Jy9u||GA0k||KTVW||ic2H||fF3v||ZdoQ||n1Jz||06vY||w2iB||TXW8].*/i
+! /.+(Jy9u|GA0k|KTVW|ic2H|fF3v|ZdoQ|n1Jz|06vY|w2iB|TXW8).+/i
 
 {/quiz}
 
