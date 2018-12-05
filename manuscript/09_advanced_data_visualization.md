@@ -156,8 +156,8 @@ o) plot
 ?2 To output a .gif animated plot, which package would you use? 
 
 C) plotly
+C) gganimate
 o) ggplot
-o) gganimate
 o) ggplot2
 o) plot
 

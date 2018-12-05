@@ -172,12 +172,12 @@ o) inclusion of source of data
 ! /.+(VUX0|yqmH|xuAg|CfDp|Nevw|Ynqz|DrcO|WDOj|vFwa|gTOc).+/i
 
 {points:3}
-?6 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L07 Tables in R Q02 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
+?6 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L07 Tables in R Q03 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
 ! /.+(C6xK|itkJ|tuvm|nCkV|MKl7|a1dR|vFQ6|beDx|Tb9R|L6hr).+/i
 
 {points:3}
-?7 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L07 Tables in R Q02 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
+?7 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L07 Tables in R Q04 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
 ! /.+(Wt1G|DRlx|cmjg|Q6E1|bdca|m79w|fTui|n0Bk|9SfC|mzKw).+/i
 

@@ -67,7 +67,7 @@ For example, if you are displaying information about arrests in each of the 50 U
 
 #### Labels
 
-Labels on your columns and rows should be informative and clear. If talking about the price of diamonds, a bad column label would be "P" and a better column label would be "price." An even better column label would be "price (USD)." This lavel is preferred because it provides viewers with the unit for the values in the table, conveying that these prices are all in US dollars. Viewers should be able to easily determine what information the table is displaying.
+Labels on your columns and rows should be informative and clear. If talking about the price of diamonds, a bad column label would be "P" and a better column label would be "price." An even better column label would be "price (USD)." This label is preferred because it provides viewers with the unit for the values in the table, conveying that these prices are all in US dollars. Viewers should be able to easily determine what information the table is displaying.
 
 Below, the labels on the table at right are informative, whereas a viewer may not easily be able to determine what the column labels on the left (AN, AC, and MAD) mean. 
 
@@ -87,7 +87,7 @@ Just like with good plots, good tables should have a title or caption that is cl
 
 #### The source of the data
 
-Like with explanatory graphs, it's important to include the source of the dat used in your table at the bottom of the table when finalizing a table.
+Like with explanatory graphs, it's important to include the source of the data used in your table at the bottom of the table when finalizing a table.
 
 ![Always include the source of the data in your table](images/06_datatables/06_dataviz_datatables-11.png)
 

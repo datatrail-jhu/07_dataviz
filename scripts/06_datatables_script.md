@@ -14,12 +14,12 @@ Put the most informative and important columns at the left and the less importan
 
 Viewers should be able to figure out what the table is saying at a quick glance. If there are too many rows or too many columns, your data should most likely be a plot, not a table. For example, if you are displaying information about arrests in each of the 50 US states, it may be better to consider plots, as it's difficult to draw any conclusions about these data across 50 different rows. However, when we are only comparing across 5 rows, as in the case of our top results from the flights analysis, we can easily make comparisons across these five airports whose data are included in the table.
 
-Labels on your columns and rows should be informative and clear. If talking about the price of diamonds, a bad column label would be "P" and a better column label would be "price." An even better column label would be "price (USD)." This level is preferred because it provides viewers with the unit for the values in the table, conveying that these prices are all in US dollars. Viewers should be able to easily determine what information the table is displaying. Here, the labels on the table at right are informative, whereas a viewer may not easily be able to determine what the column labels on the left (AN, AC, and MAD) mean. 
+Labels on your columns and rows should be informative and clear. If talking about the price of diamonds, a bad column label would be "P" and a better column label would be "price." An even better column label would be "price (USD)." This label is preferred because it provides viewers with the unit for the values in the table, conveying that these prices are all in US dollars. Viewers should be able to easily determine what information the table is displaying. Here, the labels on the table at right are informative, whereas a viewer may not easily be able to determine what the column labels on the left (AN, AC, and MAD) mean. 
 
 Including a lot of decimal places in a table is not helpful to viewers. Often, two significant digits is enough. You'll want to always double check the values in your table to make sure they are displayed appropriately before finalizing a table.
 
 Just like with good plots, good tables should have a title or caption that is clear and concise. It should tell viewers what they should determine from the data in the table. 
 
-Like with explanatory plots, it's important to include the source of the dat used in your table at the bottom of the table when finalizing a table. 
+Like with explanatory plots, it's important to include the source of the data used in your table at the bottom of the table when finalizing a table. 
 
 With an idea of how to make a great explanatory table, you're ready to start practicing making your own in R.

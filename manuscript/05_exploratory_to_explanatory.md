@@ -91,7 +91,7 @@ ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
   theme_bw()
 ```
 
-![`theme_bw()` gets us closer to the aesthetic we're looking for](images/05_exploratory_to_explanatory/05_dataviz_exploratory_to_explanatory-9.png)
+![`theme_bw()` gets us closer to the aesthetic we're looking for](images/05_exploratory_to_explanatory/05_dataviz_exploratory_to_explanatory-8.png)
 
 ### Customizing the Theme
 
