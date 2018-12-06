@@ -27,7 +27,7 @@ p2 <- ggplot(mtcars) + geom_boxplot(aes(gear, mpg, group = gear))
 p1 + p2
 ```
 
-![Two plots side-by-side](images/08_multiple_plots/08_dataviz_multiple_plots-1.png)
+![Two plots side-by-side](https://docs.google.com/presentation/d/1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI/export/png?id=1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI&pageid=g2bfdb07292_0_151)
 
 ### Altering the layout
 
@@ -37,7 +37,7 @@ If you don't want these plots side-by-side, but rather one on top of the other, 
 p1 + p2 + plot_layout(ncol = 1)
 ```
 
-![two plots one on top of the other](images/08_multiple_plots/08_dataviz_multiple_plots-2.png)
+![two plots one on top of the other](https://docs.google.com/presentation/d/1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI/export/png?id=1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI&pageid=g3585f477db_0_2)
 
 Similarly, if you want these on top of one another but would rather the first plot be larger, this can be controlled within `plot_layout()` using the `heights` argument. The '3' in the code below specifies that you would like the top plot to be 3 times larger than the bottom plot (whose relative height is defined as '1').
 
@@ -45,7 +45,7 @@ Similarly, if you want these on top of one another but would rather the first pl
 p1 + p2 + plot_layout(ncol = 1, heights = c(3, 1))
 ```
 
-![two plots one on top of the other of unequal heights](images/08_multiple_plots/08_dataviz_multiple_plots-3.png)
+![two plots one on top of the other of unequal heights](https://docs.google.com/presentation/d/1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI/export/png?id=1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI&pageid=g3585f477db_0_6)
 
 ### Nesting plots
 
@@ -68,7 +68,7 @@ p4 + (
   plot_layout(ncol = 1)
 ```
 
-![Nested Plots](images/08_multiple_plots/08_dataviz_multiple_plots-4.png)
+![Nested Plots](https://docs.google.com/presentation/d/1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI/export/png?id=1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI&pageid=g3585f477db_0_10)
 
 
 ### Additional operators 
@@ -84,7 +84,7 @@ If you are simply adding plots beside one another or on top of one another, this
       p4
 ```
 
-![Three plots together horizontally over another plot vertically](images/08_multiple_plots/08_dataviz_multiple_plots-5.png)
+![Three plots together horizontally over another plot vertically](https://docs.google.com/presentation/d/1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI/export/png?id=1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI&pageid=g3585f477db_0_14)
 
 #### `&` and `*`
 
@@ -94,7 +94,7 @@ If you are simply adding plots beside one another or on top of one another, this
 p1 + (p2 + p3) + p4 + plot_layout(ncol = 1) & theme_bw()
 ```
 
-![All four plots changed to theme_bw()](images/08_multiple_plots/08_dataviz_multiple_plots-6.png)
+![All four plots changed to theme_bw()](https://docs.google.com/presentation/d/1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI/export/png?id=1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI&pageid=g3585f477db_0_18)
 
 If you only wanted this theme to be applied to the plots in the current nesting level, you would use `*`.
 
@@ -102,7 +102,7 @@ If you only wanted this theme to be applied to the plots in the current nesting 
 (p1 + (p2 + p3) + p4 + plot_layout(ncol = 1)) * theme_bw()
 ```
 
-![Plots in main nesting level have theme_bw, but p2 and p3 remain unchanged](images/08_multiple_plots/08_dataviz_multiple_plots-7.png)
+![Plots in main nesting level have theme_bw, but p2 and p3 remain unchanged](https://docs.google.com/presentation/d/1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI/export/png?id=1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI&pageid=g3585f477db_0_32)
 
 #### `-`
 
@@ -112,7 +112,7 @@ Thus far, we have only focused on adding plots together using `+`. There is also
 p1 + p2 - p3 + plot_layout(ncol = 1)
 ```
 
-![Using the - operator](images/08_multiple_plots/08_dataviz_multiple_plots-8.png)
+![Using the - operator](https://docs.google.com/presentation/d/1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI/export/png?id=1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI&pageid=g3585f477db_0_36)
 
 ### Additional Resources
 [Patchwork GitHub](https://github.com/thomasp85/patchwork)

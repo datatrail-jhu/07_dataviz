@@ -39,23 +39,23 @@ p
 
 Within RStudio, ggplotly() graphs will display within the 'Viewer' tab. 
 
-![iris interactive plot in RStudios](images/09_advanced_data_visualization/09_dataviz_advanced_data_visualization-2.png)
+![iris interactive plot in RStudios](https://docs.google.com/presentation/d/1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0/export/png?id=1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0&pageid=g2bfdb07292_0_151)
 
 While this picture here appears to be static, within RStudio, you are able to interact with this graph. For example, if you hover over a point on the graph, information about that particular point will display.  
 
-![information about a specific point](images/09_advanced_data_visualization/09_dataviz_advanced_data_visualization-3.png)
+![information about a specific point](https://docs.google.com/presentation/d/1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0/export/png?id=1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0&pageid=g389ae8f2fa_0_12)
 
 Similarly, if you hover your mouse over the boxplot, summary information about that category will display.
 
-![information about a specific group of points](images/09_advanced_data_visualization/09_dataviz_advanced_data_visualization-4.png)
+![information about a specific group of points](https://docs.google.com/presentation/d/1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0/export/png?id=1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0&pageid=g389ae8f2fa_0_22)
 
 
 If you hover over the graph in general, options will display at the top right of the interactive graph. 
-![hover over plot menu displays](images/09_advanced_data_visualization/09_dataviz_advanced_data_visualization-5.png)
+![hover over plot menu displays](https://docs.google.com/presentation/d/1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0/export/png?id=1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0&pageid=g389ae8f2fa_0_1)
 
 We won't walk through each of these now, but if you hover your mouse over any of the icons in the menu, it will describe what that button does. The best way to get a feel for what these do is to play around with these options in RStudio and to read the [plotly documentation](https://plotly-book.cpsievert.me/)
 
-![hover over button in menu displays](images/09_advanced_data_visualization/09_dataviz_advanced_data_visualization-6.png)
+![hover over button in menu displays](https://docs.google.com/presentation/d/1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0/export/png?id=1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0&pageid=g389ae8f2fa_0_29)
 
 
 
@@ -82,11 +82,11 @@ ggplotly(gg)
 
 ```
 
-![plotly animated graphic](images/09_advanced_data_visualization/09_dataviz_advanced_data_visualization-8.png)
+![plotly animated graphic](https://docs.google.com/presentation/d/1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0/export/png?id=1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0&pageid=g389ae8f2fa_0_37)
 
 An important point is that this animated graphic is still an interactive graphic. For example, if we were only interested in looking at this relationship for countries in Africa and Europe, we could click on "Americas", "Asia", and "Oceania" in the legend to remove those points from the plot in the current view. 
 
-![plotly animated graphic is still interactive](images/09_advanced_data_visualization/09_dataviz_advanced_data_visualization-9.png)
+![plotly animated graphic is still interactive](https://docs.google.com/presentation/d/1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0/export/png?id=1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0&pageid=g389ae8f2fa_0_68)
 
 ##### plotly in RMarkdown reports
 

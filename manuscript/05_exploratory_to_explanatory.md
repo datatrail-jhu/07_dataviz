@@ -8,11 +8,11 @@ To discuss going from exploratory plots, such as the four plots made last lesson
 
 To discuss the types of changes you can make to plots, we'll return to the iPhone sales plot we looked at in an earlier lesson in this course where we discussed considerations that should be made when making good plots and use that as an example. We'll walk through the code used to make that plot and highlight the types of changes you can make to the the overall appearance of a plot step-by-step.  
 
-![Final reproduction of blog post plot](images/05_exploratory_to_explanatory/05_dataviz_exploratory_to_explanatory-1.png)
+![Final reproduction of blog post plot](https://docs.google.com/presentation/d/1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI/export/png?id=1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI&pageid=g35672b192f_0_5)
 
 Before we do that, let's take a glance at the data used to make this plot. 
 
-![data for iPhone plot](images/05_exploratory_to_explanatory/05_dataviz_exploratory_to_explanatory-2.png)
+![data for iPhone plot](https://docs.google.com/presentation/d/1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI/export/png?id=1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI&pageid=g35672b192f_0_0)
 
 The variables used to reproduce the blog post graph are:
 
@@ -25,7 +25,7 @@ The variables used to reproduce the blog post graph are:
 
 While there is a lot of code that led to this final product of this plot, you'll note that it still starts with the same basic framework we already discussed. There is a ggplot() call and then the geom is defined. Here, as we wanted a line for each Apple product, so we specify the geom `geom_line().` This isn't a geom we have discussed explicitly yet, but it connects the points on a plot with a single line. It's helpful for plotting data over time, which is exactly what we're doing here! In addition to specifying the x and y arguments within `aes()`, we are also specifying the `group` and `color` arguments, both of which we have discussed previously. Here, `group` lets `ggplot2` to map the variable `variable` to three different lines (one for each Apple product) and `color` specifies that we want to map the variable `variable` to three different colors.
 
-![plot code highlighting first two lines](images/05_exploratory_to_explanatory/05_dataviz_exploratory_to_explanatory-3.png)
+![plot code highlighting first two lines](https://docs.google.com/presentation/d/1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI/export/png?id=1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI&pageid=g3a0d0ecc6f_0_168)
 
 In fact, if we were to just run these two lines of code, we would have a reasonable exploratory plot.  
 
@@ -34,7 +34,7 @@ ggplot(data = df2, aes(x = yrq, y = value, group = variable, color = variable)) 
   geom_line() 
 ```
 
-![Exploratory plot](images/05_exploratory_to_explanatory/05_dataviz_exploratory_to_explanatory-4.png)
+![Exploratory plot](https://docs.google.com/presentation/d/1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI/export/png?id=1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI&pageid=g35672b192f_0_17)
 
 While this plot is not nearly as clear nor as pretty as the final plot, you can better understand the data at this point, which is precisely the goal of an exploratory plot.
 
@@ -50,7 +50,7 @@ ggplot(data = df2, aes(x = yrq, y = value, group = variable, color = variable)) 
   geom_line(size = 1.5) 
 ```
 
-![`size` increases line thickness](images/05_exploratory_to_explanatory/05_dataviz_exploratory_to_explanatory-5.png)
+![`size` increases line thickness](https://docs.google.com/presentation/d/1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI/export/png?id=1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI&pageid=g3a0d0ecc6f_0_1)
 
 ### Adding a Title
 
@@ -62,7 +62,7 @@ ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
   ggtitle("iPhone more successful than all other Apple products", subtitle="Worldwide sales of selected Apple products in million, by fiscal quarter, 2000 to 2014")
 ```
 
-![ggtitle adds title to plot](images/05_exploratory_to_explanatory/05_dataviz_exploratory_to_explanatory-6.png)
+![ggtitle adds title to plot](https://docs.google.com/presentation/d/1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI/export/png?id=1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI&pageid=g35672b192f_0_23)
 
 Here, we're using the same title and subtitle as was used in the plot originally.
 
@@ -77,7 +77,7 @@ ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
   scale_colour_manual(values = c("red3","grey","grey")) 
 ```
 
-![`scale_colour_manual` allows for manual control of the line colors](images/05_exploratory_to_explanatory/05_dataviz_exploratory_to_explanatory-7.png)
+![`scale_colour_manual` allows for manual control of the line colors](https://docs.google.com/presentation/d/1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI/export/png?id=1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI&pageid=g3a0d0ecc6f_0_6)
 
 ### Specifying a Theme
 
@@ -91,7 +91,7 @@ ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
   theme_bw()
 ```
 
-![`theme_bw()` gets us closer to the aesthetic we're looking for](images/05_exploratory_to_explanatory/05_dataviz_exploratory_to_explanatory-9.png)
+![`theme_bw()` gets us closer to the aesthetic we're looking for](https://docs.google.com/presentation/d/1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI/export/png?id=1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI&pageid=g3a0d0ecc6f_0_12)
 
 ### Customizing the Theme
 
@@ -108,7 +108,7 @@ ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
   )
 ```
 
-![removing vertical grid lines](images/05_exploratory_to_explanatory/05_dataviz_exploratory_to_explanatory-9.png)
+![removing vertical grid lines](https://docs.google.com/presentation/d/1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI/export/png?id=1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI&pageid=g3a0d0ecc6f_0_12)
 
 We can then remove the axis labels `yrq` and `value` from the plot. The necessary information about what is plotted on each axis is included in the subtitle already on this plot
 
@@ -125,7 +125,7 @@ ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
    ) 
 ```
 
-![removing axis labels](images/05_exploratory_to_explanatory/05_dataviz_exploratory_to_explanatory-10.png)
+![removing axis labels](https://docs.google.com/presentation/d/1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI/export/png?id=1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI&pageid=g3a0d0ecc6f_0_34)
 
 Now, let's increase the size of those axis labels and the plot title, so that they're clear to anyone looking at this plot!
 
@@ -145,7 +145,7 @@ ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
   )
 ```
 
-![increase font size across plot](images/05_exploratory_to_explanatory/05_dataviz_exploratory_to_explanatory-11.png)
+![increase font size across plot](https://docs.google.com/presentation/d/1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI/export/png?id=1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI&pageid=g3a0d0ecc6f_0_41)
 
 Now, let's just make a few more tweaks. Let's first remove the legend because we're going to directly label the lines in a few steps and let's remove the unnecessary border around the plot.
 
@@ -167,7 +167,7 @@ ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
   )
 ```
 
-![Removing the legend and border around the plot](images/05_exploratory_to_explanatory/05_dataviz_exploratory_to_explanatory-12.png)
+![Removing the legend and border around the plot](https://docs.google.com/presentation/d/1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI/export/png?id=1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI&pageid=g3a0d0ecc6f_0_52)
 
 Now that the border has been removed, we're kind of squished up right against the edge of the plotting area. We can increase the area around the plot by specifying `plot.margin`. The default for this argument is `plot.margin = unit(c(1, 1, 0.5, 0.5), "lines")` where the four numbers correspond to the top, right, bottom, and left of the plot. Here, by increasing the value from 0.5 to 1 we're increasing the space in the margin area beneath and to the left of the plot a bit.
 
@@ -191,7 +191,7 @@ ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
   ) 
 ```
 
-![Adjusting plot margin](images/05_exploratory_to_explanatory/05_dataviz_exploratory_to_explanatory-13.png)
+![Adjusting plot margin](https://docs.google.com/presentation/d/1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI/export/png?id=1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI&pageid=g3a0d0ecc6f_0_59)
 
 ### Customizing Axis Labels
 
@@ -220,7 +220,7 @@ ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
   scale_y_continuous(breaks = c(0,10,20,30,40,50,60,70,80))
 ```
 
-![controlling axis labels](images/05_exploratory_to_explanatory/05_dataviz_exploratory_to_explanatory-14.png)
+![controlling axis labels](https://docs.google.com/presentation/d/1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI/export/png?id=1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI&pageid=g3a0d0ecc6f_0_68)
 
 ### Adding direct labels
 
@@ -254,7 +254,7 @@ ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
   )
 ```
 
-![`geom_dl` directly labels our three lines](images/05_exploratory_to_explanatory/05_dataviz_exploratory_to_explanatory-15.png)
+![`geom_dl` directly labels our three lines](https://docs.google.com/presentation/d/1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI/export/png?id=1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI&pageid=g3a0d0ecc6f_0_97)
 
 #### Adding Annotations
 
@@ -293,7 +293,7 @@ ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
   annotate("rect", xmin = 2010, xmax = 2011, ymin = 0, ymax = Inf, fill = "grey", alpha = 0.2)
 ```
 
-![adding the rectangle to draw attention](images/05_exploratory_to_explanatory/05_dataviz_exploratory_to_explanatory-16.png)
+![adding the rectangle to draw attention](https://docs.google.com/presentation/d/1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI/export/png?id=1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI&pageid=g3a0d0ecc6f_0_104)
 
 Within annotate, we to specify the geom you want to add to the plot (here we add "rect" and "text") and the x- and y-coordinates on the graph where you want the annotation to appear. Additionally, you also have the ability to control a number of parameters, including:
 
@@ -333,19 +333,19 @@ ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
   annotate("text", x = 2010.5, y = 40, label = "After Apple announced \n the iPhone 4 in 2010, \n more iPhones were sold \n than iPods for the first time.", hjust = 1, size=6)
 ```
 
-![adding text to plot](images/05_exploratory_to_explanatory/05_dataviz_exploratory_to_explanatory-18.png)
+![adding text to plot](https://docs.google.com/presentation/d/1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI/export/png?id=1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI&pageid=g3a0d0ecc6f_0_111)
 
 ### Explanatory Plot
 
 With all of these changes, you now have a beautiful plot that accomplishes everything an explanatory plot should. It conveys information clearly to the viewer, is well-labeled, and draws the attention of the viewer to the important parts of the graph.
 
-![Explanatory Plot](images/05_exploratory_to_explanatory/05_dataviz_exploratory_to_explanatory-19.png)
+![Explanatory Plot](https://docs.google.com/presentation/d/1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI/export/png?id=1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI&pageid=g3a0d0ecc6f_0_129)
 
 We point these out now not so you master each of these alterations, but rather so that you have some idea of what it takes to take an exploratory plot that you generally make very quickly for your own purposes and turn it into an explanatory plot that clearly communicates your results to someone else. 
 
 As we walked through this example, you saw that it can take a lot of code to generate a polished graph. As you practice making plots in R, know that it's typical to struggle to figure out how to make the plot look exactly the way you want. Google will help here and so will people on [stack overflow](https://stackoverflow.com/). Googling your specific question and looking for solutions in R that other people have already come up with is a great place to start whenever you're stuck trying to figure out something on a plot. Also, really great explanatory plots take time. It's ok to spend a lot of time making a single important plot that effectively communicates your point.  
 
-![It can take a lot of code](images/05_exploratory_to_explanatory/05_dataviz_exploratory_to_explanatory-20.png)
+![It can take a lot of code](https://docs.google.com/presentation/d/1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI/export/png?id=1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI&pageid=g3a0d0ecc6f_0_174)
 
 
 ### Slides and Video
