@@ -215,7 +215,7 @@ While we've reviewed basic code to make a few common types of plots, there are a
 
 Or, you can select a geom from this list and click enter. After selecting a geom, such as geom_abline and hitting 'Enter,' the help page for that geom will pop up in the 'Help' tab at bottom right. Here, you can find more detailed information about the selected geom.
 
-[geom_abline help page](images/02_ggplot2/02_dataviz_ggplot2-16.png)
+![geom_abline help page](https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&pageid=g360e22de56_0_154)
 
 ### Summary
 
