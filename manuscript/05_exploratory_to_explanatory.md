@@ -93,6 +93,7 @@ ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
 
 ![`theme_bw()` gets us closer to the aesthetic we're looking for](https://docs.google.com/presentation/d/1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI/export/png?id=1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI&pageid=g3a0d0ecc6f_0_12)
 
+
 ### Customizing the Theme
 
 After getting closer to the look we want, we can modify the theme specifically using `theme()`. To get us started we'll first remove the vertical gridlines. Note that within theme, when you want to remove a theme element you specify that by setting the theme element to `element_blank()`.
