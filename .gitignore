@@ -1,3 +1,7 @@
 manuscript/resources/videos/*
+manuscript/resources/images/*
 .Rproj.user
+.Rhistory
+.RData
+.Ruserdata
 .httr-oauth
