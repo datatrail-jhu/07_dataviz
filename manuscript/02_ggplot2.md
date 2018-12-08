@@ -26,6 +26,7 @@ After installation and loading `ggplot2` in, you will always begin by calling th
 
 To build your first plot in `ggplot2` we'll make use of the fact that there are some datasets already available in R. One frequently-used data set is known as `diamonds`. This data set contains prices and other attributes of 53,940 diamonds, with each row containing information about a different diamond. If you look at the first few rows of data, you can get an idea of what data are included in this dataset. 
 
+{format: png}
 ![First 12 rows of diamonds dataset](https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&pageid=g360e22de56_0_108)
 
 Here you see a lot of numbers and can get an idea of what data are available in this data set. For example, in looking at the column names across the top, you can see that we have information about how many carats each diamond is (`carat`), some information on the quality of the diamond cut (`cut`), the color of the diamond from J (worst) to D (best) (`color`), along with a number of other pieces of information about each diamond.
@@ -40,6 +41,7 @@ In `ggplot2` we specify these by defining `x` and `y` in the `aes()` argument. T
 ggplot(data = diamonds) + 
   geom_point(mapping = aes(x = carat, y = price))
 ```
+{format: png}
 ![diamonds scatterplot](https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&pageid=g360e22de56_0_118)
 
 In this plot, we see that, in general, the larger the diamond is (or the more carats it has), the more expensive the diamond is (price), which is probably what we would have expected. However, now, we have a plot that definitively supports this conclusion. 
@@ -61,6 +63,7 @@ ggplot(data = diamonds) +
   geom_point(mapping = aes(x = carat, y = price, color = clarity)
 ```
 
+{format: png}
 ![changing point colors helps us better understand the data](https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&pageid=g3c02bd843a_0_0)
 
 Here, we see that not only are the points now colored by clarity, ggplot2 has also automatically added a legend for us with the various classes and their corresponding point color. 
@@ -76,6 +79,7 @@ ggplot(data = diamonds) +
   geom_point(mapping = aes(x = carat, y = price), color = "red") 
 ```
 
+{format: png}
 ![manually specifying point color occurs outside of `aes()`](https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&pageid=g3c02bd843a_0_5)
 
 
@@ -88,6 +92,7 @@ ggplot(data = diamonds) +
   geom_point(mapping = aes(x = carat, y = price, size = clarity))
 ```
 
+{format: png}
 ![mapping to size changes point size on plot](https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&pageid=g3c02bd843a_0_10)
 
 
@@ -102,6 +107,7 @@ ggplot(data = diamonds) +
   geom_point(mapping = aes(x = carat, y = price), size = 4.5)
 ```
 
+{format: png}
 ![manually specifying point size of all points occurs outside of `aes()`](https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&pageid=g3c02bd843a_0_16)
 
 Here, we have manually increased the size of *all* the points on the plot. 
@@ -115,12 +121,14 @@ ggplot(data = diamonds) +
   geom_point(mapping = aes(x = carat, y = price, shape = clarity))
 ```
 
+{format: png}
 ![mapping clarity to shape](https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&pageid=g3c02bd843a_0_32)
 
 Here, while the mapping occurs correctly within ggplot2, we do get a warning message that discriminating more than six different shapes is difficult for the human eye. Thus, ggplot2 won't allow more than six different shapes on a plot. This suggests that while you *can* do something, it's not always the *best* to do that thing. Here, with more than six levels of clarity, it's best to stick to mapping this variable to `color` as we did initially.
 
 To manually specify a shape for all the points on your plot, you would specify it outside of `aes` using one of the twenty-five different shape options available:
 
+{format: png}
 ![options for points in ggplot2's `shape`](https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&pageid=g3c02bd843a_0_25)
 
 For example, to plot all of the points on the plot as filled diamonds (it is a dataset about diamonds after all...), you would specify shape '18':
@@ -130,6 +138,7 @@ ggplot(data = diamonds) +
   geom_point(mapping = aes(x = carat, y = price), shape = 18)
 ```
  
+{format: png}
 ![specifying filled diamonds as shape for all points manually](https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&pageid=g3c02bd843a_0_38)
 
 ### Facets
@@ -145,6 +154,7 @@ ggplot(data = diamonds) +
 ```
 Here, read the tilde as the word "by". Specifically here, we want a scatterplot of the relationship between carat and price and we want it faceted (broken down) **by (~)** clarity.
 
+{format: png}
 ![facet_wrap breaks plots down into subplots](https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&pageid=g3c02bd843a_0_44)
 
 Now, we have eight different plots, one for each level of clarity, where we can see the relationship between diamond carats and price.
@@ -169,6 +179,7 @@ ggplot(data = diamonds) +
   geom_histogram(mapping =  aes(carat))
 ```
 
+{format: png}
 ![histogram of carat shows range and shape](https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&pageid=g360e22de56_0_113)
 
 The code follows what we've seen so far in this lesson; however, we've now called `geom_histogram` to specify that we want to plot a histogram rather than a scatterplot. 
@@ -188,6 +199,7 @@ ggplot(data = diamonds) +
 
 Again, the changes to the code are minimal. We are now interested in plotting the categorical variable `cut` and state that we want a bar plot, by including `geom_bar()`. 
 
+{format: png}
 ![diamonds barplot](https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&pageid=g360e22de56_0_122)
 
 Here, we again use rectangular shapes to represent the data, but we're not showing the distribution of a single variable (as we were with `geom_histogram`). Rather, we're using rectangles to show the count (number) of diamonds within each category within cut. Thus, we need a different geom: `geom_bar`!
@@ -203,6 +215,7 @@ ggplot(data = diamonds) +
 
 In the code, we see that again, we only have to change what variables we want to be included in the plot the type of plot (or geom) we want (here, `geom_boxplot()`) to get a basic boxplot.
 
+{format: png}
 ![diamonds boxplot](https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&pageid=g360e22de56_0_128)
 
 In the figure itself we see that the median price (the black horizontal bar in the middle of each box represents the median for each category) increases as the diamond color increases from the worst category (J) to the best (D).
@@ -211,10 +224,12 @@ In the figure itself we see that the median price (the black horizontal bar in t
 
 While we've reviewed basic code to make a few common types of plots, there are a number of other plot types that can be made in `ggplot2.` These are listed in the [online reference material for ggplot2](http://ggplot2.tidyverse.org/reference/) or can be accessed through RStudio directly. To do so, you would type `?geom_` into the Console in RStudio. A list of geoms will appear. You can hover your cursor over any one of these to get a short description. 
 
+{format: png}
 ![?geom in Console](https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&pageid=g360e22de56_0_149)
 
 Or, you can select a geom from this list and click enter. After selecting a geom, such as geom_abline and hitting 'Enter,' the help page for that geom will pop up in the 'Help' tab at bottom right. Here, you can find more detailed information about the selected geom.
 
+{format: png}
 ![geom_abline help page](https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&pageid=g360e22de56_0_154)
 
 ### Summary

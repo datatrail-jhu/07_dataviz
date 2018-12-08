@@ -247,6 +247,7 @@ In the second part of the project, you'll work to generate an explanatory plot. 
 
 The data used in this part of the project were dowloaded from [FiveThirtyEight](https://data.fivethirtyeight.com/) - `steak-survey`.  They were originally used in the article: [How Americans Like Their Steak](https://fivethirtyeight.com/features/how-americans-like-their-steak/). The goal of this part of the project will be to recreate the data visualization used in this article, which is re-printed here:
 
+{format: png}
 ![steak survey data visualization from fivethirtyeight.com](https://fivethirtyeight.com/wp-content/uploads/2017/06/hickeydottle-steak-1-rd.png)
 
 To get started, **run the code in the `meat-data` code chunk** to read the survey data into RStudio Cloud.

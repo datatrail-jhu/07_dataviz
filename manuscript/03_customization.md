@@ -11,6 +11,7 @@ Since we're already familiar with it, we'll again use the `diamonds` dataset tha
 
 To get started, we'll learn how to control color across plots in `ggplot2`. in the last lesson we discussed using color within `aes()` on a scatterplot to automatically color points by the clarity of the diamond when looking at the relationship between price and carat.
 
+{format: png}
 ![color within `aes()` to color points](https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&pageid=g3c07dc9761_0_0) 
 
 However, what if we wanted to carry this concept over to a bar plot and look at how many diamonds we have of each clarity group?
@@ -19,6 +20,7 @@ However, what if we wanted to carry this concept over to a bar plot and look at 
 ggplot(data = diamonds) + 
   geom_bar(mapping = aes(x = clarity))
 ```
+{format: png}
 ![diamonds broken down by clarity](https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&pageid=g3c07dc9761_0_84)
 
 Well that's a start since we see the breakdown, but all the bars are the same color. What if we adjusted color within `aes()`?
@@ -27,6 +29,7 @@ Well that's a start since we see the breakdown, but all the bars are the same co
 ggplot(data = diamonds) + 
   geom_bar(mapping = aes(x = clarity, color = clarity))
 ```
+{format: png}
 ![color does add color but around the bars](https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&pageid=g3c07dc9761_0_79)
 
 As expected, color added a legend for each level of clarity; however, it colored the lines around the bars on the plot, rather than the bars themselves. In order to color the bars themselves, you want to specify the more helpful argument `fill`:
@@ -35,6 +38,7 @@ As expected, color added a legend for each level of clarity; however, it colored
 ggplot(data = diamonds) + 
   geom_bar(mapping = aes(x = clarity, fill = clarity))
 ```
+{format: png}
 ![`fill` automatically colors the bars](https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&pageid=g3c07dc9761_0_89)
 
 Great! We now have a plot with bars of different colors, which was our first goal! However, adding colors here, while maybe making the plot prettier doesn't actually give us any more information. We can see the same pattern of which clarity is most frequent among the diamonds in our dataset that we could in the first plot we made. 
@@ -45,6 +49,7 @@ Color is particularly helpful here, however, if we wanted to map a different var
 ggplot(data = diamonds) + 
   geom_bar(mapping = aes(x = clarity, fill = cut))
 ```
+{format: png}
 ![mapping a different variable to fill provides new information](https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&pageid=g3c07dc9761_0_98)
 
 Now we're getting some new information! We can see that each level in clarity appears to have diamonds of all levels of cut. Color here has really helped us understand more about the data.
@@ -56,6 +61,7 @@ ggplot(data = diamonds) +
   geom_bar(mapping = aes(x = clarity, fill = cut)) +
   scale_fill_manual(values = c("red", "orange", "darkgreen", "dodgerblue", "purple4"))
 ```
+{format: png}
 ![manually setting colors using `scale_fill_manual`](https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&pageid=g3c07dc9761_0_103)
 
 Here, we've specified five different colors within the `values` argument of `scale_fill_manual()`, one for each cut of diamond. The names of these colors can be specified using the names explained on the third page of the cheatsheet [here](https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/colorPaletteCheatsheet.pdf). (Note: There are other ways to specify colors within R. Explore the details in that cheatsheet to better understand the various ways!)
@@ -74,6 +80,7 @@ ggplot(data = diamonds) +
   scale_fill_manual(values = c("red", "orange", "darkgreen", "dodgerblue", "purple4"))
 ```
 
+{format: png}
 ![`position = "fill"` allows for comparison of proportion across groups](https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&pageid=g3c07dc9761_0_108)
 
 Here, we've specified how we want to adjust the position of the bars in the plot. Each bar is now of equal height and we can compare each colored bar across the different clarities. As expected, we see that among the best clarity group (IF), we see more diamonds of the best cut ("Ideal")!
@@ -85,6 +92,7 @@ ggplot(data = diamonds) +
   geom_bar(mapping = aes(x = clarity, fill = cut), position = "dodge") +
   scale_fill_manual(values = c("red", "orange", "darkgreen", "dodgerblue", "purple4"))
 ```
+{format: png}
 ![`position = "dodge"` helps compare values within each group](https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&pageid=g3c07dc9761_0_113)
 
 Unlike in the first plot where we specified `fill = cut`, we can actually see the relationship between each cut within the lowest clarity group (I1). Before, when the values were stacked on top of one another, we were not able to visually see that there were more "Fair" and "Premium" cut diamonds in this group than the other cuts. Now, with `position = "dodge"`, this information is visually apparent.
@@ -109,6 +117,7 @@ ggplot(data = diamonds) +
         subtitle = "The majority of IF diamonds are an \"Ideal\" cut")
 ```
 
+{format: png}
  ![`labs()` adds helpful tittles, subtitles, and captions](https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&pageid=g3c07dc9761_0_118)
  
 #### Axis labels
@@ -124,6 +133,7 @@ ggplot(data = diamonds) +
   ylab("proportion")
 ```
 
+{format: png}
 ![Accurate axis labels are incredibly important](https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&pageid=g3c07dc9761_0_136)
 
  
@@ -131,6 +141,7 @@ ggplot(data = diamonds) +
 
 To change the overall aesthetic of your graph, there are 8 themes built into `ggplot2` that can be added as an additional layer in your graph:
 
+{format: png}
 ![themes](https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&pageid=g3c07dc9761_0_123)
 
 For example, if we wanted remove the gridlines and grey background from the chart, we would use `theme_classic()`. Building on what we've already generated:
@@ -144,6 +155,7 @@ ggplot(data = diamonds) +
   ylab("proportion") +
   theme_classic()
 ```
+{format: png}
 ![`theme_classic` changes aesthetic of our plot](https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&pageid=g3c07dc9761_0_129)
 
 We now have a pretty good looking plot! However, a few additional changes would make this plot *even better* for communication.
@@ -171,6 +183,7 @@ ggplot(data = diamonds) +
          axis.title = element_text(size = 16),
          legend.text = element_text(size = 14) )
 ```
+{format: png}
 ![`theme()` allows us to adjust font size](https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&pageid=g3c07dc9761_0_142)
 
 #### Additional text alterations
@@ -191,6 +204,7 @@ ggplot(data = diamonds) +
          legend.text = element_text(size = 14),
          plot.subtitle = element_text(color = "gray30") )
 ```
+{format: png}
 ![`theme()` allows us to tweak many parts of our plot](https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&pageid=g3c07dc9761_0_157)
 
 Any alterations to plot spacing/background, title, axis, and legend will all be made within `theme()`
@@ -215,6 +229,7 @@ ggplot(data = diamonds) +
   guides(fill = guide_legend("cut quality")) 
 ```
 
+{format: png}
 ![`guide()` allows us to change the legend title](https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&pageid=g3c07dc9761_0_148)
 
 At this point, we have an informative title, clear colors, a well-labeled legend, and text that is large enough throughout the graph. This is certainly a graph that could be used in a presentation. We've taken it from a graph that is useful to just ourselves (exploratory) and made it into a plot that can communicate our findings well to others (explanatory)! 
@@ -231,6 +246,7 @@ ggplot(data = diamonds) +
   scale_y_continuous(breaks = seq(0, 17000, by = 1000))
 ```
 
+{format: png}
 ![Continuous cales can be altered](https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&pageid=g3c07dc9761_0_165)
 
 However, for **discrete variables** (aka factors or categorical variables), where there is a limited number of levels, you would use `scale_x_discrete` or `scale_y_discrete`:
@@ -242,6 +258,7 @@ ggplot(data = diamonds) +
   scale_y_continuous(breaks = seq(0, 17000, by = 1000)) 
   
 ```
+{format: png}
 ![Discrete scales can be altered](https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&pageid=g3c07dc9761_0_170)
 
 ### Coordinate Adjustment
@@ -267,6 +284,7 @@ ggplot(data = diamonds) +
   guides(fill = guide_legend("cut quality")) 
 ```
 
+{format: png}
 ![Axes can be flipped using `coord_flip`](https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&pageid=g3c07dc9761_0_152)
 
 It's important to remember that all the additional alterations we already discussed can still be applied to this graph! 
@@ -287,6 +305,7 @@ ggplot(data = diamonds) +
          plot.subtitle = element_text(color = "gray30") ) 
 ```
 
+{format: png}
 ![Additional layers will help customize this plot](https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&pageid=g3c07dc9761_0_176)
 
 ### Annotation
@@ -314,6 +333,7 @@ ggplot(data = diamonds) +
            vjust = "top", hjust = "right", 
            size = 6)
 ```
+{format: png}
 ![`annotate` helps add text to our plot](https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&pageid=g3c07dc9761_0_181)
 
 Note: we could have accomplished this by adding an additional `geom`: `geom_text`. However, this requires creating a new data frame, as explained [here](http://r4ds.had.co.nz/graphics-for-communication.html#annotations). This can also be used to **label the points on your plot**. Keep this reference in mind in case you have to do that in the future.
