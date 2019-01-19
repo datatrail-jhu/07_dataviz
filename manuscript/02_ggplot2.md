@@ -220,6 +220,17 @@ In the code, we see that again, we only have to change what variables we want to
 
 In the figure itself we see that the median price (the black horizontal bar in the middle of each box represents the median for each category) increases as the diamond color increases from the worst category (J) to the best (D).
 
+Now, if you wanted to change the color of this boxplot, it would just take a small addition to the code for the plot you just generated.
+
+```r
+ggplot(data = diamonds) + 
+  geom_boxplot(aes(x = color, y = price), fill = "red")
+```
+
+![diamonds boxplot with red fill](images/02_ggplot2/02_dataviz_ggplot2-15.png)
+
+Here, by speciying the color "red" in the `fill` argument, you're able to change the plot's appearance. In the next lesson, we'll go deeper into the many ways in which a plot can be customized within `ggplot2`!
+
 #### Other plots
 
 While we've reviewed basic code to make a few common types of plots, there are a number of other plot types that can be made in `ggplot2.` These are listed in the [online reference material for ggplot2](http://ggplot2.tidyverse.org/reference/) or can be accessed through RStudio directly. To do so, you would type `?geom_` into the Console in RStudio. A list of geoms will appear. You can hover your cursor over any one of these to get a short description. 

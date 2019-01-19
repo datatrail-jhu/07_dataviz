@@ -119,8 +119,8 @@ gganimate(gg, "output.gif")
 
 ```
 
-![gganimiate gif](https://www.youtube.com/watch?v=F0aPKC9NtV4)
-
+{format: gif}
+![gganimiate gif](https://s3-eu-west-1.amazonaws.com/pfigshare-u-files/14127164/output.gif)
 
 ### Additional resources
 
