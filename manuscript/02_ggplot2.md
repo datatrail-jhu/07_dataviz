@@ -374,45 +374,45 @@ o) changes all the points to be rainbow colored
 {points:3}
 ?6 Go to the [Cloud-based Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/20345/join?access_code=n4b8J1s0XmWctSy83%2BEXbGAwj7rKcuFMI7WJEJFD) and click on your copy of the 'swirl' project (If you haven't made a copy yet, do so now.) Then, type `swirl()` to get started. Tell Swirl your first name when it asks what to call you. Then, type the number that corresponds to the course `CBDS Data Visualization`. Type the number that corresponds to the lesson `L02 Introduction to ggplot2 Q01 Swirl`. Do this swirl module! Once complete, paste the code at the end of the lesson here.
 
-! /.+(FGFu|0qCo|RZ1E|HeeP|Uh4p|8xN1|XD51|NgN1|Vyr4|agga).+/i
+! /.+(YGTA|e77b|EV0k|Ub3m|HzFt|OxtC|IPIq|MHgD|Yb26|s1el).+/i
 
 
 {points:3}
 ?7 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L02 Introduction to ggplot2 Q02 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
-! /.+(46Qc|y52H|plnM|UMg3|9nMl|Nf5j|o03W|JwlM|HUbA|eyyi).+/i
+! /.+(Nezt|oIXF|K8KN|jvKu|IvNN|AXqO|jIhv|TtLR|ofxv|dGz6).+/i
 
 {points:3}
 ?8 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L02 Introduction to ggplot2 Q03 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
-! /.+(d1g2|OzQ4|CSgD|UwZt|eiL6|GfRv|q2B9|gcA7|VvCB|0H3v).+/i
+! /.+(NxNP|5uTH|EHLg|gJgf|sqju|Y5lK|P0R0|OJG5|zU6v|zkcs).+/i
 
 
 {points:3}
 ?9 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L02 Introduction to ggplot2 Q04 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
-! /.+(3X2C|uAuQ|HZsz|x1Rf|Rg8N|i2dl|YhtU|KMdZ|DYCD|w6Yi).+/i
+! /.+(00xr|Zstp|qlfx|f9Fu|nc38|l2ho|bOzF|zElE|eZFC|pQXL).+/i
 
 
 {points:3}
 ?10 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L02 Introduction to ggplot2 Q05 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
-! /.+(QKUL|RJaN|bS21|2Gt4|a7HO|JjQH|p98s|Zsd3|0NQa|Uhao).+/i
+! /.+(io3B|o8yd|UPrE|y6kW|XZ6c|51mv|H2OB|h6SN|KH1c|xRrF).+/i
 
 {points:3}
 ?11 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L02 Introduction to ggplot2 Q06 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
-! /.+(WHFR|r9IF|0qDM|HdUh|4z1H|B8RV|ykC3|SJ2G|SvDl|mWPI).+/i
+! /.+(VdRk|9Ol0|uZIS|TIz0|DxL1|xeCg|4nGb|Lftj|tOFR|Hnbs).+/i
 
 {points:3}
 ?12 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L02 Introduction to ggplot2 Q07 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
-! /.+(3bfp|Yb3S|u8WA|7FtQ|F3zB|upEm|6eUQ|ualQ|pbn1|HFcj).+/i
+! /.+(RhHN|FTDM|x4Q7|u03U|3xnW|TmKs|8lUV|YmWr|jH16|9Vo3).+/i
 
 {points:3}
 ?13 Within the same course on swirl: `CBDS Data Visualization`, navigate to the lesson `L02 Introduction to ggplot2 Q08 Swirl`. Do this swirl module! Once complete, paste the code provided at the end of the swirl module here.
 
-! /.+(VOfD|EvAR|LAkC|vIdo|yxJP|JSa0|O4Ho|T3iB|z7ZV|fW7N).+/i
+! /.+(YdM8|bpBf|EsLE|2y1w|Fu67|PcZX|IgVk|kNau|It9o|5Z2p).+/i
 
 
 {/quiz}
