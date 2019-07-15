@@ -467,7 +467,7 @@ o) axis.text = element_text(font = "bold")
 o) axis.text = element_text(text = "bold")
 
 {points:3}
-?6 Go to the [Cloud-based Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/20345/join?access_code=n4b8J1s0XmWctSy83%2BEXbGAwj7rKcuFMI7WJEJFD) and click on your copy of the 'swirl' project (If you haven't made a copy yet, do so now.) Then, type `swirl()` to get started. Tell Swirl your first name when it asks what to call you. Then, type the number that corresponds to the course `CBDS Data Visualization`. Type the number that corresponds to the lesson `L03 Customization in ggplot2 Q01 Swirl`. Do this swirl module! Once complete, paste the code at the end of the lesson here.
+?6 Go to the [Cloud-based Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/20345/join?access_code=n4b8J1s0XmWctSy83%2BEXbGAwj7rKcuFMI7WJEJFD) and click on your copy of the 'swirl' project (If you haven't made a copy yet, do so now.) First type `library(swirl)` to load the package and then type `swirl()` to get started. Tell Swirl your first name when it asks what to call you. Then, type the number that corresponds to the course `CBDS Data Visualization`. Type the number that corresponds to the lesson `L03 Customization in ggplot2 Q01 Swirl`. Do this swirl module! Once complete, paste the code at the end of the lesson here.
 
 ! /.+(X5rK|Obsa|6xU1|N7g4|tCjB|h5SG|IgzX|mra9|p5Hb|wtiV).+/i
 

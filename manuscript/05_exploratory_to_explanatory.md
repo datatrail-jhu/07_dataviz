@@ -445,7 +445,7 @@ o) ggplot2(caption = "")
 o) labels(caption = "")
 
 {points:3}
-?6 Go to the [Cloud-based Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/20345/join?access_code=n4b8J1s0XmWctSy83%2BEXbGAwj7rKcuFMI7WJEJFD) and click on your copy of the 'swirl' project (If you haven't made a copy yet, do so now.) Then, type `swirl()` to get started. Tell Swirl your first name when it asks what to call you. Then, type the number that corresponds to the course `CBDS Data Visualization`. Type the number that corresponds to the lesson `L05 Exploratory to Explanatory Q01 Swirl`. Do this swirl module! Once complete, paste the code at the end of the lesson here.
+?6 Go to the [Cloud-based Data Science Space on RStudio Cloud](https://rstudio.cloud/spaces/20345/join?access_code=n4b8J1s0XmWctSy83%2BEXbGAwj7rKcuFMI7WJEJFD) and click on your copy of the 'swirl' project (If you haven't made a copy yet, do so now.) First type `library(swirl)` to load the package and then type `swirl()` to get started. Tell Swirl your first name when it asks what to call you. Then, type the number that corresponds to the course `CBDS Data Visualization`. Type the number that corresponds to the lesson `L05 Exploratory to Explanatory Q01 Swirl`. Do this swirl module! Once complete, paste the code at the end of the lesson here.
 
 ! /.+(f9oJ|aRL7|xIKJ|esqX|qxUL|IxMs|SYKm|WXNF|jHZ3|pRmF).+/i
 
