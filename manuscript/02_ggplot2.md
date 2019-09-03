@@ -227,7 +227,8 @@ ggplot(data = diamonds) +
   geom_boxplot(aes(x = color, y = price), fill = "red")
 ```
 
-![diamonds boxplot with red fill](images/02_ggplot2/02_dataviz_ggplot2-15.png)
+![diamonds boxplot with red fill](https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&pageid=g4d96e4be59_0_0)
+
 
 Here, by speciying the color "red" in the `fill` argument, you're able to change the plot's appearance. In the next lesson, we'll go deeper into the many ways in which a plot can be customized within `ggplot2`!
 
