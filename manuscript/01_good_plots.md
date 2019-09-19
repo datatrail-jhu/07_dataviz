@@ -244,7 +244,7 @@ To read more about Data Visualization and the goals of Data Visualization read E
 
 ### Slides and Video
 
-![Good Plots](https://www.youtube.com/watch?v=M-ZFsfMu-A8)
+![Good Plots](https://youtu.be/-QDzybJJExc)
 
 * [Slides](https://docs.google.com/presentation/d/1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w/edit?usp=sharing)
 

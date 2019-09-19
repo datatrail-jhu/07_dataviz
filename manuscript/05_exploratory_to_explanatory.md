@@ -1,4 +1,4 @@
-# From Exploratory to Explanatory
+# From Exploratory To Explanatory
 
 In the lessons in this course up to this point, we have covered what to consider when making a plot, the basics of using `ggplot2` to generate plots in R, how to customize `ggplot2` plots, and how to save figures. In this lesson we're going to put all of those skills together and walk through an example of how to take a plot from exploratory (its roughest form) to explanatory (polished and ready to be presented).
 
@@ -370,14 +370,14 @@ As we walked through this example, you saw that it can take a lot of code to gen
 
 ### Slides and Video
   
-![Making Plots In R](https://www.youtube.com/watch?v=Dh2v9_t08Ns)
+![From Exploratory To Explanatory](https://youtu.be/0QZFG7uluq8)
   
  * [Slides](https://docs.google.com/presentation/d/1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI/edit?usp=sharing)
   
   
 {quiz, id: quiz_05_exploratory_to_explanatory}
   
-### From Exploratory to Explanatory quiz
+### From Exploratory To Explanatory quiz
   
 {choose-answers: 4}
 ?1 What is the goal of the title on your plot?

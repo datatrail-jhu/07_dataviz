@@ -127,7 +127,7 @@ p1 + p2 - p3 + plot_layout(ncol = 1)
 
 ### Slides and Video
 
-![Multiple Plots](https://www.youtube.com/watch?v=M75F6oPZpgs)
+![Multiple Plots](https://youtu.be/3OylV8mvXvA)
 
 * [Slides](https://docs.google.com/presentation/d/1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI/edit?usp=sharing)
 
