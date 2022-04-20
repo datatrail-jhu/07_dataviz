@@ -2,8 +2,17 @@ book_filename: "DataTrail"
 chapter_name: "Chapter "
 repo: https://github.com/jhudsl/OTTR_Template/
 rmd_files: ["index.Rmd",
-            "01-intro.Rmd",
-            "02-chapter_of_course.Rmd",
+            "00_intro_visualization.Rmd",
+            "01_good_plots.Rmd",
+            "02_ggplot2.Rmd",
+            "03_customization.Rmd",
+            "04_saving_plots.Rmd",
+            "05_exploratory_to_explanatory.Rmd",
+            "06_datatables.Rmd",
+            "07_tables_in_R.Rmd",
+            "08_multiple_plots.Rmd",
+            "09_advanced_data_visualization.Rmd",
+            "10_dataviz_project.Rmd",
             "About.Rmd",
             "References.Rmd"]
 new_session: yes
