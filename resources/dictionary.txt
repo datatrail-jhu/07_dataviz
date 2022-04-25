@@ -54,6 +54,7 @@ fCZJ
 Ferdio
 ffCw
 fivethirtyeight
+FiveThirtyEight
 FkqH
 Fmax
 fn
@@ -65,8 +66,9 @@ GBK
 Gct
 gdocs
 gg
-gganimiate
+gganimate
 ggcaption
+GFZW
 gJgf
 glm
 gma
