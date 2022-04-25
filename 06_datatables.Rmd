@@ -1,3 +1,12 @@
+---
+output: html_document
+date: '2022-04-11'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 # Data Tables
 
 So far, we've spent a fair amount of time discussing how to make great exploratory and explanatory plots. However, plots are not the only ways to display data. Often, a table is a perfect approach to summarizing and displaying your data. In this lesson, we'll discuss *when* to consider making a table instead of a plot, *what* to consider when making your table, and *how* to make tables in R and RMarkdown.

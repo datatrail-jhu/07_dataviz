@@ -1,3 +1,12 @@
+---
+output: html_document
+date: '2022-04-11'
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
 # Advanced Data Visualization
 
 So far in this course we've discussed the characteristics of good plots and tables as well as how to generate these using the statistical programming language R. The remainder of this course will build on what you have already learned, exposing you to a few additional tools that are to you for data visualization. The rest of this course is meant to expose you to the possibilities in R, not help you become an expert. However, after having an idea of the possibilities, we will provide links to other places where you can obtain more information, allow you to practice your data visualization skills on your own, and eventually become an expert at advanced data visualization.
