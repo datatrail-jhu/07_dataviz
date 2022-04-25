@@ -20,7 +20,7 @@ In R, frequently, individuals tend to generate one of the following four file fo
 
 ### Saving Plots: `ggsave()`
 
-We've discussed how to generate plots using `ggplot2`, and here we will discuss how to save them using the convenient function `ggsave()`. By specifying the `plot` you want to save, the `filename` you want the file output to have and the `path`, or destination where you want this plot to be saved, you can quickly and easily save any plot generated in `ggplot2`. To save a different file format, you simply change the file extension in the `filename` argument. `ggsave()` will output plots in any of the following file formats: "eps", "ps", "tex" (pictex), "pdf", "jpeg", "tiff", "png", "bmp", "svg" or "wmf" (on Windows onlly).
+We've discussed how to generate plots using `ggplot2`, and here we will discuss how to save them using the convenient function `ggsave()`. By specifying the `plot` you want to save, the `filename` you want the file output to have and the `path`, or destination where you want this plot to be saved, you can quickly and easily save any plot generated in `ggplot2`. To save a different file format, you simply change the file extension in the `filename` argument. `ggsave()` will output plots in any of the following file formats: "eps", "ps", "tex" (pictex), "pdf", "jpeg", "tiff", "png", "bmp", "svg" or "wmf" (on Windows only).
 
 For example, here we see how to save a plot in the "figures/exploratory_figures" directory. The code demonstrates how to save it both as a PNG and JPEG image.
 

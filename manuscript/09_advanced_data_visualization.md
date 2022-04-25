@@ -8,7 +8,7 @@ Up to this point, all the graphics we've generated have been static graphics. St
 
 ### Animated Graphics
 
-Animated graphics are similar to interactive graphics in that they are not static. However, unlike interactive graphics -- which respond to user input -- animated graphics can generally be thought of as a number of static plots displayed one after another in a specific order in an animation. These are helpful when trying to display changes over time. 
+Animated graphics are similar to interactive graphics in that they are not static. However, unlike interactive graphics -- which respond to user input -- animated graphics can generally be thought of as a number of static plots displayed one after another in a specific order in an animation. These are helpful when trying to display changes over time.
 
 ### Advanced Graphics In R
 
@@ -37,10 +37,10 @@ p <- ggplotly(p)
 p
 ```
 
-Within RStudio, ggplotly() graphs will display within the 'Viewer' tab. 
+Within RStudio, ggplotly() graphs will display within the 'Viewer' tab.
 
 {format: png}
-![iris interactive plot in RStudios](https://docs.google.com/presentation/d/1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0/export/png?id=1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0&pageid=g2bfdb07292_0_151)
+![iris interactive plot in RStudio](https://docs.google.com/presentation/d/1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0/export/png?id=1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0&pageid=g2bfdb07292_0_151)
 
 While this picture here appears to be static, within RStudio, you are able to interact with this graph. For example, if you hover over a point on the graph, information about that particular point will display.  
 
@@ -53,7 +53,7 @@ Similarly, if you hover your mouse over the boxplot, summary information about t
 ![information about a specific group of points](https://docs.google.com/presentation/d/1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0/export/png?id=1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0&pageid=g389ae8f2fa_0_22)
 
 
-If you hover over the graph in general, options will display at the top right of the interactive graph. 
+If you hover over the graph in general, options will display at the top right of the interactive graph.
 {format: png}
 ![hover over plot menu displays](https://docs.google.com/presentation/d/1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0/export/png?id=1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0&pageid=g389ae8f2fa_0_1)
 
@@ -65,13 +65,13 @@ We won't walk through each of these now, but if you hover your mouse over any of
 
 
 ##### plotly animated graphics
- 
-In addition to general interactive graphics, plotly can also be used to generate animated plots - plots that show changes over time. The code for this is similar in form to what is seen above; however, it requires the `frame` argument be specified. This states what variable `ggplotly` should use for each frame in the animation. 
+
+In addition to general interactive graphics, plotly can also be used to generate animated plots - plots that show changes over time. The code for this is similar in form to what is seen above; however, it requires the `frame` argument be specified. This states what variable `ggplotly` should use for each frame in the animation.
 
 To demonstrate how this can be done, we'll use a very common example data set, frequently used by R users. This dataset is from Jenny Bryan's [`gapminder` R package](https://cran.r-project.org/web/packages/gapminder/index.html). It contains data about the life expectancy, population, and per capita GDP from a number of countries from 1952 to 2007. We will use these data to generate an animated graphic that shows the relationship between per capita GDP and life expectancy by country. Each point on the graph represents a different country. The points are colored by the continent that each country is from. As mentioned above, to generate an animated plot within plotly, frame must be specified. Below, frame is specified to be `year,` which specifies that the animation should cycle through the years within this dataset.
 
 ```r
-## install the package 
+## install the package
 install.packages("gapminder")
 
 ## get the data
@@ -90,7 +90,7 @@ ggplotly(gg)
 {format: png}
 ![plotly animated graphic](https://docs.google.com/presentation/d/1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0/export/png?id=1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0&pageid=g389ae8f2fa_0_37)
 
-An important point is that this animated graphic is still an interactive graphic. For example, if we were only interested in looking at this relationship for countries in Africa and Europe, we could click on "Americas", "Asia", and "Oceania" in the legend to remove those points from the plot in the current view. 
+An important point is that this animated graphic is still an interactive graphic. For example, if we were only interested in looking at this relationship for countries in Africa and Europe, we could click on "Americas", "Asia", and "Oceania" in the legend to remove those points from the plot in the current view.
 
 {format: png}
 ![plotly animated graphic is still interactive](https://docs.google.com/presentation/d/1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0/export/png?id=1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0&pageid=g389ae8f2fa_0_68)
@@ -107,7 +107,7 @@ With many things in R, there is more than one way to generate animated objects i
 Below we will generate the same graph as above but will use `gganimate()` to do so. The code to generate the ggplot object created (gg) will not change. The benefit of gganimate() is that if you are interesting in saving the image as a GIF, rather than embedding the plot into your .Rmd report, gganimate() has this capability. (gganimate() can save animated graphics as .gif, .mp4, .swf, and .html objects)
 
 ```r
-## download and load gganimate 
+## download and load gganimate
 devtools::install_github("dgrtwo/gganimate")
 library(gganimate)
 
@@ -129,19 +129,19 @@ gganimate(gg, "output.gif")
 
 
 ### Slides and Video
-  
+
 ![Advanced Data Visualization](https://youtu.be/JNQy0y5NUX4)
-  
+
   * [Slides](https://docs.google.com/presentation/d/1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0/edit?usp=sharing)
-  
-  
+
+
 {quiz, id: quiz_09_advanced_data_visualization}
-  
+
 ### Advanced Data Visualization quiz
-  
+
 {choose-answers:4}
 ?1 What type of visualization allows the user to make changes to the plot by clicking on it?
-  
+
 C) interactive
 o) explanatory
 o) animated
@@ -160,7 +160,7 @@ o) ggplot
 o) plot
 
 {choose-answers:4}
-?2 To output a .gif animated plot, which package would you use? 
+?2 To output a .gif animated plot, which package would you use?
 
 C) plotly
 C) gganimate
@@ -179,4 +179,3 @@ o) link to click to see plot
 o) interactive plot will download
 
 {/quiz}
-

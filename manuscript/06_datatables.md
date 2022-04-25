@@ -1,6 +1,6 @@
 # Data Tables
 
-So far, we've spent a fair amount of time discussing how to make great exploratory and explanatory plots. However, plots are not the only ways to display data. Often, a table is a perfect approach to summarizing and displaying your data. In this lesson, we'll discuss *when* to consider making a table instead of a plot, *what* to consider when making your table, and *how* to make tables in R and RMarkdown. 
+So far, we've spent a fair amount of time discussing how to make great exploratory and explanatory plots. However, plots are not the only ways to display data. Often, a table is a perfect approach to summarizing and displaying your data. In this lesson, we'll discuss *when* to consider making a table instead of a plot, *what* to consider when making your table, and *how* to make tables in R and RMarkdown.
 
 ### What are Data Tables?
 
@@ -15,7 +15,7 @@ In this lesson we will focus on characteristics of good plots and discuss how to
 
 Just as for deciding what type of plot to make given the data you want to display, it's important to consider what you're trying to convey when making a table. Tables are effective when you want to display summary information about a dataset or when you want to display top results from an analysis.
 
-#### Summarize dataset information 
+#### Summarize dataset information
 
 When you have an entire dataset, it's often nice to have a table that summarizes important pieces of information. For example if you had a dataset with information on 32 different cars, you may be interested in the difference between cars in that dataset that have automatic vs. manual transmissions. Rather than go through and try to count them in this dataset, a table can do a nice job quickly summarizing and displaying this information for you. For example, you could display summarized information across a number of variables, such as how many of each type of car there are in your dataset (N), how fuel efficient the cars in each group are on average (mpg), the average weight of the cars in each group (weight), their average horsepower in each group (horsepower). This information can be easily displayed in a table. A table is better than a plot here because you're trying to summarize information across a few different variables. A single plot that attempted to include all of this information would be less clear than this table. Similarly, four separate plots -- one for each variable -- would take up much more space. Thus, a table is the right approach here to display these data.
 
@@ -55,7 +55,7 @@ For example, if you are displaying a table about longest delay in flight time ar
 
 #### The order of columns
 
-Put the most informative and important columns at the left and the less important columns at the right to assist viewers who read from left to right. (In languages where reading occurs from right to left, the ordering of columns should be reversed.) 
+Put the most informative and important columns at the left and the less important columns at the right to assist viewers who read from left to right. (In languages where reading occurs from right to left, the ordering of columns should be reversed.)
 
 Here, if we want viewers to understand which airports had the longest delays, it makes the most logical sense to start with the airport name at the left, rather than the mean arrival delay time, giving viewers some context about what they're looking at before getting to the actual numbers.
 
@@ -76,12 +76,12 @@ For example, if you are displaying information about arrests in each of the 50 U
 
 Labels on your columns and rows should be informative and clear. If talking about the price of diamonds, a bad column label would be "P" and a better column label would be "price." An even better column label would be "price (USD)." This label is preferred because it provides viewers with the unit for the values in the table, conveying that these prices are all in US dollars. Viewers should be able to easily determine what information the table is displaying.
 
-Below, the labels on the table at right are informative, whereas a viewer may not easily be able to determine what the column labels on the left (AN, AC, and MAD) mean. 
+Below, the labels on the table at right are informative, whereas a viewer may not easily be able to determine what the column labels on the left (AN, AC, and MAD) mean.
 
 {format: png}
 ![Labels should be informative and concise](https://docs.google.com/presentation/d/147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk/export/png?id=147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk&pageid=g35798d27dd_0_171)
 
-#### Significant digits 
+#### Significant digits
 
 Including a lot of decimal places in a table is not helpful to viewers. Often, two significant digits is enough. You'll want to always double check the values in your table to make sure they are displayed appropriately before finalizing a table.
 
@@ -90,7 +90,7 @@ Including a lot of decimal places in a table is not helpful to viewers. Often, t
 
 #### A good title or caption
 
-Just like with good plots, good tables should have a title or caption that is clear and concise. It should tell viewers what they should determine from the data in the table. 
+Just like with good plots, good tables should have a title or caption that is clear and concise. It should tell viewers what they should determine from the data in the table.
 
 {format: png}
 ![Including a good title or caption is critical](https://docs.google.com/presentation/d/147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk/export/png?id=147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk&pageid=g35798d27dd_0_178)
@@ -142,7 +142,7 @@ o) l, f, a, c, p, i
 o) L, F, A, C, P, I
 
 {choose-answers:4}
-?3 When should you use a plot instead of a table? 
+?3 When should you use a plot instead of a table?
 
 C) when there is a lot of data that cannot be summarized in a table
 C) when the information can be understood more quickly in a plot
@@ -150,7 +150,7 @@ C) when the information can be understood more easily in a plot
 o) when summarizing the samples in a data set
 o) when displaying a few of the top results from an analysis
 o) when trying to display information across a few different variables for a few people
-o) when summarizin a few metrics about the samples in a study
+o) when summarizing a few metrics about the samples in a study
 
 
 {choose-answers:4}

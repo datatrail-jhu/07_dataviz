@@ -49,7 +49,7 @@ p
 Within RStudio, ggplotly() graphs will display within the 'Viewer' tab.
 
 {format: png}
-![iris interactive plot in RStudios](https://docs.google.com/presentation/d/1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0/export/png?id=1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0&pageid=g2bfdb07292_0_151)
+![iris interactive plot in RStudio](https://docs.google.com/presentation/d/1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0/export/png?id=1akxwxd52on22B7uUhZTUi1oHJ6PSDicdVchjmVynhr0&pageid=g2bfdb07292_0_151)
 
 While this picture here appears to be static, within RStudio, you are able to interact with this graph. For example, if you hover over a point on the graph, information about that particular point will display.  
 

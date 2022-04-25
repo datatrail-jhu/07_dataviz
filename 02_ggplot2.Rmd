@@ -239,7 +239,7 @@ ggplot(data = diamonds) +
 ![diamonds boxplot with red fill](https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&pageid=g4d96e4be59_0_0)
 
 
-Here, by speciying the color "red" in the `fill` argument, you're able to change the plot's appearance. In the next lesson, we'll go deeper into the many ways in which a plot can be customized within `ggplot2`!
+Here, by specifying the color "red" in the `fill` argument, you're able to change the plot's appearance. In the next lesson, we'll go deeper into the many ways in which a plot can be customized within `ggplot2`!
 
 #### Other plots
 
@@ -297,7 +297,7 @@ o) geom_blank
 o) geom_scatter
 
 {choose-answers: 4}
-?2 Which geom would you specify to generate a barpot?
+?2 Which geom would you specify to generate a barplot?
 
 C) geom_bar
 m) geom_point

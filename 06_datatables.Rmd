@@ -159,7 +159,7 @@ C) when the information can be understood more easily in a plot
 o) when summarizing the samples in a data set
 o) when displaying a few of the top results from an analysis
 o) when trying to display information across a few different variables for a few people
-o) when summarizin a few metrics about the samples in a study
+o) when summarizing a few metrics about the samples in a study
 
 
 {choose-answers:4}
