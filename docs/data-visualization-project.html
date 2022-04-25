@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 11 Data Visualization Project | Course Name</title>
+  <meta name="description" content="Description about Course/Book." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 11 Data Visualization Project | Course Name" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Description about Course/Book." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 11 Data Visualization Project | Course Name" />
+  
+  <meta name="twitter:description" content="Description about Course/Book." />
+  
+
+
+
+<meta name="date" content="2022-04-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="assets/DataTrail_favicon.ico" type="image/x-icon" />
+<link rel="prev" href="advanced-data-visualization.html"/>
+<link rel="next" href="about-the-authors.html"/>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="assets/style_DataTrail.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<a href="https://www.datatrail.org/"><img src="https://github.com/datatrail-jhu/DataTrail_Template/raw/main/assets/DataTrail_logo.jpg" style="padding-left: 0px; padding-top: 8px;"</a>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this Course</a></li>
+<li class="chapter" data-level="1" data-path="intro-to-data-visualization.html"><a href="intro-to-data-visualization.html"><i class="fa fa-check"></i><b>1</b> Intro to Data Visualization</a>
+<ul>
+<li class="chapter" data-level="1.0.1" data-path="intro-to-data-visualization.html"><a href="intro-to-data-visualization.html#data-visualization"><i class="fa fa-check"></i><b>1.0.1</b> Data Visualization</a></li>
+<li class="chapter" data-level="1.0.2" data-path="intro-to-data-visualization.html"><a href="intro-to-data-visualization.html#explanatory-plots"><i class="fa fa-check"></i><b>1.0.2</b> Explanatory Plots</a></li>
+<li class="chapter" data-level="1.0.3" data-path="intro-to-data-visualization.html"><a href="intro-to-data-visualization.html#types-of-plots"><i class="fa fa-check"></i><b>1.0.3</b> Types of Plots</a></li>
+<li class="chapter" data-level="1.0.4" data-path="intro-to-data-visualization.html"><a href="intro-to-data-visualization.html#tables"><i class="fa fa-check"></i><b>1.0.4</b> Tables</a></li>
+<li class="chapter" data-level="1.0.5" data-path="intro-to-data-visualization.html"><a href="intro-to-data-visualization.html#slides-and-video"><i class="fa fa-check"></i><b>1.0.5</b> Slides and Video</a></li>
+<li class="chapter" data-level="1.0.6" data-path="intro-to-data-visualization.html"><a href="intro-to-data-visualization.html#intro-to-data-visualization-quiz"><i class="fa fa-check"></i><b>1.0.6</b> Intro to Data Visualization quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="good-plots.html"><a href="good-plots.html"><i class="fa fa-check"></i><b>2</b> Good Plots</a>
+<ul>
+<li class="chapter" data-level="2.0.1" data-path="good-plots.html"><a href="good-plots.html#tips-for-making-good-plots"><i class="fa fa-check"></i><b>2.0.1</b> Tips for Making Good Plots</a></li>
+<li class="chapter" data-level="2.0.2" data-path="good-plots.html"><a href="good-plots.html#what-to-consider-when-making-plots"><i class="fa fa-check"></i><b>2.0.2</b> What To Consider When Making Plots</a></li>
+<li class="chapter" data-level="2.0.3" data-path="good-plots.html"><a href="good-plots.html#making-the-iphone-plot-in-r"><i class="fa fa-check"></i><b>2.0.3</b> Making The iPhone Plot in R</a></li>
+<li class="chapter" data-level="2.0.4" data-path="good-plots.html"><a href="good-plots.html#additional-resources"><i class="fa fa-check"></i><b>2.0.4</b> Additional Resources</a></li>
+<li class="chapter" data-level="2.0.5" data-path="good-plots.html"><a href="good-plots.html#slides-and-video-1"><i class="fa fa-check"></i><b>2.0.5</b> Slides and Video</a></li>
+<li class="chapter" data-level="2.0.6" data-path="good-plots.html"><a href="good-plots.html#good-plots-quiz"><i class="fa fa-check"></i><b>2.0.6</b> Good Plots quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html"><i class="fa fa-check"></i><b>3</b> Introduction to ggplot2</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#the-basics"><i class="fa fa-check"></i><b>3.0.1</b> The basics</a></li>
+<li class="chapter" data-level="3.0.2" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#example-dataset-diamonds"><i class="fa fa-check"></i><b>3.0.2</b> Example dataset: <code>diamonds</code></a></li>
+<li class="chapter" data-level="3.0.3" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#scatterplots-geom_point"><i class="fa fa-check"></i><b>3.0.3</b> Scatterplots: <code>geom_point</code></a></li>
+<li class="chapter" data-level="3.0.4" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#aesthetics"><i class="fa fa-check"></i><b>3.0.4</b> Aesthetics</a></li>
+<li class="chapter" data-level="3.0.5" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#facets"><i class="fa fa-check"></i><b>3.0.5</b> Facets</a></li>
+<li class="chapter" data-level="3.0.6" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#geoms"><i class="fa fa-check"></i><b>3.0.6</b> Geoms</a></li>
+<li class="chapter" data-level="3.0.7" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#summary"><i class="fa fa-check"></i><b>3.0.7</b> Summary</a></li>
+<li class="chapter" data-level="3.0.8" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#additional-resources-1"><i class="fa fa-check"></i><b>3.0.8</b> Additional Resources:</a></li>
+<li class="chapter" data-level="3.0.9" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#slides-and-video-2"><i class="fa fa-check"></i><b>3.0.9</b> Slides and Video</a></li>
+<li class="chapter" data-level="3.0.10" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#introduction-to-ggplot2-quiz"><i class="fa fa-check"></i><b>3.0.10</b> Introduction to ggplot2 quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html"><i class="fa fa-check"></i><b>4</b> Customization in ggplot2</a>
+<ul>
+<li class="chapter" data-level="4.0.1" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#colors"><i class="fa fa-check"></i><b>4.0.1</b> Colors</a></li>
+<li class="chapter" data-level="4.0.2" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#labels"><i class="fa fa-check"></i><b>4.0.2</b> Labels</a></li>
+<li class="chapter" data-level="4.0.3" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#themes"><i class="fa fa-check"></i><b>4.0.3</b> Themes</a></li>
+<li class="chapter" data-level="4.0.4" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#theme"><i class="fa fa-check"></i><b>4.0.4</b> Theme</a></li>
+<li class="chapter" data-level="4.0.5" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#legends"><i class="fa fa-check"></i><b>4.0.5</b> Legends</a></li>
+<li class="chapter" data-level="4.0.6" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#scales"><i class="fa fa-check"></i><b>4.0.6</b> Scales</a></li>
+<li class="chapter" data-level="4.0.7" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#coordinate-adjustment"><i class="fa fa-check"></i><b>4.0.7</b> Coordinate Adjustment</a></li>
+<li class="chapter" data-level="4.0.8" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#annotation"><i class="fa fa-check"></i><b>4.0.8</b> Annotation</a></li>
+<li class="chapter" data-level="4.0.9" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#summary-1"><i class="fa fa-check"></i><b>4.0.9</b> Summary</a></li>
+<li class="chapter" data-level="4.0.10" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#additional-references"><i class="fa fa-check"></i><b>4.0.10</b> Additional References</a></li>
+<li class="chapter" data-level="4.0.11" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#slides-and-video-3"><i class="fa fa-check"></i><b>4.0.11</b> Slides and Video</a></li>
+<li class="chapter" data-level="4.0.12" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#customization-in-ggplot2-quiz"><i class="fa fa-check"></i><b>4.0.12</b> Customization in ggplot2 quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="saving-plots.html"><a href="saving-plots.html"><i class="fa fa-check"></i><b>5</b> Saving Plots</a>
+<ul>
+<li class="chapter" data-level="5.0.1" data-path="saving-plots.html"><a href="saving-plots.html#image-types"><i class="fa fa-check"></i><b>5.0.1</b> Image Types</a></li>
+<li class="chapter" data-level="5.0.2" data-path="saving-plots.html"><a href="saving-plots.html#saving-plots-ggsave"><i class="fa fa-check"></i><b>5.0.2</b> Saving Plots: <code>ggsave()</code></a></li>
+<li class="chapter" data-level="5.0.3" data-path="saving-plots.html"><a href="saving-plots.html#alternative-approach"><i class="fa fa-check"></i><b>5.0.3</b> Alternative Approach</a></li>
+<li class="chapter" data-level="5.0.4" data-path="saving-plots.html"><a href="saving-plots.html#additional-resources-2"><i class="fa fa-check"></i><b>5.0.4</b> Additional Resources</a></li>
+<li class="chapter" data-level="5.0.5" data-path="saving-plots.html"><a href="saving-plots.html#slides-and-video-4"><i class="fa fa-check"></i><b>5.0.5</b> Slides and Video</a></li>
+<li class="chapter" data-level="5.0.6" data-path="saving-plots.html"><a href="saving-plots.html#saving-plots-quiz"><i class="fa fa-check"></i><b>5.0.6</b> Saving Plots quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html"><i class="fa fa-check"></i><b>6</b> From Exploratory To Explanatory</a>
+<ul>
+<li class="chapter" data-level="6.0.1" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#apple-product-sales-data"><i class="fa fa-check"></i><b>6.0.1</b> Apple Product Sales Data</a></li>
+<li class="chapter" data-level="6.0.2" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#exploratory-plot"><i class="fa fa-check"></i><b>6.0.2</b> Exploratory Plot</a></li>
+<li class="chapter" data-level="6.0.3" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#increasing-line-thickness"><i class="fa fa-check"></i><b>6.0.3</b> Increasing Line Thickness</a></li>
+<li class="chapter" data-level="6.0.4" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#adding-a-title"><i class="fa fa-check"></i><b>6.0.4</b> Adding a Title</a></li>
+<li class="chapter" data-level="6.0.5" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#changing-line-colors"><i class="fa fa-check"></i><b>6.0.5</b> Changing Line Colors</a></li>
+<li class="chapter" data-level="6.0.6" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#specifying-a-theme"><i class="fa fa-check"></i><b>6.0.6</b> Specifying a Theme</a></li>
+<li class="chapter" data-level="6.0.7" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#customizing-the-theme"><i class="fa fa-check"></i><b>6.0.7</b> Customizing the Theme</a></li>
+<li class="chapter" data-level="6.0.8" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#customizing-axis-labels"><i class="fa fa-check"></i><b>6.0.8</b> Customizing Axis Labels</a></li>
+<li class="chapter" data-level="6.0.9" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#adding-direct-labels"><i class="fa fa-check"></i><b>6.0.9</b> Adding direct labels</a></li>
+<li class="chapter" data-level="6.0.10" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#explanatory-plot"><i class="fa fa-check"></i><b>6.0.10</b> Explanatory Plot</a></li>
+<li class="chapter" data-level="6.0.11" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#slides-and-video-5"><i class="fa fa-check"></i><b>6.0.11</b> Slides and Video</a></li>
+<li class="chapter" data-level="6.0.12" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#from-exploratory-to-explanatory-quiz"><i class="fa fa-check"></i><b>6.0.12</b> From Exploratory To Explanatory quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="data-tables.html"><a href="data-tables.html"><i class="fa fa-check"></i><b>7</b> Data Tables</a>
+<ul>
+<li class="chapter" data-level="7.0.1" data-path="data-tables.html"><a href="data-tables.html#what-are-data-tables"><i class="fa fa-check"></i><b>7.0.1</b> What are Data Tables?</a></li>
+<li class="chapter" data-level="7.0.2" data-path="data-tables.html"><a href="data-tables.html#when-to-make-a-table"><i class="fa fa-check"></i><b>7.0.2</b> When to Make a Table</a></li>
+<li class="chapter" data-level="7.0.3" data-path="data-tables.html"><a href="data-tables.html#what-to-consider-when-making-a-table"><i class="fa fa-check"></i><b>7.0.3</b> What to Consider When Making A Table</a></li>
+<li class="chapter" data-level="7.0.4" data-path="data-tables.html"><a href="data-tables.html#additional-resources-3"><i class="fa fa-check"></i><b>7.0.4</b> Additional resources</a></li>
+<li class="chapter" data-level="7.0.5" data-path="data-tables.html"><a href="data-tables.html#slides-and-video-6"><i class="fa fa-check"></i><b>7.0.5</b> Slides and Video</a></li>
+<li class="chapter" data-level="7.0.6" data-path="data-tables.html"><a href="data-tables.html#data-tables-quiz"><i class="fa fa-check"></i><b>7.0.6</b> Data Tables quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="tables-in-r.html"><a href="tables-in-r.html"><i class="fa fa-check"></i><b>8</b> Tables in R</a>
+<ul>
+<li class="chapter" data-level="8.0.1" data-path="tables-in-r.html"><a href="tables-in-r.html#getting-the-data-in-order"><i class="fa fa-check"></i><b>8.0.1</b> Getting the data in order</a></li>
+<li class="chapter" data-level="8.0.2" data-path="tables-in-r.html"><a href="tables-in-r.html#an-exploratory-table"><i class="fa fa-check"></i><b>8.0.2</b> An exploratory table</a></li>
+<li class="chapter" data-level="8.0.3" data-path="tables-in-r.html"><a href="tables-in-r.html#improving-the-table-output"><i class="fa fa-check"></i><b>8.0.3</b> Improving the table output</a></li>
+<li class="chapter" data-level="8.0.4" data-path="tables-in-r.html"><a href="tables-in-r.html#annotating-your-table"><i class="fa fa-check"></i><b>8.0.4</b> Annotating your table</a></li>
+<li class="chapter" data-level="8.0.5" data-path="tables-in-r.html"><a href="tables-in-r.html#tables-in-rmarkdown"><i class="fa fa-check"></i><b>8.0.5</b> Tables in RMarkdown</a></li>
+<li class="chapter" data-level="8.0.6" data-path="tables-in-r.html"><a href="tables-in-r.html#additional-resources-4"><i class="fa fa-check"></i><b>8.0.6</b> Additional resources</a></li>
+<li class="chapter" data-level="8.0.7" data-path="tables-in-r.html"><a href="tables-in-r.html#slides-and-video-7"><i class="fa fa-check"></i><b>8.0.7</b> Slides and Video</a></li>
+<li class="chapter" data-level="8.0.8" data-path="tables-in-r.html"><a href="tables-in-r.html#tables-in-r-quiz"><i class="fa fa-check"></i><b>8.0.8</b> Tables In R quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html"><i class="fa fa-check"></i><b>9</b> Multiple Plots in R</a>
+<ul>
+<li class="chapter" data-level="9.0.1" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#installing-patchwork"><i class="fa fa-check"></i><b>9.0.1</b> Installing patchwork</a></li>
+<li class="chapter" data-level="9.0.2" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#basic-plotting-using-patchwork"><i class="fa fa-check"></i><b>9.0.2</b> Basic plotting using patchwork</a></li>
+<li class="chapter" data-level="9.0.3" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#altering-the-layout"><i class="fa fa-check"></i><b>9.0.3</b> Altering the layout</a></li>
+<li class="chapter" data-level="9.0.4" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#nesting-plots"><i class="fa fa-check"></i><b>9.0.4</b> Nesting plots</a></li>
+<li class="chapter" data-level="9.0.5" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#additional-operators"><i class="fa fa-check"></i><b>9.0.5</b> Additional operators</a></li>
+<li class="chapter" data-level="9.0.6" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#additional-resources-5"><i class="fa fa-check"></i><b>9.0.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="9.0.7" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#slides-and-video-8"><i class="fa fa-check"></i><b>9.0.7</b> Slides and Video</a></li>
+<li class="chapter" data-level="9.0.8" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#multiple-plots-quiz"><i class="fa fa-check"></i><b>9.0.8</b> Multiple Plots quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="advanced-data-visualization.html"><a href="advanced-data-visualization.html"><i class="fa fa-check"></i><b>10</b> Advanced Data Visualization</a>
+<ul>
+<li class="chapter" data-level="10.0.1" data-path="advanced-data-visualization.html"><a href="advanced-data-visualization.html#interactive-graphics"><i class="fa fa-check"></i><b>10.0.1</b> Interactive Graphics</a></li>
+<li class="chapter" data-level="10.0.2" data-path="advanced-data-visualization.html"><a href="advanced-data-visualization.html#animated-graphics"><i class="fa fa-check"></i><b>10.0.2</b> Animated Graphics</a></li>
+<li class="chapter" data-level="10.0.3" data-path="advanced-data-visualization.html"><a href="advanced-data-visualization.html#advanced-graphics-in-r"><i class="fa fa-check"></i><b>10.0.3</b> Advanced Graphics In R</a></li>
+<li class="chapter" data-level="10.0.4" data-path="advanced-data-visualization.html"><a href="advanced-data-visualization.html#additional-resources-6"><i class="fa fa-check"></i><b>10.0.4</b> Additional resources</a></li>
+<li class="chapter" data-level="10.0.5" data-path="advanced-data-visualization.html"><a href="advanced-data-visualization.html#slides-and-video-9"><i class="fa fa-check"></i><b>10.0.5</b> Slides and Video</a></li>
+<li class="chapter" data-level="10.0.6" data-path="advanced-data-visualization.html"><a href="advanced-data-visualization.html#advanced-data-visualization-quiz"><i class="fa fa-check"></i><b>10.0.6</b> Advanced Data Visualization quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="data-visualization-project.html"><a href="data-visualization-project.html"><i class="fa fa-check"></i><b>11</b> Data Visualization Project</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="data-visualization-project.html"><a href="data-visualization-project.html#data-visualization-project-1"><i class="fa fa-check"></i><b>11.1</b> Data Visualization Project</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="data-visualization-project.html"><a href="data-visualization-project.html#github-setup"><i class="fa fa-check"></i><b>11.1.1</b> GitHub Setup</a></li>
+<li class="chapter" data-level="11.1.2" data-path="data-visualization-project.html"><a href="data-visualization-project.html#rstudio-cloud-setup"><i class="fa fa-check"></i><b>11.1.2</b> RStudio Cloud Setup</a></li>
+<li class="chapter" data-level="11.1.3" data-path="data-visualization-project.html"><a href="data-visualization-project.html#data-science-project-setup"><i class="fa fa-check"></i><b>11.1.3</b> Data Science Project Setup</a></li>
+<li class="chapter" data-level="11.1.4" data-path="data-visualization-project.html"><a href="data-visualization-project.html#pushing-to-github"><i class="fa fa-check"></i><b>11.1.4</b> Pushing to GitHub</a></li>
+<li class="chapter" data-level="11.1.5" data-path="data-visualization-project.html"><a href="data-visualization-project.html#part-1-exploratory-data-visualization"><i class="fa fa-check"></i><b>11.1.5</b> Part 1: Exploratory Data Visualization</a></li>
+<li class="chapter" data-level="11.1.6" data-path="data-visualization-project.html"><a href="data-visualization-project.html#pushing-to-github-1"><i class="fa fa-check"></i><b>11.1.6</b> Pushing to GitHub</a></li>
+<li class="chapter" data-level="11.1.7" data-path="data-visualization-project.html"><a href="data-visualization-project.html#part-2-explanatory-data-visualization"><i class="fa fa-check"></i><b>11.1.7</b> Part 2: Explanatory Data Visualization</a></li>
+<li class="chapter" data-level="11.1.8" data-path="data-visualization-project.html"><a href="data-visualization-project.html#add-markdown-text-to-.rmd"><i class="fa fa-check"></i><b>11.1.8</b> Add Markdown Text to .Rmd</a></li>
+<li class="chapter" data-level="11.1.9" data-path="data-visualization-project.html"><a href="data-visualization-project.html#knit-your-r-markdown-document"><i class="fa fa-check"></i><b>11.1.9</b> Knit your R Markdown Document</a></li>
+<li class="chapter" data-level="11.1.10" data-path="data-visualization-project.html"><a href="data-visualization-project.html#a-few-final-checks"><i class="fa fa-check"></i><b>11.1.10</b> A Few Final Checks</a></li>
+<li class="chapter" data-level="11.1.11" data-path="data-visualization-project.html"><a href="data-visualization-project.html#final-push-to-github"><i class="fa fa-check"></i><b>11.1.11</b> Final <code>push</code> to GitHub</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
+<li class="chapter" data-level="12" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>12</b> References</a></li>
+<li class="divider"></li>
+<p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
+<p style="text-align:center;"> <a href="https://www.datatrail.org/"> Data Trail </a></p>
+<a href="https://www.datatrail.org/"><img src="https://github.com/datatrail-jhu/DataTrail_Template/raw/main/assets/DataTrail_logo.jpg" style=" width: 80%; filter: grayscale(100%); padding-left: 40px; padding-top: 8px; vertical-align: top "</a>
+<p style="text-align:center; font-size: 12px;"> <a href="https://github.com/rstudio4edu/rstudio4edu-book/"> Style adapted from: rstudio4edu-book </a> <a href ="https://creativecommons.org/licenses/by/2.0/"> (CC-BY 2.0) </a></p>
+<p style="padding-left: 40px;"><div class="trapezoid" style = "padding-left: 40px;"><span>  <a href="https://forms.gle/VWaJYc3zATe3qxYC9"> Click here to provide feedback</a> <img src="assets/itcr_arrow.png" style=" width: 10%" ></span></div></p>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Course Name</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+  <!--script src="https://kit.fontawesome.com/6a26f47516.js"></script-->
+  <!--<script src="assets/hideOutput.js"></script>-->
+  <link href="assets/style_DataTrail.css" rel="stylesheet">
+</head>
+        
+
+
+<div class="hero-image-container"> 
+  <img class= "hero-image" src="assets/DataTrail.jpg">
+</div>
+<div id="data-visualization-project" class="section level1" number="11">
+<h1><span class="header-section-number">Chapter 11</span> Data Visualization Project</h1>
+<p>Throughout this course set, we’ll have a number of projects for you to complete. This is the second project of the course set. All of these will be included as Exercises. This means they will <em>not</em> be required to pass the course and receive your certificate; however, completing them will <em>really</em> help to improve your understanding of the material covered and to ensure that you’ve begun to master the skills needed to be a data scientist.</p>
+<p>In each project, we’ll aim to get you started and to ask questions that will help guide you through the project. But, we’ll intentionally leave pieces out where you have to figure out what needs to be done.</p>
+<p>This project will require you to:</p>
+<ul>
+<li>carry out an exploratory data analysis</li>
+<li>wrangle data</li>
+<li>generate exploratory plots</li>
+<li>generate explanatory plots</li>
+</ul>
+<p>You can access the project by going to the exercise accompanying this lesson.</p>
+<p>{exercise, id: project_dataviz}</p>
+<div id="data-visualization-project-1" class="section level2" number="11.1">
+<h2><span class="header-section-number">11.1</span> Data Visualization Project</h2>
+<p>Data Visualization is an incredibly important skill for a data scientist. Being able to generate exploratory visualizations that help you understand the data and explanatory visualizations so that your findings</p>
+<p>As such, this exercise has been generated to practice your, GitHub, terminal navigation, RStudio, and data wrangling skills.</p>
+<div id="github-setup" class="section level3" number="11.1.1">
+<h3><span class="header-section-number">11.1.1</span> GitHub Setup</h3>
+<p>To get started, you’ll want to go to GitHub and start a new repository:</p>
+<ul>
+<li>Call this repository <code>dataviz_project</code>.</li>
+<li>Add a short description</li>
+<li>Check the box to “Initialize this repository with a README.</li>
+<li>Click <code>Create Repository</code></li>
+</ul>
+<p>Once the repository has been created, Click on <code>Clone or download</code> and copy the “Clone with HTTPS” link provided. You’ll use this to clone your repo in RStudio Cloud.</p>
+<p><strong>Note</strong>: If you’re stuck on this, these steps were covered in detail in an earlier course: <a href="https://leanpub.com/universities/courses/jhu/version-control">Version Control</a>. Refer to the materials in this course if you’re stuck on this part of the project.</p>
+</div>
+<div id="rstudio-cloud-setup" class="section level3" number="11.1.2">
+<h3><span class="header-section-number">11.1.2</span> RStudio Cloud Setup</h3>
+<ul>
+<li>Go to the <a href="https://rstudio.cloud/spaces/20345/join?access_code=n4b8J1s0XmWctSy83%2BEXbGAwj7rKcuFMI7WJEJFD">Cloud-based Data Science Space on RStudio Cloud</a></li>
+<li>Click on the “Projects” tab at the top of the workspace</li>
+<li>Make a copy of the project: <code>dataviz_project</code></li>
+</ul>
+<p>In this project you should see a <code>dataviz_project.Rmd</code> file. You’ll use this to get started working on your project!</p>
+<p><em>Note</em>: If you try to Knit this document at this time, you <em>will</em> get an error because there is code in this document that has to be edited (by you!) before it will be able to successfully knit!</p>
+<p>To start using version control, you’ll want to clone the GitHub repository you just created into this workspace. To do so, go to the Terminal and clone your project into this workspace.</p>
+<p>A new directory with the name of your GitHub repository should now be viewable in the Files tab of RStudio Cloud. You are now set up to track your project with git.</p>
+</div>
+<div id="data-science-project-setup" class="section level3" number="11.1.3">
+<h3><span class="header-section-number">11.1.3</span> Data Science Project Setup</h3>
+<p>As discussed previously, you’ll want all your data science projects you be organized from the very beginning. Let’s do that now!</p>
+<p>First, use <code>cd</code> to get yourself into the directory of your GitHub Project.</p>
+<p>Once in the correct directory, use <code>mkdir</code> in the terminal to create folders with the following structure:</p>
+<ul>
+<li>data/
+<ul>
+<li>raw_data/</li>
+<li>tidy_data/</li>
+</ul></li>
+<li>code/
+<ul>
+<li>raw_code/</li>
+<li>final_code/</li>
+</ul></li>
+<li>figures/
+<ul>
+<li>exploratory_figures/</li>
+<li>explanatory_figures/</li>
+</ul></li>
+<li>products/
+<ul>
+<li>writing/</li>
+</ul></li>
+</ul>
+<p>Now that your directories are set up you’ll want to use the Terminal (or ‘More’ drop-down menu in the Files tab) to <strong>move (<code>mv</code>) the <code>dataviz_project.Rmd</code> file into code/raw_code</strong> and the <strong>two .csv files in data/raw_data into the data/raw_data directory in <em>your</em> version controlled repository</strong>. This ensures that your code file and raw data are in the correct directory.</p>
+<p>Once the .Rmd document is in the correct folder, you’ll want to <strong>change the author of this document</strong> to your name at the top of the .Rmd document (in the YAML). Save this change before moving to the next step.</p>
+<p><strong>Note</strong>: If you’re stuck on this, these steps were covered in detail in an earlier course: <a href="https://leanpub.com/universities/courses/jhu/organizingdatascienceprojects">Organizing Data Science Projects</a>. Refer to the materials in this course if you’re stuck on this part of the project.</p>
+</div>
+<div id="pushing-to-github" class="section level3" number="11.1.4">
+<h3><span class="header-section-number">11.1.4</span> Pushing to GitHub</h3>
+<p>You’ll want to save changes to your project regularly by pushing them to GitHub. Now that you’ve got your file structure set up and have added a code file (.Rmd) and two raw data files (.csv), it’s a good time to stage, commit, and push these changes to GitHub. Do so now, and then take a long on GitHub to see the changes on their website!</p>
+<p><strong>Note</strong>: If you’re stuck on this, these steps were covered in detail in an earlier course: <a href="https://leanpub.com/universities/courses/jhu/version-control">Version Control</a>. Refer to the materials in this course if you’re stuck on this part of the project.</p>
+</div>
+<div id="part-1-exploratory-data-visualization" class="section level3" number="11.1.5">
+<h3><span class="header-section-number">11.1.5</span> Part 1: Exploratory Data Visualization</h3>
+<p>The first part of the project will guide you through a few steps to read the data in and explore the data. After you have a sense of what data are included in the dataset, you’ll generate a number of exploratory plots.</p>
+<p>To get started, first run the code in the <code>setup</code> code chunk. This will install and load all packages you’ll need to complete this project.</p>
+<div id="the-data" class="section level4" number="11.1.5.1">
+<h4><span class="header-section-number">11.1.5.1</span> The Data</h4>
+<p>The data we’ll be using for this part of the project were downloaded from <a href="https://www.kaggle.com/aaronschlegel/seattle-pet-licenses/data">kaggle</a>, and include information about “pet licenses issued by the Seattle Animal Shelter between 2005 and early 2017.” We’ll be exploring these data and generating a few exploratory plots in the first part of the project.</p>
+<p>To load the data in, <strong>run the code in the <code>pet-data</code> code chunk</strong> to create an object called <code>pets</code>.</p>
+</div>
+<div id="explore-the-data" class="section level4" number="11.1.5.2">
+<h4><span class="header-section-number">11.1.5.2</span> Explore the Data</h4>
+<p>Once the data have been read in, <strong>explore the data</strong>, <strong>adding your code to <code>dataviz_project.Rmd</code></strong>, and then <strong>answer the following questions</strong>:</p>
+<p>? How many pet licenses are included in the dataset?</p>
+<p>! 66042 ; 66,042</p>
+<p>? How many unique pet names are included in the dataset (<code>animal_s_name</code>)</p>
+<p>! 15796 ; 15,796</p>
+<p>? How many different species are included in this dataset (<code>species</code>)?</p>
+<p>! 3</p>
+<p>{choose-answers: 4}
+? Which of these species is not included in the dataset?</p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>Reptile</li>
+<li>Bird</li>
+<li>Primate</li>
+</ol>
+<ol start="15" style="list-style-type: lower-alpha">
+<li>Cat</li>
+<li>Dog</li>
+<li>Livestock</li>
+</ol>
+<p>Now that you have a handle on the data, let’s start to generate some exploratory plots!</p>
+</div>
+<div id="visualize-the-data" class="section level4" number="11.1.5.3">
+<h4><span class="header-section-number">11.1.5.3</span> Visualize the Data</h4>
+<p>To visualize the data, we’ll first guide you through a few code chunks that have partial code. After walking through these code chunks, you’ll be prompted to write code to generate your own exploratory plot!</p>
+<div id="bar-chart-pet-barchart" class="section level5" number="11.1.5.3.1">
+<h5><span class="header-section-number">11.1.5.3.1</span> Bar Chart: <code>pet-barchart</code></h5>
+<p>Start in the code chunk <code>visualize-pets</code>.</p>
+<p>Here you will see comments with partial code underneath of them. For example, the first plot you’ll want to generate will be using the comment from the partial code:</p>
+<div class="sourceCode" id="cb70"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb70-1"><a href="data-visualization-project.html#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="do">## visual breakdown of how many of each species</span></span>
+<span id="cb70-2"><a href="data-visualization-project.html#cb70-2" aria-hidden="true" tabindex="-1"></a><span class="do">## are included in the dataset</span></span>
+<span id="cb70-3"><a href="data-visualization-project.html#cb70-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(DATASET) <span class="sc">+</span></span>
+<span id="cb70-4"><a href="data-visualization-project.html#cb70-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x=</span>VARIABLE))</span></code></pre></div>
+<p>Here, you’ll have to <strong>change <code>DATASET</code> and <code>VARIABLE</code> in the code</strong> to the appropriate dataset and variable name in order to generate an exploratory plot. We’ll want species name along the x and a count of how many are in each species along the y.</p>
+<p>Feel free to customize your plots further using what you’ve learned about <code>ggplot2</code>!</p>
+<p>After generating this figure, you’ll be able to <strong>answer the following questions</strong>:</p>
+<p>? Are there more dogs or cat licenses in this dataset?</p>
+<ol style="list-style-type: upper-alpha">
+<li>Dog</li>
+</ol>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>Cat</li>
+</ol>
+<p>{choose-answers: 4}
+? Approximately how many cat licenses are in this dataset?</p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>23,000</li>
+</ol>
+<ol start="15" style="list-style-type: lower-alpha">
+<li>10,000</li>
+<li>60,000</li>
+<li>40,000</li>
+<li>100,000</li>
+<li>100</li>
+</ol>
+</div>
+<div id="cat-table-pet-cat-table" class="section level5" number="11.1.5.3.2">
+<h5><span class="header-section-number">11.1.5.3.2</span> Cat Table: <code>pet-cat-table</code></h5>
+<p>After generating this first bar chart, move onto the code chunk <code>pet-cat-table</code>. Here you’ll see the following partial code:</p>
+<div class="sourceCode" id="cb71"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb71-1"><a href="data-visualization-project.html#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="do">## Table: Most frequent Cat Name</span></span>
+<span id="cb71-2"><a href="data-visualization-project.html#cb71-2" aria-hidden="true" tabindex="-1"></a>DATASET <span class="sc">%&gt;%</span></span>
+<span id="cb71-3"><a href="data-visualization-project.html#cb71-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(species<span class="sc">==</span><span class="st">&quot;SPECIES&quot;</span>,VARIABLE <span class="sc">!=</span> <span class="st">&quot;&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb71-4"><a href="data-visualization-project.html#cb71-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(VARIABLE) <span class="sc">%&gt;%</span></span>
+<span id="cb71-5"><a href="data-visualization-project.html#cb71-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n=</span><span class="fu">n</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb71-6"><a href="data-visualization-project.html#cb71-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="sc">-</span>n) <span class="sc">%&gt;%</span></span>
+<span id="cb71-7"><a href="data-visualization-project.html#cb71-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">top_n</span>(<span class="at">n=</span><span class="dv">10</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb71-8"><a href="data-visualization-project.html#cb71-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable</span>(., <span class="at">caption =</span> <span class="st">&quot;Top 10 Cat Names in Seattle&quot;</span>)</span></code></pre></div>
+<p>Here, you will need to <strong>replace <code>DATASET</code>, <code>"SPECIES"</code>, and <code>VARIABLE</code> (in two places)</strong> in order to get this code to run. Your table at the end should have information about the top 10 most frequent cat names</p>
+<p>{case-sensitive: false}
+? What is the most common cat name?</p>
+<p>! Lucy</p>
+</div>
+<div id="dog-table-pet-dog-table" class="section level5" number="11.1.5.3.3">
+<h5><span class="header-section-number">11.1.5.3.3</span> Dog Table: <code>pet-dog-table</code></h5>
+<p>Having successfully generated this table, move onto the <code>pet-dog-table</code> code chunk. <em>There is no code in here</em>. You’ll need to <strong>put all the necessary code in this code chunk</strong>! Here, the goal is to create a similar table to what we just created; however, this should contain the 10 most frequent <em>dog</em> names, rather than cat names.</p>
+<p>{case-sensitive: false}
+? What is the most common dog name?</p>
+<p>! Lucy</p>
+</div>
+<div id="line-chart-pet-linechart" class="section level5" number="11.1.5.3.4">
+<h5><span class="header-section-number">11.1.5.3.4</span> Line Chart: <code>pet-linechart</code></h5>
+<p>The last guided exploratory visualization you’ll see is in the code chunk <code>pet-linechart</code>. Here, the code to create two new columns has been provided in full. You’ll use the column <code>ym</code>, which creates a “year-month” variable, to generate your plot in just a second.</p>
+<p>You will, however, have to <strong>edit the partial code after <code>## how the number of licenses recorded has changed over time</code></strong>. Here, you’ll need to <strong>add the appropriate function_names to accomplish what is stated in the comment above the missing function name</strong>. Additionally, you’ll need to <strong>fill in the appropriate variable wherever you see <code>VARIABLE</code></strong>. Finally, where you see <code>geom_GEOM</code>, <strong>change “GEOM” to the appropriate geom specified in the comment above</strong>.</p>
+<div class="sourceCode" id="cb72"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb72-1"><a href="data-visualization-project.html#cb72-1" aria-hidden="true" tabindex="-1"></a><span class="do">## add date and ym columns</span></span>
+<span id="cb72-2"><a href="data-visualization-project.html#cb72-2" aria-hidden="true" tabindex="-1"></a>pets <span class="ot">&lt;-</span> pets <span class="sc">%&gt;%</span>  </span>
+<span id="cb72-3"><a href="data-visualization-project.html#cb72-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">date =</span>  lubridate<span class="sc">::</span><span class="fu">ymd_hms</span>(license_issue_date),</span>
+<span id="cb72-4"><a href="data-visualization-project.html#cb72-4" aria-hidden="true" tabindex="-1"></a>         <span class="at">ym =</span> <span class="fu">as.yearmon</span>(pets<span class="sc">$</span>date, <span class="st">&quot;%y%m&quot;</span>))</span>
+<span id="cb72-5"><a href="data-visualization-project.html#cb72-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-6"><a href="data-visualization-project.html#cb72-6" aria-hidden="true" tabindex="-1"></a><span class="do">## how the number of licenses recorded has changed over time</span></span>
+<span id="cb72-7"><a href="data-visualization-project.html#cb72-7" aria-hidden="true" tabindex="-1"></a>pets <span class="sc">%&gt;%</span></span>
+<span id="cb72-8"><a href="data-visualization-project.html#cb72-8" aria-hidden="true" tabindex="-1"></a>  <span class="do">## group by yearmonth (`ym`)</span></span>
+<span id="cb72-9"><a href="data-visualization-project.html#cb72-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">function_name</span>(VARIABLE) <span class="sc">%&gt;%</span></span>
+<span id="cb72-10"><a href="data-visualization-project.html#cb72-10" aria-hidden="true" tabindex="-1"></a>  <span class="do">## count number within each group</span></span>
+<span id="cb72-11"><a href="data-visualization-project.html#cb72-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">function_name</span>(<span class="at">n=</span><span class="fu">n</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb72-12"><a href="data-visualization-project.html#cb72-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(., <span class="fu">aes</span>(VARIABLE, n)) <span class="sc">+</span></span>
+<span id="cb72-13"><a href="data-visualization-project.html#cb72-13" aria-hidden="true" tabindex="-1"></a>  <span class="do">## geom name for line chart</span></span>
+<span id="cb72-14"><a href="data-visualization-project.html#cb72-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_GEOM</span>() <span class="sc">+</span></span>
+<span id="cb72-15"><a href="data-visualization-project.html#cb72-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_yearmon</span>() <span class="sc">+</span></span>
+<span id="cb72-16"><a href="data-visualization-project.html#cb72-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">xlab</span>(<span class="st">&quot;&quot;</span>) <span class="sc">+</span></span>
+<span id="cb72-17"><a href="data-visualization-project.html#cb72-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;Number of licenses&quot;</span>)</span></code></pre></div>
+<p>After figuring out the missing pieces in the code and generating the plot, you’ll be able to <strong>answer the following questions</strong>:</p>
+<p>{words: 20}
+? What does the function <code>ymd_hms()</code> accomplish?</p>
+<p>! Converts <code>license_issue_date</code> to a date-time object</p>
+<p>? What geom did you specify to generate a line chart?</p>
+<p>! geom_line; geom_line()</p>
+<p>? In what year do you see a huge jump in the number of pet licenses?</p>
+<p>! 2015</p>
+</div>
+<div id="create-your-own-exploratory-plot-pet-plot" class="section level5" number="11.1.5.3.5">
+<h5><span class="header-section-number">11.1.5.3.5</span> Create Your Own Exploratory Plot: <code>pet-plot</code></h5>
+<p>After successfully generating two figures and two tables, it’s time for you to <strong>generate your own exploratory plot</strong>! Explore the data and generate an additional exploratory plot that helps you better understand the data in this dataset. Include the code for this in the <code>pet-plot</code> code chunk.</p>
+</div>
+</div>
+</div>
+<div id="pushing-to-github-1" class="section level3" number="11.1.6">
+<h3><span class="header-section-number">11.1.6</span> Pushing to GitHub</h3>
+<p>You’ll want to save changes to your project regularly by <strong>pushing them to GitHub</strong>. Now that you’ve finished Part 1 of this project (yay!), it’s a good time to stage, commit, and push these changes to GitHub. Do so now, and then take a long on GitHub to see the changes on their website!</p>
+<p><strong>Note</strong>: If you’re stuck on this, these steps were covered in detail in an earlier course: <a href="https://leanpub.com/universities/courses/jhu/version-control">Version Control</a>. Refer to the materials in this course if you’re stuck on this part of the project.</p>
+</div>
+<div id="part-2-explanatory-data-visualization" class="section level3" number="11.1.7">
+<h3><span class="header-section-number">11.1.7</span> Part 2: Explanatory Data Visualization</h3>
+<p>In the second part of the project, you’ll work to generate an explanatory plot. Building on what you’ve done above, here, we’ll again use <code>ggplot2</code>; however, we’ll focus on the details in the appearance of the plot we generate to ensure that we’re generating plots that effectively communicate the point we’re trying to make to others.</p>
+<div id="the-data-1" class="section level4" number="11.1.7.1">
+<h4><span class="header-section-number">11.1.7.1</span> The Data</h4>
+<p>The data used in this part of the project were dowloaded from <a href="https://data.fivethirtyeight.com/">FiveThirtyEight</a> - <code>steak-survey</code>. They were originally used in the article: <a href="https://fivethirtyeight.com/features/how-americans-like-their-steak/">How Americans Like Their Steak</a>. The goal of this part of the project will be to recreate the data visualization used in this article, which is re-printed here:</p>
+<p>{format: png}
+<img src="https://fivethirtyeight.com/wp-content/uploads/2017/06/hickeydottle-steak-1-rd.png" alt="steak survey data visualization from fivethirtyeight.com" /></p>
+<p>To get started, <strong>run the code in the <code>meat-data</code> code chunk</strong> to read the survey data into RStudio Cloud.</p>
+</div>
+<div id="explore-the-data-1" class="section level4" number="11.1.7.2">
+<h4><span class="header-section-number">11.1.7.2</span> Explore the Data</h4>
+<p>Once the data have been read in, <strong>explore the data</strong>. <strong>Add the code you use</strong> to explore the data to the <code>meat-explore</code> code chunk in dataviz_project.Rmd, and <strong>answer the following questions</strong>:</p>
+<p>? How many people participated in the survey?</p>
+<p>! 550</p>
+<p>{choose-answers: 4}
+? Which piece of information was NOT collected about the steak survey respondents?</p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>State</li>
+<li>Street Address</li>
+</ol>
+<ol start="15" style="list-style-type: lower-alpha">
+<li>Age</li>
+<li>Education</li>
+<li>Gender</li>
+<li>Location (by Census Region)</li>
+<li>Household Income</li>
+</ol>
+<p>? How many people responded “Yes” to the question “Do you eat steak?”</p>
+<p>! 430</p>
+<p>? How many different (unique) responses were there to the question “How do you like your steak prepared?”</p>
+<ol style="list-style-type: lower-alpha">
+<li>0</li>
+<li>3</li>
+</ol>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>5</li>
+</ol>
+<ol start="4" style="list-style-type: lower-alpha">
+<li>7</li>
+</ol>
+</div>
+<div id="wrangle-the-data" class="section level4" number="11.1.7.3">
+<h4><span class="header-section-number">11.1.7.3</span> Wrangle the Data</h4>
+<p><strong>Run the code in the <code>meat-wrangle</code> code chunk</strong> to get the data in the right format for you to generate the plot. Once you’ve run the code, <strong>answer the following questions</strong>:</p>
+<p>{choose-answers: 4}
+? What does the code within the <code>mutate()</code> function accomplish in this code chunk?</p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>creates a new column <code>steak_pref</code> that contains a “factor” variable</li>
+</ol>
+<ol start="15" style="list-style-type: lower-alpha">
+<li>changes the values of the existing <code>steak_pref</code> column</li>
+<li>creates a new column <code>steak_pref</code> that contains a “character” variable</li>
+<li>changes the values of the existing <code>How.do.you.like.your.steak.prepared.</code> column</li>
+<li>orders the values in the existing <code>How.do.you.like.your.steak.prepared.</code> column</li>
+<li>filters out missing values</li>
+</ol>
+<p>? What does the code within the <code>filter()</code> function accomplish in this code chunk?</p>
+<ol style="list-style-type: upper-alpha">
+<li>only includes data in <code>pref</code> where <code>steak_pref</code> was <em>not</em> empty</li>
+</ol>
+<ol start="2" style="list-style-type: lower-alpha">
+<li>only includes data in <code>pref</code> where <code>steak_pref</code> was empty</li>
+</ol>
+<p>? How many columns are there in <code>pref</code>?</p>
+<p>! 3</p>
+<p>{choose-answers: 4}
+? What is contained in the column: <code>pref$prop</code></p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>The proportion of people who prefer each level of steak wellness</li>
+</ol>
+<ol start="15" style="list-style-type: lower-alpha">
+<li>The proportion of people who responded to the question about whether or not they eat steak</li>
+<li>The number of people who prefer each each level of steak wellness</li>
+<li>The proportion of people who responded to the question about whether or not they eat steak</li>
+<li>The number of people who prefer each each level of steak cut</li>
+<li>The proportion of people who prefer each each level of steak cut</li>
+</ol>
+<p>{choose-answers: 4}
+? What is contained in the column: <code>pref$n</code></p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>The number of people who prefer each each level of steak wellness</li>
+</ol>
+<ol start="15" style="list-style-type: lower-alpha">
+<li>The proportion of people who prefer each level of steak wellness</li>
+<li>The proportion of people who responded to the question about whether or not they eat steak</li>
+<li>The proportion of people who responded to the question about whether or not they eat steak</li>
+<li>The number of people who prefer each each level of steak cut</li>
+<li>The proportion of people who prefer each each level of steak cut</li>
+</ol>
+</div>
+<div id="visualize-the-data-1" class="section level4" number="11.1.7.4">
+<h4><span class="header-section-number">11.1.7.4</span> Visualize the Data</h4>
+<p>To generate an explanatory figure, <em>some</em> of the code you’ll need has been entered into the <code>meat-visualize</code> code chunk. Work through this code line by line, <strong>replacing each <code>function_name</code> with the appropriate function to accomplish what the comment above the line states</strong>.</p>
+<p>For example, the first part of this code chunk contains the following partial code:</p>
+<div class="sourceCode" id="cb73"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb73-1"><a href="data-visualization-project.html#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="do">## generate the plot</span></span>
+<span id="cb73-2"><a href="data-visualization-project.html#cb73-2" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(pref) <span class="sc">+</span></span>
+<span id="cb73-3"><a href="data-visualization-project.html#cb73-3" aria-hidden="true" tabindex="-1"></a>  <span class="do">## specify you want to generate a bar chart</span></span>
+<span id="cb73-4"><a href="data-visualization-project.html#cb73-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">function_name</span>(<span class="fu">aes</span>(<span class="at">x =</span> steak_pref, <span class="at">y =</span> prop, <span class="at">fill =</span> steak_pref),</span>
+<span id="cb73-5"><a href="data-visualization-project.html#cb73-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">stat =</span> <span class="st">&#39;identity&#39;</span>,</span>
+<span id="cb73-6"><a href="data-visualization-project.html#cb73-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">width =</span> <span class="fl">0.7</span>)</span></code></pre></div>
+<p>Here, the comment says we want to <code>## specify you want to generate a bar chart</code>. This says to me that I’ll want to change <code>function_name</code> to <code>geom_bar</code>, so that the code looks like this:</p>
+<div class="sourceCode" id="cb74"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb74-1"><a href="data-visualization-project.html#cb74-1" aria-hidden="true" tabindex="-1"></a><span class="do">## generate the plot</span></span>
+<span id="cb74-2"><a href="data-visualization-project.html#cb74-2" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(pref) <span class="sc">+</span></span>
+<span id="cb74-3"><a href="data-visualization-project.html#cb74-3" aria-hidden="true" tabindex="-1"></a>  <span class="do">## specify you want to generate a bar chart</span></span>
+<span id="cb74-4"><a href="data-visualization-project.html#cb74-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="fu">aes</span>(<span class="at">x =</span> steak_pref, <span class="at">y =</span> prop, <span class="at">fill =</span> steak_pref),</span>
+<span id="cb74-5"><a href="data-visualization-project.html#cb74-5" aria-hidden="true" tabindex="-1"></a>                <span class="at">stat =</span> <span class="st">&#39;identity&#39;</span>,</span>
+<span id="cb74-6"><a href="data-visualization-project.html#cb74-6" aria-hidden="true" tabindex="-1"></a>                <span class="at">width =</span> <span class="fl">0.7</span>)</span></code></pre></div>
+<p>After determining what function I need, I would then <strong>run that portion of the code</strong> (what you see above).</p>
+<p>Note that we’re assigning the plot to the object <code>p</code>. This means that to view the plot in the “Plots” tab you’ll have to type <code>p</code> into the Console and hit enter after you run the code above. This will display the plot in the “Plots” tab of RStudio Cloud.</p>
+<p><strong>Work through this code layer by layer</strong> determining what <code>function_name</code> should be in each line of code. Note: <strong><code>function_name</code> should be the only thing you have to change in this code</strong>.</p>
+<p>? What function did you use to specify the colors of the bars in your bar chart?</p>
+<p>! scale_fill_manual ; scale_fill_manual()</p>
+<p>{choose-answers: 4}
+? What does <code>width = 0.7</code> accomplish in the code to generate the explanatory plot? (You can play around with the number to see how it changes the plot!)</p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>controls the width of the bars/ spacing between the bars on the bar chart</li>
+</ol>
+<ol start="15" style="list-style-type: lower-alpha">
+<li>controls the width of the plot</li>
+<li>controls the width of the gridlines</li>
+<li>controls the width of the bars in the legend</li>
+<li>controls the width of the space to the left of the plot</li>
+<li>controls the width of the space to the right of the plot</li>
+<li>controls the width of the space above the plot</li>
+<li>controls the width of the space below the plot</li>
+</ol>
+<p>{choose-answers: 4}
+? Without the line <code>legend.position="none"</code> what would change on the plot? (Try removing that line of code and regenerating the plot to see what changes!)</p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>A legend containing steak preference options would be present along the bottom of the plot</li>
+</ol>
+<ol start="15" style="list-style-type: lower-alpha">
+<li>A legend containing steak preference options would be present to the right of the plot</li>
+<li>A legend containing steak preference options would be present to the left of the plot</li>
+<li>A legend containing steak preference options would be present along the top of the plot</li>
+<li>A legend containing proportion of respondents would be present along the bottom of the plot</li>
+<li>A legend containing proportion of respondents would be present to the right of the plot</li>
+<li>A legend containing proportion of respondents would be present to the left of the plot</li>
+<li>A legend containing proportion of respondents would be present along the top of the plot</li>
+</ol>
+</div>
+<div id="save-the-plot" class="section level4" number="11.1.7.5">
+<h4><span class="header-section-number">11.1.7.5</span> Save the Plot</h4>
+<p>Once you’ve worked through this code chunk and have a plot that looks very similar to the plot in the original publication (and that you see above), you’ll want to use <code>ggsave()</code> to <strong>save this plot to figures/explanatory_figures</strong>. Save this figure as “steak_R.png”. Do this using the partial code in the code chunk <code>save-plot</code>.</p>
+</div>
+<div id="create-your-own-exploratory-plot-meat-plot" class="section level4" number="11.1.7.6">
+<h4><span class="header-section-number">11.1.7.6</span> Create Your Own Exploratory Plot: <code>meat-plot</code></h4>
+<p>Now, you’ll want to <strong>generate an explanatory figure on your own</strong>. Use these data to generate a second explanatory plot. It should tell us something new about the data. You can use any column in the data frame. But, make sure that the figure is something that could be presented or shown to a boss. <strong>Add this code to <code>meat-plot</code></strong>.</p>
+<p>A quick reminder, generating plots can take a while. Be patient as you make mistakes. <a href="google.com">Google</a> and <a href="stackoverflow.com">StackOverflow</a> are your friends - use them when you’re stuck!</p>
+</div>
+<div id="save-your-explanatory-plot" class="section level4" number="11.1.7.7">
+<h4><span class="header-section-number">11.1.7.7</span> Save Your Explanatory plot</h4>
+<p>After you’re happy with your very own explanatory plot, use <code>ggsave()</code> again to <strong>save this plot to figures/explanatory_figures</strong>. Be sure to use a filename other than “steak_R.png”. You don’t want to overwrite the plot you’ve already saved. <strong>Add this code to the code chunk <code>save-meat-plot</code>.</strong></p>
+</div>
+</div>
+<div id="add-markdown-text-to-.rmd" class="section level3" number="11.1.8">
+<h3><span class="header-section-number">11.1.8</span> Add Markdown Text to .Rmd</h3>
+<p>Before finalizing your project you’ll want be sure there are <strong>comments in your code chunks</strong> and <strong>text outside of your code chunks</strong> to explain what you’re doing in each code chunk. These explanations are incredibly helpful for someone who doesn’t code or someone unfamiliar to your project.</p>
+<p><strong>Note</strong>: If you’re stuck on this, these steps were covered in detail in an earlier course: <a href="https://leanpub.com/universities/courses/jhu/introduction-to-r">Introduction to R</a>. Refer to the R Markdown lesson in this course if you’re stuck on this part (or the next part) of the project.</p>
+</div>
+<div id="knit-your-r-markdown-document" class="section level3" number="11.1.9">
+<h3><span class="header-section-number">11.1.9</span> Knit your R Markdown Document</h3>
+<p>Last but not least, you’ll want to <strong>Knit your .Rmd document into an HTML document</strong>. If you get an error, take a look at what the error says and edit your .Rmd document. Then, try to Knit again! Troubleshooting these error messages will teach you a lot about coding in R.</p>
+</div>
+<div id="a-few-final-checks" class="section level3" number="11.1.10">
+<h3><span class="header-section-number">11.1.10</span> A Few Final Checks</h3>
+<p>A complete project should have:</p>
+<ul>
+<li><strong>Exploratory Analysis</strong>
+<ul>
+<li>3 plots (two guided ; one on your own)</li>
+<li>2 tables (one guided ; one on your own)</li>
+</ul></li>
+<li><strong>Explanatory Analysis</strong>
+<ul>
+<li>2 plots (one guided ; one on your own)</li>
+<li>saved to figures/explanatory_figures</li>
+</ul></li>
+<li>Markdown text explaining your project</li>
+<li>Comments in your code chunk</li>
+<li>Answered all questions throughout this exercise</li>
+</ul>
+</div>
+<div id="final-push-to-github" class="section level3" number="11.1.11">
+<h3><span class="header-section-number">11.1.11</span> Final <code>push</code> to GitHub</h3>
+<p>Now that you’ve finalized your project, you’ll do one final <strong>push to GitHub</strong>. add, commit, and push your work to GitHub. Navigate to your GitHub repository, and answer the final question below!</p>
+<p><strong>Note</strong>: If you’re stuck on this, these steps were covered in detail in an earlier course: <a href="https://leanpub.com/universities/courses/jhu/version-control">Version Control</a>. Refer to the materials in this course if you’re stuck on this part of the project.</p>
+<p>? Submit the URL to your <code>dataviz_project</code> GitHub repository below.</p>
+<p>! /(<a href="https:\/\/github.com.+\/dataviz_project)/i" class="uri">https:\/\/github.com.+\/dataviz_project)/i</a></p>
+<p><strong>Congrats on finishing your Data Visualization Project!!</strong></p>
+<p>{/exercise}</p>
+
+</div>
+</div>
+</div>
+<hr>
+<center> 
+  <div class="footer">
+      All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
+      <br>
+      All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
+  </div>
+</center>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="advanced-data-visualization.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="about-the-authors.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

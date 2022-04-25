@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Good Plots | Course Name</title>
+  <meta name="description" content="Description about Course/Book." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Good Plots | Course Name" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Description about Course/Book." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Good Plots | Course Name" />
+  
+  <meta name="twitter:description" content="Description about Course/Book." />
+  
+
+
+
+<meta name="date" content="2022-04-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="assets/DataTrail_favicon.ico" type="image/x-icon" />
+<link rel="prev" href="intro-to-data-visualization.html"/>
+<link rel="next" href="introduction-to-ggplot2.html"/>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="assets/style_DataTrail.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<a href="https://www.datatrail.org/"><img src="https://github.com/datatrail-jhu/DataTrail_Template/raw/main/assets/DataTrail_logo.jpg" style="padding-left: 0px; padding-top: 8px;"</a>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this Course</a></li>
+<li class="chapter" data-level="1" data-path="intro-to-data-visualization.html"><a href="intro-to-data-visualization.html"><i class="fa fa-check"></i><b>1</b> Intro to Data Visualization</a>
+<ul>
+<li class="chapter" data-level="1.0.1" data-path="intro-to-data-visualization.html"><a href="intro-to-data-visualization.html#data-visualization"><i class="fa fa-check"></i><b>1.0.1</b> Data Visualization</a></li>
+<li class="chapter" data-level="1.0.2" data-path="intro-to-data-visualization.html"><a href="intro-to-data-visualization.html#explanatory-plots"><i class="fa fa-check"></i><b>1.0.2</b> Explanatory Plots</a></li>
+<li class="chapter" data-level="1.0.3" data-path="intro-to-data-visualization.html"><a href="intro-to-data-visualization.html#types-of-plots"><i class="fa fa-check"></i><b>1.0.3</b> Types of Plots</a></li>
+<li class="chapter" data-level="1.0.4" data-path="intro-to-data-visualization.html"><a href="intro-to-data-visualization.html#tables"><i class="fa fa-check"></i><b>1.0.4</b> Tables</a></li>
+<li class="chapter" data-level="1.0.5" data-path="intro-to-data-visualization.html"><a href="intro-to-data-visualization.html#slides-and-video"><i class="fa fa-check"></i><b>1.0.5</b> Slides and Video</a></li>
+<li class="chapter" data-level="1.0.6" data-path="intro-to-data-visualization.html"><a href="intro-to-data-visualization.html#intro-to-data-visualization-quiz"><i class="fa fa-check"></i><b>1.0.6</b> Intro to Data Visualization quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="good-plots.html"><a href="good-plots.html"><i class="fa fa-check"></i><b>2</b> Good Plots</a>
+<ul>
+<li class="chapter" data-level="2.0.1" data-path="good-plots.html"><a href="good-plots.html#tips-for-making-good-plots"><i class="fa fa-check"></i><b>2.0.1</b> Tips for Making Good Plots</a></li>
+<li class="chapter" data-level="2.0.2" data-path="good-plots.html"><a href="good-plots.html#what-to-consider-when-making-plots"><i class="fa fa-check"></i><b>2.0.2</b> What To Consider When Making Plots</a></li>
+<li class="chapter" data-level="2.0.3" data-path="good-plots.html"><a href="good-plots.html#making-the-iphone-plot-in-r"><i class="fa fa-check"></i><b>2.0.3</b> Making The iPhone Plot in R</a></li>
+<li class="chapter" data-level="2.0.4" data-path="good-plots.html"><a href="good-plots.html#additional-resources"><i class="fa fa-check"></i><b>2.0.4</b> Additional Resources</a></li>
+<li class="chapter" data-level="2.0.5" data-path="good-plots.html"><a href="good-plots.html#slides-and-video-1"><i class="fa fa-check"></i><b>2.0.5</b> Slides and Video</a></li>
+<li class="chapter" data-level="2.0.6" data-path="good-plots.html"><a href="good-plots.html#good-plots-quiz"><i class="fa fa-check"></i><b>2.0.6</b> Good Plots quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html"><i class="fa fa-check"></i><b>3</b> Introduction to ggplot2</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#the-basics"><i class="fa fa-check"></i><b>3.0.1</b> The basics</a></li>
+<li class="chapter" data-level="3.0.2" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#example-dataset-diamonds"><i class="fa fa-check"></i><b>3.0.2</b> Example dataset: <code>diamonds</code></a></li>
+<li class="chapter" data-level="3.0.3" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#scatterplots-geom_point"><i class="fa fa-check"></i><b>3.0.3</b> Scatterplots: <code>geom_point</code></a></li>
+<li class="chapter" data-level="3.0.4" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#aesthetics"><i class="fa fa-check"></i><b>3.0.4</b> Aesthetics</a></li>
+<li class="chapter" data-level="3.0.5" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#facets"><i class="fa fa-check"></i><b>3.0.5</b> Facets</a></li>
+<li class="chapter" data-level="3.0.6" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#geoms"><i class="fa fa-check"></i><b>3.0.6</b> Geoms</a></li>
+<li class="chapter" data-level="3.0.7" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#summary"><i class="fa fa-check"></i><b>3.0.7</b> Summary</a></li>
+<li class="chapter" data-level="3.0.8" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#additional-resources-1"><i class="fa fa-check"></i><b>3.0.8</b> Additional Resources:</a></li>
+<li class="chapter" data-level="3.0.9" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#slides-and-video-2"><i class="fa fa-check"></i><b>3.0.9</b> Slides and Video</a></li>
+<li class="chapter" data-level="3.0.10" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#introduction-to-ggplot2-quiz"><i class="fa fa-check"></i><b>3.0.10</b> Introduction to ggplot2 quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html"><i class="fa fa-check"></i><b>4</b> Customization in ggplot2</a>
+<ul>
+<li class="chapter" data-level="4.0.1" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#colors"><i class="fa fa-check"></i><b>4.0.1</b> Colors</a></li>
+<li class="chapter" data-level="4.0.2" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#labels"><i class="fa fa-check"></i><b>4.0.2</b> Labels</a></li>
+<li class="chapter" data-level="4.0.3" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#themes"><i class="fa fa-check"></i><b>4.0.3</b> Themes</a></li>
+<li class="chapter" data-level="4.0.4" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#theme"><i class="fa fa-check"></i><b>4.0.4</b> Theme</a></li>
+<li class="chapter" data-level="4.0.5" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#legends"><i class="fa fa-check"></i><b>4.0.5</b> Legends</a></li>
+<li class="chapter" data-level="4.0.6" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#scales"><i class="fa fa-check"></i><b>4.0.6</b> Scales</a></li>
+<li class="chapter" data-level="4.0.7" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#coordinate-adjustment"><i class="fa fa-check"></i><b>4.0.7</b> Coordinate Adjustment</a></li>
+<li class="chapter" data-level="4.0.8" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#annotation"><i class="fa fa-check"></i><b>4.0.8</b> Annotation</a></li>
+<li class="chapter" data-level="4.0.9" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#summary-1"><i class="fa fa-check"></i><b>4.0.9</b> Summary</a></li>
+<li class="chapter" data-level="4.0.10" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#additional-references"><i class="fa fa-check"></i><b>4.0.10</b> Additional References</a></li>
+<li class="chapter" data-level="4.0.11" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#slides-and-video-3"><i class="fa fa-check"></i><b>4.0.11</b> Slides and Video</a></li>
+<li class="chapter" data-level="4.0.12" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#customization-in-ggplot2-quiz"><i class="fa fa-check"></i><b>4.0.12</b> Customization in ggplot2 quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="saving-plots.html"><a href="saving-plots.html"><i class="fa fa-check"></i><b>5</b> Saving Plots</a>
+<ul>
+<li class="chapter" data-level="5.0.1" data-path="saving-plots.html"><a href="saving-plots.html#image-types"><i class="fa fa-check"></i><b>5.0.1</b> Image Types</a></li>
+<li class="chapter" data-level="5.0.2" data-path="saving-plots.html"><a href="saving-plots.html#saving-plots-ggsave"><i class="fa fa-check"></i><b>5.0.2</b> Saving Plots: <code>ggsave()</code></a></li>
+<li class="chapter" data-level="5.0.3" data-path="saving-plots.html"><a href="saving-plots.html#alternative-approach"><i class="fa fa-check"></i><b>5.0.3</b> Alternative Approach</a></li>
+<li class="chapter" data-level="5.0.4" data-path="saving-plots.html"><a href="saving-plots.html#additional-resources-2"><i class="fa fa-check"></i><b>5.0.4</b> Additional Resources</a></li>
+<li class="chapter" data-level="5.0.5" data-path="saving-plots.html"><a href="saving-plots.html#slides-and-video-4"><i class="fa fa-check"></i><b>5.0.5</b> Slides and Video</a></li>
+<li class="chapter" data-level="5.0.6" data-path="saving-plots.html"><a href="saving-plots.html#saving-plots-quiz"><i class="fa fa-check"></i><b>5.0.6</b> Saving Plots quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html"><i class="fa fa-check"></i><b>6</b> From Exploratory To Explanatory</a>
+<ul>
+<li class="chapter" data-level="6.0.1" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#apple-product-sales-data"><i class="fa fa-check"></i><b>6.0.1</b> Apple Product Sales Data</a></li>
+<li class="chapter" data-level="6.0.2" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#exploratory-plot"><i class="fa fa-check"></i><b>6.0.2</b> Exploratory Plot</a></li>
+<li class="chapter" data-level="6.0.3" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#increasing-line-thickness"><i class="fa fa-check"></i><b>6.0.3</b> Increasing Line Thickness</a></li>
+<li class="chapter" data-level="6.0.4" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#adding-a-title"><i class="fa fa-check"></i><b>6.0.4</b> Adding a Title</a></li>
+<li class="chapter" data-level="6.0.5" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#changing-line-colors"><i class="fa fa-check"></i><b>6.0.5</b> Changing Line Colors</a></li>
+<li class="chapter" data-level="6.0.6" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#specifying-a-theme"><i class="fa fa-check"></i><b>6.0.6</b> Specifying a Theme</a></li>
+<li class="chapter" data-level="6.0.7" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#customizing-the-theme"><i class="fa fa-check"></i><b>6.0.7</b> Customizing the Theme</a></li>
+<li class="chapter" data-level="6.0.8" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#customizing-axis-labels"><i class="fa fa-check"></i><b>6.0.8</b> Customizing Axis Labels</a></li>
+<li class="chapter" data-level="6.0.9" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#adding-direct-labels"><i class="fa fa-check"></i><b>6.0.9</b> Adding direct labels</a></li>
+<li class="chapter" data-level="6.0.10" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#explanatory-plot"><i class="fa fa-check"></i><b>6.0.10</b> Explanatory Plot</a></li>
+<li class="chapter" data-level="6.0.11" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#slides-and-video-5"><i class="fa fa-check"></i><b>6.0.11</b> Slides and Video</a></li>
+<li class="chapter" data-level="6.0.12" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#from-exploratory-to-explanatory-quiz"><i class="fa fa-check"></i><b>6.0.12</b> From Exploratory To Explanatory quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="data-tables.html"><a href="data-tables.html"><i class="fa fa-check"></i><b>7</b> Data Tables</a>
+<ul>
+<li class="chapter" data-level="7.0.1" data-path="data-tables.html"><a href="data-tables.html#what-are-data-tables"><i class="fa fa-check"></i><b>7.0.1</b> What are Data Tables?</a></li>
+<li class="chapter" data-level="7.0.2" data-path="data-tables.html"><a href="data-tables.html#when-to-make-a-table"><i class="fa fa-check"></i><b>7.0.2</b> When to Make a Table</a></li>
+<li class="chapter" data-level="7.0.3" data-path="data-tables.html"><a href="data-tables.html#what-to-consider-when-making-a-table"><i class="fa fa-check"></i><b>7.0.3</b> What to Consider When Making A Table</a></li>
+<li class="chapter" data-level="7.0.4" data-path="data-tables.html"><a href="data-tables.html#additional-resources-3"><i class="fa fa-check"></i><b>7.0.4</b> Additional resources</a></li>
+<li class="chapter" data-level="7.0.5" data-path="data-tables.html"><a href="data-tables.html#slides-and-video-6"><i class="fa fa-check"></i><b>7.0.5</b> Slides and Video</a></li>
+<li class="chapter" data-level="7.0.6" data-path="data-tables.html"><a href="data-tables.html#data-tables-quiz"><i class="fa fa-check"></i><b>7.0.6</b> Data Tables quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="tables-in-r.html"><a href="tables-in-r.html"><i class="fa fa-check"></i><b>8</b> Tables in R</a>
+<ul>
+<li class="chapter" data-level="8.0.1" data-path="tables-in-r.html"><a href="tables-in-r.html#getting-the-data-in-order"><i class="fa fa-check"></i><b>8.0.1</b> Getting the data in order</a></li>
+<li class="chapter" data-level="8.0.2" data-path="tables-in-r.html"><a href="tables-in-r.html#an-exploratory-table"><i class="fa fa-check"></i><b>8.0.2</b> An exploratory table</a></li>
+<li class="chapter" data-level="8.0.3" data-path="tables-in-r.html"><a href="tables-in-r.html#improving-the-table-output"><i class="fa fa-check"></i><b>8.0.3</b> Improving the table output</a></li>
+<li class="chapter" data-level="8.0.4" data-path="tables-in-r.html"><a href="tables-in-r.html#annotating-your-table"><i class="fa fa-check"></i><b>8.0.4</b> Annotating your table</a></li>
+<li class="chapter" data-level="8.0.5" data-path="tables-in-r.html"><a href="tables-in-r.html#tables-in-rmarkdown"><i class="fa fa-check"></i><b>8.0.5</b> Tables in RMarkdown</a></li>
+<li class="chapter" data-level="8.0.6" data-path="tables-in-r.html"><a href="tables-in-r.html#additional-resources-4"><i class="fa fa-check"></i><b>8.0.6</b> Additional resources</a></li>
+<li class="chapter" data-level="8.0.7" data-path="tables-in-r.html"><a href="tables-in-r.html#slides-and-video-7"><i class="fa fa-check"></i><b>8.0.7</b> Slides and Video</a></li>
+<li class="chapter" data-level="8.0.8" data-path="tables-in-r.html"><a href="tables-in-r.html#tables-in-r-quiz"><i class="fa fa-check"></i><b>8.0.8</b> Tables In R quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html"><i class="fa fa-check"></i><b>9</b> Multiple Plots in R</a>
+<ul>
+<li class="chapter" data-level="9.0.1" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#installing-patchwork"><i class="fa fa-check"></i><b>9.0.1</b> Installing patchwork</a></li>
+<li class="chapter" data-level="9.0.2" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#basic-plotting-using-patchwork"><i class="fa fa-check"></i><b>9.0.2</b> Basic plotting using patchwork</a></li>
+<li class="chapter" data-level="9.0.3" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#altering-the-layout"><i class="fa fa-check"></i><b>9.0.3</b> Altering the layout</a></li>
+<li class="chapter" data-level="9.0.4" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#nesting-plots"><i class="fa fa-check"></i><b>9.0.4</b> Nesting plots</a></li>
+<li class="chapter" data-level="9.0.5" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#additional-operators"><i class="fa fa-check"></i><b>9.0.5</b> Additional operators</a></li>
+<li class="chapter" data-level="9.0.6" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#additional-resources-5"><i class="fa fa-check"></i><b>9.0.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="9.0.7" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#slides-and-video-8"><i class="fa fa-check"></i><b>9.0.7</b> Slides and Video</a></li>
+<li class="chapter" data-level="9.0.8" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#multiple-plots-quiz"><i class="fa fa-check"></i><b>9.0.8</b> Multiple Plots quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="advanced-data-visualization.html"><a href="advanced-data-visualization.html"><i class="fa fa-check"></i><b>10</b> Advanced Data Visualization</a>
+<ul>
+<li class="chapter" data-level="10.0.1" data-path="advanced-data-visualization.html"><a href="advanced-data-visualization.html#interactive-graphics"><i class="fa fa-check"></i><b>10.0.1</b> Interactive Graphics</a></li>
+<li class="chapter" data-level="10.0.2" data-path="advanced-data-visualization.html"><a href="advanced-data-visualization.html#animated-graphics"><i class="fa fa-check"></i><b>10.0.2</b> Animated Graphics</a></li>
+<li class="chapter" data-level="10.0.3" data-path="advanced-data-visualization.html"><a href="advanced-data-visualization.html#advanced-graphics-in-r"><i class="fa fa-check"></i><b>10.0.3</b> Advanced Graphics In R</a></li>
+<li class="chapter" data-level="10.0.4" data-path="advanced-data-visualization.html"><a href="advanced-data-visualization.html#additional-resources-6"><i class="fa fa-check"></i><b>10.0.4</b> Additional resources</a></li>
+<li class="chapter" data-level="10.0.5" data-path="advanced-data-visualization.html"><a href="advanced-data-visualization.html#slides-and-video-9"><i class="fa fa-check"></i><b>10.0.5</b> Slides and Video</a></li>
+<li class="chapter" data-level="10.0.6" data-path="advanced-data-visualization.html"><a href="advanced-data-visualization.html#advanced-data-visualization-quiz"><i class="fa fa-check"></i><b>10.0.6</b> Advanced Data Visualization quiz</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="data-visualization-project.html"><a href="data-visualization-project.html"><i class="fa fa-check"></i><b>11</b> Data Visualization Project</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="data-visualization-project.html"><a href="data-visualization-project.html#data-visualization-project-1"><i class="fa fa-check"></i><b>11.1</b> Data Visualization Project</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="data-visualization-project.html"><a href="data-visualization-project.html#github-setup"><i class="fa fa-check"></i><b>11.1.1</b> GitHub Setup</a></li>
+<li class="chapter" data-level="11.1.2" data-path="data-visualization-project.html"><a href="data-visualization-project.html#rstudio-cloud-setup"><i class="fa fa-check"></i><b>11.1.2</b> RStudio Cloud Setup</a></li>
+<li class="chapter" data-level="11.1.3" data-path="data-visualization-project.html"><a href="data-visualization-project.html#data-science-project-setup"><i class="fa fa-check"></i><b>11.1.3</b> Data Science Project Setup</a></li>
+<li class="chapter" data-level="11.1.4" data-path="data-visualization-project.html"><a href="data-visualization-project.html#pushing-to-github"><i class="fa fa-check"></i><b>11.1.4</b> Pushing to GitHub</a></li>
+<li class="chapter" data-level="11.1.5" data-path="data-visualization-project.html"><a href="data-visualization-project.html#part-1-exploratory-data-visualization"><i class="fa fa-check"></i><b>11.1.5</b> Part 1: Exploratory Data Visualization</a></li>
+<li class="chapter" data-level="11.1.6" data-path="data-visualization-project.html"><a href="data-visualization-project.html#pushing-to-github-1"><i class="fa fa-check"></i><b>11.1.6</b> Pushing to GitHub</a></li>
+<li class="chapter" data-level="11.1.7" data-path="data-visualization-project.html"><a href="data-visualization-project.html#part-2-explanatory-data-visualization"><i class="fa fa-check"></i><b>11.1.7</b> Part 2: Explanatory Data Visualization</a></li>
+<li class="chapter" data-level="11.1.8" data-path="data-visualization-project.html"><a href="data-visualization-project.html#add-markdown-text-to-.rmd"><i class="fa fa-check"></i><b>11.1.8</b> Add Markdown Text to .Rmd</a></li>
+<li class="chapter" data-level="11.1.9" data-path="data-visualization-project.html"><a href="data-visualization-project.html#knit-your-r-markdown-document"><i class="fa fa-check"></i><b>11.1.9</b> Knit your R Markdown Document</a></li>
+<li class="chapter" data-level="11.1.10" data-path="data-visualization-project.html"><a href="data-visualization-project.html#a-few-final-checks"><i class="fa fa-check"></i><b>11.1.10</b> A Few Final Checks</a></li>
+<li class="chapter" data-level="11.1.11" data-path="data-visualization-project.html"><a href="data-visualization-project.html#final-push-to-github"><i class="fa fa-check"></i><b>11.1.11</b> Final <code>push</code> to GitHub</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
+<li class="chapter" data-level="12" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>12</b> References</a></li>
+<li class="divider"></li>
+<p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
+<p style="text-align:center;"> <a href="https://www.datatrail.org/"> Data Trail </a></p>
+<a href="https://www.datatrail.org/"><img src="https://github.com/datatrail-jhu/DataTrail_Template/raw/main/assets/DataTrail_logo.jpg" style=" width: 80%; filter: grayscale(100%); padding-left: 40px; padding-top: 8px; vertical-align: top "</a>
+<p style="text-align:center; font-size: 12px;"> <a href="https://github.com/rstudio4edu/rstudio4edu-book/"> Style adapted from: rstudio4edu-book </a> <a href ="https://creativecommons.org/licenses/by/2.0/"> (CC-BY 2.0) </a></p>
+<p style="padding-left: 40px;"><div class="trapezoid" style = "padding-left: 40px;"><span>  <a href="https://forms.gle/VWaJYc3zATe3qxYC9"> Click here to provide feedback</a> <img src="assets/itcr_arrow.png" style=" width: 10%" ></span></div></p>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Course Name</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+  <!--script src="https://kit.fontawesome.com/6a26f47516.js"></script-->
+  <!--<script src="assets/hideOutput.js"></script>-->
+  <link href="assets/style_DataTrail.css" rel="stylesheet">
+</head>
+        
+
+
+<div class="hero-image-container"> 
+  <img class= "hero-image" src="assets/DataTrail.jpg">
+</div>
+<div id="good-plots" class="section level1" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Good Plots</h1>
+<p>The goal of data visualization in data analysis is to improve understanding of the data. As mentioned in the last lesson, this could mean improving our own understanding of the data <em>or</em> using visualization to improve someone else’s understanding of the data.</p>
+<p>We discussed some general characteristics and basic types of plots in the last lesson, but here we will step through a number of general tips for making good plots.</p>
+<div id="tips-for-making-good-plots" class="section level3" number="2.0.1">
+<h3><span class="header-section-number">2.0.1</span> Tips for Making Good Plots</h3>
+<div id="choose-the-right-type-of-plot" class="section level4" number="2.0.1.1">
+<h4><span class="header-section-number">2.0.1.1</span> Choose the right type of plot</h4>
+<p>If your goal is to allow the viewer to compare values across groups, pie charts should largely be avoided. This is because it’s easier for the human eye to differentiate between bar heights than it is between similarly-sized slices of a pie. Thinking about the best way to visualize your data before making the plot is an important step in the process of data visualization.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w/export/png?id=1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w&amp;pageid=g313fe11f0c_0_445" alt="Choose an appropriate plot for the data you’re visualizing." /></p>
+</div>
+<div id="be-mindful-when-choosing-colors" class="section level4" number="2.0.1.2">
+<h4><span class="header-section-number">2.0.1.2</span> Be mindful when choosing colors</h4>
+<p>Choosing colors that work for the story you’re trying to convey with your visualization is important. Avoiding colors that are hard to see on a screen or when projected, such as pastels, is a good idea. Additionally, red-green color blindness is common and leads to difficulty in distinguishing reds from greens. Simply avoiding making comparisons between these two colors is a good first step when visualizing data.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w/export/png?id=1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w&amp;pageid=g313fe11f0c_0_146" alt="Choosing appropriate colors for visualizations is important" /></p>
+<p>Beyond red-green color blindness, there is an entire group of experts out there in color theory.To learn more about available <a href="https://github.com/EmilHvitfeldt/r-color-palettes">color palettes in R</a> or to read more from a pro named Lisa Charlotte Rost <a href="https://lisacharlotterost.github.io/2016/04/22/Colors-for-DataVis/">talking about color choices in data visualization</a>, feel free to read more.</p>
+</div>
+<div id="label-your-axes" class="section level4" number="2.0.1.3">
+<h4><span class="header-section-number">2.0.1.3</span> Label your axes</h4>
+<p>Whether you’re making an exploratory or explanatory visualization, labeled axes are a must. They help tell the story of the figure. Making sure the axes are clearly labeled is also important. Rather than labeling the graph below with “h” and “g,” we chose the labels “height” and “gender,” making it clear to the viewer exactly what is being plotted.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w/export/png?id=1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w&amp;pageid=g313fe11f0c_0_180" alt="Having descriptive labels on your axes is critical" /></p>
+</div>
+<div id="make-sure-text-is-readable" class="section level4" number="2.0.1.4">
+<h4><span class="header-section-number">2.0.1.4</span> Make sure text is readable</h4>
+<p>Often text on plots is too small for viewers to read. By being mindful of the size of the text on your axes, in your legend, and used for your labels, your visualizations will be greatly improved.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w/export/png?id=1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w&amp;pageid=g313fe11f0c_0_232" alt="On the right, we see that the text is easily readable" /></p>
+</div>
+<div id="make-sure-your-numbers-add-up" class="section level4" number="2.0.1.5">
+<h4><span class="header-section-number">2.0.1.5</span> Make sure your numbers add up</h4>
+<p>When you’re making a plot that should sum to 100, make sure that it in fact does. Taking a look at visualizations after you make them to ensure that they make sense is an important part of the data visualization process.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w/export/png?id=1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w&amp;pageid=g313fe11f0c_0_336" alt="At left, the pieces of the pie only add up to 95%. On the right, this error has been fixed and the pieces add up to 100%" /></p>
+</div>
+<div id="make-sure-the-numbers-and-plots-make-sense-together" class="section level4" number="2.0.1.6">
+<h4><span class="header-section-number">2.0.1.6</span> Make sure the numbers and plots make sense together</h4>
+<p>Another common error is having labels that don’t reflect the underlying graphic. For example, here, we can see on the left that the turquoise piece is more than half the graph, and thus the label 45% must be incorrect. At right, we see that the labels match what we see in the figure.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w/export/png?id=1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w&amp;pageid=g313fe11f0c_0_351" alt="Checking to make sure the numbers and plot make sense together is important" /></p>
+</div>
+<div id="make-comparisons-easy-on-viewers" class="section level4" number="2.0.1.7">
+<h4><span class="header-section-number">2.0.1.7</span> Make comparisons easy on viewers</h4>
+<p>There are many ways in which you can make comparisons easier on the viewer. For example, avoiding unnecessary whitespace between the bars on your graph can help viewers make comparisons between the bars on the barplot.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w/export/png?id=1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w&amp;pageid=g313fe11f0c_0_0" alt="At left, there is extra white space between the bars of the plot that should be removed. On the right, we see an improved plot" /></p>
+</div>
+<div id="use-y-axes-that-start-at-zero" class="section level4" number="2.0.1.8">
+<h4><span class="header-section-number">2.0.1.8</span> Use y-axes that start at zero</h4>
+<p>Often, in an attempt to make differences between groups look larger than they are, y-axis will be started at a value other than zero. This is misleading. Y-axis for numerical information should start at zero.
+{format: png}
+<img src="https://docs.google.com/presentation/d/1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w/export/png?id=1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w&amp;pageid=g313fe11f0c_0_299" alt="At left, the differences between the vars appears larger than on the right; however, this is just because the y-axis starts at 200. The proper way to start this graph is to start the y-axis at 0." /></p>
+</div>
+<div id="keep-it-simple" class="section level4" number="2.0.1.9">
+<h4><span class="header-section-number">2.0.1.9</span> Keep it simple</h4>
+<p>The goal of data visualization is to improve understanding of data. Sometimes complicated visualizations cannot be avoided; however, when possible, keep it simple.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w/export/png?id=1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w&amp;pageid=g313fe11f0c_0_390" alt="Here, the graphic does not immediately convey a main point. It’s hard to interpret what each circle means or what the story of this graphic is supposed to me. Make sure in your graphics that your main point comes through" /></p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w/export/png?id=1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w&amp;pageid=g313fe11f0c_0_463" alt="Similarly, the intention of your graphic should never be to mislead and confuse. Unlike what was done here, be sure that your data visualizations improve viewers’ understanding. Do not aim to confuse" /></p>
+</div>
+</div>
+<div id="what-to-consider-when-making-plots" class="section level3" number="2.0.2">
+<h3><span class="header-section-number">2.0.2</span> What To Consider When Making Plots</h3>
+<p>Having discussed some general guidelines, there are a number of questions you should ask yourself before making a plot. These have been nicely laid out in a <a href="https://blog.datawrapper.de/better-charts/">blog post</a> from the wonderful team at <a href="https://blog.datawrapper.de/">Chartable</a>, <a href="https://www.datawrapper.de/">Datawrapper’s</a> blog. We will summarize them here and include a number of the images from their post. The post argues that there are three main questions you should ask any time you create a visual display of your data. We will discuss these three questions below and then step through the process of creating data displays in R.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w/export/png?id=1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w&amp;pageid=g3a100c29e0_0_39" alt="Three Questions for Creating a Chart" /></p>
+<ol style="list-style-type: decimal">
+<li>What’s your point?</li>
+<li>How can you emphasize your point in your chart?</li>
+<li>What does your final chart show exactly?</li>
+</ol>
+<div id="the-data-we-want-to-plot" class="section level4" number="2.0.2.1">
+<h4><span class="header-section-number">2.0.2.1</span> The Data We Want to Plot</h4>
+<p>When discussing data visualization, it’s always good to have an example to look at. For the example here, we’ll use the same example <a href="https://twitter.com/lisacrost">Lisa Charlotte Rost</a> used in her blog post. If you were interested in analyzing data that looked to assess the success of the iPhone, you would want to look at data to see how sales of iPhones have changed over time. You might, for example, start with a super basic plot like this:</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w/export/png?id=1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w&amp;pageid=g3a100c29e0_0_44" alt="iPhone Sales over time" /></p>
+</div>
+<div id="whats-your-point" class="section level4" number="2.0.2.2">
+<h4><span class="header-section-number">2.0.2.2</span> What’s your point?</h4>
+<p>Whenever you have data you’re trying to plot, think about what you’re actually trying to show. Once you’ve taken a look at your data, a good title for the plot can be helpful. Your title should <strong>tell viewers what they’ll see when they look at the plot</strong>.</p>
+<p>For the iPhone example, a reasonable headline would be **“iPhone more successful than all other Apple products.” This tells us what others would expect to conclude from looking at the data in the figure.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w/export/png?id=1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w&amp;pageid=g3a100c29e0_0_50" alt="iPhone Sales over time with title" /></p>
+</div>
+<div id="how-can-you-emphasize-your-point" class="section level4" number="2.0.2.3">
+<h4><span class="header-section-number">2.0.2.3</span> How can you emphasize your point?</h4>
+<p>We talked about it in the last lesson, but an incredibly important decision is that, choosing an appropriate chart for the type of data you have is very important. In the next section of this lesson, we’ll discuss what type of data are appropriate for each type of plot in R; however, for now, we’ll just focus on the iPhone data example. With this example, we’ll discuss that you can emphasize your point by:</p>
+<ul>
+<li>adding data</li>
+<li>highlighting data with color</li>
+<li>annotating your plot</li>
+</ul>
+<div id="adding-data" class="section level5" number="2.0.2.3.1">
+<h5><span class="header-section-number">2.0.2.3.1</span> Adding data</h5>
+<p>With our example data set, our title suggests that the iPhone has been Apple’s most successful product. To make that claim, it would be really helpful for the plot to compare iPhone sales with other Apple products, say, the iPad or the iPod. By adding data about other Apple products over time, we can visualize just how successful the iPhone has been.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w/export/png?id=1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w&amp;pageid=g3a100c29e0_0_56" alt="iPhone Sales over time vs other Apple Products" /></p>
+</div>
+<div id="highlighting-data-with-color" class="section level5" number="2.0.2.3.2">
+<h5><span class="header-section-number">2.0.2.3.2</span> Highlighting data with color</h5>
+<p>Colors help direct viewers’ eyes to the most important parts of the figure. Colors tell your readers where to focus their attention. Grays help to tell viewers where to focus less of their attention, while other colors help to highlight the point your trying to make.</p>
+<p>For example, in the iPhone example, we can de-emphasize the iPod and iPad data using gray lines, while really highlighting the huge amount of growth of the iPhone, by making its line red.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w/export/png?id=1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w&amp;pageid=g3a100c29e0_0_61" alt="iPhone Sales, in red, over time vs other Apple Products, in gray" /></p>
+</div>
+<div id="annotate-your-plot" class="section level5" number="2.0.2.3.3">
+<h5><span class="header-section-number">2.0.2.3.3</span> Annotate your plot</h5>
+<p>By highlighting parts of your plot with arrows or text on your plot, you can further draw viewers’ attention to certain part of the plot. These are often details that are unnecessary in exploratory plots, where the goal is just to better understand the data, but are very helpful in explanatory plots, when you’re trying to draw conclusions from the plot.</p>
+<p>In the iPhone example, by highlighting when Apple announced the iPhone 4 in 2010 and adding text to explain that this was the first time that more iPhones were sold than iPods, viewers get a better understanding of the data.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w/export/png?id=1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w&amp;pageid=g3a100c29e0_0_66" alt="iPhone sales over time annotated" /></p>
+</div>
+</div>
+<div id="what-does-your-final-chart-show" class="section level4" number="2.0.2.4">
+<h4><span class="header-section-number">2.0.2.4</span> What does your final chart show?</h4>
+<p>The first step of the process told viewers what they would see in the plot. The second step showed them. The third step makes it extra clear to viewers what they should be seeing. You explain to viewers what they should be seeing in the plot. This is where you are sure to add descriptions, legends, and the source of your data. Again, these are important pieces of creating a complete explanatory plot, but are not all necessary when making exploratory plots.</p>
+<div id="write-precise-descriptions" class="section level5" number="2.0.2.4.1">
+<h5><span class="header-section-number">2.0.2.4.1</span> Write precise descriptions</h5>
+<p>Whether it’s a figure legend at the bottom of your plot, a subtitle explaining what data are plotted, or clear axes labels, text describing clearly what’s going on in your plot is important. Here, the author of these plots decided to include a subtitle, “Worldwide sales of selected Apple products in million, by fiscal quarter, 2000 to 2014.” She could have similarly included this information on the y-axis “Worldwide sales of Apple products (in millions).” While there are different approaches, including this information is critical.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w/export/png?id=1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w&amp;pageid=g3a100c29e0_0_72" alt="iPhone sales over time annotated with description" /></p>
+</div>
+<div id="add-legends" class="section level5" number="2.0.2.4.2">
+<h5><span class="header-section-number">2.0.2.4.2</span> Add legends</h5>
+<p>When making a plot, be sure that viewers are able to easily determine what each line or point on a plot represents. Here, by adding text to label which line is iPhone, which is iPad, and which is iPod, viewers are quickly able to understand the plot</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w/export/png?id=1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w&amp;pageid=g3a100c29e0_0_78" alt="iPhone sales over time annotated with description and text labels" /></p>
+</div>
+<div id="add-a-source" class="section level5" number="2.0.2.4.3">
+<h5><span class="header-section-number">2.0.2.4.3</span> Add a source</h5>
+<p>When finalizing an explanatory plot, be sure to source your data. It’s always best for readers to know where you obtained your data and what data are being used to create your plot. Transparency is important.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w/export/png?id=1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w&amp;pageid=g3a100c29e0_0_86" alt="iPhone sales over time with source information" /></p>
+<p>The finalized plot is clear, the conclusion the viewer is to make is obvious, the data are well-labeled, and the plot is annotated.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w/export/png?id=1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w&amp;pageid=g3a100c29e0_0_92" alt="Final blog post plot" /></p>
+</div>
+</div>
+</div>
+<div id="making-the-iphone-plot-in-r" class="section level3" number="2.0.3">
+<h3><span class="header-section-number">2.0.3</span> Making The iPhone Plot in R</h3>
+<p>Here, we’ll introduce the code required to generate the plot used as an example in this lesson in R, but we won’t walk through this code step-by-step until a later lesson. We include this now to make two points:</p>
+<ol style="list-style-type: decimal">
+<li>Once you have access to the data, you <strong>can</strong> manipulate plots to look the way you want.</li>
+<li>It often takes a lot of somewhat complicated code to reproduce someone else’s beautiful plot.</li>
+</ol>
+<p>As to the second point above, while the code here is rather complicated, you’ll see that the code required to make basic plots in R is quite simple. Once you master the basics, you’ll be able to start generating more and more complex plots, building on the basic building blocs that we’ll go over in the next lesson!</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="good-plots.html#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-2"><a href="good-plots.html#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reshape2)</span>
+<span id="cb1-3"><a href="good-plots.html#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(zoo)</span>
+<span id="cb1-4"><a href="good-plots.html#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(directlabels)</span>
+<span id="cb1-5"><a href="good-plots.html#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="good-plots.html#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="do">## after downloading data from https://blog.datawrapper.de/better-charts/</span></span>
+<span id="cb1-7"><a href="good-plots.html#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="do">## read data into R</span></span>
+<span id="cb1-8"><a href="good-plots.html#cb1-8" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">&quot;data-orzoM.csv&quot;</span>,<span class="at">stringsAsFactors=</span><span class="cn">FALSE</span>)</span>
+<span id="cb1-9"><a href="good-plots.html#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="good-plots.html#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="do">## get quarter year variable into a form R knows how to work with</span></span>
+<span id="cb1-11"><a href="good-plots.html#cb1-11" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>Year <span class="ot">&lt;-</span> <span class="fu">grep</span>(<span class="st">&quot;Q&quot;</span>,<span class="fu">unlist</span>(<span class="fu">strsplit</span>(<span class="fu">as.character</span>(df<span class="sc">$</span>Quarter),<span class="st">&quot;</span><span class="sc">\\</span><span class="st">s&quot;</span>)), <span class="at">value=</span><span class="cn">TRUE</span>, <span class="at">invert=</span><span class="cn">TRUE</span>)</span>
+<span id="cb1-12"><a href="good-plots.html#cb1-12" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>Q <span class="ot">&lt;-</span> <span class="fu">grep</span>(<span class="st">&quot;Q&quot;</span>,<span class="fu">unlist</span>(<span class="fu">strsplit</span>(<span class="fu">as.character</span>(df<span class="sc">$</span>Quarter),<span class="st">&quot;</span><span class="sc">\\</span><span class="st">s&quot;</span>)), <span class="at">value=</span><span class="cn">TRUE</span>, <span class="at">invert=</span><span class="cn">FALSE</span>)</span>
+<span id="cb1-13"><a href="good-plots.html#cb1-13" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>yrq <span class="ot">&lt;-</span> <span class="fu">paste</span>(df<span class="sc">$</span>Year,df<span class="sc">$</span>Q, <span class="at">sep=</span><span class="st">&quot; &quot;</span>)</span>
+<span id="cb1-14"><a href="good-plots.html#cb1-14" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>yrq <span class="ot">&lt;-</span> <span class="fu">as.yearqtr</span>(df<span class="sc">$</span>yrq)</span>
+<span id="cb1-15"><a href="good-plots.html#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="good-plots.html#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="do">## reshape data into long, tidy format</span></span>
+<span id="cb1-17"><a href="good-plots.html#cb1-17" aria-hidden="true" tabindex="-1"></a>df2 <span class="ot">&lt;-</span> <span class="fu">melt</span>(df, <span class="at">id=</span><span class="fu">c</span>(<span class="st">&quot;Quarter&quot;</span>,<span class="st">&quot;yrq&quot;</span>,<span class="st">&quot;Year&quot;</span>, <span class="st">&quot;Q&quot;</span>))</span>
+<span id="cb1-18"><a href="good-plots.html#cb1-18" aria-hidden="true" tabindex="-1"></a>df2<span class="sc">$</span>value <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(df2<span class="sc">$</span>value)</span>
+<span id="cb1-19"><a href="good-plots.html#cb1-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-20"><a href="good-plots.html#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="do">## plot data as in blog post</span></span>
+<span id="cb1-21"><a href="good-plots.html#cb1-21" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data =</span> df2, <span class="fu">aes</span>(<span class="at">x=</span>yrq,<span class="at">y=</span>value, <span class="at">group=</span>variable, <span class="at">color=</span>variable)) <span class="sc">+</span></span>
+<span id="cb1-22"><a href="good-plots.html#cb1-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">size =</span> <span class="fl">1.5</span>) <span class="sc">+</span></span>
+<span id="cb1-23"><a href="good-plots.html#cb1-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_yearqtr</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">2004</span>, <span class="dv">2015</span>),</span>
+<span id="cb1-24"><a href="good-plots.html#cb1-24" aria-hidden="true" tabindex="-1"></a>                  <span class="at">format =</span> <span class="st">&quot;%Y&quot;</span>, <span class="at">breaks=</span><span class="fu">c</span>(<span class="dv">2004</span><span class="sc">:</span><span class="dv">2015</span>), <span class="at">expand =</span> <span class="fu">c</span>(<span class="fl">0.1</span>, <span class="fl">0.01</span>)) <span class="sc">+</span></span>
+<span id="cb1-25"><a href="good-plots.html#cb1-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_colour_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;red3&quot;</span>,<span class="st">&quot;grey&quot;</span>,<span class="st">&quot;grey&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb1-26"><a href="good-plots.html#cb1-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">c</span>(<span class="dv">0</span>,<span class="dv">10</span>,<span class="dv">20</span>,<span class="dv">30</span>,<span class="dv">40</span>,<span class="dv">50</span>,<span class="dv">60</span>,<span class="dv">70</span>,<span class="dv">80</span>)) <span class="sc">+</span></span>
+<span id="cb1-27"><a href="good-plots.html#cb1-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb1-28"><a href="good-plots.html#cb1-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(  <span class="at">panel.grid.major.x =</span> <span class="fu">element_blank</span>() ,</span>
+<span id="cb1-29"><a href="good-plots.html#cb1-29" aria-hidden="true" tabindex="-1"></a>          <span class="at">panel.grid.minor.x =</span> <span class="fu">element_blank</span>() ,</span>
+<span id="cb1-30"><a href="good-plots.html#cb1-30" aria-hidden="true" tabindex="-1"></a>          <span class="at">axis.title.x =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb1-31"><a href="good-plots.html#cb1-31" aria-hidden="true" tabindex="-1"></a>          <span class="at">axis.title.y =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb1-32"><a href="good-plots.html#cb1-32" aria-hidden="true" tabindex="-1"></a>          <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size=</span><span class="dv">15</span>),</span>
+<span id="cb1-33"><a href="good-plots.html#cb1-33" aria-hidden="true" tabindex="-1"></a>          <span class="at">plot.margin =</span> <span class="fu">unit</span>(<span class="fu">c</span>(<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>,<span class="dv">1</span>), <span class="st">&quot;lines&quot;</span>),</span>
+<span id="cb1-34"><a href="good-plots.html#cb1-34" aria-hidden="true" tabindex="-1"></a>          <span class="at">legend.position =</span><span class="st">&quot;none&quot;</span>,</span>
+<span id="cb1-35"><a href="good-plots.html#cb1-35" aria-hidden="true" tabindex="-1"></a>          <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">22</span>),</span>
+<span id="cb1-36"><a href="good-plots.html#cb1-36" aria-hidden="true" tabindex="-1"></a>          <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">15</span>),</span>
+<span id="cb1-37"><a href="good-plots.html#cb1-37" aria-hidden="true" tabindex="-1"></a>          <span class="at">panel.border =</span> <span class="fu">element_blank</span>()</span>
+<span id="cb1-38"><a href="good-plots.html#cb1-38" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-39"><a href="good-plots.html#cb1-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_dl</span>(<span class="fu">aes</span>(<span class="at">label =</span> variable),</span>
+<span id="cb1-40"><a href="good-plots.html#cb1-40" aria-hidden="true" tabindex="-1"></a>          <span class="at">method =</span> <span class="fu">list</span>(<span class="fu">c</span>(<span class="st">&quot;last.points&quot;</span>),</span>
+<span id="cb1-41"><a href="good-plots.html#cb1-41" aria-hidden="true" tabindex="-1"></a>          <span class="fu">aes</span>(<span class="at">colour =</span> <span class="st">&quot;black&quot;</span>),</span>
+<span id="cb1-42"><a href="good-plots.html#cb1-42" aria-hidden="true" tabindex="-1"></a>          <span class="at">cex =</span> <span class="fl">1.3</span>)</span>
+<span id="cb1-43"><a href="good-plots.html#cb1-43" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb1-44"><a href="good-plots.html#cb1-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">&quot;iPhone more successful than all other Apple products&quot;</span>, <span class="at">subtitle=</span><span class="st">&quot;Worldwide sales of selected Apple products in million, by fiscal quarter, 2000 to 2014&quot;</span>) <span class="sc">+</span></span>
+<span id="cb1-45"><a href="good-plots.html#cb1-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;rect&quot;</span>, <span class="at">xmin =</span> <span class="dv">2010</span>, <span class="at">xmax =</span> <span class="dv">2011</span>, <span class="at">ymin =</span> <span class="dv">0</span>, <span class="at">ymax =</span> <span class="cn">Inf</span>, <span class="at">fill =</span> <span class="st">&quot;grey&quot;</span>, <span class="at">alpha =</span> <span class="fl">0.2</span>) <span class="sc">+</span></span>
+<span id="cb1-46"><a href="good-plots.html#cb1-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">x =</span> <span class="fl">2010.5</span>, <span class="at">y =</span> <span class="dv">40</span>, <span class="at">label =</span> <span class="st">&quot;After Apple announced </span><span class="sc">\n</span><span class="st"> the iPhone 4 in 2010, </span><span class="sc">\n</span><span class="st"> more iPhones were sold </span><span class="sc">\n</span><span class="st"> than iPods for the first time.&quot;</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">size=</span><span class="dv">6</span>)</span>
+<span id="cb1-47"><a href="good-plots.html#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="good-plots.html#cb1-48" aria-hidden="true" tabindex="-1"></a><span class="do">## save plot as PNG  </span></span>
+<span id="cb1-49"><a href="good-plots.html#cb1-49" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">&quot;iPhone_sales.png&quot;</span>,p, <span class="at">width=</span><span class="dv">12</span> , <span class="at">units=</span><span class="fu">c</span>(<span class="st">&quot;in&quot;</span>))</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w/export/png?id=1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w&amp;pageid=g3a100c29e0_0_102" alt="Reproduced blog post plot" /></p>
+<p>While the plots are not identical, they are very similar and tell the same story. Making good plots in R is an important skill and can be learned using the <code>ggplot2</code> package in R. We’ll discuss how to generate <code>ggplot2</code> plots in the next lesson!</p>
+</div>
+<div id="additional-resources" class="section level3" number="2.0.4">
+<h3><span class="header-section-number">2.0.4</span> Additional Resources</h3>
+<p>To learn more about bad plotting techniques to avoid, you can check out Flowing Data’s <a href="http://flowingdata.com/category/visualization/ugly-visualization/">Ugly Charts</a> or <a href="http://viz.wtf/">WTF Visualizations</a>.</p>
+<p>To see examples of beautiful data visualizations, check out Nathan Yau’s <a href="http://flowingdata.com/">Flowing Data</a> blog, the <a href="https://blog.datawrapper.de/">Chartable</a> blog, or many analytical pieces published by <a href="http://fivethirtyeight.com/">FiveThirtyEight</a>.</p>
+<p>To read more about red-green color blindness, read more information <a href="http://www.colourblindawareness.org/colour-blindness/">here</a>.</p>
+<p>To read more about Data Visualization and the goals of Data Visualization read Elijah Meek’s <a href="https://medium.com/@Elijah_Meeks/data-visualization-fast-and-slow-d2653d4850b0">Data Visualization Fast and Slow</a> - links to the rest of the posts in this series are included there.</p>
+</div>
+<div id="slides-and-video-1" class="section level3" number="2.0.5">
+<h3><span class="header-section-number">2.0.5</span> Slides and Video</h3>
+<div class="figure">
+<img src="https://youtu.be/-QDzybJJExc" alt="" />
+<p class="caption">Good Plots</p>
+</div>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1j6GOwIwvDwwmec6PaQlQGyYORn3a0j4EiZHoUbQN5_w/edit?usp=sharing">Slides</a></li>
+</ul>
+<p>{quiz, id: quiz_01_good_plots}</p>
+</div>
+<div id="good-plots-quiz" class="section level3" number="2.0.6">
+<h3><span class="header-section-number">2.0.6</span> Good Plots quiz</h3>
+<p>{choose-answers: 4}
+?1 Why is it important to start the y-axis at 0?</p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>to avoid misleading viewers</li>
+<li>it’s the least misleading way to display the data</li>
+</ol>
+<ol start="15" style="list-style-type: lower-alpha">
+<li>it’s the law</li>
+<li>it’s mandatory when graphing in R</li>
+<li>to help color-blind viewers</li>
+<li>it minimizes whitespace</li>
+</ol>
+<p>{choose-answers: 4}
+?2 Which of these is something you should do when visualizing data?</p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>using contrasting colors for comparison</li>
+<li>include axis labels</li>
+<li>minimize unnecessary whitespace</li>
+</ol>
+<ol start="15" style="list-style-type: lower-alpha">
+<li>minimize label text size</li>
+<li>assume whatever chart is made first is right</li>
+<li>exclude axes labels to save space</li>
+<li>only use red and green in your charts</li>
+<li>make sure text is small to highlight the data</li>
+</ol>
+<p>{choose-answers: 4}
+?3 If a pie chart is made up of exactly two slices that appear similar in size, what is a reasonable value for one of those slices?</p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>51%</li>
+<li>49%</li>
+<li>50%</li>
+</ol>
+<ol start="13" style="list-style-type: lower-alpha">
+<li>33%</li>
+<li>2%</li>
+<li>10%</li>
+<li>100%</li>
+<li>90%</li>
+<li>4%</li>
+<li>95%</li>
+</ol>
+<p>{choose-answers: 4}
+?3 If a pie chart is made up of exactly three slices that all appear similar in size, what is a reasonable value for one of those slices?</p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>33%</li>
+</ol>
+<ol start="15" style="list-style-type: lower-alpha">
+<li>51%</li>
+<li>49%</li>
+<li>50%</li>
+<li>2%</li>
+<li>10%</li>
+<li>100%</li>
+<li>90%</li>
+<li>4%</li>
+<li>95%</li>
+</ol>
+<p>{choose-answers: 4}
+?4 If a plot is getting too busy, what is a reasonable approach to take?</p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>Simplify the plot’s design to highlight your main point.</li>
+<li>Rethink the plot’s design to simply the plot.</li>
+</ol>
+<ol start="15" style="list-style-type: lower-alpha">
+<li>Use a lot of different colors to explain all the different points you’re trying to make.</li>
+<li>Explain the complicated plot with a lot of text underneath the figure.</li>
+<li>Leave it as is. People will figure it out.</li>
+<li>Overlay as much text as possible to help explain the busy figure.</li>
+<li>Add an additional busy figure to help explain the first figure</li>
+</ol>
+<p>{choose-answers: 4}
+?5 In the iPhone plot example used in the lesson, what is one way the figure generator “emphasize the point” in their chart?</p>
+<ol start="3" style="list-style-type: upper-alpha">
+<li>used red to highlight most important data on the plot</li>
+<li>used a grey box to help highlight an important portion of the plot</li>
+<li>used text annotation to help highlight an important portion of the plot</li>
+</ol>
+<ol start="15" style="list-style-type: lower-alpha">
+<li>used grey text on a grey background to highlight data on the plot</li>
+<li>used red and green for comparison</li>
+<li>started the y-axis at 50 to make the point</li>
+<li>removed values from axes to just highlight the lines</li>
+<li>removed all text from the plot to just show the data</li>
+<li>chose to use a pie chart</li>
+<li>chose to only use grey, black, and white to keep it simple</li>
+</ol>
+<p>{/quiz}</p>
+
+</div>
+</div>
+<hr>
+<center> 
+  <div class="footer">
+      All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
+      <br>
+      All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
+  </div>
+</center>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="intro-to-data-visualization.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="introduction-to-ggplot2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
