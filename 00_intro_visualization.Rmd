@@ -51,11 +51,9 @@ Below we have a graph where the axes are labeled and general pattern can be dete
 
 As you're trying to understand the data you have on hand, you'll likely make a lot of plots and tables just to figure out to explore and understand the data. Because there are a lot of them and they're for your use (rather than for communicating with others), you don't have to spend all your time making them perfect. But, you do have to spend enough time to make sure that you're drawing the right conclusions from this. Thus, you don't have to spend a long time considering what colors are perfect on these, but you do want to make sure your axis are not cut off.  
 
-Other Exploratory Plotting Examples:
-[Map of Reddit](http://opensource.datacratic.com/mtlpy50/)
-[Air Quality Data](https://blog.datazar.com/exploratory-data-analysis-using-r-part-i-17e4e8e03961)
+[Other Exploratory Plotting Examples](https://towardsdatascience.com/visualizing-your-exploratory-data-analysis-d2d6c2e3b30e)
 
-### Explanatory Plots 
+### Explanatory Plots
 
 These are data displays that aim to **communicate insights to others**. These are plots that you spend a lot of time making sure they're easily interpretable by an audience. General characteristics of explanatory plots:
 
@@ -86,10 +84,10 @@ To do this, we'll use the "Davis" dataset which includes, height and weight info
 
 #### Histogram
 
-Histograms are helpful when you want to **better understand what values you have in your data set for a single set of numbers**. For example, if you had a dataset with information about many people, you may want to know how tall the people in your data set are. To quickly visualize this, you could use a histogram. Histograms let you know what range of values you have in your data set. For example, below you can see that in this data set, the height values range from around 50 to around 200 cm. The shape of the histogram also gives you information about the individuals in your dataset. The number of people at each height are also counted. So, the tallest bars show that there are about 40 people in the data set whose height is between 165 and 170 cm. Finally, you can quickly tell, at a glance that most people in this data set are at least 150 cm tall, but that there is at least one individually whose reported height is much lower. 
+Histograms are helpful when you want to **better understand what values you have in your data set for a single set of numbers**. For example, if you had a dataset with information about many people, you may want to know how tall the people in your data set are. To quickly visualize this, you could use a histogram. Histograms let you know what range of values you have in your data set. For example, below you can see that in this data set, the height values range from around 50 to around 200 cm. The shape of the histogram also gives you information about the individuals in your dataset. The number of people at each height are also counted. So, the tallest bars show that there are about 40 people in the data set whose height is between 165 and 170 cm. Finally, you can quickly tell, at a glance that most people in this data set are at least 150 cm tall, but that there is at least one individually whose reported height is much lower.
 
 {format: png}
-![Histogram](https://docs.google.com/presentation/d/1MiYOmyqu6Et6mBVTS91gip8h-tids8Wo0JDlMfXULqE/export/png?id=1MiYOmyqu6Et6mBVTS91gip8h-tids8Wo0JDlMfXULqE&pageid=g313d6498b0_0_119) 
+![Histogram](https://docs.google.com/presentation/d/1MiYOmyqu6Et6mBVTS91gip8h-tids8Wo0JDlMfXULqE/export/png?id=1MiYOmyqu6Et6mBVTS91gip8h-tids8Wo0JDlMfXULqE&pageid=g313d6498b0_0_119)
 
 #### Scatterplot
 
@@ -100,7 +98,7 @@ Scatterplots are helpful when you have **numerical values for two different piec
 
 #### Barplot
 
-When you only have **one numerical piece of information** and a **second piece of information that can be broken down into a few categories**, a barplot will help you make numerical comparisons across categories. For example if you wanted to look at how many females and how many males you have in your data set, you could use a barplot.  The comparison in heights between bars clearly demonstrates that there are more females in this dataset than males. 
+When you only have **one numerical piece of information** and a **second piece of information that can be broken down into a few categories**, a barplot will help you make numerical comparisons across categories. For example if you wanted to look at how many females and how many males you have in your data set, you could use a barplot.  The comparison in heights between bars clearly demonstrates that there are more females in this dataset than males.
 
 {format: png}
 ![Barplot](https://docs.google.com/presentation/d/1MiYOmyqu6Et6mBVTS91gip8h-tids8Wo0JDlMfXULqE/export/png?id=1MiYOmyqu6Et6mBVTS91gip8h-tids8Wo0JDlMfXULqE&pageid=g313d6498b0_0_114)
@@ -121,7 +119,7 @@ To interpret a boxplot, there are a few places where we'll want to focus our att
 
 ### Tables
 
-While we have focused on figures here so far, tables can be incredibly informative at a glance too. If you are looking to display summary numbers, **a table can also visually display information**. 
+While we have focused on figures here so far, tables can be incredibly informative at a glance too. If you are looking to display summary numbers, **a table can also visually display information**.
 
 Using this same data set, we can use a table to get a quick breakdown of how many males and females there are in the data set and what percentage of each gender there is.
 
@@ -146,9 +144,9 @@ A few things to keep in mind when making tables is that it's best to:
 
 ### Intro to Data Visualization quiz
 
-  
+
 ?1 When you've spent a lot of time perfecting the details of your plot, what type of plot have you created?
-  
+
 a) exploratory
 B) explanatory
 
@@ -178,8 +176,8 @@ C) 50%
 m) 25%
 o) 0
 o) 49.879%
-o) 50.0000% 
-o) 100.00% 
+o) 50.0000%
+o) 100.00%
 o) NA
 
 {choose-answers: 4}
@@ -189,8 +187,8 @@ C) 75%
 m) 25%
 o) 0
 o) 75.879%
-o) 75.0000% 
-o) 100.00% 
+o) 75.0000%
+o) 100.00%
 o) NA
 
 {choose-answers: 4}
@@ -200,8 +198,8 @@ C) 25%
 m) 75%
 o) 0
 o) 25.879%
-o) 25.0000% 
-o) 100.00% 
+o) 25.0000%
+o) 100.00%
 o) NA
 
 {choose-answers: 4}

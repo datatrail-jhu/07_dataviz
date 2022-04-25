@@ -2,7 +2,7 @@
 
 Throughout this course set, we'll have a number of projects for you to complete. This is the second project of the course set. All of these will be included as Exercises. This means they will *not* be required to pass the course and receive your certificate; however, completing them will *really* help to improve your understanding of the material covered and to ensure that you've begun to master the skills needed to be a data scientist.
 
-In each project, we'll aim to get you started and to ask questions that will help guide you through the project. But, we'll intentionally leave pieces out where you have to figure out what needs to be done. 
+In each project, we'll aim to get you started and to ask questions that will help guide you through the project. But, we'll intentionally leave pieces out where you have to figure out what needs to be done.
 
 This project will require you to:
 
@@ -17,7 +17,7 @@ You can access the project by going to the exercise accompanying this lesson.
 
 ## Data Visualization Project
 
-Data Visualization is an incredibly important skill for a data scientist. Being able to generate exploratory visualizations that help you understand the data and explanatory visualizations so that your findings 
+Data Visualization is an incredibly important skill for a data scientist. Being able to generate exploratory visualizations that help you understand the data and explanatory visualizations so that your findings
 
 As such, this exercise has been generated to practice your, GitHub, terminal navigation, RStudio, and data wrangling skills.
 
@@ -25,9 +25,9 @@ As such, this exercise has been generated to practice your, GitHub, terminal nav
 
 To get started, you'll want to go to GitHub and start a new repository:
 
-- Call this repository `dataviz_project`. 
+- Call this repository `dataviz_project`.
 - Add a short description
-- Check the box to "Initialize this repository with a README. 
+- Check the box to "Initialize this repository with a README.
 - Click `Create Repository`
 
 Once the repository has been created, Click on `Clone or download` and copy the "Clone with HTTPS" link provided. You'll use this to clone your repo in RStudio Cloud.
@@ -90,7 +90,7 @@ To get started, first run the code in the `setup` code chunk. This will install 
 
 The data we'll be using for this part of the project were downloaded from [kaggle](https://www.kaggle.com/aaronschlegel/seattle-pet-licenses/data), and include information about "pet licenses issued by the Seattle Animal Shelter between 2005 and early 2017." We'll be exploring these data and generating a few exploratory plots in the first part of the project.
 
-To load the data in, **run the code in the `pet-data` code chunk** to create an object called `pets`. 
+To load the data in, **run the code in the `pet-data` code chunk** to create an object called `pets`.
 
 #### Explore the Data
 
@@ -104,7 +104,7 @@ Once the data have been read in, **explore the data**, **adding your code to `da
 
 ! 15796 ; 15,796
 
-? How many different species are included in this dataset (`species`)? 
+? How many different species are included in this dataset (`species`)?
 
 ! 3
 
@@ -128,10 +128,10 @@ To visualize the data, we'll first guide you through a few code chunks that have
 
 Start in the code chunk `visualize-pets`.
 
-Here you will see comments with partial code underneath of them. For example, the first plot you'll want to generate will be using the comment  from the partial code: 
+Here you will see comments with partial code underneath of them. For example, the first plot you'll want to generate will be using the comment  from the partial code:
 
 ```r
-## visual breakdown of how many of each species 
+## visual breakdown of how many of each species
 ## are included in the dataset
 ggplot(DATASET) +
   geom_bar(aes(x=VARIABLE))
@@ -162,11 +162,11 @@ o) 100
 After generating this first bar chart, move onto the code chunk `pet-cat-table`. Here you'll see the following partial code:
 
 ```r
-## Table: Most frequent Cat Name 
-DATASET %>% 
+## Table: Most frequent Cat Name
+DATASET %>%
   filter(species=="SPECIES",VARIABLE != "") %>%
-  group_by(VARIABLE) %>% 
-  summarise(n=n()) %>% 
+  group_by(VARIABLE) %>%
+  summarise(n=n()) %>%
   arrange(-n) %>%
   top_n(n=10) %>%
   kable(., caption = "Top 10 Cat Names in Seattle")
@@ -192,7 +192,7 @@ Having successfully generated this table, move onto the `pet-dog-table` code chu
 The last guided exploratory visualization you'll see is in the code chunk `pet-linechart`. Here, the code to create two new columns has been provided in full. You'll use the column `ym`, which creates a "year-month" variable, to generate your plot in just a second.
 
 You will, however, have to **edit the partial code after `## how the number of licenses recorded has changed over time`**. Here, you'll need to **add the appropriate function_names to accomplish what is stated in the comment above the missing function name**. Additionally, you'll need to **fill in the appropriate variable wherever you see `VARIABLE`**. Finally, where you see `geom_GEOM`, **change "GEOM" to the appropriate geom specified in the comment above**.
- 
+
 ```r
 ## add date and ym columns
 pets <- pets %>%  
@@ -202,14 +202,14 @@ pets <- pets %>%
 ## how the number of licenses recorded has changed over time
 pets %>%
   ## group by yearmonth (`ym`)
-  function_name(VARIABLE) %>% 
+  function_name(VARIABLE) %>%
   ## count number within each group
   function_name(n=n()) %>%
-  ggplot(., aes(VARIABLE, n)) + 
+  ggplot(., aes(VARIABLE, n)) +
   ## geom name for line chart
   geom_GEOM() +
-  scale_x_yearmon() + 
-  xlab("") + 
+  scale_x_yearmon() +
+  xlab("") +
   ylab("Number of licenses")
 ```
 
@@ -328,31 +328,31 @@ o) The proportion of people who prefer each each level of steak cut
 
 #### Visualize the Data
 
-To generate an explanatory figure, *some* of the code you'll need has been entered into the `meat-visualize` code chunk. Work through this code line by line, **replacing each `function_name` with the appropriate function to accomplish what the comment above the line states**. 
+To generate an explanatory figure, *some* of the code you'll need has been entered into the `meat-visualize` code chunk. Work through this code line by line, **replacing each `function_name` with the appropriate function to accomplish what the comment above the line states**.
 
 For example, the first part of this code chunk contains the following partial code:
 
 ```r
-## generate the plot 
+## generate the plot
 p <- ggplot(pref) +
   ## specify you want to generate a bar chart
   function_name(aes(x = steak_pref, y = prop, fill = steak_pref),
-                stat = 'identity', 
+                stat = 'identity',
                 width = 0.7)
 ```
 
 Here, the comment says we want to `## specify you want to generate a bar chart`. This says to me that I'll want to change `function_name` to `geom_bar`, so that the code looks like this:
 
 ```r
-## generate the plot 
+## generate the plot
 p <- ggplot(pref) +
   ## specify you want to generate a bar chart
   geom_bar(aes(x = steak_pref, y = prop, fill = steak_pref),
-                stat = 'identity', 
+                stat = 'identity',
                 width = 0.7)
 ```
 
-After determining what function I need, I would then **run that portion of the code** (what you see above). 
+After determining what function I need, I would then **run that portion of the code** (what you see above).
 
 Note that we're assigning the plot to the object `p`. This means that to view the plot in the "Plots" tab you'll have to type `p` into the Console and hit enter after you run the code above. This will display the plot in the "Plots" tab of RStudio Cloud.
 
@@ -378,23 +378,23 @@ o) controls the width of the space below the plot
 ? Without the line `legend.position="none"` what would change on the plot? (Try removing that line of code and regenerating the plot to see what changes!)
 
 C) A legend containing steak preference options would be present along the bottom of the plot
-o) A legend containing steak preference options would be present to the right of the plot 
-o) A legend containing steak preference options would be present to the left of the plot 
+o) A legend containing steak preference options would be present to the right of the plot
+o) A legend containing steak preference options would be present to the left of the plot
 o) A legend containing steak preference options would be present along the top of the plot
 o) A legend containing proportion of respondents would be present along the bottom of the plot
-o) A legend containing proportion of respondents would be present to the right of the plot 
-o) A legend containing proportion of respondents would be present to the left of the plot 
+o) A legend containing proportion of respondents would be present to the right of the plot
+o) A legend containing proportion of respondents would be present to the left of the plot
 o) A legend containing proportion of respondents would be present along the top of the plot
 
 #### Save the Plot
 
-Once you've worked through this code chunk and have a plot that looks very similar to the plot in the original publication (and that you see above), you'll want to use `ggsave()` to **save this plot to figures/explanatory_figures**. Save this figure as "steak_R.png". Do this using the partial code in the code chunk `save-plot`. 
+Once you've worked through this code chunk and have a plot that looks very similar to the plot in the original publication (and that you see above), you'll want to use `ggsave()` to **save this plot to figures/explanatory_figures**. Save this figure as "steak_R.png". Do this using the partial code in the code chunk `save-plot`.
 
 #### Create Your Own Exploratory Plot: `meat-plot`
 
 Now, you'll want to **generate an explanatory figure on your own**. Use these data to generate a second explanatory plot. It should tell us something new about the data. You can use any column in the data frame. But, make sure that the figure is something that could be presented or shown to a boss. **Add this code to `meat-plot`**.
 
-A quick reminder, generating plots can take a while. Be patient as you make mistakes. [Google](google.com) and [StackOverlow](stackoverflow.com) are your friends - use them when you're stuck!
+A quick reminder, generating plots can take a while. Be patient as you make mistakes. [Google](google.com) and [StackOverflow](stackoverflow.com) are your friends - use them when you're stuck!
 
 #### Save Your Explanatory plot
 
@@ -426,7 +426,7 @@ A complete project should have:
 
 ### Final `push` to GitHub
 
-Now that you've finalized your project, you'll do one final **push to GitHub**. add, commit, and push your work to GitHub. Navigate to your GitHub repository, and answer the final question below! 
+Now that you've finalized your project, you'll do one final **push to GitHub**. add, commit, and push your work to GitHub. Navigate to your GitHub repository, and answer the final question below!
 
 **Note**: If you're stuck on this, these steps were covered in detail in an earlier course: [Version Control](https://leanpub.com/universities/courses/jhu/version-control). Refer to the materials in this course if you're stuck on this part of the project.
 
@@ -438,4 +438,3 @@ Now that you've finalized your project, you'll do one final **push to GitHub**. 
 **Congrats on finishing your Data Visualization Project!!**
 
 {/exercise}
-

@@ -403,7 +403,7 @@ Once you've worked through this code chunk and have a plot that looks very simil
 
 Now, you'll want to **generate an explanatory figure on your own**. Use these data to generate a second explanatory plot. It should tell us something new about the data. You can use any column in the data frame. But, make sure that the figure is something that could be presented or shown to a boss. **Add this code to `meat-plot`**.
 
-A quick reminder, generating plots can take a while. Be patient as you make mistakes. [Google](google.com) and [StackOverlow](stackoverflow.com) are your friends - use them when you're stuck!
+A quick reminder, generating plots can take a while. Be patient as you make mistakes. [Google](google.com) and [StackOverflow](stackoverflow.com) are your friends - use them when you're stuck!
 
 #### Save Your Explanatory plot
 
