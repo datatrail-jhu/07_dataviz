@@ -1,5 +1,4 @@
 ---
-title: "Untitled"
 output: html_document
 date: '2022-04-11'
 ---
@@ -10,7 +9,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Saving Plots
 
-While you'll frequently be generating R Markdown documents where figures are generated directly as the file is knit, it is nonetheless important to know how to save an image directly. This is helpful when you have to add plots into slide presentations (using Google Slides, for example) or to send a quick update to your team. 
+While you'll frequently be generating R Markdown documents where figures are generated directly as the file is knit, it is nonetheless important to know how to save an image directly. This is helpful when you have to add plots into slide presentations (using Google Slides, for example) or to send a quick update to your team.
 
 In this lesson, we'll discuss how to save plots you've generated in R within RStudio Cloud as images that you can share with others as you need.
 
@@ -21,8 +20,8 @@ There are a number of different image file formats that can be generated from R.
 In R, frequently, individuals tend to generate one of the following four file formats. Brief characteristics of each file format are summarized here. These are worth considering when deciding what type of image you want to generate:
 
 * __JPEG__ - a popular file format that will **take up less space** on your computer due to how its compressed. Figures that are saved multiple times, however, will **lose quality each time they're saved**. These files have a **white background by default**.
-* __PNG__ - a high-quality bitmap image file format that preserves its integrity over time. Due to this, these images will **take up more storage space**. The **background of these files is transparent**. There will be no white border around these images.  If magnified, pixels may be visible. 
-* __TIFF__ - a bitmap file format. TIFF files are not meant to compress but are meant to preserve quality over time. TIFF images can be edited using photo editors, such as Photoshop. Use this file format if you **intend to edit this image later**. If magnified, pixels may be visible. 
+* __PNG__ - a high-quality bitmap image file format that preserves its integrity over time. Due to this, these images will **take up more storage space**. The **background of these files is transparent**. There will be no white border around these images.  If magnified, pixels may be visible.
+* __TIFF__ - a bitmap file format. TIFF files are not meant to compress but are meant to preserve quality over time. TIFF images can be edited using photo editors, such as Photoshop. Use this file format if you **intend to edit this image later**. If magnified, pixels may be visible.
 * __PDF__ - a vector file format. This is most helpful if you want to plot **multiple images to a single file** or when you want to print your images, as they can be **scaled to any size without suffering from pixelation**.
 
 {format: png}
@@ -45,7 +44,7 @@ ggsave(plot = myplot, filename = "myplot.png", path = "figures/exploratory_figur
 ggsave(plot = myplot, filename = "myplot.jpeg", path = "figures/exploratory_figures")
 ```
 
-There are additional arguments within `ggsave`. In particular, you will often want to adjust the size of your images. You can control the size of your image using the `height` and `width` arguments. Additionally, `ggsave()` allows you to specify the units of those height and width arguments as either inches ("in"), centimeters ("cm"), or millimeters ("mm"). 
+There are additional arguments within `ggsave`. In particular, you will often want to adjust the size of your images. You can control the size of your image using the `height` and `width` arguments. Additionally, `ggsave()` allows you to specify the units of those height and width arguments as either inches ("in"), centimeters ("cm"), or millimeters ("mm").
 
 For example, to increase the size of and overwrite the PNG image created above, you could use the following:
 
@@ -68,7 +67,7 @@ print(myplot)
 dev.off()
 ```
 
-To generate a JPEG, you would use this very similar syntax, but ensure that you change the initial function call to `jpeg` and the file extension to ".jpeg": 
+To generate a JPEG, you would use this very similar syntax, but ensure that you change the initial function call to `jpeg` and the file extension to ".jpeg":
 
 ```r
 jpeg("figures/exploratory_figures/myplot.jpeg")
@@ -83,14 +82,14 @@ Similar to above, the `height`, `width` can again be specified, as above. For jp
 * [R Cookbook](http://www.cookbook-r.com/Graphs/Output_to_a_file/)  - Further reading on file formats in R
 
 ### Slides and Video
-  
+
 ![Saving Plots](https://youtu.be/1z3m_9ZXp0M)
-  
+
   * [Slides](https://docs.google.com/presentation/d/1O_10dR6Nb273S0bF-Xv3VCCHweagVzRJVv7HI1NPMBs/edit?usp=sharing)
-  
-  
+
+
 {quiz, id: quiz_03_saving_plots}
-  
+
 ### Saving Plots quiz
 
 {choose-answers: 4}

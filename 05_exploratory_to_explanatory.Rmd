@@ -1,5 +1,4 @@
 ---
-title: "Untitled"
 output: html_document
 date: '2022-04-11'
 ---
@@ -21,7 +20,7 @@ To discuss the types of changes you can make to plots, we'll return to the iPhon
 {format: png}
 ![Final reproduction of blog post plot](https://docs.google.com/presentation/d/1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI/export/png?id=1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI&pageid=g35672b192f_0_5)
 
-Before we do that, let's take a glance at the data used to make this plot. 
+Before we do that, let's take a glance at the data used to make this plot.
 
 {format: png}
 ![data for iPhone plot](https://docs.google.com/presentation/d/1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI/export/png?id=1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI&pageid=g35672b192f_0_0)
@@ -33,7 +32,7 @@ The variables used to reproduce the blog post graph are:
 * __value__ - the sales for that Apple product in that year and quarter in millions of US dollars. NA means no data were available for that product in that year-quarter.
 
 
-### Exploratory Plot 
+### Exploratory Plot
 
 While there is a lot of code that led to this final product of this plot, you'll note that it still starts with the same basic framework we already discussed. There is a ggplot() call and then the geom is defined. Here, as we wanted a line for each Apple product, so we specify the geom `geom_line().` This isn't a geom we have discussed explicitly yet, but it connects the points on a plot with a single line. It's helpful for plotting data over time, which is exactly what we're doing here! In addition to specifying the x and y arguments within `aes()`, we are also specifying the `group` and `color` arguments, both of which we have discussed previously. Here, `group` lets `ggplot2` to map the variable `variable` to three different lines (one for each Apple product) and `color` specifies that we want to map the variable `variable` to three different colors.
 
@@ -44,7 +43,7 @@ In fact, if we were to just run these two lines of code, we would have a reasona
 
 ```r
 ggplot(data = df2, aes(x = yrq, y = value, group = variable, color = variable)) +
-  geom_line() 
+  geom_line()
 ```
 
 {format: png}
@@ -61,7 +60,7 @@ The lines on this plot are a little too thin to be seen easily and certainly not
 
 ```r
 ggplot(data = df2, aes(x = yrq, y = value, group = variable, color = variable)) +
-  geom_line(size = 1.5) 
+  geom_line(size = 1.5)
 ```
 
 {format: png}
@@ -69,7 +68,7 @@ ggplot(data = df2, aes(x = yrq, y = value, group = variable, color = variable)) 
 
 ### Adding a Title
 
-Before we go any further, we'll want to consider including a great title. As discussed at the beginning of this lesson, it's important to add a title that tells viewers what conclusions that should draw from the plot. `ggtitle()` allows the addition of both a title and a subtitle to any plot made with `ggplot2.` 
+Before we go any further, we'll want to consider including a great title. As discussed at the beginning of this lesson, it's important to add a title that tells viewers what conclusions that should draw from the plot. `ggtitle()` allows the addition of both a title and a subtitle to any plot made with `ggplot2.`
 
 ```r
 ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
@@ -90,7 +89,7 @@ Here, since we've specified a variable to color in our `aes()` originally, we're
 ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
   geom_line(size = 1.5) +
   ggtitle("iPhone more successful than all other Apple products", subtitle="Worldwide sales of selected Apple products in million, by fiscal quarter, 2000 to 2014") +
-  scale_colour_manual(values = c("red3","grey","grey")) 
+  scale_colour_manual(values = c("red3","grey","grey"))
 ```
 
 {format: png}
@@ -104,7 +103,7 @@ Before we go any further, let's just remove that gray background. To do so, we'l
 ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
   geom_line(size = 1.5) +
   ggtitle("iPhone more successful than all other Apple products", subtitle="Worldwide sales of selected Apple products in million, by fiscal quarter, 2000 to 2014") +
-  scale_colour_manual(values = c("red3","grey","grey")) + 
+  scale_colour_manual(values = c("red3","grey","grey")) +
   theme_bw()
 ```
 
@@ -120,7 +119,7 @@ After getting closer to the look we want, we can modify the theme specifically u
 ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
   geom_line(size = 1.5) +
   ggtitle("iPhone more successful than all other Apple products", subtitle="Worldwide sales of selected Apple products in million, by fiscal quarter, 2000 to 2014") +
-  scale_colour_manual(values = c("red3","grey","grey")) + 
+  scale_colour_manual(values = c("red3","grey","grey")) +
   theme_bw() +
   theme(  panel.grid.major.x = element_blank() ,
           panel.grid.minor.x = element_blank()
@@ -136,13 +135,13 @@ We can then remove the axis labels `yrq` and `value` from the plot. The necessar
 ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
   geom_line(size = 1.5) +
   ggtitle("iPhone more successful than all other Apple products", subtitle="Worldwide sales of selected Apple products in million, by fiscal quarter, 2000 to 2014") +
-  scale_colour_manual(values = c("red3","grey","grey")) + 
+  scale_colour_manual(values = c("red3","grey","grey")) +
   theme_bw() +
   theme(  panel.grid.major.x = element_blank() ,
           panel.grid.minor.x = element_blank() ,
           axis.title.x = element_blank(),
           axis.title.y = element_blank()
-   ) 
+   )
 ```
 
 {format: png}
@@ -154,7 +153,7 @@ Now, let's increase the size of those axis labels and the plot title, so that th
 ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
   geom_line(size = 1.5) +
   ggtitle("iPhone more successful than all other Apple products", subtitle="Worldwide sales of selected Apple products in million, by fiscal quarter, 2000 to 2014") +
-  scale_colour_manual(values = c("red3","grey","grey")) + 
+  scale_colour_manual(values = c("red3","grey","grey")) +
   theme_bw() +
   theme(  panel.grid.major.x = element_blank() ,
           panel.grid.minor.x = element_blank() ,
@@ -175,7 +174,7 @@ Now, let's just make a few more tweaks. Let's first remove the legend because we
 ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
   geom_line(size = 1.5) +
   ggtitle("iPhone more successful than all other Apple products", subtitle="Worldwide sales of selected Apple products in million, by fiscal quarter, 2000 to 2014") +
-  scale_colour_manual(values = c("red3","grey","grey")) + 
+  scale_colour_manual(values = c("red3","grey","grey")) +
   theme_bw() +
   theme(  panel.grid.major.x = element_blank() ,
           panel.grid.minor.x = element_blank() ,
@@ -198,7 +197,7 @@ Now that the border has been removed, we're kind of squished up right against th
 ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
   geom_line(size = 1.5) +
   ggtitle("iPhone more successful than all other Apple products", subtitle="Worldwide sales of selected Apple products in million, by fiscal quarter, 2000 to 2014") +
-  scale_colour_manual(values = c("red3","grey","grey")) + 
+  scale_colour_manual(values = c("red3","grey","grey")) +
   theme_bw() +
   theme(  panel.grid.major.x = element_blank() ,
           panel.grid.minor.x = element_blank() ,
@@ -210,8 +209,8 @@ ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
           legend.position ="none",
           panel.border = element_blank(),
           plot.margin = unit(c(1,1,1,1), "lines"),
-          
-  ) 
+
+  )
 ```
 
 {format: png}
@@ -219,13 +218,13 @@ ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
 
 ### Customizing Axis Labels
 
-Now that we've got the theme pretty close to what we want and have increased the size of the font on the axes, it's clear that they're not quite displaying enough information. We can specify how and what values are displayed on the x and y axis so that each year is displayed along the x-axis and multiples of ten along the y-axis. 
+Now that we've got the theme pretty close to what we want and have increased the size of the font on the axes, it's clear that they're not quite displaying enough information. We can specify how and what values are displayed on the x and y axis so that each year is displayed along the x-axis and multiples of ten along the y-axis.
 
 ```r
 ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
   geom_line(size = 1.5) +
   ggtitle("iPhone more successful than all other Apple products", subtitle="Worldwide sales of selected Apple products in million, by fiscal quarter, 2000 to 2014") +
-  scale_colour_manual(values = c("red3","grey","grey")) + 
+  scale_colour_manual(values = c("red3","grey","grey")) +
   theme_bw() +
   theme(  panel.grid.major.x = element_blank() ,
           panel.grid.minor.x = element_blank() ,
@@ -237,10 +236,10 @@ ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
           legend.position ="none",
           panel.border = element_blank(),
           plot.margin = unit(c(1,1,1,1), "lines"),
-          
+
   ) +
   scale_x_yearqtr(limits = c(2004, 2015),
-                  format = "%Y", breaks=c(2004:2015), expand = c(0.1, 0.01)) + 
+                  format = "%Y", breaks=c(2004:2015), expand = c(0.1, 0.01)) +
   scale_y_continuous(breaks = c(0,10,20,30,40,50,60,70,80))
 ```
 
@@ -255,7 +254,7 @@ There isn't direct functionality to directly label lines in `ggplot2`, but someo
 ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
   geom_line(size = 1.5) +
   ggtitle("iPhone more successful than all other Apple products", subtitle="Worldwide sales of selected Apple products in million, by fiscal quarter, 2000 to 2014") +
-  scale_colour_manual(values = c("red3","grey","grey")) + 
+  scale_colour_manual(values = c("red3","grey","grey")) +
   theme_bw() +
   theme(  panel.grid.major.x = element_blank() ,
           panel.grid.minor.x = element_blank() ,
@@ -267,14 +266,14 @@ ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
           legend.position ="none",
           panel.border = element_blank(),
           plot.margin = unit(c(1,1,1,1), "lines"),
-          
+
   ) +
   scale_x_yearqtr(limits = c(2004, 2015),
-                  format = "%Y", breaks=c(2004:2015), expand = c(0.1, 0.01)) + 
-  scale_y_continuous(breaks = c(0,10,20,30,40,50,60,70,80)) + 
-  geom_dl(aes(label = variable), 
+                  format = "%Y", breaks=c(2004:2015), expand = c(0.1, 0.01)) +
+  scale_y_continuous(breaks = c(0,10,20,30,40,50,60,70,80)) +
+  geom_dl(aes(label = variable),
           method = list(c("last.points"),
-                        aes(colour = "black"), 
+                        aes(colour = "black"),
                         cex = 1.3)
   )
 ```
@@ -284,17 +283,17 @@ ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
 
 #### Adding Annotations
 
-The plot is really close to complete at this point. But, to really make it as explanatory as possible, we want to annotate the plot to draw viewers attention to a particular point on the plot. To do so in `ggplot2`, we'll use `annotate()`. 
+The plot is really close to complete at this point. But, to really make it as explanatory as possible, we want to annotate the plot to draw viewers attention to a particular point on the plot. To do so in `ggplot2`, we'll use `annotate()`.
 
-Here, we'll use `annotate()` to both to add the grey rectangle and to add the text to the plot explaining that in 2010 was the first year when more iPhones were sold than iPods. 
+Here, we'll use `annotate()` to both to add the grey rectangle and to add the text to the plot explaining that in 2010 was the first year when more iPhones were sold than iPods.
 
-First, we specify we want to generate a "rect" using annotate and include the limits of that rectangle. 
+First, we specify we want to generate a "rect" using annotate and include the limits of that rectangle.
 
 ```r
 ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
   geom_line(size = 1.5) +
   ggtitle("iPhone more successful than all other Apple products", subtitle="Worldwide sales of selected Apple products in million, by fiscal quarter, 2000 to 2014") +
-  scale_colour_manual(values = c("red3","grey","grey")) + 
+  scale_colour_manual(values = c("red3","grey","grey")) +
   theme_bw() +
   theme(  panel.grid.major.x = element_blank() ,
           panel.grid.minor.x = element_blank() ,
@@ -306,14 +305,14 @@ ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
           legend.position ="none",
           panel.border = element_blank(),
           plot.margin = unit(c(1,1,1,1), "lines"),
-          
+
   ) +
   scale_x_yearqtr(limits = c(2004, 2015),
-                  format = "%Y", breaks=c(2004:2015), expand = c(0.1, 0.01)) + 
-  scale_y_continuous(breaks = c(0,10,20,30,40,50,60,70,80)) + 
-  geom_dl(aes(label = variable), 
+                  format = "%Y", breaks=c(2004:2015), expand = c(0.1, 0.01)) +
+  scale_y_continuous(breaks = c(0,10,20,30,40,50,60,70,80)) +
+  geom_dl(aes(label = variable),
           method = list(c("last.points"),
-                        aes(colour = "black"), 
+                        aes(colour = "black"),
                         cex = 1.3)
   ) +
   annotate("rect", xmin = 2010, xmax = 2011, ymin = 0, ymax = Inf, fill = "grey", alpha = 0.2)
@@ -334,7 +333,7 @@ Finally, we can again use `annotate()` to add text directly to the plot to expla
 ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
   geom_line(size = 1.5) +
   ggtitle("iPhone more successful than all other Apple products", subtitle="Worldwide sales of selected Apple products in million, by fiscal quarter, 2000 to 2014") +
-  scale_colour_manual(values = c("red3","grey","grey")) + 
+  scale_colour_manual(values = c("red3","grey","grey")) +
   theme_bw() +
   theme(  panel.grid.major.x = element_blank() ,
           panel.grid.minor.x = element_blank() ,
@@ -346,14 +345,14 @@ ggplot(data = df2, aes(x = yrq,y = value, group = variable, color = variable)) +
           legend.position ="none",
           panel.border = element_blank(),
           plot.margin = unit(c(1,1,1,1), "lines"),
-          
+
   ) +
   scale_x_yearqtr(limits = c(2004, 2015),
-                  format = "%Y", breaks=c(2004:2015), expand = c(0.1, 0.01)) + 
-  scale_y_continuous(breaks = c(0,10,20,30,40,50,60,70,80)) + 
-  geom_dl(aes(label = variable), 
+                  format = "%Y", breaks=c(2004:2015), expand = c(0.1, 0.01)) +
+  scale_y_continuous(breaks = c(0,10,20,30,40,50,60,70,80)) +
+  geom_dl(aes(label = variable),
           method = list(c("last.points"),
-                        aes(colour = "black"), 
+                        aes(colour = "black"),
                         cex = 1.3)
   ) +
   annotate("rect", xmin = 2010, xmax = 2011, ymin = 0, ymax = Inf, fill = "grey", alpha = 0.2) +
@@ -370,7 +369,7 @@ With all of these changes, you now have a beautiful plot that accomplishes every
 {format: png}
 ![Explanatory Plot](https://docs.google.com/presentation/d/1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI/export/png?id=1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI&pageid=g3a0d0ecc6f_0_129)
 
-We point these out now not so you master each of these alterations, but rather so that you have some idea of what it takes to take an exploratory plot that you generally make very quickly for your own purposes and turn it into an explanatory plot that clearly communicates your results to someone else. 
+We point these out now not so you master each of these alterations, but rather so that you have some idea of what it takes to take an exploratory plot that you generally make very quickly for your own purposes and turn it into an explanatory plot that clearly communicates your results to someone else.
 
 As we walked through this example, you saw that it can take a lot of code to generate a polished graph. As you practice making plots in R, know that it's typical to struggle to figure out how to make the plot look exactly the way you want. Google will help here and so will people on [stack overflow](https://stackoverflow.com/). Googling your specific question and looking for solutions in R that other people have already come up with is a great place to start whenever you're stuck trying to figure out something on a plot. Also, really great explanatory plots take time. It's ok to spend a lot of time making a single important plot that effectively communicates your point.  
 
@@ -379,23 +378,23 @@ As we walked through this example, you saw that it can take a lot of code to gen
 
 
 ### Slides and Video
-  
+
 ![From Exploratory To Explanatory](https://youtu.be/0QZFG7uluq8)
-  
+
  * [Slides](https://docs.google.com/presentation/d/1HZFgSe0m8_Ehwvd674AkdpOnnGiir5oluvIi68C_icI/edit?usp=sharing)
-  
-  
+
+
 {quiz, id: quiz_05_exploratory_to_explanatory}
-  
+
 ### From Exploratory To Explanatory quiz
-  
+
 {choose-answers: 4}
 ?1 What is the goal of the title on your plot?
-  
+
 C) tell viewers what they will see on the plot
 C) inform viewers what to take away from the plot
 o) define what variables are on your axes
-o) choose the appropriate colors 
+o) choose the appropriate colors
 o) ggplot2 won't make a plot without one
 o) explain all the data on the plot in detail
 o) tell ggplot2 what shapes to put on the plot
