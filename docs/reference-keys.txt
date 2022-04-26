@@ -11,7 +11,6 @@ boxplot
 resources-to-look-at-these-and-other-types-of-plots
 tables
 slides-and-video
-intro-to-data-visualization-quiz
 good-plots
 tips-for-making-good-plots
 choose-the-right-type-of-plot
@@ -37,7 +36,6 @@ add-a-source
 making-the-iphone-plot-in-r
 additional-resources
 slides-and-video-1
-good-plots-quiz
 introduction-to-ggplot2
 the-basics
 example-dataset-diamonds
@@ -55,7 +53,6 @@ other-plots
 summary
 additional-resources-1
 slides-and-video-2
-introduction-to-ggplot2-quiz
 customization-in-ggplot2
 colors
 labels
@@ -72,14 +69,12 @@ annotation
 summary-1
 additional-references
 slides-and-video-3
-customization-in-ggplot2-quiz
 saving-plots
 image-types
 saving-plots-ggsave
 alternative-approach
 additional-resources-2
 slides-and-video-4
-saving-plots-quiz
 from-exploratory-to-explanatory
 apple-product-sales-data
 exploratory-plot
@@ -93,7 +88,6 @@ adding-direct-labels
 adding-annotations
 explanatory-plot
 slides-and-video-5
-from-exploratory-to-explanatory-quiz
 data-tables
 what-are-data-tables
 when-to-make-a-table
@@ -110,7 +104,6 @@ a-good-title-or-caption
 the-source-of-the-data
 additional-resources-3
 slides-and-video-6
-data-tables-quiz
 tables-in-r
 getting-the-data-in-order
 an-exploratory-table
@@ -119,7 +112,6 @@ annotating-your-table
 tables-in-rmarkdown
 additional-resources-4
 slides-and-video-7
-tables-in-r-quiz
 multiple-plots-in-r
 installing-patchwork
 basic-plotting-using-patchwork
@@ -131,7 +123,6 @@ and-1
 section
 additional-resources-5
 slides-and-video-8
-multiple-plots-quiz
 advanced-data-visualization
 interactive-graphics
 animated-graphics
@@ -143,7 +134,6 @@ plotly-in-rmarkdown-reports
 gganimate
 additional-resources-6
 slides-and-video-9
-advanced-data-visualization-quiz
 data-visualization-project
 data-visualization-project-1
 github-setup
