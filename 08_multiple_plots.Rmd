@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # Multiple Plots in R
 
-When generating reports for a data science project, there is often more than one plot that you want to display at a time. To accomplish this in R, we will use the R package [patchwork](https://github.com/thomasp85/patchwork) from [Thomas Lin Pedersen](https://www.data-imaginist.com/), which simplifies this process. 
+When generating reports for a data science project, there is often more than one plot that you want to display at a time. To accomplish this in R, we will use the R package [patchwork](https://github.com/thomasp85/patchwork) from [Thomas Lin Pedersen](https://www.data-imaginist.com/), which simplifies this process.
 
 ### Installing patchwork
 
@@ -25,7 +25,7 @@ devtools::install_github("thomasp85/patchwork")
 
 ### Basic plotting using patchwork
 
-Patchwork allows any plots generated from `ggplot2` to be combined simply. For example, if you were interested in plotting data from the `mtcars` dataset in R but wanted to combine two different plots, you could use patchwork. Below, you'll see code for combining two plots. The first plot examines the relationship between how many miles per gallon (mpg) a car a gets and the weight of that car in 1000lb (wt). This is assigned to object `p1`. The second plot looks at the relationship between how many mpgs a car gets and the number of forward gears that car has (`p2`). While you could plot each individually, you may want to see them side by side. With patchwork, you can do this my simply using a plus sign (`p1+p2`). Using this very simple code, you'll obtain side by side plots, which is exactly what you were looking to achieve! 
+Patchwork allows any plots generated from `ggplot2` to be combined simply. For example, if you were interested in plotting data from the `mtcars` dataset in R but wanted to combine two different plots, you could use patchwork. Below, you'll see code for combining two plots. The first plot examines the relationship between how many miles per gallon (mpg) a car a gets and the weight of that car in 1000lb (wt). This is assigned to object `p1`. The second plot looks at the relationship between how many mpgs a car gets and the number of forward gears that car has (`p2`). While you could plot each individually, you may want to see them side by side. With patchwork, you can do this my simply using a plus sign (`p1+p2`). Using this very simple code, you'll obtain side by side plots, which is exactly what you were looking to achieve!
 
 ```r
 library(ggplot2)
@@ -62,7 +62,7 @@ p1 + p2 + plot_layout(ncol = 1, heights = c(3, 1))
 
 ### Nesting plots
 
-Finally, sometimes you want a more complicated layout. Patchwork can handle this too. To nest a plot within another plot, the formatting is slightly more complicated, you can use parentheses '()' or brackets '{}' around the plots you want to nest. 
+Finally, sometimes you want a more complicated layout. Patchwork can handle this too. To nest a plot within another plot, the formatting is slightly more complicated, you can use parentheses '()' or brackets '{}' around the plots you want to nest.
 
 For example, in the code below, plot `p4` is plotted first and the whole plot is defined to have one column. Then, plot `p1` is added. Finally,`p2` and `p3` are combined into a single column plot before this combined plot (p2 + p3) is nested into the overall plot. The brackets {} are placed carefully around the plots to determine the achieve the desired plotting format.
 
@@ -85,7 +85,7 @@ p4 + (
 ![Nested Plots](https://docs.google.com/presentation/d/1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI/export/png?id=1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI&pageid=g3585f477db_0_10)
 
 
-### Additional operators 
+### Additional operators
 
 So far we have only added plots to one another using '+'. While this operator can accomplish most multi-plotting goals, we will briefly highlight a few additional operators within `patchwork`.
 
@@ -140,55 +140,3 @@ p1 + p2 - p3 + plot_layout(ncol = 1)
 ![Multiple Plots](https://youtu.be/3OylV8mvXvA)
 
 * [Slides](https://docs.google.com/presentation/d/1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI/edit?usp=sharing)
-
-
-{quiz, id: quiz_08_multiple_plots}
-
-### Multiple Plots quiz
-
-{choose-answers:4}
-?1 If you had three plots (p1, p2, and p3) and used the code `p1 + p2 + p3`, how many columns would the resulting plot have?
-
-C) 3
-m) 2
-o) 1
-o) 4
-o) 0
-
-{choose-answers:4}
-?1 If you had two plots (p1 and p2) and used the code `p1 + p2`, how many columns would the resulting plot have?
-
-C) 2
-m) 3
-o) 1
-o) 4
-o) 0
-
-{choose-answers:4, points:2}
-?2 Which of these would NOT get you four plots of equal size with two on top and two on bottom?
-
-C) `p1 + p2 + (p3 + p4) + plot_layout(ncol = 2)`
-o) `(p1 + p2) + p3 + p4 + plot_layout(ncol = 2)`
-o) `p1 + p2 + plot_layout(ncol = 2) + p3 + p4`
-o) `p1 + p2 + p3 + p4 + plot_layout(ncol = 2)`
-
-
-{choose-answers:4}
-?3 How many plots would have `ggplot2` theme `theme_bw()` w/ this code: `((p1 + p2 + p3) + plot_layout(ncol = 1)) * theme_bw() + p4`? 
-
-C) 3
-m) 1
-o) 2 
-o) 4
-o) 0
-
-{choose-answers:4}
-?3 How many plots would have the default `ggplot2` theme `theme_gray()` w/ this code: `((p1 + p2 + p3) + plot_layout(ncol = 1)) * theme_bw() + p4`? 
-
-C) 1
-m) 3
-o) 2 
-o) 4
-o) 0
-
-{/quiz}
