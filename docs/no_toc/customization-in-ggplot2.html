@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Customization in ggplot2 | Course Name</title>
+  <meta name="description" content="Description about Course/Book." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Customization in ggplot2 | Course Name" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Description about Course/Book." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Customization in ggplot2 | Course Name" />
+  
+  <meta name="twitter:description" content="Description about Course/Book." />
+  
+
+
+
+<meta name="date" content="2022-04-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="assets/DataTrail_favicon.ico" type="image/x-icon" />
+<link rel="prev" href="introduction-to-ggplot2.html"/>
+<link rel="next" href="saving-plots.html"/>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="assets/style_DataTrail.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<a href="https://www.datatrail.org/"><img src="https://github.com/datatrail-jhu/DataTrail_Template/raw/main/assets/DataTrail_logo.jpg" style="padding-left: 0px; padding-top: 8px;"</a>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this Course</a></li>
+<li class="chapter" data-level="1" data-path="intro-to-data-visualization.html"><a href="intro-to-data-visualization.html"><i class="fa fa-check"></i><b>1</b> Intro to Data Visualization</a>
+<ul>
+<li class="chapter" data-level="1.0.1" data-path="intro-to-data-visualization.html"><a href="intro-to-data-visualization.html#data-visualization"><i class="fa fa-check"></i><b>1.0.1</b> Data Visualization</a></li>
+<li class="chapter" data-level="1.0.2" data-path="intro-to-data-visualization.html"><a href="intro-to-data-visualization.html#explanatory-plots"><i class="fa fa-check"></i><b>1.0.2</b> Explanatory Plots</a></li>
+<li class="chapter" data-level="1.0.3" data-path="intro-to-data-visualization.html"><a href="intro-to-data-visualization.html#types-of-plots"><i class="fa fa-check"></i><b>1.0.3</b> Types of Plots</a></li>
+<li class="chapter" data-level="1.0.4" data-path="intro-to-data-visualization.html"><a href="intro-to-data-visualization.html#tables"><i class="fa fa-check"></i><b>1.0.4</b> Tables</a></li>
+<li class="chapter" data-level="1.0.5" data-path="intro-to-data-visualization.html"><a href="intro-to-data-visualization.html#slides-and-video"><i class="fa fa-check"></i><b>1.0.5</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="good-plots.html"><a href="good-plots.html"><i class="fa fa-check"></i><b>2</b> Good Plots</a>
+<ul>
+<li class="chapter" data-level="2.0.1" data-path="good-plots.html"><a href="good-plots.html#tips-for-making-good-plots"><i class="fa fa-check"></i><b>2.0.1</b> Tips for Making Good Plots</a></li>
+<li class="chapter" data-level="2.0.2" data-path="good-plots.html"><a href="good-plots.html#what-to-consider-when-making-plots"><i class="fa fa-check"></i><b>2.0.2</b> What To Consider When Making Plots</a></li>
+<li class="chapter" data-level="2.0.3" data-path="good-plots.html"><a href="good-plots.html#making-the-iphone-plot-in-r"><i class="fa fa-check"></i><b>2.0.3</b> Making The iPhone Plot in R</a></li>
+<li class="chapter" data-level="2.0.4" data-path="good-plots.html"><a href="good-plots.html#additional-resources"><i class="fa fa-check"></i><b>2.0.4</b> Additional Resources</a></li>
+<li class="chapter" data-level="2.0.5" data-path="good-plots.html"><a href="good-plots.html#slides-and-video-1"><i class="fa fa-check"></i><b>2.0.5</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html"><i class="fa fa-check"></i><b>3</b> Introduction to ggplot2</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#the-basics"><i class="fa fa-check"></i><b>3.0.1</b> The basics</a></li>
+<li class="chapter" data-level="3.0.2" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#example-dataset-diamonds"><i class="fa fa-check"></i><b>3.0.2</b> Example dataset: <code>diamonds</code></a></li>
+<li class="chapter" data-level="3.0.3" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#scatterplots-geom_point"><i class="fa fa-check"></i><b>3.0.3</b> Scatterplots: <code>geom_point</code></a></li>
+<li class="chapter" data-level="3.0.4" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#aesthetics"><i class="fa fa-check"></i><b>3.0.4</b> Aesthetics</a></li>
+<li class="chapter" data-level="3.0.5" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#facets"><i class="fa fa-check"></i><b>3.0.5</b> Facets</a></li>
+<li class="chapter" data-level="3.0.6" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#geoms"><i class="fa fa-check"></i><b>3.0.6</b> Geoms</a></li>
+<li class="chapter" data-level="3.0.7" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#summary"><i class="fa fa-check"></i><b>3.0.7</b> Summary</a></li>
+<li class="chapter" data-level="3.0.8" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#additional-resources-1"><i class="fa fa-check"></i><b>3.0.8</b> Additional Resources:</a></li>
+<li class="chapter" data-level="3.0.9" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#slides-and-video-2"><i class="fa fa-check"></i><b>3.0.9</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html"><i class="fa fa-check"></i><b>4</b> Customization in ggplot2</a>
+<ul>
+<li class="chapter" data-level="4.0.1" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#colors"><i class="fa fa-check"></i><b>4.0.1</b> Colors</a></li>
+<li class="chapter" data-level="4.0.2" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#labels"><i class="fa fa-check"></i><b>4.0.2</b> Labels</a></li>
+<li class="chapter" data-level="4.0.3" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#themes"><i class="fa fa-check"></i><b>4.0.3</b> Themes</a></li>
+<li class="chapter" data-level="4.0.4" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#theme"><i class="fa fa-check"></i><b>4.0.4</b> Theme</a></li>
+<li class="chapter" data-level="4.0.5" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#legends"><i class="fa fa-check"></i><b>4.0.5</b> Legends</a></li>
+<li class="chapter" data-level="4.0.6" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#scales"><i class="fa fa-check"></i><b>4.0.6</b> Scales</a></li>
+<li class="chapter" data-level="4.0.7" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#coordinate-adjustment"><i class="fa fa-check"></i><b>4.0.7</b> Coordinate Adjustment</a></li>
+<li class="chapter" data-level="4.0.8" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#annotation"><i class="fa fa-check"></i><b>4.0.8</b> Annotation</a></li>
+<li class="chapter" data-level="4.0.9" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#summary-1"><i class="fa fa-check"></i><b>4.0.9</b> Summary</a></li>
+<li class="chapter" data-level="4.0.10" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#additional-references"><i class="fa fa-check"></i><b>4.0.10</b> Additional References</a></li>
+<li class="chapter" data-level="4.0.11" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#slides-and-video-3"><i class="fa fa-check"></i><b>4.0.11</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="saving-plots.html"><a href="saving-plots.html"><i class="fa fa-check"></i><b>5</b> Saving Plots</a>
+<ul>
+<li class="chapter" data-level="5.0.1" data-path="saving-plots.html"><a href="saving-plots.html#image-types"><i class="fa fa-check"></i><b>5.0.1</b> Image Types</a></li>
+<li class="chapter" data-level="5.0.2" data-path="saving-plots.html"><a href="saving-plots.html#saving-plots-ggsave"><i class="fa fa-check"></i><b>5.0.2</b> Saving Plots: <code>ggsave()</code></a></li>
+<li class="chapter" data-level="5.0.3" data-path="saving-plots.html"><a href="saving-plots.html#alternative-approach"><i class="fa fa-check"></i><b>5.0.3</b> Alternative Approach</a></li>
+<li class="chapter" data-level="5.0.4" data-path="saving-plots.html"><a href="saving-plots.html#additional-resources-2"><i class="fa fa-check"></i><b>5.0.4</b> Additional Resources</a></li>
+<li class="chapter" data-level="5.0.5" data-path="saving-plots.html"><a href="saving-plots.html#slides-and-video-4"><i class="fa fa-check"></i><b>5.0.5</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html"><i class="fa fa-check"></i><b>6</b> From Exploratory To Explanatory</a>
+<ul>
+<li class="chapter" data-level="6.0.1" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#apple-product-sales-data"><i class="fa fa-check"></i><b>6.0.1</b> Apple Product Sales Data</a></li>
+<li class="chapter" data-level="6.0.2" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#exploratory-plot"><i class="fa fa-check"></i><b>6.0.2</b> Exploratory Plot</a></li>
+<li class="chapter" data-level="6.0.3" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#increasing-line-thickness"><i class="fa fa-check"></i><b>6.0.3</b> Increasing Line Thickness</a></li>
+<li class="chapter" data-level="6.0.4" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#adding-a-title"><i class="fa fa-check"></i><b>6.0.4</b> Adding a Title</a></li>
+<li class="chapter" data-level="6.0.5" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#changing-line-colors"><i class="fa fa-check"></i><b>6.0.5</b> Changing Line Colors</a></li>
+<li class="chapter" data-level="6.0.6" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#specifying-a-theme"><i class="fa fa-check"></i><b>6.0.6</b> Specifying a Theme</a></li>
+<li class="chapter" data-level="6.0.7" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#customizing-the-theme"><i class="fa fa-check"></i><b>6.0.7</b> Customizing the Theme</a></li>
+<li class="chapter" data-level="6.0.8" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#customizing-axis-labels"><i class="fa fa-check"></i><b>6.0.8</b> Customizing Axis Labels</a></li>
+<li class="chapter" data-level="6.0.9" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#adding-direct-labels"><i class="fa fa-check"></i><b>6.0.9</b> Adding direct labels</a></li>
+<li class="chapter" data-level="6.0.10" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#explanatory-plot"><i class="fa fa-check"></i><b>6.0.10</b> Explanatory Plot</a></li>
+<li class="chapter" data-level="6.0.11" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#slides-and-video-5"><i class="fa fa-check"></i><b>6.0.11</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="data-tables.html"><a href="data-tables.html"><i class="fa fa-check"></i><b>7</b> Data Tables</a>
+<ul>
+<li class="chapter" data-level="7.0.1" data-path="data-tables.html"><a href="data-tables.html#what-are-data-tables"><i class="fa fa-check"></i><b>7.0.1</b> What are Data Tables?</a></li>
+<li class="chapter" data-level="7.0.2" data-path="data-tables.html"><a href="data-tables.html#when-to-make-a-table"><i class="fa fa-check"></i><b>7.0.2</b> When to Make a Table</a></li>
+<li class="chapter" data-level="7.0.3" data-path="data-tables.html"><a href="data-tables.html#what-to-consider-when-making-a-table"><i class="fa fa-check"></i><b>7.0.3</b> What to Consider When Making A Table</a></li>
+<li class="chapter" data-level="7.0.4" data-path="data-tables.html"><a href="data-tables.html#additional-resources-3"><i class="fa fa-check"></i><b>7.0.4</b> Additional resources</a></li>
+<li class="chapter" data-level="7.0.5" data-path="data-tables.html"><a href="data-tables.html#slides-and-video-6"><i class="fa fa-check"></i><b>7.0.5</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="tables-in-r.html"><a href="tables-in-r.html"><i class="fa fa-check"></i><b>8</b> Tables in R</a>
+<ul>
+<li class="chapter" data-level="8.0.1" data-path="tables-in-r.html"><a href="tables-in-r.html#getting-the-data-in-order"><i class="fa fa-check"></i><b>8.0.1</b> Getting the data in order</a></li>
+<li class="chapter" data-level="8.0.2" data-path="tables-in-r.html"><a href="tables-in-r.html#an-exploratory-table"><i class="fa fa-check"></i><b>8.0.2</b> An exploratory table</a></li>
+<li class="chapter" data-level="8.0.3" data-path="tables-in-r.html"><a href="tables-in-r.html#improving-the-table-output"><i class="fa fa-check"></i><b>8.0.3</b> Improving the table output</a></li>
+<li class="chapter" data-level="8.0.4" data-path="tables-in-r.html"><a href="tables-in-r.html#annotating-your-table"><i class="fa fa-check"></i><b>8.0.4</b> Annotating your table</a></li>
+<li class="chapter" data-level="8.0.5" data-path="tables-in-r.html"><a href="tables-in-r.html#tables-in-rmarkdown"><i class="fa fa-check"></i><b>8.0.5</b> Tables in RMarkdown</a></li>
+<li class="chapter" data-level="8.0.6" data-path="tables-in-r.html"><a href="tables-in-r.html#additional-resources-4"><i class="fa fa-check"></i><b>8.0.6</b> Additional resources</a></li>
+<li class="chapter" data-level="8.0.7" data-path="tables-in-r.html"><a href="tables-in-r.html#slides-and-video-7"><i class="fa fa-check"></i><b>8.0.7</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html"><i class="fa fa-check"></i><b>9</b> Multiple Plots in R</a>
+<ul>
+<li class="chapter" data-level="9.0.1" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#installing-patchwork"><i class="fa fa-check"></i><b>9.0.1</b> Installing patchwork</a></li>
+<li class="chapter" data-level="9.0.2" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#basic-plotting-using-patchwork"><i class="fa fa-check"></i><b>9.0.2</b> Basic plotting using patchwork</a></li>
+<li class="chapter" data-level="9.0.3" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#altering-the-layout"><i class="fa fa-check"></i><b>9.0.3</b> Altering the layout</a></li>
+<li class="chapter" data-level="9.0.4" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#nesting-plots"><i class="fa fa-check"></i><b>9.0.4</b> Nesting plots</a></li>
+<li class="chapter" data-level="9.0.5" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#additional-operators"><i class="fa fa-check"></i><b>9.0.5</b> Additional operators</a></li>
+<li class="chapter" data-level="9.0.6" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#additional-resources-5"><i class="fa fa-check"></i><b>9.0.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="9.0.7" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#slides-and-video-8"><i class="fa fa-check"></i><b>9.0.7</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="advanced-data-visualization.html"><a href="advanced-data-visualization.html"><i class="fa fa-check"></i><b>10</b> Advanced Data Visualization</a>
+<ul>
+<li class="chapter" data-level="10.0.1" data-path="advanced-data-visualization.html"><a href="advanced-data-visualization.html#interactive-graphics"><i class="fa fa-check"></i><b>10.0.1</b> Interactive Graphics</a></li>
+<li class="chapter" data-level="10.0.2" data-path="advanced-data-visualization.html"><a href="advanced-data-visualization.html#animated-graphics"><i class="fa fa-check"></i><b>10.0.2</b> Animated Graphics</a></li>
+<li class="chapter" data-level="10.0.3" data-path="advanced-data-visualization.html"><a href="advanced-data-visualization.html#advanced-graphics-in-r"><i class="fa fa-check"></i><b>10.0.3</b> Advanced Graphics In R</a></li>
+<li class="chapter" data-level="10.0.4" data-path="advanced-data-visualization.html"><a href="advanced-data-visualization.html#additional-resources-6"><i class="fa fa-check"></i><b>10.0.4</b> Additional resources</a></li>
+<li class="chapter" data-level="10.0.5" data-path="advanced-data-visualization.html"><a href="advanced-data-visualization.html#slides-and-video-9"><i class="fa fa-check"></i><b>10.0.5</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="data-visualization-project.html"><a href="data-visualization-project.html"><i class="fa fa-check"></i><b>11</b> Data Visualization Project</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="data-visualization-project.html"><a href="data-visualization-project.html#data-visualization-project-1"><i class="fa fa-check"></i><b>11.1</b> Data Visualization Project</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="data-visualization-project.html"><a href="data-visualization-project.html#github-setup"><i class="fa fa-check"></i><b>11.1.1</b> GitHub Setup</a></li>
+<li class="chapter" data-level="11.1.2" data-path="data-visualization-project.html"><a href="data-visualization-project.html#rstudio-cloud-setup"><i class="fa fa-check"></i><b>11.1.2</b> RStudio Cloud Setup</a></li>
+<li class="chapter" data-level="11.1.3" data-path="data-visualization-project.html"><a href="data-visualization-project.html#data-science-project-setup"><i class="fa fa-check"></i><b>11.1.3</b> Data Science Project Setup</a></li>
+<li class="chapter" data-level="11.1.4" data-path="data-visualization-project.html"><a href="data-visualization-project.html#pushing-to-github"><i class="fa fa-check"></i><b>11.1.4</b> Pushing to GitHub</a></li>
+<li class="chapter" data-level="11.1.5" data-path="data-visualization-project.html"><a href="data-visualization-project.html#part-1-exploratory-data-visualization"><i class="fa fa-check"></i><b>11.1.5</b> Part 1: Exploratory Data Visualization</a></li>
+<li class="chapter" data-level="11.1.6" data-path="data-visualization-project.html"><a href="data-visualization-project.html#pushing-to-github-1"><i class="fa fa-check"></i><b>11.1.6</b> Pushing to GitHub</a></li>
+<li class="chapter" data-level="11.1.7" data-path="data-visualization-project.html"><a href="data-visualization-project.html#part-2-explanatory-data-visualization"><i class="fa fa-check"></i><b>11.1.7</b> Part 2: Explanatory Data Visualization</a></li>
+<li class="chapter" data-level="11.1.8" data-path="data-visualization-project.html"><a href="data-visualization-project.html#add-markdown-text-to-.rmd"><i class="fa fa-check"></i><b>11.1.8</b> Add Markdown Text to .Rmd</a></li>
+<li class="chapter" data-level="11.1.9" data-path="data-visualization-project.html"><a href="data-visualization-project.html#knit-your-r-markdown-document"><i class="fa fa-check"></i><b>11.1.9</b> Knit your R Markdown Document</a></li>
+<li class="chapter" data-level="11.1.10" data-path="data-visualization-project.html"><a href="data-visualization-project.html#a-few-final-checks"><i class="fa fa-check"></i><b>11.1.10</b> A Few Final Checks</a></li>
+<li class="chapter" data-level="11.1.11" data-path="data-visualization-project.html"><a href="data-visualization-project.html#final-push-to-github"><i class="fa fa-check"></i><b>11.1.11</b> Final <code>push</code> to GitHub</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
+<li class="chapter" data-level="12" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>12</b> References</a></li>
+<li class="divider"></li>
+<p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
+<p style="text-align:center;"> <a href="https://www.datatrail.org/"> Data Trail </a></p>
+<a href="https://www.datatrail.org/"><img src="https://github.com/datatrail-jhu/DataTrail_Template/raw/main/assets/DataTrail_logo.jpg" style=" width: 80%; filter: grayscale(100%); padding-left: 40px; padding-top: 8px; vertical-align: top "</a>
+<p style="text-align:center; font-size: 12px;"> <a href="https://github.com/rstudio4edu/rstudio4edu-book/"> Style adapted from: rstudio4edu-book </a> <a href ="https://creativecommons.org/licenses/by/2.0/"> (CC-BY 2.0) </a></p>
+<p style="padding-left: 40px;"><div class="trapezoid" style = "padding-left: 40px;"><span>  <a href="https://forms.gle/VWaJYc3zATe3qxYC9"> Click here to provide feedback</a> <img src="assets/itcr_arrow.png" style=" width: 10%" ></span></div></p>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Course Name</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+  <!--script src="https://kit.fontawesome.com/6a26f47516.js"></script-->
+  <!--<script src="assets/hideOutput.js"></script>-->
+  <link href="assets/style_DataTrail.css" rel="stylesheet">
+</head>
+        
+
+
+<div class="hero-image-container"> 
+  <img class= "hero-image" src="assets/DataTrail.jpg">
+</div>
+<div id="customization-in-ggplot2" class="section level1" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Customization in ggplot2</h1>
+<p>In the previous lesson, we walked through the steps of generating a number of different graphs (using different <code>geoms</code>) in <code>ggplot2</code>. We discussed the basics of mapping variables to your graph to customize its appearance or aesthetic (using size, shape, and color within <code>aes()</code>. In this lesson, we’ll build on what we’ve previously learned to really get down to how to customize your plots so that they’re as clear as possible for communicating your results to others.</p>
+<p>The skills learned in this lesson will help take you from generating exploratory plots that help <em>you</em> better understand your data<br />
+to explanatory plots – plots that help you communicate your results <em>to others</em>. We’ll cover how to customize the colors, labels, legends, and text used on your graph.</p>
+<p>Since we’re already familiar with it, we’ll again use the <code>diamonds</code> dataset that we’ve been using to learn about <code>ggplot2</code>.</p>
+<div id="colors" class="section level3" number="4.0.1">
+<h3><span class="header-section-number">4.0.1</span> Colors</h3>
+<p>To get started, we’ll learn how to control color across plots in <code>ggplot2</code>. in the last lesson we discussed using color within <code>aes()</code> on a scatterplot to automatically color points by the clarity of the diamond when looking at the relationship between price and carat.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_0" alt="color within aes() to color points" /></p>
+<p>However, what if we wanted to carry this concept over to a bar plot and look at how many diamonds we have of each clarity group?</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="customization-in-ggplot2.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb16-2"><a href="customization-in-ggplot2.html#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> clarity))</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_84" alt="diamonds broken down by clarity" /></p>
+<p>Well that’s a start since we see the breakdown, but all the bars are the same color. What if we adjusted color within <code>aes()</code>?</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="customization-in-ggplot2.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb17-2"><a href="customization-in-ggplot2.html#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> clarity, <span class="at">color =</span> clarity))</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_79" alt="color does add color but around the bars" /></p>
+<p>As expected, color added a legend for each level of clarity; however, it colored the lines around the bars on the plot, rather than the bars themselves. In order to color the bars themselves, you want to specify the more helpful argument <code>fill</code>:</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="customization-in-ggplot2.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb18-2"><a href="customization-in-ggplot2.html#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> clarity, <span class="at">fill =</span> clarity))</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_89" alt="fill automatically colors the bars" /></p>
+<p>Great! We now have a plot with bars of different colors, which was our first goal! However, adding colors here, while maybe making the plot prettier doesn’t actually give us any more information. We can see the same pattern of which clarity is most frequent among the diamonds in our dataset that we could in the first plot we made.</p>
+<p>Color is particularly helpful here, however, if we wanted to map a different variable onto each bar. For example, what if we wanted to see the breakdown of diamond “cut” within each “clarity” bar?</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="customization-in-ggplot2.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb19-2"><a href="customization-in-ggplot2.html#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> clarity, <span class="at">fill =</span> cut))</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_98" alt="mapping a different variable to fill provides new information" /></p>
+<p>Now we’re getting some new information! We can see that each level in clarity appears to have diamonds of all levels of cut. Color here has really helped us understand more about the data.</p>
+<p>But what if we were going to present these data? While there is no comparison between red and green (which is good!), there is a fair amount of yellow in this plot. Some projectors don’t handle projecting yellow well, and it will show up too light on the screen. To avoid this, let’s manually change the colors in this bar chart! To do so we’ll add an additional layer to the plot using <code>scale_fill_manual</code>.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="customization-in-ggplot2.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb20-2"><a href="customization-in-ggplot2.html#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> clarity, <span class="at">fill =</span> cut)) <span class="sc">+</span></span>
+<span id="cb20-3"><a href="customization-in-ggplot2.html#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;orange&quot;</span>, <span class="st">&quot;darkgreen&quot;</span>, <span class="st">&quot;dodgerblue&quot;</span>, <span class="st">&quot;purple4&quot;</span>))</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_103" alt="manually setting colors using scale_fill_manual" /></p>
+<p>Here, we’ve specified five different colors within the <code>values</code> argument of <code>scale_fill_manual()</code>, one for each cut of diamond. The names of these colors can be specified using the names explained on the third page of the cheatsheet <a href="https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/colorPaletteCheatsheet.pdf">here</a>. (Note: There are other ways to specify colors within R. Explore the details in that cheatsheet to better understand the various ways!)</p>
+<p>Additionally, it’s important to note that here we’ve used <code>scale_fill_manual</code> to adjust the color of what was mapped using <code>fill = cut</code>. If we had colored our chart using <code>color</code> within <code>aes()</code>, there is a different function called <code>scale_color_manual</code>. This makes good sense! You use scale_fill_manual() with <code>fill</code> and scale_color_manual() with <code>color</code>. Keep that in mind as you adjust colors in the future!</p>
+<p>Now that we have some sense of which clarity is most common in our diamonds dataset and were able to successfully specified the colors we wanted manually in order to make this plot useful for presentation, what if we wanted to compare the proportion of each cut across the different clarities? Currently that’s difficult because there is a different number within each clarity. In order to compare the proportion of each cut we have to use <strong>position adjustment</strong>.</p>
+<p>What we’ve just generated is a <strong>stacked bar chart</strong>. It’s a pretty good name for this type of chart as the bars fur cut are all stacked on top of one another. If you don’t want a stacked bar chart you could use one of the other <code>position</code> options: <code>identity</code>, <code>fill</code>, or <code>dodge</code>.</p>
+<p>Returning to our question about proportion of each cut within each clarity group, we’ll want to use <code>position = "fill"</code>. Building off of what we’ve already done:</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="customization-in-ggplot2.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb21-2"><a href="customization-in-ggplot2.html#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> clarity, <span class="at">fill =</span> cut), <span class="at">position =</span> <span class="st">&quot;fill&quot;</span>) <span class="sc">+</span></span>
+<span id="cb21-3"><a href="customization-in-ggplot2.html#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;orange&quot;</span>, <span class="st">&quot;darkgreen&quot;</span>, <span class="st">&quot;dodgerblue&quot;</span>, <span class="st">&quot;purple4&quot;</span>))</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_108" alt="position = &quot;fill&quot; allows for comparison of proportion across groups" /></p>
+<p>Here, we’ve specified how we want to adjust the position of the bars in the plot. Each bar is now of equal height and we can compare each colored bar across the different clarities. As expected, we see that among the best clarity group (IF), we see more diamonds of the best cut (“Ideal”)!</p>
+<p>Briefly, we’ll take a quick detour to look at <code>position = "dodge"</code>. This position adjustment places each object <em>next to one another</em>. This will not allow for easy comparison across groups, as we just saw with the last group but will allow values within each clarity group to be visualized.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="customization-in-ggplot2.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb22-2"><a href="customization-in-ggplot2.html#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> clarity, <span class="at">fill =</span> cut), <span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span></span>
+<span id="cb22-3"><a href="customization-in-ggplot2.html#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;orange&quot;</span>, <span class="st">&quot;darkgreen&quot;</span>, <span class="st">&quot;dodgerblue&quot;</span>, <span class="st">&quot;purple4&quot;</span>))</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_113" alt="position = &quot;dodge&quot; helps compare values within each group" /></p>
+<p>Unlike in the first plot where we specified <code>fill = cut</code>, we can actually see the relationship between each cut within the lowest clarity group (I1). Before, when the values were stacked on top of one another, we were not able to visually see that there were more “Fair” and “Premium” cut diamonds in this group than the other cuts. Now, with <code>position = "dodge"</code>, this information is visually apparent.</p>
+<p>Note: <code>position = "identity"</code> is not very useful for bars, as it <em>places each object exactly where it falls within the graph</em>. For bar charts, this will lead to <em>overlapping bars</em>, which is not visually helpful. However, for scatterplots (and other 2-Dimensional charts), this is the default and is exactly what you want.</p>
+</div>
+<div id="labels" class="section level3" number="4.0.2">
+<h3><span class="header-section-number">4.0.2</span> Labels</h3>
+<p>Text on plots is incredibly helpful. A good title tells viewers what they should be getting out of the plot. Axis labels are incredibly important to inform viewers of what’s being plotted. Annotations on plot help guide viewers to important points in the plot. We’ll discuss how to control all of these now!</p>
+<div id="titles" class="section level4" number="4.0.2.1">
+<h4><span class="header-section-number">4.0.2.1</span> Titles</h4>
+<p>Now that we have an understanding of how to manually adjust color, let’s improve the clarity of our plots by including helpful labels on our plot by adding an additional <code>labs()</code> layer. We’ll return to the plot where we were comparing proportions of diamond cut across diamond clarity groups.</p>
+<p>You can include a <code>title</code>, <code>subtitle</code>, and/or <code>caption</code> within the <code>labs()</code> function. Each argument, as per usual, will be specified by a comma.</p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb23-1"><a href="customization-in-ggplot2.html#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb23-2"><a href="customization-in-ggplot2.html#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> clarity, <span class="at">fill =</span> cut), <span class="at">position =</span> <span class="st">&quot;fill&quot;</span>) <span class="sc">+</span></span>
+<span id="cb23-3"><a href="customization-in-ggplot2.html#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;orange&quot;</span>, <span class="st">&quot;darkgreen&quot;</span>, <span class="st">&quot;dodgerblue&quot;</span>, <span class="st">&quot;purple4&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb23-4"><a href="customization-in-ggplot2.html#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="at">title =</span> <span class="st">&quot;Clearer diamonds tend to be of higher quality cut&quot;</span>,</span>
+<span id="cb23-5"><a href="customization-in-ggplot2.html#cb23-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">subtitle =</span> <span class="st">&quot;The majority of IF diamonds are an </span><span class="sc">\&quot;</span><span class="st">Ideal</span><span class="sc">\&quot;</span><span class="st"> cut&quot;</span>)</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_118" alt="labs() adds helpful tittles, subtitles, and captions" /></p>
+</div>
+<div id="axis-labels" class="section level4" number="4.0.2.2">
+<h4><span class="header-section-number">4.0.2.2</span> Axis labels</h4>
+<p>You may have noticed that our y-axis label says “count”, but it’s not actually a count anymore. In reality, it’s a proportion. Having appropriately labeled axes is <em>so important</em>. Otherwise, viewers won’t know what’s being plotted. So, we should really fix that now using the <code>ylab()</code> function. Note: we won’t be changing the x-axis label, but if you were interested in doing so, you would use <code>xlab("label")</code>.</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb24-1"><a href="customization-in-ggplot2.html#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb24-2"><a href="customization-in-ggplot2.html#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> clarity, <span class="at">fill =</span> cut), <span class="at">position =</span> <span class="st">&quot;fill&quot;</span>) <span class="sc">+</span></span>
+<span id="cb24-3"><a href="customization-in-ggplot2.html#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;orange&quot;</span>, <span class="st">&quot;darkgreen&quot;</span>, <span class="st">&quot;dodgerblue&quot;</span>, <span class="st">&quot;purple4&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb24-4"><a href="customization-in-ggplot2.html#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="at">title =</span> <span class="st">&quot;Clearer diamonds tend to be of higher quality cut&quot;</span>,</span>
+<span id="cb24-5"><a href="customization-in-ggplot2.html#cb24-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">subtitle =</span> <span class="st">&quot;The majority of IF diamonds are an </span><span class="sc">\&quot;</span><span class="st">Ideal</span><span class="sc">\&quot;</span><span class="st"> cut&quot;</span>) <span class="sc">+</span></span>
+<span id="cb24-6"><a href="customization-in-ggplot2.html#cb24-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;proportion&quot;</span>)</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_136" alt="Accurate axis labels are incredibly important" /></p>
+</div>
+</div>
+<div id="themes" class="section level3" number="4.0.3">
+<h3><span class="header-section-number">4.0.3</span> Themes</h3>
+<p>To change the overall aesthetic of your graph, there are 8 themes built into <code>ggplot2</code> that can be added as an additional layer in your graph:</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_123" alt="themes" /></p>
+<p>For example, if we wanted remove the gridlines and grey background from the chart, we would use <code>theme_classic()</code>. Building on what we’ve already generated:</p>
+<div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="customization-in-ggplot2.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb25-2"><a href="customization-in-ggplot2.html#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> clarity, <span class="at">fill =</span> cut), <span class="at">position =</span> <span class="st">&quot;fill&quot;</span>) <span class="sc">+</span></span>
+<span id="cb25-3"><a href="customization-in-ggplot2.html#cb25-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;orange&quot;</span>, <span class="st">&quot;darkgreen&quot;</span>, <span class="st">&quot;dodgerblue&quot;</span>, <span class="st">&quot;purple4&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb25-4"><a href="customization-in-ggplot2.html#cb25-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="at">title =</span> <span class="st">&quot;Clearer diamonds tend to be of higher quality cut&quot;</span>,</span>
+<span id="cb25-5"><a href="customization-in-ggplot2.html#cb25-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">subtitle =</span> <span class="st">&quot;The majority of IF diamonds are an </span><span class="sc">\&quot;</span><span class="st">Ideal</span><span class="sc">\&quot;</span><span class="st"> cut&quot;</span>) <span class="sc">+</span></span>
+<span id="cb25-6"><a href="customization-in-ggplot2.html#cb25-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;proportion&quot;</span>) <span class="sc">+</span></span>
+<span id="cb25-7"><a href="customization-in-ggplot2.html#cb25-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_129" alt="theme_classic changes aesthetic of our plot" /></p>
+<p>We now have a pretty good looking plot! However, a few additional changes would make this plot <em>even better</em> for communication.</p>
+<p>Note: Additional themes are available from the <a href="https://cran.r-project.org/web/packages/ggthemes/vignettes/ggthemes.html"><code>ggthemes</code> package</a>. Users can also generate their own themes.</p>
+</div>
+<div id="theme" class="section level3" number="4.0.4">
+<h3><span class="header-section-number">4.0.4</span> Theme</h3>
+<p>In addition to using available themes, we can also adjust parts of the theme of our graph using an additional <code>theme()</code> layer. There are <strong>a lot</strong> of options within theme. To see them all, look at the help documentation within RStudio Cloud using: <code>?theme</code>. We’ll simply go over the syntax for using a few of them here to get you comfortable with adjusting your theme. Later on, you can play around with all the options on your own to become an expert!</p>
+<div id="altering-text-size" class="section level4" number="4.0.4.1">
+<h4><span class="header-section-number">4.0.4.1</span> Altering text size</h4>
+<p>For example, if we want to increase text size to make it more easily viewable when presenting this graph, we would do that within theme. Notice here that we’re increasing the text size of the <code>title</code>, <code>axis.text</code>, <code>axis.title</code>, and <code>legend.text</code> all within <code>theme()</code>! The syntax here is important. Within each of the elements of the theme you want to alter, you have to specify what it is you want to change. Here, for all three, we want to later text, so we specify <code>element_text()</code>. Within that, we specify that it’s <code>size</code> that we want to adjust.</p>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb26-1"><a href="customization-in-ggplot2.html#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb26-2"><a href="customization-in-ggplot2.html#cb26-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> clarity, <span class="at">fill =</span> cut), <span class="at">position =</span> <span class="st">&quot;fill&quot;</span>) <span class="sc">+</span></span>
+<span id="cb26-3"><a href="customization-in-ggplot2.html#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;orange&quot;</span>, <span class="st">&quot;darkgreen&quot;</span>, <span class="st">&quot;dodgerblue&quot;</span>, <span class="st">&quot;purple4&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb26-4"><a href="customization-in-ggplot2.html#cb26-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="at">title =</span> <span class="st">&quot;Clearer diamonds tend to be of higher quality cut&quot;</span>,</span>
+<span id="cb26-5"><a href="customization-in-ggplot2.html#cb26-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">subtitle =</span> <span class="st">&quot;The majority of IF diamonds are an </span><span class="sc">\&quot;</span><span class="st">Ideal</span><span class="sc">\&quot;</span><span class="st"> cut&quot;</span>) <span class="sc">+</span></span>
+<span id="cb26-6"><a href="customization-in-ggplot2.html#cb26-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;proportion&quot;</span>) <span class="sc">+</span></span>
+<span id="cb26-7"><a href="customization-in-ggplot2.html#cb26-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb26-8"><a href="customization-in-ggplot2.html#cb26-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>( <span class="at">title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>),</span>
+<span id="cb26-9"><a href="customization-in-ggplot2.html#cb26-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span><span class="dv">14</span>),</span>
+<span id="cb26-10"><a href="customization-in-ggplot2.html#cb26-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>),</span>
+<span id="cb26-11"><a href="customization-in-ggplot2.html#cb26-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>) )</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_142" alt="theme() allows us to adjust font size" /></p>
+</div>
+<div id="additional-text-alterations" class="section level4" number="4.0.4.2">
+<h4><span class="header-section-number">4.0.4.2</span> Additional text alterations</h4>
+<p>Changing the size of text on your plot is not the only thing you can control within <code>theme()</code>. You can make text <strong>bold* and change its color within <code>theme()</code>. Note here that multiple changes can be made to a single element. We can change size and make the text </strong>bold**. All we do is separate each argument with a comma, per usual.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb27-1"><a href="customization-in-ggplot2.html#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb27-2"><a href="customization-in-ggplot2.html#cb27-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> clarity, <span class="at">fill =</span> cut), <span class="at">position =</span> <span class="st">&quot;fill&quot;</span>) <span class="sc">+</span></span>
+<span id="cb27-3"><a href="customization-in-ggplot2.html#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;orange&quot;</span>, <span class="st">&quot;darkgreen&quot;</span>, <span class="st">&quot;dodgerblue&quot;</span>, <span class="st">&quot;purple4&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb27-4"><a href="customization-in-ggplot2.html#cb27-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="at">title =</span> <span class="st">&quot;Clearer diamonds tend to be of higher quality cut&quot;</span>,</span>
+<span id="cb27-5"><a href="customization-in-ggplot2.html#cb27-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">subtitle =</span> <span class="st">&quot;The majority of IF diamonds are an </span><span class="sc">\&quot;</span><span class="st">Ideal</span><span class="sc">\&quot;</span><span class="st"> cut&quot;</span>) <span class="sc">+</span></span>
+<span id="cb27-6"><a href="customization-in-ggplot2.html#cb27-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;proportion&quot;</span>) <span class="sc">+</span></span>
+<span id="cb27-7"><a href="customization-in-ggplot2.html#cb27-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb27-8"><a href="customization-in-ggplot2.html#cb27-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>( <span class="at">title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>),</span>
+<span id="cb27-9"><a href="customization-in-ggplot2.html#cb27-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>),</span>
+<span id="cb27-10"><a href="customization-in-ggplot2.html#cb27-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>),</span>
+<span id="cb27-11"><a href="customization-in-ggplot2.html#cb27-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>),</span>
+<span id="cb27-12"><a href="customization-in-ggplot2.html#cb27-12" aria-hidden="true" tabindex="-1"></a>         <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">&quot;gray30&quot;</span>) )</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_157" alt="theme() allows us to tweak many parts of our plot" /></p>
+<p>Any alterations to plot spacing/background, title, axis, and legend will all be made within <code>theme()</code></p>
+</div>
+</div>
+<div id="legends" class="section level3" number="4.0.5">
+<h3><span class="header-section-number">4.0.5</span> Legends</h3>
+<p>At this point, all the text on the plot is pretty visible! However, there’s one thing that’s still not quite clear to viewers. In daily life, people refer to the “cut” of a diamond by terms like “round cut” or “princess cut” to describe the <em>shape</em> of the diamond. That’s not what we’re talking about here when we’re discussing “cut”. In these data, “cut” refers to the quality of the diamond, not the shape. Let’s be sure that’s clear as well! We can change that using an additional layer and <code>guides()</code>!</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb28-1"><a href="customization-in-ggplot2.html#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb28-2"><a href="customization-in-ggplot2.html#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> clarity, <span class="at">fill =</span> cut), <span class="at">position =</span> <span class="st">&quot;fill&quot;</span>) <span class="sc">+</span></span>
+<span id="cb28-3"><a href="customization-in-ggplot2.html#cb28-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;orange&quot;</span>, <span class="st">&quot;darkgreen&quot;</span>, <span class="st">&quot;dodgerblue&quot;</span>, <span class="st">&quot;purple4&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb28-4"><a href="customization-in-ggplot2.html#cb28-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="at">title =</span> <span class="st">&quot;Clearer diamonds tend to be of higher quality cut&quot;</span>,</span>
+<span id="cb28-5"><a href="customization-in-ggplot2.html#cb28-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">subtitle =</span> <span class="st">&quot;The majority of IF diamonds are an </span><span class="sc">\&quot;</span><span class="st">Ideal</span><span class="sc">\&quot;</span><span class="st"> cut&quot;</span>) <span class="sc">+</span></span>
+<span id="cb28-6"><a href="customization-in-ggplot2.html#cb28-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;proportion&quot;</span>) <span class="sc">+</span></span>
+<span id="cb28-7"><a href="customization-in-ggplot2.html#cb28-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb28-8"><a href="customization-in-ggplot2.html#cb28-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>( <span class="at">title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>),</span>
+<span id="cb28-9"><a href="customization-in-ggplot2.html#cb28-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>),</span>
+<span id="cb28-10"><a href="customization-in-ggplot2.html#cb28-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>),</span>
+<span id="cb28-11"><a href="customization-in-ggplot2.html#cb28-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>),</span>
+<span id="cb28-12"><a href="customization-in-ggplot2.html#cb28-12" aria-hidden="true" tabindex="-1"></a>         <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">&quot;gray30&quot;</span>) ) <span class="sc">+</span></span>
+<span id="cb28-13"><a href="customization-in-ggplot2.html#cb28-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="fu">guide_legend</span>(<span class="st">&quot;cut quality&quot;</span>))</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_148" alt="guide() allows us to change the legend title" /></p>
+<p>At this point, we have an informative title, clear colors, a well-labeled legend, and text that is large enough throughout the graph. This is certainly a graph that could be used in a presentation. We’ve taken it from a graph that is useful to just ourselves (exploratory) and made it into a plot that can communicate our findings well to others (explanatory)!</p>
+<p>We have touched on a number of alterations you can make by adding additional layers to a ggplot. In the rest of this lesson we’ll touch on a few more changes you can make within <code>ggplot2</code> using a slightly different graph.</p>
+</div>
+<div id="scales" class="section level3" number="4.0.6">
+<h3><span class="header-section-number">4.0.6</span> Scales</h3>
+<p>There may be times when you want a different number of values to be displayed on an axis. The scale of your plot for <strong>continuous variables</strong> (i.e. numeric variables) can be controlled using <code>scale_x_continuous</code> or <code>scale_y_continuous</code>. Here, we want to increase the number of labels displayed on the y-axis, so we’ll use <code>scale_y_continuous</code>:</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="customization-in-ggplot2.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb29-2"><a href="customization-in-ggplot2.html#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> clarity)) <span class="sc">+</span></span>
+<span id="cb29-3"><a href="customization-in-ggplot2.html#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">17000</span>, <span class="at">by =</span> <span class="dv">1000</span>))</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_165" alt="Continuous cales can be altered" /></p>
+<p>However, for <strong>discrete variables</strong> (aka factors or categorical variables), where there is a limited number of levels, you would use <code>scale_x_discrete</code> or <code>scale_y_discrete</code>:</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="customization-in-ggplot2.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb30-2"><a href="customization-in-ggplot2.html#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> clarity)) <span class="sc">+</span></span>
+<span id="cb30-3"><a href="customization-in-ggplot2.html#cb30-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">limit =</span> <span class="fu">c</span>(<span class="st">&quot;SI2&quot;</span>, <span class="st">&quot;SI1&quot;</span>, <span class="st">&quot;I1&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb30-4"><a href="customization-in-ggplot2.html#cb30-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">17000</span>, <span class="at">by =</span> <span class="dv">1000</span>))</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_170" alt="Discrete scales can be altered" /></p>
+</div>
+<div id="coordinate-adjustment" class="section level3" number="4.0.7">
+<h3><span class="header-section-number">4.0.7</span> Coordinate Adjustment</h3>
+<p>There are times when you’ll want to flip your axis. This can be accomplished using <code>coord_flip()</code>. Adding an additional layer to the plot we just generated switches our x- and y-axes, allowing for horizontal bar charts, rather than the default
+vertical bar charts:</p>
+<div class="sourceCode" id="cb31"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb31-1"><a href="customization-in-ggplot2.html#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb31-2"><a href="customization-in-ggplot2.html#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> clarity)) <span class="sc">+</span></span>
+<span id="cb31-3"><a href="customization-in-ggplot2.html#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">17000</span>, <span class="at">by =</span> <span class="dv">1000</span>)) <span class="sc">+</span></span>
+<span id="cb31-4"><a href="customization-in-ggplot2.html#cb31-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">limit =</span> <span class="fu">c</span>(<span class="st">&quot;SI2&quot;</span>, <span class="st">&quot;SI1&quot;</span>, <span class="st">&quot;I1&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb31-5"><a href="customization-in-ggplot2.html#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb31-6"><a href="customization-in-ggplot2.html#cb31-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="at">title =</span> <span class="st">&quot;Clearer diamonds tend to be of higher quality cut&quot;</span>,</span>
+<span id="cb31-7"><a href="customization-in-ggplot2.html#cb31-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">subtitle =</span> <span class="st">&quot;The majority of IF diamonds are an </span><span class="sc">\&quot;</span><span class="st">Ideal</span><span class="sc">\&quot;</span><span class="st"> cut&quot;</span>) <span class="sc">+</span></span>
+<span id="cb31-8"><a href="customization-in-ggplot2.html#cb31-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;proportion&quot;</span>) <span class="sc">+</span></span>
+<span id="cb31-9"><a href="customization-in-ggplot2.html#cb31-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb31-10"><a href="customization-in-ggplot2.html#cb31-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>( <span class="at">title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>),</span>
+<span id="cb31-11"><a href="customization-in-ggplot2.html#cb31-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>),</span>
+<span id="cb31-12"><a href="customization-in-ggplot2.html#cb31-12" aria-hidden="true" tabindex="-1"></a>         <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>),</span>
+<span id="cb31-13"><a href="customization-in-ggplot2.html#cb31-13" aria-hidden="true" tabindex="-1"></a>         <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>),</span>
+<span id="cb31-14"><a href="customization-in-ggplot2.html#cb31-14" aria-hidden="true" tabindex="-1"></a>         <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">&quot;gray30&quot;</span>) ) <span class="sc">+</span></span>
+<span id="cb31-15"><a href="customization-in-ggplot2.html#cb31-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="fu">guide_legend</span>(<span class="st">&quot;cut quality&quot;</span>))</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_152" alt="Axes can be flipped using coord_flip" /></p>
+<p>It’s important to remember that all the additional alterations we already discussed can still be applied to this graph!</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="customization-in-ggplot2.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb32-2"><a href="customization-in-ggplot2.html#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> clarity)) <span class="sc">+</span></span>
+<span id="cb32-3"><a href="customization-in-ggplot2.html#cb32-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">17000</span>, <span class="at">by =</span> <span class="dv">1000</span>)) <span class="sc">+</span></span>
+<span id="cb32-4"><a href="customization-in-ggplot2.html#cb32-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">limit =</span> <span class="fu">c</span>(<span class="st">&quot;SI2&quot;</span>, <span class="st">&quot;SI1&quot;</span>, <span class="st">&quot;I1&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb32-5"><a href="customization-in-ggplot2.html#cb32-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb32-6"><a href="customization-in-ggplot2.html#cb32-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="at">title =</span> <span class="st">&quot;Number of diamonds by diamond clarity&quot;</span>,</span>
+<span id="cb32-7"><a href="customization-in-ggplot2.html#cb32-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">subtitle =</span> <span class="st">&quot;Subset of all diamonds, looking three levels of clarity&quot;</span>) <span class="sc">+</span></span>
+<span id="cb32-8"><a href="customization-in-ggplot2.html#cb32-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb32-9"><a href="customization-in-ggplot2.html#cb32-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>( <span class="at">title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>),</span>
+<span id="cb32-10"><a href="customization-in-ggplot2.html#cb32-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>),</span>
+<span id="cb32-11"><a href="customization-in-ggplot2.html#cb32-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>),</span>
+<span id="cb32-12"><a href="customization-in-ggplot2.html#cb32-12" aria-hidden="true" tabindex="-1"></a>         <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>),</span>
+<span id="cb32-13"><a href="customization-in-ggplot2.html#cb32-13" aria-hidden="true" tabindex="-1"></a>         <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">&quot;gray30&quot;</span>) )</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_176" alt="Additional layers will help customize this plot" /></p>
+</div>
+<div id="annotation" class="section level3" number="4.0.8">
+<h3><span class="header-section-number">4.0.8</span> Annotation</h3>
+<p>Finally, there will be times when you’ll want to add text to a plot or to annotate points on your plot. We’ll discuss briefly how to accomplish that here!</p>
+<p>To add text to your plot, we can use the function <code>annotate</code>. This requires us to specify that we want to annotate here with a “text” geom (rather than say a shape, like a rectangle - “rect”). Additionally, we have to specify what we’d like that text to say (<code>label</code>), where on the plot we’d like that text to show up (using <code>x</code> and <code>y</code> for coordinates), how we’d like the text aligned (using <code>hjust</code> for horizontal alignment where the options are “left”, “center”, or “right” and <code>vjust</code> for vertical alignment where the arguments are “top”, “center” or “bottom”), and how big we’d like that text to be (<code>size</code>):</p>
+<div class="sourceCode" id="cb33"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb33-1"><a href="customization-in-ggplot2.html#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb33-2"><a href="customization-in-ggplot2.html#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> clarity)) <span class="sc">+</span></span>
+<span id="cb33-3"><a href="customization-in-ggplot2.html#cb33-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">17000</span>, <span class="at">by =</span> <span class="dv">1000</span>)) <span class="sc">+</span></span>
+<span id="cb33-4"><a href="customization-in-ggplot2.html#cb33-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">limit =</span> <span class="fu">c</span>(<span class="st">&quot;SI2&quot;</span>, <span class="st">&quot;SI1&quot;</span>, <span class="st">&quot;I1&quot;</span>)) <span class="sc">+</span></span>
+<span id="cb33-5"><a href="customization-in-ggplot2.html#cb33-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb33-6"><a href="customization-in-ggplot2.html#cb33-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="at">title =</span> <span class="st">&quot;Number of diamonds by diamond clarity&quot;</span>,</span>
+<span id="cb33-7"><a href="customization-in-ggplot2.html#cb33-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">subtitle =</span> <span class="st">&quot;Subset of all diamonds, looking three levels of clarity&quot;</span>) <span class="sc">+</span></span>
+<span id="cb33-8"><a href="customization-in-ggplot2.html#cb33-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>() <span class="sc">+</span></span>
+<span id="cb33-9"><a href="customization-in-ggplot2.html#cb33-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>( <span class="at">title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">18</span>),</span>
+<span id="cb33-10"><a href="customization-in-ggplot2.html#cb33-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>),</span>
+<span id="cb33-11"><a href="customization-in-ggplot2.html#cb33-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>),</span>
+<span id="cb33-12"><a href="customization-in-ggplot2.html#cb33-12" aria-hidden="true" tabindex="-1"></a>         <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>),</span>
+<span id="cb33-13"><a href="customization-in-ggplot2.html#cb33-13" aria-hidden="true" tabindex="-1"></a>         <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">&quot;gray30&quot;</span>) ) <span class="sc">+</span></span>
+<span id="cb33-14"><a href="customization-in-ggplot2.html#cb33-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">annotate</span>(<span class="st">&quot;text&quot;</span>, <span class="at">label =</span> <span class="st">&quot;SI1 diamonds are among </span><span class="sc">\n</span><span class="st"> the most frequent clarity diamond&quot;</span>,</span>
+<span id="cb33-15"><a href="customization-in-ggplot2.html#cb33-15" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> <span class="dv">12800</span>, <span class="at">x =</span> <span class="fl">2.9</span>,</span>
+<span id="cb33-16"><a href="customization-in-ggplot2.html#cb33-16" aria-hidden="true" tabindex="-1"></a>           <span class="at">vjust =</span> <span class="st">&quot;top&quot;</span>, <span class="at">hjust =</span> <span class="st">&quot;right&quot;</span>,</span>
+<span id="cb33-17"><a href="customization-in-ggplot2.html#cb33-17" aria-hidden="true" tabindex="-1"></a>           <span class="at">size =</span> <span class="dv">6</span>)</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_181" alt="annotate helps add text to our plot" /></p>
+<p>Note: we could have accomplished this by adding an additional <code>geom</code>: <code>geom_text</code>. However, this requires creating a new data frame, as explained <a href="http://r4ds.had.co.nz/graphics-for-communication.html#annotations">here</a>. This can also be used to <strong>label the points on your plot</strong>. Keep this reference in mind in case you have to do that in the future.</p>
+</div>
+<div id="summary-1" class="section level3" number="4.0.9">
+<h3><span class="header-section-number">4.0.9</span> Summary</h3>
+<p>In this lesson we’ve covered how to manually change the colors of your plot in R, how to use built-in <code>ggplot2</code> themes, how to tailor your plot to look exactly how you want it to look within <code>theme()</code>, how to customize legends, how to scale axes, how to flip coordinates, and how to annotate your plots. What’s important to remember is that <code>ggplot2</code> is flexible and benefits from its layered nature. Additionally, it’s important to remember that the last lesson and this lesson have just touched the surface of what’s capable in <code>ggplot2</code>. You’ll certainly run into things when graphing that were not covered in this lesson, and that’s great! That means you’re beginning to master <code>ggplot2</code>. Use what you’ve learned here and additional online available resources to generate any plot you can think of!</p>
+</div>
+<div id="additional-references" class="section level3" number="4.0.10">
+<h3><span class="header-section-number">4.0.10</span> Additional References</h3>
+<ul>
+<li><a href="https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/colorPaletteCheatsheet.pdf">Color Cheatsheet</a></li>
+<li><a href="https://cran.r-project.org/web/packages/ggthemes/vignettes/ggthemes.html"><code>ggthemes</code> package</a> - <a href="https://github.com/jrnold/ggthemes">GitHub repo</a></li>
+<li><a href="http://r4ds.had.co.nz/data-visualisation.html">R4DS: Chapter 3</a></li>
+<li><a href="http://r4ds.had.co.nz/graphics-for-communication.html">R4DS: Chapter 18</a></li>
+</ul>
+</div>
+<div id="slides-and-video-3" class="section level3" number="4.0.11">
+<h3><span class="header-section-number">4.0.11</span> Slides and Video</h3>
+<div class="figure">
+<img src="https://youtu.be/vytGpMWUhWU" alt="" />
+<p class="caption">Customization in ggplot2</p>
+</div>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/edit?usp=sharing">Slides</a></li>
+</ul>
+
+</div>
+</div>
+<hr>
+<center> 
+  <div class="footer">
+      All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
+      <br>
+      All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
+  </div>
+</center>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="introduction-to-ggplot2.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="saving-plots.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

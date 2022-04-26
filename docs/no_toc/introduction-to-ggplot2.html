@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 3 Introduction to ggplot2 | Course Name</title>
+  <meta name="description" content="Description about Course/Book." />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 3 Introduction to ggplot2 | Course Name" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Description about Course/Book." />
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 3 Introduction to ggplot2 | Course Name" />
+  
+  <meta name="twitter:description" content="Description about Course/Book." />
+  
+
+
+
+<meta name="date" content="2022-04-11" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  <link rel="shortcut icon" href="assets/DataTrail_favicon.ico" type="image/x-icon" />
+<link rel="prev" href="good-plots.html"/>
+<link rel="next" href="customization-in-ggplot2.html"/>
+<script src="libs/header-attrs-2.10/header-attrs.js"></script>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {  background-color: #f8f8f8; }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ef2929; } /* Alert */
+code span.an { color: #8f5902; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #c4a000; } /* Attribute */
+code span.bn { color: #0000cf; } /* BaseN */
+code span.cf { color: #204a87; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4e9a06; } /* Char */
+code span.cn { color: #000000; } /* Constant */
+code span.co { color: #8f5902; font-style: italic; } /* Comment */
+code span.cv { color: #8f5902; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #8f5902; font-weight: bold; font-style: italic; } /* Documentation */
+code span.dt { color: #204a87; } /* DataType */
+code span.dv { color: #0000cf; } /* DecVal */
+code span.er { color: #a40000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #0000cf; } /* Float */
+code span.fu { color: #000000; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #8f5902; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #204a87; font-weight: bold; } /* Keyword */
+code span.op { color: #ce5c00; font-weight: bold; } /* Operator */
+code span.ot { color: #8f5902; } /* Other */
+code span.pp { color: #8f5902; font-style: italic; } /* Preprocessor */
+code span.sc { color: #000000; } /* SpecialChar */
+code span.ss { color: #4e9a06; } /* SpecialString */
+code span.st { color: #4e9a06; } /* String */
+code span.va { color: #000000; } /* Variable */
+code span.vs { color: #4e9a06; } /* VerbatimString */
+code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="assets/style_DataTrail.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<a href="https://www.datatrail.org/"><img src="https://github.com/datatrail-jhu/DataTrail_Template/raw/main/assets/DataTrail_logo.jpg" style="padding-left: 0px; padding-top: 8px;"</a>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>About this Course</a></li>
+<li class="chapter" data-level="1" data-path="intro-to-data-visualization.html"><a href="intro-to-data-visualization.html"><i class="fa fa-check"></i><b>1</b> Intro to Data Visualization</a>
+<ul>
+<li class="chapter" data-level="1.0.1" data-path="intro-to-data-visualization.html"><a href="intro-to-data-visualization.html#data-visualization"><i class="fa fa-check"></i><b>1.0.1</b> Data Visualization</a></li>
+<li class="chapter" data-level="1.0.2" data-path="intro-to-data-visualization.html"><a href="intro-to-data-visualization.html#explanatory-plots"><i class="fa fa-check"></i><b>1.0.2</b> Explanatory Plots</a></li>
+<li class="chapter" data-level="1.0.3" data-path="intro-to-data-visualization.html"><a href="intro-to-data-visualization.html#types-of-plots"><i class="fa fa-check"></i><b>1.0.3</b> Types of Plots</a></li>
+<li class="chapter" data-level="1.0.4" data-path="intro-to-data-visualization.html"><a href="intro-to-data-visualization.html#tables"><i class="fa fa-check"></i><b>1.0.4</b> Tables</a></li>
+<li class="chapter" data-level="1.0.5" data-path="intro-to-data-visualization.html"><a href="intro-to-data-visualization.html#slides-and-video"><i class="fa fa-check"></i><b>1.0.5</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="good-plots.html"><a href="good-plots.html"><i class="fa fa-check"></i><b>2</b> Good Plots</a>
+<ul>
+<li class="chapter" data-level="2.0.1" data-path="good-plots.html"><a href="good-plots.html#tips-for-making-good-plots"><i class="fa fa-check"></i><b>2.0.1</b> Tips for Making Good Plots</a></li>
+<li class="chapter" data-level="2.0.2" data-path="good-plots.html"><a href="good-plots.html#what-to-consider-when-making-plots"><i class="fa fa-check"></i><b>2.0.2</b> What To Consider When Making Plots</a></li>
+<li class="chapter" data-level="2.0.3" data-path="good-plots.html"><a href="good-plots.html#making-the-iphone-plot-in-r"><i class="fa fa-check"></i><b>2.0.3</b> Making The iPhone Plot in R</a></li>
+<li class="chapter" data-level="2.0.4" data-path="good-plots.html"><a href="good-plots.html#additional-resources"><i class="fa fa-check"></i><b>2.0.4</b> Additional Resources</a></li>
+<li class="chapter" data-level="2.0.5" data-path="good-plots.html"><a href="good-plots.html#slides-and-video-1"><i class="fa fa-check"></i><b>2.0.5</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html"><i class="fa fa-check"></i><b>3</b> Introduction to ggplot2</a>
+<ul>
+<li class="chapter" data-level="3.0.1" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#the-basics"><i class="fa fa-check"></i><b>3.0.1</b> The basics</a></li>
+<li class="chapter" data-level="3.0.2" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#example-dataset-diamonds"><i class="fa fa-check"></i><b>3.0.2</b> Example dataset: <code>diamonds</code></a></li>
+<li class="chapter" data-level="3.0.3" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#scatterplots-geom_point"><i class="fa fa-check"></i><b>3.0.3</b> Scatterplots: <code>geom_point</code></a></li>
+<li class="chapter" data-level="3.0.4" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#aesthetics"><i class="fa fa-check"></i><b>3.0.4</b> Aesthetics</a></li>
+<li class="chapter" data-level="3.0.5" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#facets"><i class="fa fa-check"></i><b>3.0.5</b> Facets</a></li>
+<li class="chapter" data-level="3.0.6" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#geoms"><i class="fa fa-check"></i><b>3.0.6</b> Geoms</a></li>
+<li class="chapter" data-level="3.0.7" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#summary"><i class="fa fa-check"></i><b>3.0.7</b> Summary</a></li>
+<li class="chapter" data-level="3.0.8" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#additional-resources-1"><i class="fa fa-check"></i><b>3.0.8</b> Additional Resources:</a></li>
+<li class="chapter" data-level="3.0.9" data-path="introduction-to-ggplot2.html"><a href="introduction-to-ggplot2.html#slides-and-video-2"><i class="fa fa-check"></i><b>3.0.9</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html"><i class="fa fa-check"></i><b>4</b> Customization in ggplot2</a>
+<ul>
+<li class="chapter" data-level="4.0.1" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#colors"><i class="fa fa-check"></i><b>4.0.1</b> Colors</a></li>
+<li class="chapter" data-level="4.0.2" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#labels"><i class="fa fa-check"></i><b>4.0.2</b> Labels</a></li>
+<li class="chapter" data-level="4.0.3" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#themes"><i class="fa fa-check"></i><b>4.0.3</b> Themes</a></li>
+<li class="chapter" data-level="4.0.4" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#theme"><i class="fa fa-check"></i><b>4.0.4</b> Theme</a></li>
+<li class="chapter" data-level="4.0.5" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#legends"><i class="fa fa-check"></i><b>4.0.5</b> Legends</a></li>
+<li class="chapter" data-level="4.0.6" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#scales"><i class="fa fa-check"></i><b>4.0.6</b> Scales</a></li>
+<li class="chapter" data-level="4.0.7" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#coordinate-adjustment"><i class="fa fa-check"></i><b>4.0.7</b> Coordinate Adjustment</a></li>
+<li class="chapter" data-level="4.0.8" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#annotation"><i class="fa fa-check"></i><b>4.0.8</b> Annotation</a></li>
+<li class="chapter" data-level="4.0.9" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#summary-1"><i class="fa fa-check"></i><b>4.0.9</b> Summary</a></li>
+<li class="chapter" data-level="4.0.10" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#additional-references"><i class="fa fa-check"></i><b>4.0.10</b> Additional References</a></li>
+<li class="chapter" data-level="4.0.11" data-path="customization-in-ggplot2.html"><a href="customization-in-ggplot2.html#slides-and-video-3"><i class="fa fa-check"></i><b>4.0.11</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="saving-plots.html"><a href="saving-plots.html"><i class="fa fa-check"></i><b>5</b> Saving Plots</a>
+<ul>
+<li class="chapter" data-level="5.0.1" data-path="saving-plots.html"><a href="saving-plots.html#image-types"><i class="fa fa-check"></i><b>5.0.1</b> Image Types</a></li>
+<li class="chapter" data-level="5.0.2" data-path="saving-plots.html"><a href="saving-plots.html#saving-plots-ggsave"><i class="fa fa-check"></i><b>5.0.2</b> Saving Plots: <code>ggsave()</code></a></li>
+<li class="chapter" data-level="5.0.3" data-path="saving-plots.html"><a href="saving-plots.html#alternative-approach"><i class="fa fa-check"></i><b>5.0.3</b> Alternative Approach</a></li>
+<li class="chapter" data-level="5.0.4" data-path="saving-plots.html"><a href="saving-plots.html#additional-resources-2"><i class="fa fa-check"></i><b>5.0.4</b> Additional Resources</a></li>
+<li class="chapter" data-level="5.0.5" data-path="saving-plots.html"><a href="saving-plots.html#slides-and-video-4"><i class="fa fa-check"></i><b>5.0.5</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html"><i class="fa fa-check"></i><b>6</b> From Exploratory To Explanatory</a>
+<ul>
+<li class="chapter" data-level="6.0.1" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#apple-product-sales-data"><i class="fa fa-check"></i><b>6.0.1</b> Apple Product Sales Data</a></li>
+<li class="chapter" data-level="6.0.2" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#exploratory-plot"><i class="fa fa-check"></i><b>6.0.2</b> Exploratory Plot</a></li>
+<li class="chapter" data-level="6.0.3" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#increasing-line-thickness"><i class="fa fa-check"></i><b>6.0.3</b> Increasing Line Thickness</a></li>
+<li class="chapter" data-level="6.0.4" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#adding-a-title"><i class="fa fa-check"></i><b>6.0.4</b> Adding a Title</a></li>
+<li class="chapter" data-level="6.0.5" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#changing-line-colors"><i class="fa fa-check"></i><b>6.0.5</b> Changing Line Colors</a></li>
+<li class="chapter" data-level="6.0.6" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#specifying-a-theme"><i class="fa fa-check"></i><b>6.0.6</b> Specifying a Theme</a></li>
+<li class="chapter" data-level="6.0.7" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#customizing-the-theme"><i class="fa fa-check"></i><b>6.0.7</b> Customizing the Theme</a></li>
+<li class="chapter" data-level="6.0.8" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#customizing-axis-labels"><i class="fa fa-check"></i><b>6.0.8</b> Customizing Axis Labels</a></li>
+<li class="chapter" data-level="6.0.9" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#adding-direct-labels"><i class="fa fa-check"></i><b>6.0.9</b> Adding direct labels</a></li>
+<li class="chapter" data-level="6.0.10" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#explanatory-plot"><i class="fa fa-check"></i><b>6.0.10</b> Explanatory Plot</a></li>
+<li class="chapter" data-level="6.0.11" data-path="from-exploratory-to-explanatory.html"><a href="from-exploratory-to-explanatory.html#slides-and-video-5"><i class="fa fa-check"></i><b>6.0.11</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="data-tables.html"><a href="data-tables.html"><i class="fa fa-check"></i><b>7</b> Data Tables</a>
+<ul>
+<li class="chapter" data-level="7.0.1" data-path="data-tables.html"><a href="data-tables.html#what-are-data-tables"><i class="fa fa-check"></i><b>7.0.1</b> What are Data Tables?</a></li>
+<li class="chapter" data-level="7.0.2" data-path="data-tables.html"><a href="data-tables.html#when-to-make-a-table"><i class="fa fa-check"></i><b>7.0.2</b> When to Make a Table</a></li>
+<li class="chapter" data-level="7.0.3" data-path="data-tables.html"><a href="data-tables.html#what-to-consider-when-making-a-table"><i class="fa fa-check"></i><b>7.0.3</b> What to Consider When Making A Table</a></li>
+<li class="chapter" data-level="7.0.4" data-path="data-tables.html"><a href="data-tables.html#additional-resources-3"><i class="fa fa-check"></i><b>7.0.4</b> Additional resources</a></li>
+<li class="chapter" data-level="7.0.5" data-path="data-tables.html"><a href="data-tables.html#slides-and-video-6"><i class="fa fa-check"></i><b>7.0.5</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="tables-in-r.html"><a href="tables-in-r.html"><i class="fa fa-check"></i><b>8</b> Tables in R</a>
+<ul>
+<li class="chapter" data-level="8.0.1" data-path="tables-in-r.html"><a href="tables-in-r.html#getting-the-data-in-order"><i class="fa fa-check"></i><b>8.0.1</b> Getting the data in order</a></li>
+<li class="chapter" data-level="8.0.2" data-path="tables-in-r.html"><a href="tables-in-r.html#an-exploratory-table"><i class="fa fa-check"></i><b>8.0.2</b> An exploratory table</a></li>
+<li class="chapter" data-level="8.0.3" data-path="tables-in-r.html"><a href="tables-in-r.html#improving-the-table-output"><i class="fa fa-check"></i><b>8.0.3</b> Improving the table output</a></li>
+<li class="chapter" data-level="8.0.4" data-path="tables-in-r.html"><a href="tables-in-r.html#annotating-your-table"><i class="fa fa-check"></i><b>8.0.4</b> Annotating your table</a></li>
+<li class="chapter" data-level="8.0.5" data-path="tables-in-r.html"><a href="tables-in-r.html#tables-in-rmarkdown"><i class="fa fa-check"></i><b>8.0.5</b> Tables in RMarkdown</a></li>
+<li class="chapter" data-level="8.0.6" data-path="tables-in-r.html"><a href="tables-in-r.html#additional-resources-4"><i class="fa fa-check"></i><b>8.0.6</b> Additional resources</a></li>
+<li class="chapter" data-level="8.0.7" data-path="tables-in-r.html"><a href="tables-in-r.html#slides-and-video-7"><i class="fa fa-check"></i><b>8.0.7</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html"><i class="fa fa-check"></i><b>9</b> Multiple Plots in R</a>
+<ul>
+<li class="chapter" data-level="9.0.1" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#installing-patchwork"><i class="fa fa-check"></i><b>9.0.1</b> Installing patchwork</a></li>
+<li class="chapter" data-level="9.0.2" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#basic-plotting-using-patchwork"><i class="fa fa-check"></i><b>9.0.2</b> Basic plotting using patchwork</a></li>
+<li class="chapter" data-level="9.0.3" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#altering-the-layout"><i class="fa fa-check"></i><b>9.0.3</b> Altering the layout</a></li>
+<li class="chapter" data-level="9.0.4" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#nesting-plots"><i class="fa fa-check"></i><b>9.0.4</b> Nesting plots</a></li>
+<li class="chapter" data-level="9.0.5" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#additional-operators"><i class="fa fa-check"></i><b>9.0.5</b> Additional operators</a></li>
+<li class="chapter" data-level="9.0.6" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#additional-resources-5"><i class="fa fa-check"></i><b>9.0.6</b> Additional Resources</a></li>
+<li class="chapter" data-level="9.0.7" data-path="multiple-plots-in-r.html"><a href="multiple-plots-in-r.html#slides-and-video-8"><i class="fa fa-check"></i><b>9.0.7</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="advanced-data-visualization.html"><a href="advanced-data-visualization.html"><i class="fa fa-check"></i><b>10</b> Advanced Data Visualization</a>
+<ul>
+<li class="chapter" data-level="10.0.1" data-path="advanced-data-visualization.html"><a href="advanced-data-visualization.html#interactive-graphics"><i class="fa fa-check"></i><b>10.0.1</b> Interactive Graphics</a></li>
+<li class="chapter" data-level="10.0.2" data-path="advanced-data-visualization.html"><a href="advanced-data-visualization.html#animated-graphics"><i class="fa fa-check"></i><b>10.0.2</b> Animated Graphics</a></li>
+<li class="chapter" data-level="10.0.3" data-path="advanced-data-visualization.html"><a href="advanced-data-visualization.html#advanced-graphics-in-r"><i class="fa fa-check"></i><b>10.0.3</b> Advanced Graphics In R</a></li>
+<li class="chapter" data-level="10.0.4" data-path="advanced-data-visualization.html"><a href="advanced-data-visualization.html#additional-resources-6"><i class="fa fa-check"></i><b>10.0.4</b> Additional resources</a></li>
+<li class="chapter" data-level="10.0.5" data-path="advanced-data-visualization.html"><a href="advanced-data-visualization.html#slides-and-video-9"><i class="fa fa-check"></i><b>10.0.5</b> Slides and Video</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="data-visualization-project.html"><a href="data-visualization-project.html"><i class="fa fa-check"></i><b>11</b> Data Visualization Project</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="data-visualization-project.html"><a href="data-visualization-project.html#data-visualization-project-1"><i class="fa fa-check"></i><b>11.1</b> Data Visualization Project</a>
+<ul>
+<li class="chapter" data-level="11.1.1" data-path="data-visualization-project.html"><a href="data-visualization-project.html#github-setup"><i class="fa fa-check"></i><b>11.1.1</b> GitHub Setup</a></li>
+<li class="chapter" data-level="11.1.2" data-path="data-visualization-project.html"><a href="data-visualization-project.html#rstudio-cloud-setup"><i class="fa fa-check"></i><b>11.1.2</b> RStudio Cloud Setup</a></li>
+<li class="chapter" data-level="11.1.3" data-path="data-visualization-project.html"><a href="data-visualization-project.html#data-science-project-setup"><i class="fa fa-check"></i><b>11.1.3</b> Data Science Project Setup</a></li>
+<li class="chapter" data-level="11.1.4" data-path="data-visualization-project.html"><a href="data-visualization-project.html#pushing-to-github"><i class="fa fa-check"></i><b>11.1.4</b> Pushing to GitHub</a></li>
+<li class="chapter" data-level="11.1.5" data-path="data-visualization-project.html"><a href="data-visualization-project.html#part-1-exploratory-data-visualization"><i class="fa fa-check"></i><b>11.1.5</b> Part 1: Exploratory Data Visualization</a></li>
+<li class="chapter" data-level="11.1.6" data-path="data-visualization-project.html"><a href="data-visualization-project.html#pushing-to-github-1"><i class="fa fa-check"></i><b>11.1.6</b> Pushing to GitHub</a></li>
+<li class="chapter" data-level="11.1.7" data-path="data-visualization-project.html"><a href="data-visualization-project.html#part-2-explanatory-data-visualization"><i class="fa fa-check"></i><b>11.1.7</b> Part 2: Explanatory Data Visualization</a></li>
+<li class="chapter" data-level="11.1.8" data-path="data-visualization-project.html"><a href="data-visualization-project.html#add-markdown-text-to-.rmd"><i class="fa fa-check"></i><b>11.1.8</b> Add Markdown Text to .Rmd</a></li>
+<li class="chapter" data-level="11.1.9" data-path="data-visualization-project.html"><a href="data-visualization-project.html#knit-your-r-markdown-document"><i class="fa fa-check"></i><b>11.1.9</b> Knit your R Markdown Document</a></li>
+<li class="chapter" data-level="11.1.10" data-path="data-visualization-project.html"><a href="data-visualization-project.html#a-few-final-checks"><i class="fa fa-check"></i><b>11.1.10</b> A Few Final Checks</a></li>
+<li class="chapter" data-level="11.1.11" data-path="data-visualization-project.html"><a href="data-visualization-project.html#final-push-to-github"><i class="fa fa-check"></i><b>11.1.11</b> Final <code>push</code> to GitHub</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="about-the-authors.html"><a href="about-the-authors.html"><i class="fa fa-check"></i>About the Authors</a></li>
+<li class="chapter" data-level="12" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>12</b> References</a></li>
+<li class="divider"></li>
+<p style="text-align:center;"> <a href="https://github.com/jhudsl/OTTR_Template" target="blank" > This content was published with</a> <a href="https://bookdown.org/" target="blank"> bookdown by: </a> </p>
+<p style="text-align:center;"> <a href="https://www.datatrail.org/"> Data Trail </a></p>
+<a href="https://www.datatrail.org/"><img src="https://github.com/datatrail-jhu/DataTrail_Template/raw/main/assets/DataTrail_logo.jpg" style=" width: 80%; filter: grayscale(100%); padding-left: 40px; padding-top: 8px; vertical-align: top "</a>
+<p style="text-align:center; font-size: 12px;"> <a href="https://github.com/rstudio4edu/rstudio4edu-book/"> Style adapted from: rstudio4edu-book </a> <a href ="https://creativecommons.org/licenses/by/2.0/"> (CC-BY 2.0) </a></p>
+<p style="padding-left: 40px;"><div class="trapezoid" style = "padding-left: 40px;"><span>  <a href="https://forms.gle/VWaJYc3zATe3qxYC9"> Click here to provide feedback</a> <img src="assets/itcr_arrow.png" style=" width: 10%" ></span></div></p>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Course Name</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<head>
+  <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,initial-scale=1.0">
+  <!--script src="https://kit.fontawesome.com/6a26f47516.js"></script-->
+  <!--<script src="assets/hideOutput.js"></script>-->
+  <link href="assets/style_DataTrail.css" rel="stylesheet">
+</head>
+        
+
+
+<div class="hero-image-container"> 
+  <img class= "hero-image" src="assets/DataTrail.jpg">
+</div>
+<div id="introduction-to-ggplot2" class="section level1" number="3">
+<h1><span class="header-section-number">Chapter 3</span> Introduction to ggplot2</h1>
+<p>R was initially developed for statisticians, who often are interested in generating plots or figures to visualize their data. As such, a few basic plotting features were built in when R was first developed. These are all still available; however, over time, a new approach to graphing in R was developed. This new approach implemented what is known as the <a href="http://vita.had.co.nz/papers/layered-grammar.pdf">grammar of graphics</a>, which allows you to develop elegant graphs flexibly in R. Making plots with this set of rules requires the R package <code>ggplot2</code>. To get started using ggplot2 requires you to install and load the package into R.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="introduction-to-ggplot2.html#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">&quot;ggplot2&quot;</span>)</span>
+<span id="cb2-2"><a href="introduction-to-ggplot2.html#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span></code></pre></div>
+<div id="the-basics" class="section level3" number="3.0.1">
+<h3><span class="header-section-number">3.0.1</span> The basics</h3>
+<p>The grammar of graphics implemented in <code>ggplot2</code> is based on the idea that you can build <em>any</em> plot as long as you have a few pieces of information. To start building plots in <code>ggplot2</code>, we’ll need some data and to know the type of plot we want to make. The type of plot you want to make in <code>ggplot2</code> is referred to as a geom. This will get us started, but the idea behind ggplot2 is that every new concept we introduce will be layered on top of the information you’ve already learned. In this way, ggplot2 is <em>layered</em> - layers of information add on top of each other as you build your graph. In code written to generate a <code>ggplot2</code> figure, you will see each line is separated by a plus sign (<code>+</code>). Think of each line as a different layer of the graph. We’re simply adding one layer on top of the previous layers to generate the graph. You’ll see exactly what we mean by this throughout each section in this lesson.</p>
+<p>To get started, we’ll start with the two basics (data and a geom) and build additional layers from there.</p>
+<p>As we get started plotting in <code>ggplot2</code>, plots will take the following general form:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="introduction-to-ggplot2.html#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> DATASET) <span class="sc">+</span></span>
+<span id="cb3-2"><a href="introduction-to-ggplot2.html#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_PLOT_TYPE</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="fu">VARIABLE</span>(S)))</span></code></pre></div>
+<p>After installation and loading <code>ggplot2</code> in, you will always begin by calling the <code>ggplot()</code> function. You’ll then specify your dataset. Within the <code>ggplot()</code> function. Then, before making your plot you will also have to specify what geom type you’re interested in plotting. We’ll focus on a few basic geoms in the next section and give examples of each plot type (geom), but for now we’ll just work with a single geom: <code>geom_point</code>. <code>geom_point</code> is most helpful for creating scatterplots. As a reminder from an earlier lesson, scatterplots are useful when you’re looking at the relationship between two numeric variables. Within <code>geom</code> you will specify the arguments needed to tell <code>ggplot2</code> how you want your plot to look. You will map your variables using the aesthetic argument <code>aes</code>. We’ll walk through examples below to make all of this clear. However, get comfortable with the overall look of the code now.</p>
+</div>
+<div id="example-dataset-diamonds" class="section level3" number="3.0.2">
+<h3><span class="header-section-number">3.0.2</span> Example dataset: <code>diamonds</code></h3>
+<p>To build your first plot in <code>ggplot2</code> we’ll make use of the fact that there are some datasets already available in R. One frequently-used data set is known as <code>diamonds</code>. This data set contains prices and other attributes of 53,940 diamonds, with each row containing information about a different diamond. If you look at the first few rows of data, you can get an idea of what data are included in this dataset.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g360e22de56_0_108" alt="First 12 rows of diamonds dataset" /></p>
+<p>Here you see a lot of numbers and can get an idea of what data are available in this data set. For example, in looking at the column names across the top, you can see that we have information about how many carats each diamond is (<code>carat</code>), some information on the quality of the diamond cut (<code>cut</code>), the color of the diamond from J (worst) to D (best) (<code>color</code>), along with a number of other pieces of information about each diamond.</p>
+<p>We will use this data set to better understand how to generate plots in R, using <code>ggplot2</code>.</p>
+</div>
+<div id="scatterplots-geom_point" class="section level3" number="3.0.3">
+<h3><span class="header-section-number">3.0.3</span> Scatterplots: <code>geom_point</code></h3>
+<p>In <code>ggplot2</code> we specify these by defining <code>x</code> and <code>y</code> in the <code>aes()</code> argument. The <code>x</code> argument defines which variable will be along the bottom of the plot. <code>y</code> refers to which variable will be along the left side of the plot. If we wanted to understand the relationship between the number of carats in a diamond and that diamond’s price, we may do the following:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="introduction-to-ggplot2.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb4-2"><a href="introduction-to-ggplot2.html#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price))</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g360e22de56_0_118" alt="diamonds scatterplot" /></p>
+<p>In this plot, we see that, in general, the larger the diamond is (or the more carats it has), the more expensive the diamond is (price), which is probably what we would have expected. However, now, we have a plot that definitively supports this conclusion.</p>
+</div>
+<div id="aesthetics" class="section level3" number="3.0.4">
+<h3><span class="header-section-number">3.0.4</span> Aesthetics</h3>
+<p>What if we wanted to alter the size, color or shape of the points? Probably unsurprisingly, these can all be changed within the aesthetics argument. After all, something’s aesthetic refers to how something looks. Thus, if you want to change the look of your graph, you’ll want to play around with the plot’s aesthetics.</p>
+<p>In fact, in the plots above you’ll notice that we specified what should be on the x and y axis within the <code>aes()</code> call. These are aesthetic mappings too! We were telling ggplot2 what to put on each axis, which will clearly affect how the plot looks, so it makes sense that these calls have to occur within <code>aes()</code>. Additionally now, we’ll focus on arguments within <code>aes()</code> that change how the points on the plot look.</p>
+<div id="point-color" class="section level4" number="3.0.4.1">
+<h4><span class="header-section-number">3.0.4.1</span> Point color</h4>
+<p>In the scatterplot we just generated, we saw that there was a relationship between carat and price, such that the more carats a diamond has, generally, the higher the price. But, it’s not a perfectly linear trend. What we mean by that is that not all diamonds that were 2 carats were exactly the same price. And, not all 3 carat diamonds were exactly the same price. What if we were interested in finding out a little bit more about why this is the case?</p>
+<p>Well, we could look at the clarity of the diamonds to see whether or not that affects the price of the diamonds? To add clarity to our plot, we could change the color of our points to differ based on clarity:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="introduction-to-ggplot2.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb5-2"><a href="introduction-to-ggplot2.html#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price, <span class="at">color =</span> clarity)</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g3c02bd843a_0_0" alt="changing point colors helps us better understand the data" /></p>
+<p>Here, we see that not only are the points now colored by clarity, ggplot2 has also automatically added a legend for us with the various classes and their corresponding point color.</p>
+<p>The Help pages of the diamonds dataset (accessed using <code>?diamonds</code>) state that clarity is “a measurement of how clear the diamond is.” The documentation also tells us that I1 is the worst clarity and IF is the best (Full scale: I1, SI1, SI2, VS1, VS2, VVS1, VVS2, IF). This makes sense with what we see in the plot. Small (&lt;1 carat) diamonds that have the best clarity level (IF) are some of the most expensive diamonds. While, relatively large diamonds (diamonds between 2 and 3 carats) of the lowest clarity (I1) tend to cost less.</p>
+<p>By coloring our points by a different variable in the dataset, we now understand our dataset better. This is one of the goals of data visualization! And, specifically, what we’re doing here in <code>ggplot2</code> is known as <strong>mapping a variable to an aesthetic</strong>. We took another variable in the dataset, mapped it to a color, and then put those colors on the points in the plot. Well, we only told <code>ggplot2</code> what variable to map. It took care of the rest!</p>
+<p>Of course, we can also <em>manually</em> specify the colors of the points on our graph; however, manually specifying the colors of points happens <em>outside</em> of the <code>aes()</code> call. This is because <code>ggplot2</code> does not have to go through the mapping the variable to an aesthetic process. In the code here, <code>ggplot2</code> doesn’t have to go through the trouble of figuring out which level of the variable is going to be which color on the plot (the mapping to the aesthetic part of the process). Instead, it just colors every point red. Thus, <strong>manually specifying the color of your points happens <em>outside</em> of <code>aes()</code></strong>:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="introduction-to-ggplot2.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb6-2"><a href="introduction-to-ggplot2.html#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g3c02bd843a_0_5" alt="manually specifying point color occurs outside of aes()" /></p>
+</div>
+<div id="point-size" class="section level4" number="3.0.4.2">
+<h4><span class="header-section-number">3.0.4.2</span> Point size</h4>
+<p>As above, we can change the point size by mapping another variable to the <code>size</code> argument within <code>aes</code>:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="introduction-to-ggplot2.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb7-2"><a href="introduction-to-ggplot2.html#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price, <span class="at">size =</span> clarity))</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g3c02bd843a_0_10" alt="mapping to size changes point size on plot" /></p>
+<p>As above, <code>ggplot2</code> handles actually doing the mapping. All you have to do is specify what variable you want mapped (<code>clarity</code>) and how you want ggplot2 to handle the mapping (change the point <code>size</code>). With this code, you do get a warning when you run it in R that using a “discrete variable is not advised.” This is because mapping to size is usually done for numeric variables, rather than categorical variables like clarity.</p>
+<p>This makes sense here too. The relationship between clarity, carat and price was easier to visualize when clarity was mapped to <code>color</code> than here where it is mapped to <code>size</code>.</p>
+<p>As above, the size of <em>every</em> point can be changed by calling <code>size</code> outside of <code>aes</code>:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="introduction-to-ggplot2.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb8-2"><a href="introduction-to-ggplot2.html#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price), <span class="at">size =</span> <span class="fl">4.5</span>)</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g3c02bd843a_0_16" alt="manually specifying point size of all points occurs outside of aes()" /></p>
+<p>Here, we have manually increased the size of <em>all</em> the points on the plot.</p>
+</div>
+<div id="point-shape" class="section level4" number="3.0.4.3">
+<h4><span class="header-section-number">3.0.4.3</span> Point Shape</h4>
+<p>You can also change the shape of the points (<code>shape</code>). We’ve used solid, filled circles thus far (the default in <code>geom_point</code>), but we could specify a different shape for each clarity.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="introduction-to-ggplot2.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb9-2"><a href="introduction-to-ggplot2.html#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price, <span class="at">shape =</span> clarity))</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g3c02bd843a_0_32" alt="mapping clarity to shape" /></p>
+<p>Here, while the mapping occurs correctly within ggplot2, we do get a warning message that discriminating more than six different shapes is difficult for the human eye. Thus, ggplot2 won’t allow more than six different shapes on a plot. This suggests that while you <em>can</em> do something, it’s not always the <em>best</em> to do that thing. Here, with more than six levels of clarity, it’s best to stick to mapping this variable to <code>color</code> as we did initially.</p>
+<p>To manually specify a shape for all the points on your plot, you would specify it outside of <code>aes</code> using one of the twenty-five different shape options available:</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g3c02bd843a_0_25" alt="options for points in ggplot2’s shape" /></p>
+<p>For example, to plot all of the points on the plot as filled diamonds (it is a dataset about diamonds after all…), you would specify shape ‘18’:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="introduction-to-ggplot2.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb10-2"><a href="introduction-to-ggplot2.html#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price), <span class="at">shape =</span> <span class="dv">18</span>)</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g3c02bd843a_0_38" alt="specifying filled diamonds as shape for all points manually" /></p>
+</div>
+</div>
+<div id="facets" class="section level3" number="3.0.5">
+<h3><span class="header-section-number">3.0.5</span> Facets</h3>
+<p>In addition to mapping variables to different aesthetics, you can also opt to use facets to help make sense of your data visually. Rather than plotting all the data on a single plot and visually altering the point size or color of a third variable in a scatterplot, you could break each level of that third variable out into a separate subplot. To do this, you would use faceting. Faceting is particularly helpful for looking at categorical variables.</p>
+<p>To use faceting, you would add an additional layer (+) to your code and use the <code>facet_wrap()</code> function. Within facet wrap, you specify the variable by which you want your subplots to be made:</p>
+<pre><code>ggplot(data = diamonds) +
+  geom_point(mapping = aes(x = carat, y = price)) +
+  facet_wrap(~clarity, nrow = 2)</code></pre>
+<p>Here, read the tilde as the word “by”. Specifically here, we want a scatterplot of the relationship between carat and price and we want it faceted (broken down) <strong>by (~)</strong> clarity.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g3c02bd843a_0_44" alt="facet_wrap breaks plots down into subplots" /></p>
+<p>Now, we have eight different plots, one for each level of clarity, where we can see the relationship between diamond carats and price.</p>
+<p>You’ll note here we’ve opted to specify that we want 2 rows of subplots (<code>nrow = 2</code>). You can play around with the number of rows you want in your output to customize how your output plot appears.</p>
+</div>
+<div id="geoms" class="section level3" number="3.0.6">
+<h3><span class="header-section-number">3.0.6</span> Geoms</h3>
+<p>Thus far in this lesson we’ve only looked at scatterplots, which means we’ve only called <code>geom_point</code>. However, there are <em>many</em> additional geoms that we could call to generate different plots. Simply, a <em>geom</em> is just a shape we use to represent the data. In the case of scatterplots, they don’t <em>really</em> use a geom since each actual point is plotted individually. Other plots, such as the boxplots, barplots, and histograms we described in previous lessons help to summarize or represent the data in a meaningful way, without plotting each individual point. The shapes used in these different types of plots to represent what’s going on in the data is that plot’s geom.</p>
+<p>To see exactly what we mean by geoms being “shapes that represent the data”, let’s keep using the <code>diamonds</code> dataset, but instead of looking at the relationship between two numeric variables in a scatterplot, let’s take a step back and take a look at a single numeric variable using a histogram.</p>
+<div id="histograms-geom_histogram" class="section level4" number="3.0.6.1">
+<h4><span class="header-section-number">3.0.6.1</span> Histograms: <code>geom_histogram</code></h4>
+<p>To review, histograms allow you to quickly visualize the range of values your variable takes and the shape of your data. (Are all the numbers clustered around center? Or, are they all at the extremes of the range? Somewhere in between? The answers to these questions describe the “shape” of the values of your variable.)</p>
+<p>For example, if we wanted to see what the distribution of carats was for these data, we could to the following.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="introduction-to-ggplot2.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb12-2"><a href="introduction-to-ggplot2.html#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">mapping =</span>  <span class="fu">aes</span>(carat))</span></code></pre></div>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g360e22de56_0_113" alt="histogram of carat shows range and shape" /></p>
+<p>The code follows what we’ve seen so far in this lesson; however, we’ve now called <code>geom_histogram</code> to specify that we want to plot a histogram rather than a scatterplot.</p>
+<p>Here, the rectangular boxes on the plot are geoms (shapes) that represent the number of diamonds that fall into each bin on the plot. Rather than plotting each individual point, histograms use rectangular boxes to summarize the data. This summarization helps us quickly understand what’s going on in our dataset.</p>
+<p>Specifically here, we can quickly see that most of the diamonds in the dataset are less than 1 carat. This is not necessarily something we could be sure of from the scatterplots generated previously in this lesson (since some points could have been plotted directly on top of one another). Thus, it’s often helpful to visualize your data in a number of ways when you first get a dataset to ensure that you understand the variables and relationships between variables in your dataset!</p>
+</div>
+<div id="barplots-geom_bar" class="section level4" number="3.0.6.2">
+<h4><span class="header-section-number">3.0.6.2</span> Barplots: geom_bar</h4>
+<p>Barplots show the relationship between a set of numbers and a categorical variable. In the diamonds data set, we may be interested in knowing how many diamonds there are of each cut of diamonds. There are five categories for cut of diamond. If we make a barplot for this variable, we can see the number of diamonds in each category.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="introduction-to-ggplot2.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb13-2"><a href="introduction-to-ggplot2.html#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(cut))</span></code></pre></div>
+<p>Again, the changes to the code are minimal. We are now interested in plotting the categorical variable <code>cut</code> and state that we want a bar plot, by including <code>geom_bar()</code>.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g360e22de56_0_122" alt="diamonds barplot" /></p>
+<p>Here, we again use rectangular shapes to represent the data, but we’re not showing the distribution of a single variable (as we were with <code>geom_histogram</code>). Rather, we’re using rectangles to show the count (number) of diamonds within each category within cut. Thus, we need a different geom: <code>geom_bar</code>!</p>
+</div>
+<div id="boxplots-geom_boxplot" class="section level4" number="3.0.6.3">
+<h4><span class="header-section-number">3.0.6.3</span> Boxplots: <code>geom_boxplot</code></h4>
+<p>Boxplots provide a summary of a numerical variable across categories. For example, if you were interested to see how the price of a diamond (a numerical variable) changed across different diamond color categories (categorical variable), you may want to use a boxplot. To do so, you would specify that using <code>geom_boxplot</code>:</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="introduction-to-ggplot2.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb14-2"><a href="introduction-to-ggplot2.html#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> color, <span class="at">y =</span> price))</span></code></pre></div>
+<p>In the code, we see that again, we only have to change what variables we want to be included in the plot the type of plot (or geom) we want (here, <code>geom_boxplot()</code>) to get a basic boxplot.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g360e22de56_0_128" alt="diamonds boxplot" /></p>
+<p>In the figure itself we see that the median price (the black horizontal bar in the middle of each box represents the median for each category) increases as the diamond color increases from the worst category (J) to the best (D).</p>
+<p>Now, if you wanted to change the color of this boxplot, it would just take a small addition to the code for the plot you just generated.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="introduction-to-ggplot2.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
+<span id="cb15-2"><a href="introduction-to-ggplot2.html#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> color, <span class="at">y =</span> price), <span class="at">fill =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g4d96e4be59_0_0" alt="" />
+<p class="caption">diamonds boxplot with red fill</p>
+</div>
+<p>Here, by specifying the color “red” in the <code>fill</code> argument, you’re able to change the plot’s appearance. In the next lesson, we’ll go deeper into the many ways in which a plot can be customized within <code>ggplot2</code>!</p>
+</div>
+<div id="other-plots" class="section level4" number="3.0.6.4">
+<h4><span class="header-section-number">3.0.6.4</span> Other plots</h4>
+<p>While we’ve reviewed basic code to make a few common types of plots, there are a number of other plot types that can be made in <code>ggplot2.</code> These are listed in the <a href="http://ggplot2.tidyverse.org/reference/">online reference material for ggplot2</a> or can be accessed through RStudio directly. To do so, you would type <code>?geom_</code> into the Console in RStudio. A list of geoms will appear. You can hover your cursor over any one of these to get a short description.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g360e22de56_0_149" alt="?geom in Console" /></p>
+<p>Or, you can select a geom from this list and click enter. After selecting a geom, such as geom_abline and hitting ‘Enter,’ the help page for that geom will pop up in the ‘Help’ tab at bottom right. Here, you can find more detailed information about the selected geom.</p>
+<p>{format: png}
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g360e22de56_0_154" alt="geom_abline help page" /></p>
+</div>
+</div>
+<div id="summary" class="section level3" number="3.0.7">
+<h3><span class="header-section-number">3.0.7</span> Summary</h3>
+<p>In this lesson, we’ve walked through the basics of generating plots in <code>ggplot2</code>. You should be comfortable generating basic scatterplots, histograms, barplots, and boxplots after this lesson. You should also know how to interpret each of these plots. Finally, you should also know how to map variables within ggplot2 to specify what variables you want to plot, what colors the points should be mapped to, and how to specify the size/shape of those points. In the next lesson we’ll get into details about how to customize your plots further by adjusting font size, customizing labels and annotation, and incorporating different themes into your plots.</p>
+</div>
+<div id="additional-resources-1" class="section level3" number="3.0.8">
+<h3><span class="header-section-number">3.0.8</span> Additional Resources:</h3>
+<ul>
+<li><a href="http://r4ds.had.co.nz/data-visualisation.html#introduction-1">R For Data Science by Hadley Wickham</a></li>
+<li><a href="http://ggplot2.tidyverse.org/">ggplot2</a></li>
+<li><a href="http://ggplot2.tidyverse.org/reference/">ggplot2 reference</a></li>
+</ul>
+</div>
+<div id="slides-and-video-2" class="section level3" number="3.0.9">
+<h3><span class="header-section-number">3.0.9</span> Slides and Video</h3>
+<div class="figure">
+<img src="https://youtu.be/ulBMgttWU7A" alt="" />
+<p class="caption">Introduction to ggplot2</p>
+</div>
+<ul>
+<li><a href="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/edit?usp=sharing">Slides</a></li>
+</ul>
+
+</div>
+</div>
+<hr>
+<center> 
+  <div class="footer">
+      All illustrations <a href="https://creativecommons.org/licenses/by/4.0/">CC-BY. </a>
+      <br>
+      All other materials <a href= "https://creativecommons.org/licenses/by/4.0/"> CC-BY </a> unless noted otherwise.
+  </div>
+</center>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="good-plots.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="customization-in-ggplot2.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "section"
+}
+});
+});
+</script>
+
+</body>
+
+</html>
