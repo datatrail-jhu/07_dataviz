@@ -1,0 +1,15 @@
+url	chapt_title	img_path
+https://datatrail-jhu.github.io/07_dataviz/no_toc/index.html	About this Course	resources/chapt_screen_images/index.png
+https://datatrail-jhu.github.io/07_dataviz/no_toc/intro-to-data-visualization.html	1 Intro to Data Visualization	resources/chapt_screen_images/intro-to-data-visualization.png
+https://datatrail-jhu.github.io/07_dataviz/no_toc/good-plots.html	2 Good Plots	resources/chapt_screen_images/good-plots.png
+https://datatrail-jhu.github.io/07_dataviz/no_toc/introduction-to-ggplot2.html	3 Introduction to ggplot2	resources/chapt_screen_images/introduction-to-ggplot2.png
+https://datatrail-jhu.github.io/07_dataviz/no_toc/customization-in-ggplot2.html	4 Customization in ggplot2	resources/chapt_screen_images/customization-in-ggplot2.png
+https://datatrail-jhu.github.io/07_dataviz/no_toc/saving-plots.html	5 Saving Plots	resources/chapt_screen_images/saving-plots.png
+https://datatrail-jhu.github.io/07_dataviz/no_toc/from-exploratory-to-explanatory.html	6 From Exploratory To Explanatory	resources/chapt_screen_images/from-exploratory-to-explanatory.png
+https://datatrail-jhu.github.io/07_dataviz/no_toc/data-tables.html	7 Data Tables	resources/chapt_screen_images/data-tables.png
+https://datatrail-jhu.github.io/07_dataviz/no_toc/tables-in-r.html	8 Tables in R	resources/chapt_screen_images/tables-in-r.png
+https://datatrail-jhu.github.io/07_dataviz/no_toc/multiple-plots-in-r.html	9 Multiple Plots in R	resources/chapt_screen_images/multiple-plots-in-r.png
+https://datatrail-jhu.github.io/07_dataviz/no_toc/advanced-data-visualization.html	10 Advanced Data Visualization	resources/chapt_screen_images/advanced-data-visualization.png
+https://datatrail-jhu.github.io/07_dataviz/no_toc/data-visualization-project.html	11 Data Visualization Project	resources/chapt_screen_images/data-visualization-project.png
+https://datatrail-jhu.github.io/07_dataviz/no_toc/about-the-authors.html	About the Authors	resources/chapt_screen_images/about-the-authors.png
+https://datatrail-jhu.github.io/07_dataviz/no_toc/references.html	12 References	resources/chapt_screen_images/references.png
