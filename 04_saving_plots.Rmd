@@ -1,7 +1,4 @@
----
-output: html_document
-date: '2022-04-11'
----
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -24,7 +21,7 @@ In R, frequently, individuals tend to generate one of the following four file fo
 * __TIFF__ - a bitmap file format. TIFF files are not meant to compress but are meant to preserve quality over time. TIFF images can be edited using photo editors, such as Photoshop. Use this file format if you **intend to edit this image later**. If magnified, pixels may be visible.
 * __PDF__ - a vector file format. This is most helpful if you want to plot **multiple images to a single file** or when you want to print your images, as they can be **scaled to any size without suffering from pixelation**.
 
-{format: png}
+
 ![file format summary](https://docs.google.com/presentation/d/1O_10dR6Nb273S0bF-Xv3VCCHweagVzRJVv7HI1NPMBs/export/png?id=1O_10dR6Nb273S0bF-Xv3VCCHweagVzRJVv7HI1NPMBs&pageid=g3c02ec7cbb_0_0)
 
 ### Saving Plots: `ggsave()`

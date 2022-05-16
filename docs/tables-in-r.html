@@ -312,7 +312,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <h3><span class="header-section-number">8.0.2</span> An exploratory table</h3>
 <div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb53-1"><a href="tables-in-r.html#cb53-1" aria-hidden="true" tabindex="-1"></a>df</span></code></pre></div>
 <p>By getting the data summarized into a single object in R (<code>df</code>), we’re on our way to making an informative table. However, this is clearly just an exploratory table. The output in R from this code follows some of the good table rules above, but not all of them. At a glance, it will help you to understand the data, but it’s not the finished table you would want to send to your boss.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1vjyG1vibsmtXrPA1hs2HS3MfjsPMjRDEmBEsVlgkIxg/export/png?id=1vjyG1vibsmtXrPA1hs2HS3MfjsPMjRDEmBEsVlgkIxg&amp;pageid=g35798d27dd_0_0" alt="Exploratory diamonds table" /></p>
 <p>From this output, you, the creator of the table, would be able to see that there are a number of <strong>good qualities</strong>:</p>
 <ul>
@@ -332,7 +332,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>By-default, R outputs tables in the Console using a monospaced font. However, this limits our ability to format the appearance of the table. To fix the remaining few problems with the table’s format, we’ll use the <code>kable()</code> function from the R package <code>knitr</code> and the additional formatting capabilities of the R packages <code>kableExtra</code>.</p>
 <p>The first step to a prettier table just involves using the <code>kable()</code> function from the <code>knitr</code> package, which improves the readability of this table</p>
 <div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb54-1"><a href="tables-in-r.html#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(df)</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1vjyG1vibsmtXrPA1hs2HS3MfjsPMjRDEmBEsVlgkIxg/export/png?id=1vjyG1vibsmtXrPA1hs2HS3MfjsPMjRDEmBEsVlgkIxg&amp;pageid=g361cf16451_0_18" alt="kable basic output" /></p>
 <p>However, there are still a few issues we want to improve upon:</p>
 <ul>
@@ -349,7 +349,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb55-4"><a href="tables-in-r.html#cb55-4" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(df, <span class="at">digits=</span><span class="dv">0</span>, <span class="st">&quot;html&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb55-5"><a href="tables-in-r.html#cb55-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="st">&quot;striped&quot;</span>, <span class="st">&quot;bordered&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb55-6"><a href="tables-in-r.html#cb55-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_header_above</span>(<span class="fu">c</span>(<span class="st">&quot; &quot;</span> <span class="ot">=</span> <span class="dv">2</span>,  <span class="st">&quot;price (USD)&quot;</span> <span class="ot">=</span> <span class="dv">3</span>))</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1vjyG1vibsmtXrPA1hs2HS3MfjsPMjRDEmBEsVlgkIxg/export/png?id=1vjyG1vibsmtXrPA1hs2HS3MfjsPMjRDEmBEsVlgkIxg&amp;pageid=g35798d27dd_0_6" alt="Viewer tab with formatted table" /></p>
 </div>
 <div id="annotating-your-table" class="section level3" number="8.0.4">
@@ -359,13 +359,13 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb56-2"><a href="tables-in-r.html#cb56-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">kable_styling</span>(<span class="st">&quot;striped&quot;</span>, <span class="st">&quot;bordered&quot;</span>) <span class="sc">%&gt;%</span></span>
 <span id="cb56-3"><a href="tables-in-r.html#cb56-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">add_header_above</span>(<span class="fu">c</span>(<span class="st">&quot; &quot;</span> <span class="ot">=</span> <span class="dv">2</span>,  <span class="st">&quot;price (USD)&quot;</span> <span class="ot">=</span> <span class="dv">3</span>)) <span class="sc">%&gt;%</span></span>
 <span id="cb56-4"><a href="tables-in-r.html#cb56-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">footnote</span>(<span class="at">general=</span><span class="st">&quot;Diamonds dataset from ggplot2&quot;</span>, <span class="at">general_title=</span><span class="st">&quot;Source:&quot;</span>,<span class="at">footnote_as_chunk =</span> T)</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1vjyG1vibsmtXrPA1hs2HS3MfjsPMjRDEmBEsVlgkIxg/export/png?id=1vjyG1vibsmtXrPA1hs2HS3MfjsPMjRDEmBEsVlgkIxg&amp;pageid=g35798d27dd_0_17" alt="Viewer tab with annotated and formatted table" /></p>
 </div>
 <div id="tables-in-rmarkdown" class="section level3" number="8.0.5">
 <h3><span class="header-section-number">8.0.5</span> Tables in RMarkdown</h3>
 <p>So far, this has all been done within RStudio. However, in a lesson in an earlier course in this series, we discussed the importance of making reports in RMarkdown. The previous lesson focused on how to format RMarkdown documents generally. Here we want to point out that tables made using <code>kable()</code> are properly formatted for RMarkdown reports.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1vjyG1vibsmtXrPA1hs2HS3MfjsPMjRDEmBEsVlgkIxg/export/png?id=1vjyG1vibsmtXrPA1hs2HS3MfjsPMjRDEmBEsVlgkIxg&amp;pageid=g35798d27dd_0_12" alt="Code and table rendered from RMarkdown document" /></p>
 <p>Similar to how we approached learning about making figures in R, we’ve demonstrated how to make good tables with a single example. The best way to really learn how to make tables is to practice using the tips here and playing around within R. So, feel free to use this as a start and go practice making a few beautiful tables in R!</p>
 </div>

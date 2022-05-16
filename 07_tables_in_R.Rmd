@@ -1,7 +1,4 @@
----
-output: html_document
-date: '2022-04-11'
----
+
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -38,7 +35,7 @@ df
 
 By getting the data summarized into a single object in R (`df`), we're on our way to making an informative table. However, this is clearly just an exploratory table. The output in R from this code follows some of the good table rules above, but not all of them.  At a glance, it will help you to understand the data, but it's not the finished table you would want to send to your boss.
 
-{format: png}
+
 ![Exploratory diamonds table](https://docs.google.com/presentation/d/1vjyG1vibsmtXrPA1hs2HS3MfjsPMjRDEmBEsVlgkIxg/export/png?id=1vjyG1vibsmtXrPA1hs2HS3MfjsPMjRDEmBEsVlgkIxg&pageid=g35798d27dd_0_0)
 
 From this output, you, the creator of the table, would be able to see that there are a number of **good qualities**:
@@ -63,7 +60,7 @@ The first step to a prettier table just involves using the `kable()` function fr
 kable(df)
 ```
 
-{format: png}
+
 ![kable basic output](https://docs.google.com/presentation/d/1vjyG1vibsmtXrPA1hs2HS3MfjsPMjRDEmBEsVlgkIxg/export/png?id=1vjyG1vibsmtXrPA1hs2HS3MfjsPMjRDEmBEsVlgkIxg&pageid=g361cf16451_0_18)
 
 However, there are still a few issues we want to improve upon:
@@ -86,7 +83,7 @@ kable(df, digits=0, "html") %>%
   add_header_above(c(" " = 2,  "price (USD)" = 3))
 ```  
 
-{format: png}
+
 ![Viewer tab with formatted table](https://docs.google.com/presentation/d/1vjyG1vibsmtXrPA1hs2HS3MfjsPMjRDEmBEsVlgkIxg/export/png?id=1vjyG1vibsmtXrPA1hs2HS3MfjsPMjRDEmBEsVlgkIxg&pageid=g35798d27dd_0_6)
 
 ### Annotating your table
@@ -99,14 +96,14 @@ kable(df, digits=0, "html", caption="Table 1: Diamonds Price by Quality of Cut. 
   add_header_above(c(" " = 2,  "price (USD)" = 3)) %>%
   footnote(general="Diamonds dataset from ggplot2", general_title="Source:",footnote_as_chunk = T)
 ```  
-{format: png}
+
 ![Viewer tab with annotated and formatted table](https://docs.google.com/presentation/d/1vjyG1vibsmtXrPA1hs2HS3MfjsPMjRDEmBEsVlgkIxg/export/png?id=1vjyG1vibsmtXrPA1hs2HS3MfjsPMjRDEmBEsVlgkIxg&pageid=g35798d27dd_0_17)
 
 ### Tables in RMarkdown
 
 So far, this has all been done within RStudio. However, in a lesson in an earlier course in this series, we discussed the importance of making reports in RMarkdown. The previous lesson focused on how to format RMarkdown documents generally. Here we want to point out that tables made using `kable()` are properly formatted for RMarkdown reports.
 
-{format: png}
+
 ![Code and table rendered from RMarkdown document](https://docs.google.com/presentation/d/1vjyG1vibsmtXrPA1hs2HS3MfjsPMjRDEmBEsVlgkIxg/export/png?id=1vjyG1vibsmtXrPA1hs2HS3MfjsPMjRDEmBEsVlgkIxg&pageid=g35798d27dd_0_12)
 
 Similar to how we approached learning about making figures in R, we've demonstrated how to make good tables with a single example. The best way to really learn how to make tables is to practice using the tips here and playing around within R. So, feel free to use this as a start and go practice making a few beautiful tables in R!

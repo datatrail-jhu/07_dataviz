@@ -296,7 +296,7 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div id="what-are-data-tables" class="section level3" number="7.0.1">
 <h3><span class="header-section-number">7.0.1</span> What are Data Tables?</h3>
 <p>Data tables are used to display data in a tabular format. They display the information in rows and columns. <strong>Good</strong> data tables do this in a meaningful and concise way. Similar to plots, tables can be exploratory (help you to better understand the data) or explanatory (beautifully and clearly display information in a table to others).</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk/export/png?id=147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk&amp;pageid=g35798d27dd_0_249" alt="Exploratory vs. explanatory tables" /></p>
 <p>In this lesson we will focus on characteristics of good plots and discuss how to take tables from exploratory to explanatory.</p>
 </div>
@@ -306,14 +306,14 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div id="summarize-dataset-information" class="section level4" number="7.0.2.1">
 <h4><span class="header-section-number">7.0.2.1</span> Summarize dataset information</h4>
 <p>When you have an entire dataset, it’s often nice to have a table that summarizes important pieces of information. For example if you had a dataset with information on 32 different cars, you may be interested in the difference between cars in that dataset that have automatic vs. manual transmissions. Rather than go through and try to count them in this dataset, a table can do a nice job quickly summarizing and displaying this information for you. For example, you could display summarized information across a number of variables, such as how many of each type of car there are in your dataset (N), how fuel efficient the cars in each group are on average (mpg), the average weight of the cars in each group (weight), their average horsepower in each group (horsepower). This information can be easily displayed in a table. A table is better than a plot here because you’re trying to summarize information across a few different variables. A single plot that attempted to include all of this information would be less clear than this table. Similarly, four separate plots – one for each variable – would take up much more space. Thus, a table is the right approach here to display these data.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk/export/png?id=147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk&amp;pageid=g2bfdb07292_0_151" alt="Sample summary tables" /></p>
 </div>
 <div id="summarize-top-results" class="section level4" number="7.0.2.2">
 <h4><span class="header-section-number">7.0.2.2</span> Summarize top results</h4>
 <p>Tables are also helpful when you want to display information about the top results from an analysis (i.e. the top 10 best-selling books, the business that had the highest sales last year, etc.).</p>
 <p>For example, if you had information about 162,049 different flights that departed the Pacific Northwest in 2014 and wanted to know which destinations had the longest average delay for flights out of the Pacific Northwest, you could use a data table to display these results. At a glance from this table we can clearly see which airports had the longest delay in arrival time without .</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk/export/png?id=147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk&amp;pageid=g35798d27dd_0_23" alt="Top results table" /></p>
 </div>
 </div>
@@ -323,53 +323,53 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div id="what-to-put-in-columns-and-what-to-put-in-rows" class="section level4" number="7.0.3.1">
 <h4><span class="header-section-number">7.0.3.1</span> What to put in columns and what to put in rows</h4>
 <p>The human eye is much better at comparing values up and down rather than from left to right. Consider what comparisons you want viewers to be able to make easily when looking at the table. Then, put those in a column, rather than in a row.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk/export/png?id=147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk&amp;pageid=g35798d27dd_0_57" alt="Results vertically are better than comparing horizontally" /></p>
 </div>
 <div id="the-order-of-rows" class="section level4" number="7.0.3.2">
 <h4><span class="header-section-number">7.0.3.2</span> The order of rows</h4>
 <p>Consider the data you’re putting in the table. If you’re displaying data over time, make sure the rows are in chronological order. If you’re displaying data about individuals, it’s likely best to order alphabetically by last name. Make sure that the order of rows helps viewers understand the table most quickly.</p>
 <p>For example, if you are displaying a table about longest delay in flight time arrival, it’s likely best to order the table from longest delay in the first row to shorter delays at the bottom of the table.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk/export/png?id=147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk&amp;pageid=g35798d27dd_0_150" alt="Order rows logically" /></p>
 </div>
 <div id="the-order-of-columns" class="section level4" number="7.0.3.3">
 <h4><span class="header-section-number">7.0.3.3</span> The order of columns</h4>
 <p>Put the most informative and important columns at the left and the less important columns at the right to assist viewers who read from left to right. (In languages where reading occurs from right to left, the ordering of columns should be reversed.)</p>
 <p>Here, if we want viewers to understand which airports had the longest delays, it makes the most logical sense to start with the airport name at the left, rather than the mean arrival delay time, giving viewers some context about what they’re looking at before getting to the actual numbers.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk/export/png?id=147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk&amp;pageid=g35798d27dd_0_157" alt="Order columns with most important information at left" /></p>
 </div>
 <div id="the-number-of-rows-and-columns" class="section level4" number="7.0.3.4">
 <h4><span class="header-section-number">7.0.3.4</span> The number of rows and columns</h4>
 <p>Viewers should be able to figure out what the table is saying at a quick glance. If there are too many rows or too many columns, your data should most likely be a plot, not a table.</p>
 <p>For example, if you are displaying information about arrests in each of the 50 US states, it may be better to consider plots, as it’s difficult to draw any conclusions about these data across 50 different rows. However, when we are only comparing across 5 rows, as in the case of our top results from the flights analysis, we can easily make comparisons across these five airports whose data are included in the table.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk/export/png?id=147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk&amp;pageid=g35798d27dd_0_164" alt="Limit the number of rows and columns" /></p>
 </div>
 <div id="labels-1" class="section level4" number="7.0.3.5">
 <h4><span class="header-section-number">7.0.3.5</span> Labels</h4>
 <p>Labels on your columns and rows should be informative and clear. If talking about the price of diamonds, a bad column label would be “P” and a better column label would be “price.” An even better column label would be “price (USD).” This label is preferred because it provides viewers with the unit for the values in the table, conveying that these prices are all in US dollars. Viewers should be able to easily determine what information the table is displaying.</p>
 <p>Below, the labels on the table at right are informative, whereas a viewer may not easily be able to determine what the column labels on the left (AN, AC, and MAD) mean.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk/export/png?id=147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk&amp;pageid=g35798d27dd_0_171" alt="Labels should be informative and concise" /></p>
 </div>
 <div id="significant-digits" class="section level4" number="7.0.3.6">
 <h4><span class="header-section-number">7.0.3.6</span> Significant digits</h4>
 <p>Including a lot of decimal places in a table is not helpful to viewers. Often, two significant digits is enough. You’ll want to always double check the values in your table to make sure they are displayed appropriately before finalizing a table.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk/export/png?id=147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk&amp;pageid=g35798d27dd_0_280" alt="Consider whether the appropriate number of digits for values in your table has been used" /></p>
 </div>
 <div id="a-good-title-or-caption" class="section level4" number="7.0.3.7">
 <h4><span class="header-section-number">7.0.3.7</span> A good title or caption</h4>
 <p>Just like with good plots, good tables should have a title or caption that is clear and concise. It should tell viewers what they should determine from the data in the table.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk/export/png?id=147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk&amp;pageid=g35798d27dd_0_178" alt="Including a good title or caption is critical" /></p>
 </div>
 <div id="the-source-of-the-data" class="section level4" number="7.0.3.8">
 <h4><span class="header-section-number">7.0.3.8</span> The source of the data</h4>
 <p>Like with explanatory graphs, it’s important to include the source of the data used in your table at the bottom of the table when finalizing a table.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk/export/png?id=147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk&amp;pageid=g35798d27dd_0_185" alt="Always include the source of the data in your table" /></p>
 <p>With an idea of how to make a great explanatory table, you’re ready to start practicing making your own in R.</p>
 </div>

@@ -299,35 +299,35 @@ to explanatory plots – plots that help you communicate your results <em>to oth
 <div id="colors" class="section level3" number="4.0.1">
 <h3><span class="header-section-number">4.0.1</span> Colors</h3>
 <p>To get started, we’ll learn how to control color across plots in <code>ggplot2</code>. in the last lesson we discussed using color within <code>aes()</code> on a scatterplot to automatically color points by the clarity of the diamond when looking at the relationship between price and carat.</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_0" alt="color within aes() to color points" /></p>
 <p>However, what if we wanted to carry this concept over to a bar plot and look at how many diamonds we have of each clarity group?</p>
 <div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb16-1"><a href="customization-in-ggplot2.html#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
 <span id="cb16-2"><a href="customization-in-ggplot2.html#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> clarity))</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_84" alt="diamonds broken down by clarity" /></p>
 <p>Well that’s a start since we see the breakdown, but all the bars are the same color. What if we adjusted color within <code>aes()</code>?</p>
 <div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="customization-in-ggplot2.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
 <span id="cb17-2"><a href="customization-in-ggplot2.html#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> clarity, <span class="at">color =</span> clarity))</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_79" alt="color does add color but around the bars" /></p>
 <p>As expected, color added a legend for each level of clarity; however, it colored the lines around the bars on the plot, rather than the bars themselves. In order to color the bars themselves, you want to specify the more helpful argument <code>fill</code>:</p>
 <div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="customization-in-ggplot2.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
 <span id="cb18-2"><a href="customization-in-ggplot2.html#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> clarity, <span class="at">fill =</span> clarity))</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_89" alt="fill automatically colors the bars" /></p>
 <p>Great! We now have a plot with bars of different colors, which was our first goal! However, adding colors here, while maybe making the plot prettier doesn’t actually give us any more information. We can see the same pattern of which clarity is most frequent among the diamonds in our dataset that we could in the first plot we made.</p>
 <p>Color is particularly helpful here, however, if we wanted to map a different variable onto each bar. For example, what if we wanted to see the breakdown of diamond “cut” within each “clarity” bar?</p>
 <div class="sourceCode" id="cb19"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb19-1"><a href="customization-in-ggplot2.html#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
 <span id="cb19-2"><a href="customization-in-ggplot2.html#cb19-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> clarity, <span class="at">fill =</span> cut))</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_98" alt="mapping a different variable to fill provides new information" /></p>
 <p>Now we’re getting some new information! We can see that each level in clarity appears to have diamonds of all levels of cut. Color here has really helped us understand more about the data.</p>
 <p>But what if we were going to present these data? While there is no comparison between red and green (which is good!), there is a fair amount of yellow in this plot. Some projectors don’t handle projecting yellow well, and it will show up too light on the screen. To avoid this, let’s manually change the colors in this bar chart! To do so we’ll add an additional layer to the plot using <code>scale_fill_manual</code>.</p>
 <div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb20-1"><a href="customization-in-ggplot2.html#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
 <span id="cb20-2"><a href="customization-in-ggplot2.html#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> clarity, <span class="at">fill =</span> cut)) <span class="sc">+</span></span>
 <span id="cb20-3"><a href="customization-in-ggplot2.html#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;orange&quot;</span>, <span class="st">&quot;darkgreen&quot;</span>, <span class="st">&quot;dodgerblue&quot;</span>, <span class="st">&quot;purple4&quot;</span>))</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_103" alt="manually setting colors using scale_fill_manual" /></p>
 <p>Here, we’ve specified five different colors within the <code>values</code> argument of <code>scale_fill_manual()</code>, one for each cut of diamond. The names of these colors can be specified using the names explained on the third page of the cheatsheet <a href="https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/colorPaletteCheatsheet.pdf">here</a>. (Note: There are other ways to specify colors within R. Explore the details in that cheatsheet to better understand the various ways!)</p>
 <p>Additionally, it’s important to note that here we’ve used <code>scale_fill_manual</code> to adjust the color of what was mapped using <code>fill = cut</code>. If we had colored our chart using <code>color</code> within <code>aes()</code>, there is a different function called <code>scale_color_manual</code>. This makes good sense! You use scale_fill_manual() with <code>fill</code> and scale_color_manual() with <code>color</code>. Keep that in mind as you adjust colors in the future!</p>
@@ -337,14 +337,14 @@ to explanatory plots – plots that help you communicate your results <em>to oth
 <div class="sourceCode" id="cb21"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb21-1"><a href="customization-in-ggplot2.html#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
 <span id="cb21-2"><a href="customization-in-ggplot2.html#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> clarity, <span class="at">fill =</span> cut), <span class="at">position =</span> <span class="st">&quot;fill&quot;</span>) <span class="sc">+</span></span>
 <span id="cb21-3"><a href="customization-in-ggplot2.html#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;orange&quot;</span>, <span class="st">&quot;darkgreen&quot;</span>, <span class="st">&quot;dodgerblue&quot;</span>, <span class="st">&quot;purple4&quot;</span>))</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_108" alt="position = &quot;fill&quot; allows for comparison of proportion across groups" /></p>
 <p>Here, we’ve specified how we want to adjust the position of the bars in the plot. Each bar is now of equal height and we can compare each colored bar across the different clarities. As expected, we see that among the best clarity group (IF), we see more diamonds of the best cut (“Ideal”)!</p>
 <p>Briefly, we’ll take a quick detour to look at <code>position = "dodge"</code>. This position adjustment places each object <em>next to one another</em>. This will not allow for easy comparison across groups, as we just saw with the last group but will allow values within each clarity group to be visualized.</p>
 <div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb22-1"><a href="customization-in-ggplot2.html#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
 <span id="cb22-2"><a href="customization-in-ggplot2.html#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> clarity, <span class="at">fill =</span> cut), <span class="at">position =</span> <span class="st">&quot;dodge&quot;</span>) <span class="sc">+</span></span>
 <span id="cb22-3"><a href="customization-in-ggplot2.html#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;orange&quot;</span>, <span class="st">&quot;darkgreen&quot;</span>, <span class="st">&quot;dodgerblue&quot;</span>, <span class="st">&quot;purple4&quot;</span>))</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_113" alt="position = &quot;dodge&quot; helps compare values within each group" /></p>
 <p>Unlike in the first plot where we specified <code>fill = cut</code>, we can actually see the relationship between each cut within the lowest clarity group (I1). Before, when the values were stacked on top of one another, we were not able to visually see that there were more “Fair” and “Premium” cut diamonds in this group than the other cuts. Now, with <code>position = "dodge"</code>, this information is visually apparent.</p>
 <p>Note: <code>position = "identity"</code> is not very useful for bars, as it <em>places each object exactly where it falls within the graph</em>. For bar charts, this will lead to <em>overlapping bars</em>, which is not visually helpful. However, for scatterplots (and other 2-Dimensional charts), this is the default and is exactly what you want.</p>
@@ -361,7 +361,7 @@ to explanatory plots – plots that help you communicate your results <em>to oth
 <span id="cb23-3"><a href="customization-in-ggplot2.html#cb23-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">&quot;red&quot;</span>, <span class="st">&quot;orange&quot;</span>, <span class="st">&quot;darkgreen&quot;</span>, <span class="st">&quot;dodgerblue&quot;</span>, <span class="st">&quot;purple4&quot;</span>)) <span class="sc">+</span></span>
 <span id="cb23-4"><a href="customization-in-ggplot2.html#cb23-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="at">title =</span> <span class="st">&quot;Clearer diamonds tend to be of higher quality cut&quot;</span>,</span>
 <span id="cb23-5"><a href="customization-in-ggplot2.html#cb23-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">subtitle =</span> <span class="st">&quot;The majority of IF diamonds are an </span><span class="sc">\&quot;</span><span class="st">Ideal</span><span class="sc">\&quot;</span><span class="st"> cut&quot;</span>)</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_118" alt="labs() adds helpful tittles, subtitles, and captions" /></p>
 </div>
 <div id="axis-labels" class="section level4" number="4.0.2.2">
@@ -373,14 +373,14 @@ to explanatory plots – plots that help you communicate your results <em>to oth
 <span id="cb24-4"><a href="customization-in-ggplot2.html#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>( <span class="at">title =</span> <span class="st">&quot;Clearer diamonds tend to be of higher quality cut&quot;</span>,</span>
 <span id="cb24-5"><a href="customization-in-ggplot2.html#cb24-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">subtitle =</span> <span class="st">&quot;The majority of IF diamonds are an </span><span class="sc">\&quot;</span><span class="st">Ideal</span><span class="sc">\&quot;</span><span class="st"> cut&quot;</span>) <span class="sc">+</span></span>
 <span id="cb24-6"><a href="customization-in-ggplot2.html#cb24-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;proportion&quot;</span>)</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_136" alt="Accurate axis labels are incredibly important" /></p>
 </div>
 </div>
 <div id="themes" class="section level3" number="4.0.3">
 <h3><span class="header-section-number">4.0.3</span> Themes</h3>
 <p>To change the overall aesthetic of your graph, there are 8 themes built into <code>ggplot2</code> that can be added as an additional layer in your graph:</p>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_123" alt="themes" /></p>
 <p>For example, if we wanted remove the gridlines and grey background from the chart, we would use <code>theme_classic()</code>. Building on what we’ve already generated:</p>
 <div class="sourceCode" id="cb25"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb25-1"><a href="customization-in-ggplot2.html#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
@@ -390,7 +390,7 @@ to explanatory plots – plots that help you communicate your results <em>to oth
 <span id="cb25-5"><a href="customization-in-ggplot2.html#cb25-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">subtitle =</span> <span class="st">&quot;The majority of IF diamonds are an </span><span class="sc">\&quot;</span><span class="st">Ideal</span><span class="sc">\&quot;</span><span class="st"> cut&quot;</span>) <span class="sc">+</span></span>
 <span id="cb25-6"><a href="customization-in-ggplot2.html#cb25-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">&quot;proportion&quot;</span>) <span class="sc">+</span></span>
 <span id="cb25-7"><a href="customization-in-ggplot2.html#cb25-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_classic</span>()</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_129" alt="theme_classic changes aesthetic of our plot" /></p>
 <p>We now have a pretty good looking plot! However, a few additional changes would make this plot <em>even better</em> for communication.</p>
 <p>Note: Additional themes are available from the <a href="https://cran.r-project.org/web/packages/ggthemes/vignettes/ggthemes.html"><code>ggthemes</code> package</a>. Users can also generate their own themes.</p>
@@ -412,7 +412,7 @@ to explanatory plots – plots that help you communicate your results <em>to oth
 <span id="cb26-9"><a href="customization-in-ggplot2.html#cb26-9" aria-hidden="true" tabindex="-1"></a>         <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span><span class="dv">14</span>),</span>
 <span id="cb26-10"><a href="customization-in-ggplot2.html#cb26-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>),</span>
 <span id="cb26-11"><a href="customization-in-ggplot2.html#cb26-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>) )</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_142" alt="theme() allows us to adjust font size" /></p>
 </div>
 <div id="additional-text-alterations" class="section level4" number="4.0.4.2">
@@ -430,7 +430,7 @@ to explanatory plots – plots that help you communicate your results <em>to oth
 <span id="cb27-10"><a href="customization-in-ggplot2.html#cb27-10" aria-hidden="true" tabindex="-1"></a>         <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>),</span>
 <span id="cb27-11"><a href="customization-in-ggplot2.html#cb27-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>),</span>
 <span id="cb27-12"><a href="customization-in-ggplot2.html#cb27-12" aria-hidden="true" tabindex="-1"></a>         <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">&quot;gray30&quot;</span>) )</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_157" alt="theme() allows us to tweak many parts of our plot" /></p>
 <p>Any alterations to plot spacing/background, title, axis, and legend will all be made within <code>theme()</code></p>
 </div>
@@ -451,7 +451,7 @@ to explanatory plots – plots that help you communicate your results <em>to oth
 <span id="cb28-11"><a href="customization-in-ggplot2.html#cb28-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>),</span>
 <span id="cb28-12"><a href="customization-in-ggplot2.html#cb28-12" aria-hidden="true" tabindex="-1"></a>         <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">&quot;gray30&quot;</span>) ) <span class="sc">+</span></span>
 <span id="cb28-13"><a href="customization-in-ggplot2.html#cb28-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="fu">guide_legend</span>(<span class="st">&quot;cut quality&quot;</span>))</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_148" alt="guide() allows us to change the legend title" /></p>
 <p>At this point, we have an informative title, clear colors, a well-labeled legend, and text that is large enough throughout the graph. This is certainly a graph that could be used in a presentation. We’ve taken it from a graph that is useful to just ourselves (exploratory) and made it into a plot that can communicate our findings well to others (explanatory)!</p>
 <p>We have touched on a number of alterations you can make by adding additional layers to a ggplot. In the rest of this lesson we’ll touch on a few more changes you can make within <code>ggplot2</code> using a slightly different graph.</p>
@@ -462,14 +462,14 @@ to explanatory plots – plots that help you communicate your results <em>to oth
 <div class="sourceCode" id="cb29"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb29-1"><a href="customization-in-ggplot2.html#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
 <span id="cb29-2"><a href="customization-in-ggplot2.html#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> clarity)) <span class="sc">+</span></span>
 <span id="cb29-3"><a href="customization-in-ggplot2.html#cb29-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">17000</span>, <span class="at">by =</span> <span class="dv">1000</span>))</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_165" alt="Continuous cales can be altered" /></p>
 <p>However, for <strong>discrete variables</strong> (aka factors or categorical variables), where there is a limited number of levels, you would use <code>scale_x_discrete</code> or <code>scale_y_discrete</code>:</p>
 <div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb30-1"><a href="customization-in-ggplot2.html#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
 <span id="cb30-2"><a href="customization-in-ggplot2.html#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> clarity)) <span class="sc">+</span></span>
 <span id="cb30-3"><a href="customization-in-ggplot2.html#cb30-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">limit =</span> <span class="fu">c</span>(<span class="st">&quot;SI2&quot;</span>, <span class="st">&quot;SI1&quot;</span>, <span class="st">&quot;I1&quot;</span>)) <span class="sc">+</span></span>
 <span id="cb30-4"><a href="customization-in-ggplot2.html#cb30-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">17000</span>, <span class="at">by =</span> <span class="dv">1000</span>))</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_170" alt="Discrete scales can be altered" /></p>
 </div>
 <div id="coordinate-adjustment" class="section level3" number="4.0.7">
@@ -491,7 +491,7 @@ vertical bar charts:</p>
 <span id="cb31-13"><a href="customization-in-ggplot2.html#cb31-13" aria-hidden="true" tabindex="-1"></a>         <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>),</span>
 <span id="cb31-14"><a href="customization-in-ggplot2.html#cb31-14" aria-hidden="true" tabindex="-1"></a>         <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">&quot;gray30&quot;</span>) ) <span class="sc">+</span></span>
 <span id="cb31-15"><a href="customization-in-ggplot2.html#cb31-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">guides</span>(<span class="at">fill =</span> <span class="fu">guide_legend</span>(<span class="st">&quot;cut quality&quot;</span>))</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_152" alt="Axes can be flipped using coord_flip" /></p>
 <p>It’s important to remember that all the additional alterations we already discussed can still be applied to this graph!</p>
 <div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb32-1"><a href="customization-in-ggplot2.html#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
@@ -507,7 +507,7 @@ vertical bar charts:</p>
 <span id="cb32-11"><a href="customization-in-ggplot2.html#cb32-11" aria-hidden="true" tabindex="-1"></a>         <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">16</span>, <span class="at">face =</span> <span class="st">&quot;bold&quot;</span>),</span>
 <span id="cb32-12"><a href="customization-in-ggplot2.html#cb32-12" aria-hidden="true" tabindex="-1"></a>         <span class="at">legend.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">14</span>),</span>
 <span id="cb32-13"><a href="customization-in-ggplot2.html#cb32-13" aria-hidden="true" tabindex="-1"></a>         <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">&quot;gray30&quot;</span>) )</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_176" alt="Additional layers will help customize this plot" /></p>
 </div>
 <div id="annotation" class="section level3" number="4.0.8">
@@ -531,7 +531,7 @@ vertical bar charts:</p>
 <span id="cb33-15"><a href="customization-in-ggplot2.html#cb33-15" aria-hidden="true" tabindex="-1"></a>           <span class="at">y =</span> <span class="dv">12800</span>, <span class="at">x =</span> <span class="fl">2.9</span>,</span>
 <span id="cb33-16"><a href="customization-in-ggplot2.html#cb33-16" aria-hidden="true" tabindex="-1"></a>           <span class="at">vjust =</span> <span class="st">&quot;top&quot;</span>, <span class="at">hjust =</span> <span class="st">&quot;right&quot;</span>,</span>
 <span id="cb33-17"><a href="customization-in-ggplot2.html#cb33-17" aria-hidden="true" tabindex="-1"></a>           <span class="at">size =</span> <span class="dv">6</span>)</span></code></pre></div>
-<p>{format: png}
+<p>
 <img src="https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/export/png?id=1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE&amp;pageid=g3c07dc9761_0_181" alt="annotate helps add text to our plot" /></p>
 <p>Note: we could have accomplished this by adding an additional <code>geom</code>: <code>geom_text</code>. However, this requires creating a new data frame, as explained <a href="http://r4ds.had.co.nz/graphics-for-communication.html#annotations">here</a>. This can also be used to <strong>label the points on your plot</strong>. Keep this reference in mind in case you have to do that in the future.</p>
 </div>
