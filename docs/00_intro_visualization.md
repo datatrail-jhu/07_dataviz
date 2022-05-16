@@ -1,17 +1,6 @@
----
-output: html_document
-date: '2022-04-11'
----
 
 
 
-{
-course-completeness: 100
-course-attempts: 2
-default-quiz-attempts: 2
-default-random-choice-order: true
-default-quiz-show-answers: none
-}
 
 # Intro to Data Visualization
 

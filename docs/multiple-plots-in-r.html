@@ -23,7 +23,6 @@
 
 
 
-<meta name="date" content="2022-04-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -311,19 +310,25 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb58-5"><a href="multiple-plots-in-r.html#cb58-5" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(mtcars) <span class="sc">+</span> <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(gear, mpg, <span class="at">group =</span> gear))</span>
 <span id="cb58-6"><a href="multiple-plots-in-r.html#cb58-6" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb58-7"><a href="multiple-plots-in-r.html#cb58-7" aria-hidden="true" tabindex="-1"></a>p1 <span class="sc">+</span> p2</span></code></pre></div>
-<p>
-<img src="https://docs.google.com/presentation/d/1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI/export/png?id=1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI&amp;pageid=g2bfdb07292_0_151" alt="Two plots side-by-side" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI/export/png?id=1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI&amp;pageid=g2bfdb07292_0_151" alt="" />
+<p class="caption">Two plots side-by-side</p>
+</div>
 </div>
 <div id="altering-the-layout" class="section level3" number="9.0.3">
 <h3><span class="header-section-number">9.0.3</span> Altering the layout</h3>
 <p>If you don’t want these plots side-by-side, but rather one on top of the other, this can be controlled with <code>plot_layout()</code>, where you can define the number of columns (<code>ncol</code>) or number of rows (<code>nrow</code>) you would like to display.</p>
 <div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb59-1"><a href="multiple-plots-in-r.html#cb59-1" aria-hidden="true" tabindex="-1"></a>p1 <span class="sc">+</span> p2 <span class="sc">+</span> <span class="fu">plot_layout</span>(<span class="at">ncol =</span> <span class="dv">1</span>)</span></code></pre></div>
-<p>
-<img src="https://docs.google.com/presentation/d/1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI/export/png?id=1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI&amp;pageid=g3585f477db_0_2" alt="two plots one on top of the other" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI/export/png?id=1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI&amp;pageid=g3585f477db_0_2" alt="" />
+<p class="caption">two plots one on top of the other</p>
+</div>
 <p>Similarly, if you want these on top of one another but would rather the first plot be larger, this can be controlled within <code>plot_layout()</code> using the <code>heights</code> argument. The ‘3’ in the code below specifies that you would like the top plot to be 3 times larger than the bottom plot (whose relative height is defined as ‘1’).</p>
 <div class="sourceCode" id="cb60"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb60-1"><a href="multiple-plots-in-r.html#cb60-1" aria-hidden="true" tabindex="-1"></a>p1 <span class="sc">+</span> p2 <span class="sc">+</span> <span class="fu">plot_layout</span>(<span class="at">ncol =</span> <span class="dv">1</span>, <span class="at">heights =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">1</span>))</span></code></pre></div>
-<p>
-<img src="https://docs.google.com/presentation/d/1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI/export/png?id=1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI&amp;pageid=g3585f477db_0_6" alt="two plots one on top of the other of unequal heights" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI/export/png?id=1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI&amp;pageid=g3585f477db_0_6" alt="" />
+<p class="caption">two plots one on top of the other of unequal heights</p>
+</div>
 </div>
 <div id="nesting-plots" class="section level3" number="9.0.4">
 <h3><span class="header-section-number">9.0.4</span> Nesting plots</h3>
@@ -340,8 +345,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <span id="cb61-9"><a href="multiple-plots-in-r.html#cb61-9" aria-hidden="true" tabindex="-1"></a>  )</span>
 <span id="cb61-10"><a href="multiple-plots-in-r.html#cb61-10" aria-hidden="true" tabindex="-1"></a>) <span class="sc">+</span></span>
 <span id="cb61-11"><a href="multiple-plots-in-r.html#cb61-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">plot_layout</span>(<span class="at">ncol =</span> <span class="dv">1</span>)</span></code></pre></div>
-<p>
-<img src="https://docs.google.com/presentation/d/1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI/export/png?id=1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI&amp;pageid=g3585f477db_0_10" alt="Nested Plots" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI/export/png?id=1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI&amp;pageid=g3585f477db_0_10" alt="" />
+<p class="caption">Nested Plots</p>
+</div>
 </div>
 <div id="additional-operators" class="section level3" number="9.0.5">
 <h3><span class="header-section-number">9.0.5</span> Additional operators</h3>
@@ -351,26 +358,34 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>If you are simply adding plots beside one another or on top of one another, this can be accomplished using <code>|</code> and <code>/</code>. <code>|</code> tells patchwork to put the plots next to one another from left to right. <code>/</code> tells patchwork you want those plots on top of each other. For example, below we see that <code>p1</code>, <code>p2</code>, and <code>p3</code> should all be next to one another. These are grouped together because of the parentheses. Then these three plots should all be atop <code>p4</code>.</p>
 <div class="sourceCode" id="cb62"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb62-1"><a href="multiple-plots-in-r.html#cb62-1" aria-hidden="true" tabindex="-1"></a>(p1 <span class="sc">|</span> p2 <span class="sc">|</span> p3) <span class="sc">/</span></span>
 <span id="cb62-2"><a href="multiple-plots-in-r.html#cb62-2" aria-hidden="true" tabindex="-1"></a>      p4</span></code></pre></div>
-<p>
-<img src="https://docs.google.com/presentation/d/1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI/export/png?id=1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI&amp;pageid=g3585f477db_0_14" alt="Three plots together horizontally over another plot vertically" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI/export/png?id=1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI&amp;pageid=g3585f477db_0_14" alt="" />
+<p class="caption">Three plots together horizontally over another plot vertically</p>
+</div>
 </div>
 <div id="and-1" class="section level4" number="9.0.5.2">
 <h4><span class="header-section-number">9.0.5.2</span> <code>&amp;</code> and <code>*</code></h4>
 <p><code>ggpplot2</code> allows for flexibility in theme in many different ways, as demonstrated in a previous lesson. To apply the same theme to all plots in the multi-plot image, you will want to use <code>&amp;</code>. Below you’ll see that with the use of <code>&amp;</code>, <code>theme_bw</code> has been applied to all the plots.</p>
 <div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb63-1"><a href="multiple-plots-in-r.html#cb63-1" aria-hidden="true" tabindex="-1"></a>p1 <span class="sc">+</span> (p2 <span class="sc">+</span> p3) <span class="sc">+</span> p4 <span class="sc">+</span> <span class="fu">plot_layout</span>(<span class="at">ncol =</span> <span class="dv">1</span>) <span class="sc">&amp;</span> <span class="fu">theme_bw</span>()</span></code></pre></div>
-<p>
-<img src="https://docs.google.com/presentation/d/1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI/export/png?id=1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI&amp;pageid=g3585f477db_0_18" alt="All four plots changed to theme_bw()" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI/export/png?id=1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI&amp;pageid=g3585f477db_0_18" alt="" />
+<p class="caption">All four plots changed to theme_bw()</p>
+</div>
 <p>If you only wanted this theme to be applied to the plots in the current nesting level, you would use <code>*</code>.</p>
 <div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb64-1"><a href="multiple-plots-in-r.html#cb64-1" aria-hidden="true" tabindex="-1"></a>(p1 <span class="sc">+</span> (p2 <span class="sc">+</span> p3) <span class="sc">+</span> p4 <span class="sc">+</span> <span class="fu">plot_layout</span>(<span class="at">ncol =</span> <span class="dv">1</span>)) <span class="sc">*</span> <span class="fu">theme_bw</span>()</span></code></pre></div>
-<p>
-<img src="https://docs.google.com/presentation/d/1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI/export/png?id=1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI&amp;pageid=g3585f477db_0_32" alt="Plots in main nesting level have theme_bw, but p2 and p3 remain unchanged" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI/export/png?id=1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI&amp;pageid=g3585f477db_0_32" alt="" />
+<p class="caption">Plots in main nesting level have theme_bw, but p2 and p3 remain unchanged</p>
+</div>
 </div>
 <div id="section" class="section level4" number="9.0.5.3">
 <h4><span class="header-section-number">9.0.5.3</span> <code>-</code></h4>
 <p>Thus far, we have only focused on adding plots together using <code>+</code>. There is also an <code>-</code> operator. Think of this as a hyphen, rather than as a subtraction sign, because we won’t be removing any plots. This operator puts what is on the left and right side of the <code>-</code> on the same nesting level. In the code below, the overall plot layout defines that there should be one column. That means that <code>p2</code> and <code>p3</code> are on the same nesting level (because of the <code>-</code>). This forces <code>p1</code> and <code>p2</code> to be side by side. This operator is slightly less intuitive, and thus is included here for completeness but included at the end because you can likely compose all the multiplot images you need without fully understanding the <code>-</code> operator.</p>
 <div class="sourceCode" id="cb65"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb65-1"><a href="multiple-plots-in-r.html#cb65-1" aria-hidden="true" tabindex="-1"></a>p1 <span class="sc">+</span> p2 <span class="sc">-</span> p3 <span class="sc">+</span> <span class="fu">plot_layout</span>(<span class="at">ncol =</span> <span class="dv">1</span>)</span></code></pre></div>
-<p>
-<img src="https://docs.google.com/presentation/d/1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI/export/png?id=1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI&amp;pageid=g3585f477db_0_36" alt="Using the - operator" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI/export/png?id=1pSJw_6hCq7iQOtpwwd76PSdlqAir9xkmWp44dYwr9CI&amp;pageid=g3585f477db_0_36" alt="" />
+<p class="caption">Using the - operator</p>
+</div>
 </div>
 </div>
 <div id="additional-resources-5" class="section level3" number="9.0.6">
