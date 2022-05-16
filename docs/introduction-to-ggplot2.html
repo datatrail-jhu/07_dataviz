@@ -23,7 +23,6 @@
 
 
 
-<meta name="date" content="2022-04-11" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -307,8 +306,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div id="example-dataset-diamonds" class="section level3" number="3.0.2">
 <h3><span class="header-section-number">3.0.2</span> Example dataset: <code>diamonds</code></h3>
 <p>To build your first plot in <code>ggplot2</code> we’ll make use of the fact that there are some datasets already available in R. One frequently-used data set is known as <code>diamonds</code>. This data set contains prices and other attributes of 53,940 diamonds, with each row containing information about a different diamond. If you look at the first few rows of data, you can get an idea of what data are included in this dataset.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g360e22de56_0_108" alt="First 12 rows of diamonds dataset" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g360e22de56_0_108" alt="" />
+<p class="caption">First 12 rows of diamonds dataset</p>
+</div>
 <p>Here you see a lot of numbers and can get an idea of what data are available in this data set. For example, in looking at the column names across the top, you can see that we have information about how many carats each diamond is (<code>carat</code>), some information on the quality of the diamond cut (<code>cut</code>), the color of the diamond from J (worst) to D (best) (<code>color</code>), along with a number of other pieces of information about each diamond.</p>
 <p>We will use this data set to better understand how to generate plots in R, using <code>ggplot2</code>.</p>
 </div>
@@ -317,8 +318,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>In <code>ggplot2</code> we specify these by defining <code>x</code> and <code>y</code> in the <code>aes()</code> argument. The <code>x</code> argument defines which variable will be along the bottom of the plot. <code>y</code> refers to which variable will be along the left side of the plot. If we wanted to understand the relationship between the number of carats in a diamond and that diamond’s price, we may do the following:</p>
 <div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="introduction-to-ggplot2.html#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
 <span id="cb4-2"><a href="introduction-to-ggplot2.html#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price))</span></code></pre></div>
-<p>
-<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g360e22de56_0_118" alt="diamonds scatterplot" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g360e22de56_0_118" alt="" />
+<p class="caption">diamonds scatterplot</p>
+</div>
 <p>In this plot, we see that, in general, the larger the diamond is (or the more carats it has), the more expensive the diamond is (price), which is probably what we would have expected. However, now, we have a plot that definitively supports this conclusion.</p>
 </div>
 <div id="aesthetics" class="section level3" number="3.0.4">
@@ -331,31 +334,39 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>Well, we could look at the clarity of the diamonds to see whether or not that affects the price of the diamonds? To add clarity to our plot, we could change the color of our points to differ based on clarity:</p>
 <div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="introduction-to-ggplot2.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
 <span id="cb5-2"><a href="introduction-to-ggplot2.html#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price, <span class="at">color =</span> clarity)</span></code></pre></div>
-<p>
-<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g3c02bd843a_0_0" alt="changing point colors helps us better understand the data" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g3c02bd843a_0_0" alt="" />
+<p class="caption">changing point colors helps us better understand the data</p>
+</div>
 <p>Here, we see that not only are the points now colored by clarity, ggplot2 has also automatically added a legend for us with the various classes and their corresponding point color.</p>
 <p>The Help pages of the diamonds dataset (accessed using <code>?diamonds</code>) state that clarity is “a measurement of how clear the diamond is.” The documentation also tells us that I1 is the worst clarity and IF is the best (Full scale: I1, SI1, SI2, VS1, VS2, VVS1, VVS2, IF). This makes sense with what we see in the plot. Small (&lt;1 carat) diamonds that have the best clarity level (IF) are some of the most expensive diamonds. While, relatively large diamonds (diamonds between 2 and 3 carats) of the lowest clarity (I1) tend to cost less.</p>
 <p>By coloring our points by a different variable in the dataset, we now understand our dataset better. This is one of the goals of data visualization! And, specifically, what we’re doing here in <code>ggplot2</code> is known as <strong>mapping a variable to an aesthetic</strong>. We took another variable in the dataset, mapped it to a color, and then put those colors on the points in the plot. Well, we only told <code>ggplot2</code> what variable to map. It took care of the rest!</p>
 <p>Of course, we can also <em>manually</em> specify the colors of the points on our graph; however, manually specifying the colors of points happens <em>outside</em> of the <code>aes()</code> call. This is because <code>ggplot2</code> does not have to go through the mapping the variable to an aesthetic process. In the code here, <code>ggplot2</code> doesn’t have to go through the trouble of figuring out which level of the variable is going to be which color on the plot (the mapping to the aesthetic part of the process). Instead, it just colors every point red. Thus, <strong>manually specifying the color of your points happens <em>outside</em> of <code>aes()</code></strong>:</p>
 <div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="introduction-to-ggplot2.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
 <span id="cb6-2"><a href="introduction-to-ggplot2.html#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price), <span class="at">color =</span> <span class="st">&quot;red&quot;</span>)</span></code></pre></div>
-<p>
-<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g3c02bd843a_0_5" alt="manually specifying point color occurs outside of aes()" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g3c02bd843a_0_5" alt="" />
+<p class="caption">manually specifying point color occurs outside of <code>aes()</code></p>
+</div>
 </div>
 <div id="point-size" class="section level4" number="3.0.4.2">
 <h4><span class="header-section-number">3.0.4.2</span> Point size</h4>
 <p>As above, we can change the point size by mapping another variable to the <code>size</code> argument within <code>aes</code>:</p>
 <div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb7-1"><a href="introduction-to-ggplot2.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
 <span id="cb7-2"><a href="introduction-to-ggplot2.html#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price, <span class="at">size =</span> clarity))</span></code></pre></div>
-<p>
-<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g3c02bd843a_0_10" alt="mapping to size changes point size on plot" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g3c02bd843a_0_10" alt="" />
+<p class="caption">mapping to size changes point size on plot</p>
+</div>
 <p>As above, <code>ggplot2</code> handles actually doing the mapping. All you have to do is specify what variable you want mapped (<code>clarity</code>) and how you want ggplot2 to handle the mapping (change the point <code>size</code>). With this code, you do get a warning when you run it in R that using a “discrete variable is not advised.” This is because mapping to size is usually done for numeric variables, rather than categorical variables like clarity.</p>
 <p>This makes sense here too. The relationship between clarity, carat and price was easier to visualize when clarity was mapped to <code>color</code> than here where it is mapped to <code>size</code>.</p>
 <p>As above, the size of <em>every</em> point can be changed by calling <code>size</code> outside of <code>aes</code>:</p>
 <div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb8-1"><a href="introduction-to-ggplot2.html#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
 <span id="cb8-2"><a href="introduction-to-ggplot2.html#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price), <span class="at">size =</span> <span class="fl">4.5</span>)</span></code></pre></div>
-<p>
-<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g3c02bd843a_0_16" alt="manually specifying point size of all points occurs outside of aes()" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g3c02bd843a_0_16" alt="" />
+<p class="caption">manually specifying point size of all points occurs outside of <code>aes()</code></p>
+</div>
 <p>Here, we have manually increased the size of <em>all</em> the points on the plot.</p>
 </div>
 <div id="point-shape" class="section level4" number="3.0.4.3">
@@ -363,17 +374,23 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>You can also change the shape of the points (<code>shape</code>). We’ve used solid, filled circles thus far (the default in <code>geom_point</code>), but we could specify a different shape for each clarity.</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb9-1"><a href="introduction-to-ggplot2.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
 <span id="cb9-2"><a href="introduction-to-ggplot2.html#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price, <span class="at">shape =</span> clarity))</span></code></pre></div>
-<p>
-<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g3c02bd843a_0_32" alt="mapping clarity to shape" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g3c02bd843a_0_32" alt="" />
+<p class="caption">mapping clarity to shape</p>
+</div>
 <p>Here, while the mapping occurs correctly within ggplot2, we do get a warning message that discriminating more than six different shapes is difficult for the human eye. Thus, ggplot2 won’t allow more than six different shapes on a plot. This suggests that while you <em>can</em> do something, it’s not always the <em>best</em> to do that thing. Here, with more than six levels of clarity, it’s best to stick to mapping this variable to <code>color</code> as we did initially.</p>
 <p>To manually specify a shape for all the points on your plot, you would specify it outside of <code>aes</code> using one of the twenty-five different shape options available:</p>
-<p>
-<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g3c02bd843a_0_25" alt="options for points in ggplot2’s shape" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g3c02bd843a_0_25" alt="" />
+<p class="caption">options for points in ggplot2’s <code>shape</code></p>
+</div>
 <p>For example, to plot all of the points on the plot as filled diamonds (it is a dataset about diamonds after all…), you would specify shape ‘18’:</p>
 <div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb10-1"><a href="introduction-to-ggplot2.html#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
 <span id="cb10-2"><a href="introduction-to-ggplot2.html#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> carat, <span class="at">y =</span> price), <span class="at">shape =</span> <span class="dv">18</span>)</span></code></pre></div>
-<p>
-<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g3c02bd843a_0_38" alt="specifying filled diamonds as shape for all points manually" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g3c02bd843a_0_38" alt="" />
+<p class="caption">specifying filled diamonds as shape for all points manually</p>
+</div>
 </div>
 </div>
 <div id="facets" class="section level3" number="3.0.5">
@@ -384,8 +401,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
   geom_point(mapping = aes(x = carat, y = price)) +
   facet_wrap(~clarity, nrow = 2)</code></pre>
 <p>Here, read the tilde as the word “by”. Specifically here, we want a scatterplot of the relationship between carat and price and we want it faceted (broken down) <strong>by (~)</strong> clarity.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g3c02bd843a_0_44" alt="facet_wrap breaks plots down into subplots" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g3c02bd843a_0_44" alt="" />
+<p class="caption">facet_wrap breaks plots down into subplots</p>
+</div>
 <p>Now, we have eight different plots, one for each level of clarity, where we can see the relationship between diamond carats and price.</p>
 <p>You’ll note here we’ve opted to specify that we want 2 rows of subplots (<code>nrow = 2</code>). You can play around with the number of rows you want in your output to customize how your output plot appears.</p>
 </div>
@@ -399,8 +418,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <p>For example, if we wanted to see what the distribution of carats was for these data, we could to the following.</p>
 <div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb12-1"><a href="introduction-to-ggplot2.html#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
 <span id="cb12-2"><a href="introduction-to-ggplot2.html#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_histogram</span>(<span class="at">mapping =</span>  <span class="fu">aes</span>(carat))</span></code></pre></div>
-<p>
-<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g360e22de56_0_113" alt="histogram of carat shows range and shape" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g360e22de56_0_113" alt="" />
+<p class="caption">histogram of carat shows range and shape</p>
+</div>
 <p>The code follows what we’ve seen so far in this lesson; however, we’ve now called <code>geom_histogram</code> to specify that we want to plot a histogram rather than a scatterplot.</p>
 <p>Here, the rectangular boxes on the plot are geoms (shapes) that represent the number of diamonds that fall into each bin on the plot. Rather than plotting each individual point, histograms use rectangular boxes to summarize the data. This summarization helps us quickly understand what’s going on in our dataset.</p>
 <p>Specifically here, we can quickly see that most of the diamonds in the dataset are less than 1 carat. This is not necessarily something we could be sure of from the scatterplots generated previously in this lesson (since some points could have been plotted directly on top of one another). Thus, it’s often helpful to visualize your data in a number of ways when you first get a dataset to ensure that you understand the variables and relationships between variables in your dataset!</p>
@@ -411,8 +432,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb13"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb13-1"><a href="introduction-to-ggplot2.html#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
 <span id="cb13-2"><a href="introduction-to-ggplot2.html#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(cut))</span></code></pre></div>
 <p>Again, the changes to the code are minimal. We are now interested in plotting the categorical variable <code>cut</code> and state that we want a bar plot, by including <code>geom_bar()</code>.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g360e22de56_0_122" alt="diamonds barplot" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g360e22de56_0_122" alt="" />
+<p class="caption">diamonds barplot</p>
+</div>
 <p>Here, we again use rectangular shapes to represent the data, but we’re not showing the distribution of a single variable (as we were with <code>geom_histogram</code>). Rather, we’re using rectangles to show the count (number) of diamonds within each category within cut. Thus, we need a different geom: <code>geom_bar</code>!</p>
 </div>
 <div id="boxplots-geom_boxplot" class="section level4" number="3.0.6.3">
@@ -421,8 +444,10 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb14-1"><a href="introduction-to-ggplot2.html#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
 <span id="cb14-2"><a href="introduction-to-ggplot2.html#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> color, <span class="at">y =</span> price))</span></code></pre></div>
 <p>In the code, we see that again, we only have to change what variables we want to be included in the plot the type of plot (or geom) we want (here, <code>geom_boxplot()</code>) to get a basic boxplot.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g360e22de56_0_128" alt="diamonds boxplot" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g360e22de56_0_128" alt="" />
+<p class="caption">diamonds boxplot</p>
+</div>
 <p>In the figure itself we see that the median price (the black horizontal bar in the middle of each box represents the median for each category) increases as the diamond color increases from the worst category (J) to the best (D).</p>
 <p>Now, if you wanted to change the color of this boxplot, it would just take a small addition to the code for the plot you just generated.</p>
 <div class="sourceCode" id="cb15"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb15-1"><a href="introduction-to-ggplot2.html#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(<span class="at">data =</span> diamonds) <span class="sc">+</span></span>
@@ -436,11 +461,15 @@ code span.wa { color: #8f5902; font-weight: bold; font-style: italic; } /* Warni
 <div id="other-plots" class="section level4" number="3.0.6.4">
 <h4><span class="header-section-number">3.0.6.4</span> Other plots</h4>
 <p>While we’ve reviewed basic code to make a few common types of plots, there are a number of other plot types that can be made in <code>ggplot2.</code> These are listed in the <a href="http://ggplot2.tidyverse.org/reference/">online reference material for ggplot2</a> or can be accessed through RStudio directly. To do so, you would type <code>?geom_</code> into the Console in RStudio. A list of geoms will appear. You can hover your cursor over any one of these to get a short description.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g360e22de56_0_149" alt="?geom in Console" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g360e22de56_0_149" alt="" />
+<p class="caption">?geom in Console</p>
+</div>
 <p>Or, you can select a geom from this list and click enter. After selecting a geom, such as geom_abline and hitting ‘Enter,’ the help page for that geom will pop up in the ‘Help’ tab at bottom right. Here, you can find more detailed information about the selected geom.</p>
-<p>
-<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g360e22de56_0_154" alt="geom_abline help page" /></p>
+<div class="figure">
+<img src="https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/export/png?id=1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc&amp;pageid=g360e22de56_0_154" alt="" />
+<p class="caption">geom_abline help page</p>
+</div>
 </div>
 </div>
 <div id="summary" class="section level3" number="3.0.7">
