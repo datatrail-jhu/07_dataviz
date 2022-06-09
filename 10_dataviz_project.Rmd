@@ -19,8 +19,6 @@ This project will require you to:
 
 You can access the project by going to the exercise accompanying this lesson.
 
-{exercise, id: project_dataviz}
-
 ## Data Visualization Project
 
 Data Visualization is an incredibly important skill for a data scientist. Being able to generate exploratory visualizations that help you understand the data and explanatory visualizations so that your findings
@@ -102,27 +100,9 @@ To load the data in, **run the code in the `pet-data` code chunk** to create an 
 
 Once the data have been read in, **explore the data**, **adding your code to `dataviz_project.Rmd`**, and then **answer the following questions**:
 
-? How many pet licenses are included in the dataset?
-
-! 66042 ; 66,042
-
-? How many unique pet names are included in the dataset (`animal_s_name`)
-
-! 15796 ; 15,796
-
-? How many different species are included in this dataset (`species`)?
-
-! 3
-
-{choose-answers: 4}
-? Which of these species is not included in the dataset?
-
-C) Reptile
-C) Bird
-C) Primate
-o) Cat
-o) Dog
-o) Livestock
+- How many pet licenses are included in the dataset?
+- How many unique pet names are included in the dataset (`animal_s_name`)?
+- How many different species are included in this dataset (`species`)?
 
 Now that you have a handle on the data, let's start to generate some exploratory plots!
 
@@ -148,20 +128,8 @@ Feel free to customize your plots further using what you've learned about `ggplo
 
 After generating this figure, you'll be able to **answer the following questions**:
 
-? Are there more dogs or cat licenses in this dataset?
-
-A) Dog
-b) Cat
-
-{choose-answers: 4}
-? Approximately how many cat licenses are in this dataset?
-
-C) 23,000
-o) 10,000
-o) 60,000
-o) 40,000
-o) 100,000
-o) 100
+- Are there more dogs or cat licenses in this dataset?
+- Approximately how many cat licenses are in this dataset?
 
 ##### Cat Table: `pet-cat-table`
 
@@ -179,19 +147,14 @@ DATASET %>%
 ```
 Here, you will need to **replace `DATASET`, `"SPECIES"`, and `VARIABLE` (in two places)** in order to get this code to run. Your table at the end should have information about the top 10 most frequent cat names
 
-{case-sensitive: false}
-? What is the most common cat name?
-
-! Lucy
+- What is the most common cat name?
 
 ##### Dog Table: `pet-dog-table`
 
 Having successfully generated this table, move onto the `pet-dog-table` code chunk. *There is no code in here*. You'll need to **put all the necessary code in this code chunk**! Here, the goal is to create a similar table to what we just created; however, this should contain the 10 most frequent *dog* names, rather than cat names.
 
-{case-sensitive: false}
-? What is the most common dog name?
+- What is the most common dog name?
 
-! Lucy
 
 ##### Line Chart: `pet-linechart`
 
@@ -221,18 +184,10 @@ pets %>%
 
 After figuring out the missing pieces in the code and generating the plot, you'll be able to **answer the following questions**:
 
-{words: 20}
-? What does the function `ymd_hms()` accomplish?
+- What does the function `ymd_hms()` accomplish?
+- What geom did you specify to generate a line chart?
+- In what year do you see a huge jump in the number of pet licenses?
 
-! Converts `license_issue_date` to a date-time object
-
-? What geom did you specify to generate a line chart?
-
-! geom_line; geom_line()
-
-? In what year do you see a huge jump in the number of pet licenses?
-
-! 2015
 
 ##### Create Your Own Exploratory Plot: `pet-plot`
 
@@ -262,75 +217,19 @@ To get started, **run the code in the `meat-data` code chunk** to read the surve
 
 Once the data have been read in, **explore the data**. **Add the code you use** to explore the data to the `meat-explore` code chunk in dataviz_project.Rmd, and **answer the following questions**:
 
-? How many people participated in the survey?
-
-! 550
-
-{choose-answers: 4}
-? Which piece of information was NOT collected about the steak survey respondents?
-
-C) State
-C) Street Address
-o) Age
-o) Education
-o) Gender
-o) Location (by Census Region)
-o) Household Income
-
-? How  many people responded "Yes" to the question "Do you eat steak?"
-
-! 430
-
-? How many different (unique) responses were there to the question "How do you like your steak prepared?"
-
-a) 0
-b) 3
-C) 5
-d) 7
+- How many people participated in the survey?
+- How  many people responded "Yes" to the question "Do you eat steak?"
+- How many different (unique) responses were there to the question "How do you like your steak prepared?"
 
 #### Wrangle the Data
 
 **Run the code in the `meat-wrangle` code chunk** to get the data in the right format for you to generate the plot. Once you've run the code, **answer the following questions**:
 
-{choose-answers: 4}
-? What does the code within the `mutate()` function accomplish in this code chunk?
-
-C) creates a new column `steak_pref` that contains a "factor" variable
-o) changes the values of the existing `steak_pref` column
-o) creates a new column `steak_pref` that contains a "character" variable
-o) changes the values of the existing `How.do.you.like.your.steak.prepared.` column
-o) orders the values in the existing `How.do.you.like.your.steak.prepared.` column
-o) filters out missing values
-
-? What does the code within the `filter()` function accomplish in this code chunk?
-
-A) only includes data in `pref` where `steak_pref` was *not* empty
-b) only includes data in `pref` where `steak_pref` was empty
-
-? How many columns are there in `pref`?
-
-! 3
-
-{choose-answers: 4}
-? What is contained in the column: `pref$prop`
-
-C) The proportion of people who prefer each level of steak wellness
-o) The proportion of people who responded to the question about whether or not they eat steak
-o) The number of people who prefer each each level of steak wellness
-o) The proportion of people who responded to the question about whether or not they eat steak
-o) The number of people who prefer each each level of steak cut
-o) The proportion of people who prefer each each level of steak cut
-
-{choose-answers: 4}
-? What is contained in the column: `pref$n`
-
-C) The number of people who prefer each each level of steak wellness
-o) The proportion of people who prefer each level of steak wellness
-o) The proportion of people who responded to the question about whether or not they eat steak
-o) The proportion of people who responded to the question about whether or not they eat steak
-o) The number of people who prefer each each level of steak cut
-o) The proportion of people who prefer each each level of steak cut
-
+- What does the code within the `mutate()` function accomplish in this code chunk?
+- What does the code within the `filter()` function accomplish in this code chunk?
+- How many columns are there in `pref`?
+- What is contained in the column: `pref$prop`
+- What is contained in the column: `pref$n`
 
 #### Visualize the Data
 
@@ -368,29 +267,8 @@ Note that we're assigning the plot to the object `p`. This means that to view th
 
 ! scale_fill_manual ; scale_fill_manual()
 
-{choose-answers: 4}
-? What does `width = 0.7` accomplish in the code to generate the explanatory plot? (You can play around with the number to see how it changes the plot!)
-
-C) controls the width of the bars/ spacing between the bars on the bar chart
-o) controls the width of the plot
-o) controls the width of the gridlines
-o) controls the width of the bars in the legend
-o) controls the width of the space to the left of the plot
-o) controls the width of the space to the right of the plot
-o) controls the width of the space above the plot
-o) controls the width of the space below the plot
-
-{choose-answers: 4}
-? Without the line `legend.position="none"` what would change on the plot? (Try removing that line of code and regenerating the plot to see what changes!)
-
-C) A legend containing steak preference options would be present along the bottom of the plot
-o) A legend containing steak preference options would be present to the right of the plot
-o) A legend containing steak preference options would be present to the left of the plot
-o) A legend containing steak preference options would be present along the top of the plot
-o) A legend containing proportion of respondents would be present along the bottom of the plot
-o) A legend containing proportion of respondents would be present to the right of the plot
-o) A legend containing proportion of respondents would be present to the left of the plot
-o) A legend containing proportion of respondents would be present along the top of the plot
+- What does `width = 0.7` accomplish in the code to generate the explanatory plot? (You can play around with the number to see how it changes the plot!)
+- Without the line `legend.position="none"` what would change on the plot? (Try removing that line of code and regenerating the plot to see what changes!)
 
 #### Save the Plot
 
@@ -436,11 +314,4 @@ Now that you've finalized your project, you'll do one final **push to GitHub**. 
 
 **Note**: If you're stuck on this, these steps were covered in detail in an earlier course: [Version Control](https://leanpub.com/universities/courses/jhu/version-control). Refer to the materials in this course if you're stuck on this part of the project.
 
-
-? Submit the URL to your `dataviz_project` GitHub repository below.
-
-! /(https:\/\/github.com.+\/dataviz_project)/i
-
 **Congrats on finishing your Data Visualization Project!!**
-
-{/exercise}
