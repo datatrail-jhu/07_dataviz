@@ -12,7 +12,8 @@ rmd_files: ["index.Rmd",
             "07_tables_in_R.Rmd",
             "08_multiple_plots.Rmd",
             "09_advanced_data_visualization.Rmd",
-            "10_dataviz_project.Rmd",
+            "10_dataviz.Rmd",
+            "11_dataviz_project.Rmd",
             "About.Rmd",
             "References.Rmd"]
 new_session: yes
