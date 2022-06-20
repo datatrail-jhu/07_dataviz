@@ -1,6 +1,6 @@
 ---
 title: "07: Data Visualization"
-date: "May, 2022"
+date: "June, 2022"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: book.bib
