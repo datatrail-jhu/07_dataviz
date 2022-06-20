@@ -8,7 +8,8 @@
 8-Tables-in-R.md
 9-Multiple-Plots-in-R.md
 10-Advanced-Data-Visualization.md
-11-Data-Visualization-Project.md
-12-References.md
+11-Data-Visualization.md
+12-Data-Visualization-Project.md
+13-References.md
 About-this-Course.md
 About-the-Authors.md
