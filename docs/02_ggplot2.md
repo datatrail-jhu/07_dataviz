@@ -259,6 +259,6 @@ In this lesson, we've walked through the basics of generating plots in `ggplot2`
 
 ### Slides and Video
 
-![Introduction to ggplot2](https://youtu.be/ulBMgttWU7A)
+[Automated Video](https://youtu.be/ulBMgttWU7A)
 
 * [Slides](https://docs.google.com/presentation/d/1WRfoVxRU_dRcbMGtsha5zSokBRoAFIirm32Wq6bZuEc/edit?usp=sharing)
