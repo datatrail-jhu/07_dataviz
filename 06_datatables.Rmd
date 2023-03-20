@@ -112,10 +112,10 @@ With an idea of how to make a great explanatory table, you're ready to start pra
 
 ### Additional resources
 [Intro to table design](https://design-nation.icons8.com/intro-to-data-tables-design-349f55861803)
-[Data Tables in R slideshow](http://www.stats.uwo.ca/faculty/murdoch/ism2013/4tables.pdf)
+[Data Tables in R slideshow](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html)
 
 ### Slides and Video
 
-![Data Tables](https://youtu.be/pY8pBmmgjNA)
+[Automated Video](https://youtu.be/pY8pBmmgjNA)
 
 * [Slides](https://docs.google.com/presentation/d/147UQaZBB5RoTpzsNiqkqEr4N8fcHBMB6eNr_5IdksRk/edit?usp=sharing)
