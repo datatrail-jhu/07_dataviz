@@ -164,7 +164,7 @@ ggplot(data = diamonds) +
 
 We now have a pretty good looking plot! However, a few additional changes would make this plot *even better* for communication.
 
-Note: Additional themes are available from the [`ggthemes` package](https://cran.r-project.org/web/packages/ggthemes/vignettes/ggthemes.html). Users can also generate their own themes.
+Note: Additional themes are available from the [`ggthemes` package](https://mran.microsoft.com/snapshot/2017-02-04/web/packages/ggthemes/vignettes/ggthemes.html). Users can also generate their own themes.
 
 ### Theme
 
@@ -349,13 +349,13 @@ In this lesson we've covered how to manually change the colors of your plot in R
 ### Additional References
 
 * [Color Cheatsheet](https://www.nceas.ucsb.edu/~frazier/RSpatialGuides/colorPaletteCheatsheet.pdf)
-* [`ggthemes` package](https://cran.r-project.org/web/packages/ggthemes/vignettes/ggthemes.html) - [GitHub repo](https://github.com/jrnold/ggthemes)
+* [`ggthemes` package](https://mran.microsoft.com/snapshot/2017-02-04/web/packages/ggthemes/vignettes/ggthemes.html) - [GitHub repo](https://github.com/jrnold/ggthemes)
 * [R4DS: Chapter 3](http://r4ds.had.co.nz/data-visualisation.html)
 * [R4DS: Chapter 18](http://r4ds.had.co.nz/graphics-for-communication.html)
 
 
 ### Slides and Video
 
-![Customization in ggplot2](https://youtu.be/vytGpMWUhWU)
+[Automated Video](https://youtu.be/vytGpMWUhWU)
 
  * [Slides](https://docs.google.com/presentation/d/1fAPq_QX6hzNLal4tPRLuAjuHbVYn3sXC1Y7EoK0tNJE/edit?usp=sharing)
